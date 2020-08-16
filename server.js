@@ -13,6 +13,7 @@ const db = require("./connection/config");
 //Sub Routes
 const admin = require("./routes/api/adminLogin");
 const conet = require("./routes/api/conet");
+const conexplus = require("./routes/api/conexplus");
 
 //CSRF Token Dependencies
 var csrf = require("csurf");
@@ -23,6 +24,7 @@ app.set("view engine", "ejs");
 
 //Mongoose Model
 const conetModel = require("./models/Conet");
+const conexplusModel = require("./models/conexplus");
 
 //Middleware for bodyparser
 app.use(bodyParser.json());
@@ -44,6 +46,7 @@ app.use(volleyball);
 //Actual Routes
 app.use("/api/auth", admin);
 app.use("/api/registration", conet);
+app.use("/api/registration", conexplus);
 
 //Connect to MongoDB
 mongoose.connect(
@@ -103,8 +106,13 @@ app.get(
   passport.authenticate("jwt", {
     session: false,
   }),
-  (req, res) => {
-    res.render("pages/conexplus");
+  async (req, res) => {
+    const filter = {};
+    const all = await  conexplusModel.find(filter);
+    console.log(all);
+    res.render("pages/conexplus", {
+      data: all,
+    });
   }
 );
 
@@ -115,6 +123,16 @@ app.get(
   }),
   (req, res) => {
     res.render("pages/conexspeaker");
+  }
+);
+
+app.get(
+  "/resetmypassword",
+  passport.authenticate("jwt", {
+    session: false,
+  }),
+  (req, res) => {
+    res.render("pages/resetpassword");
   }
 );
 

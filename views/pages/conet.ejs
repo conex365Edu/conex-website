@@ -11,7 +11,8 @@
   </title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="/public/css/admindashboard/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
@@ -21,7 +22,8 @@
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="/public/css/admindashboard/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="purple" data-background-color="white"
+      data-image="/public/css/admindashboard/img/sidebar-1.jpg">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -30,36 +32,42 @@
       <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
           Admin Panel
         </a></div>
-        <div class="sidebar-wrapper">
-          <ul class="nav">
-            <li class="nav-item  ">
-              <a class="nav-link" href="/AdminDashboard">
-                <i class="material-icons">H</i>
-                <p>Home</p>
-              </a>
-            </li>
-            <li class="nav-item active ">
-              <a class="nav-link" href="/conet">
-                <i class="material-icons">C</i>
-                <p>Conet</p>
-              </a>
-            </li>
-            <li class="nav-item  ">
-              <a class="nav-link" href="/conexplus">
-                <i class="material-icons">CP</i>
-                <p>ConexPlus</p>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="/conexspeaker">
-                <i class="material-icons">S</i>
-                <p>Speaker</p>
-              </a>
-            </li>
-           
-           
-          </ul>
-        </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item  ">
+            <a class="nav-link" href="/AdminDashboard">
+              <i class="material-icons">home</i>
+              <p>Home</p>
+            </a>
+          </li>
+          <li class="nav-item active ">
+            <a class="nav-link" href="/conet">
+              <i class="material-icons">group</i>
+              <p>Conet</p>
+            </a>
+          </li>
+          <li class="nav-item  ">
+            <a class="nav-link" href="/conexplus">
+              <i class="material-icons">groups</i>
+              <p>ConexPlus</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/conexspeaker">
+              <i class="material-icons">speaker_group</i>
+              <p>Speaker</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/resetmypassword">
+              <i class="material-icons">admin_panel_settings</i>
+              <p>Reset My Password</p>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
     </div>
     <div class="main-panel">
       <!-- Navbar -->
@@ -68,7 +76,8 @@
           <div class="navbar-wrapper">
             <a class="navbar-brand" href="javascript:;">Conex365</a>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -93,9 +102,10 @@
                   </p>
                 </a>
               </li>
-           
+
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
@@ -136,17 +146,19 @@
                         <th>Suggestions</th>
                       </thead>
                       <tbody>
+                        <% data.forEach(function (fetchData) { %>
                         <tr>
-                          <td>1</td>
-                          <td><%= data[0].Name%></td>
-                          <td>Niger</td>
-                          <td>Oud-Turnhout</td>
-                          <td>Oud-Turnhout</td>
-                          <td>Oud-Turnhout</td>
-                          <td>Oud-Turnhout</td>
-                          <td class="text-primary">$36,738</td>
+                          <td><%= %> </td>
+                          <td><%= fetchData.Name%></td>
+                          <td><%= fetchData.Phonenumber%></td>
+                          <td><%= fetchData.Email%></td>
+                          <td><%= fetchData.NativePlace%></td>
+                          <td><%= fetchData.Expertise%></td>
+                          <td><%= fetchData.Workrole%></td>
+                          <td class="text-primary"><%= fetchData.Suggestion%></td>
                         </tr>
-                        <tr>
+                        <% }) %>
+                        <!-- <tr>
                           <td>2</td>
                           <td>Minerva Hooper</td>
                           <td>Curaçao</td>
@@ -155,15 +167,15 @@
                           <td>Sinaai-Waas</td>
                           <td>Sinaai-Waas</td>
                           <td class="text-primary">$23,789</td>
-                        </tr>
-                                           
+                        </tr> -->
+
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
             </div>
-          
+
           </div>
         </div>
       </div>
@@ -181,8 +193,8 @@
                   About Us
                 </a>
               </li>
-              
-              
+
+
             </ul>
           </nav>
           <div class="copyright float-right">
@@ -251,9 +263,9 @@
             Use if needed
           </a>
         </li>
-      
+
         <li class="header-title">choose sidebar color and background!</li>
-      
+
       </ul>
     </div>
   </div>
@@ -301,8 +313,8 @@
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="/public/css/admindashboard/demo/demo.js"></script>
   <script>
-    $(document).ready(function() {
-      $().ready(function() {
+    $(document).ready(function () {
+      $().ready(function () {
         $sidebar = $('.sidebar');
 
         $sidebar_img_container = $sidebar.find('.sidebar-background');
@@ -322,7 +334,7 @@
 
         }
 
-        $('.fixed-plugin a').click(function(event) {
+        $('.fixed-plugin a').click(function (event) {
           // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
           if ($(this).hasClass('switch-trigger')) {
             if (event.stopPropagation) {
@@ -333,7 +345,7 @@
           }
         });
 
-        $('.fixed-plugin .active-color span').click(function() {
+        $('.fixed-plugin .active-color span').click(function () {
           $full_page_background = $('.full-page-background');
 
           $(this).siblings().removeClass('active');
@@ -354,7 +366,7 @@
           }
         });
 
-        $('.fixed-plugin .background-color .badge').click(function() {
+        $('.fixed-plugin .background-color .badge').click(function () {
           $(this).siblings().removeClass('active');
           $(this).addClass('active');
 
@@ -365,7 +377,7 @@
           }
         });
 
-        $('.fixed-plugin .img-holder').click(function() {
+        $('.fixed-plugin .img-holder').click(function () {
           $full_page_background = $('.full-page-background');
 
           $(this).parent('li').siblings().removeClass('active');
@@ -375,7 +387,7 @@
           var new_image = $(this).find("img").attr('src');
 
           if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
-            $sidebar_img_container.fadeOut('fast', function() {
+            $sidebar_img_container.fadeOut('fast', function () {
               $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
               $sidebar_img_container.fadeIn('fast');
             });
@@ -384,7 +396,7 @@
           if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
             var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
 
-            $full_page_background.fadeOut('fast', function() {
+            $full_page_background.fadeOut('fast', function () {
               $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
               $full_page_background.fadeIn('fast');
             });
@@ -403,7 +415,7 @@
           }
         });
 
-        $('.switch-sidebar-image input').change(function() {
+        $('.switch-sidebar-image input').change(function () {
           $full_page_background = $('.full-page-background');
 
           $input = $(this);
@@ -435,7 +447,7 @@
           }
         });
 
-        $('.switch-sidebar-mini input').change(function() {
+        $('.switch-sidebar-mini input').change(function () {
           $body = $('body');
 
           $input = $(this);
@@ -450,7 +462,7 @@
 
             $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
 
-            setTimeout(function() {
+            setTimeout(function () {
               $('body').addClass('sidebar-mini');
 
               md.misc.sidebar_mini_active = true;
@@ -458,12 +470,12 @@
           }
 
           // we simulate the window Resize so the charts will get updated in realtime.
-          var simulateWindowResize = setInterval(function() {
+          var simulateWindowResize = setInterval(function () {
             window.dispatchEvent(new Event('resize'));
           }, 180);
 
           // we stop the simulation of Window Resize after the animations are completed
-          setTimeout(function() {
+          setTimeout(function () {
             clearInterval(simulateWindowResize);
           }, 1000);
 

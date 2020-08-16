@@ -1,22 +1,20 @@
 const router = require("express").Router();
-const conetModel = require("../../models/Conet");
+const conexPlus = require("../../models/conexplus");
 
-router.post("/conet", (req, res) => {
+router.post("/conexplus", (req, res) => {
   const email = req.body.email;
-  conetModel.findOne(
+  conexPlus.findOne(
     {
       Email: email,
     },
-    (err, connetEmail) => {
-      if (!connetEmail) {
-        const newReg = conetModel({
+    (err, conexplusEmail) => {
+      if (!conexplusEmail) {
+        const newReg = conexPlus({
           Name: req.body.Name,
           Phonenumber: req.body.Phonenumber,
           Email: req.body.Email,
-          NativePlace: req.body.NativePlace,
-          Expertise: req.body.Expertise,
-          Workrole: req.body.Workrole,
-          Suggestion: req.body.Suggestion,
+          Address: req.body.Address,
+          Description: req.body.Description,
         });
         newReg.save((err, user) => {
           if (err) {
@@ -27,8 +25,8 @@ router.post("/conet", (req, res) => {
         });
       } else {
         return res.status(404).json({
-          msg: "User Found with this email",
-        });
+            msg: "User Found with this email",
+          });
       }
     }
   );
