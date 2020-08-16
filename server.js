@@ -92,6 +92,34 @@ app.get("/contact", (req, res) => {
   res.render("pages/contact");
 });
 
+app.get("/privacy", (req, res) => {
+  res.render("pages/privacy");
+});
+
+app.get("/termsofservice", (req, res) => {
+  res.render("pages/termsofservice");
+});
+
+app.get("/carfp", (req, res) => {
+  res.render("pages/carfp");
+});
+
+app.get("/workshopdetails", (req, res) => {
+  res.render("pages/workshopDetails");
+});
+
+app.get("/conetregistration", (req, res) => {
+  res.render("pages/Registration_Pages/conetReg");
+});
+
+app.get("/conexplusregistration", (req, res) => {
+  res.render("pages/Registration_Pages/conexplusReg");
+});
+
+app.get("/conexspeakerregistration", (req, res) => {
+  res.render("pages/Registration_Pages/conexspeakerReg");
+});
+
 app.get("/AdminLogin", csrfProtection, (req, res) => {
   res.render("pages/adminLogin", { csrfToken: req.csrfToken() });
 });
@@ -128,7 +156,7 @@ app.get(
   }),
   async (req, res) => {
     const filter = {};
-    const all = await  conexplusModel.find(filter);
+    const all = await conexplusModel.find(filter);
     console.log(all);
     res.render("pages/conexplus", {
       data: all,
