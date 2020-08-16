@@ -72,6 +72,26 @@ app.get("/", (req, res) => {
   res.render("pages/index");
 });
 
+app.get("/workshop", (req, res) => {
+  res.render("pages/workshop");
+});
+
+app.get("/speaker", (req, res) => {
+  res.render("pages/speaker");
+});
+
+app.get("/conexion", (req, res) => {
+  res.render("pages/conexion");
+});
+
+app.get("/about", (req, res) => {
+  res.render("pages/about");
+});
+
+app.get("/contact", (req, res) => {
+  res.render("pages/contact");
+});
+
 app.get("/AdminLogin", csrfProtection, (req, res) => {
   res.render("pages/adminLogin", { csrfToken: req.csrfToken() });
 });
