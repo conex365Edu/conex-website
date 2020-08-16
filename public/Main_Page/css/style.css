@@ -1135,7 +1135,7 @@ h3 {
 
 /* line 29,  header.scss */
 .header-area .main-header-area .logo-img {
-  text-align: center;
+  text-align: left;
 }
 
 @media (max-width: 767px) {
@@ -1219,13 +1219,14 @@ h3 {
 /* line 81,  header.scss */
 .header-area .main-header-area .main-menu {
   text-align: center;
+
 }
 
 /* line 84,  header.scss */
 .header-area .main-header-area .main-menu ul li {
   display: inline-block;
   position: relative;
-  margin-right: 50px;
+  margin-right: 20px;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -1249,7 +1250,7 @@ h3 {
   text-transform: capitalize;
   font-weight: 400;
   display: inline-block;
-  padding: 34px 0;
+  padding: 30px 0;
   font-family: "Poppins", sans-serif;
   position: relative;
   text-transform: capitalize;
