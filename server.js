@@ -14,6 +14,7 @@ const db = require("./connection/config");
 const admin = require("./routes/api/adminLogin");
 const conet = require("./routes/api/conet");
 const conexplus = require("./routes/api/conexplus");
+const conexspeaker = require("./routes/api/conexspeaker");
 
 //CSRF Token Dependencies
 var csrf = require("csurf");
@@ -47,6 +48,7 @@ app.use(volleyball);
 app.use("/api/auth", admin);
 app.use("/api/registration", conet);
 app.use("/api/registration", conexplus);
+app.use("/api/registration", conexspeaker);
 
 //Connect to MongoDB
 mongoose.connect(

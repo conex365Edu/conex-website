@@ -8,7 +8,7 @@ const conetSchema = new Schema({
     max: 50,
   },
   Phonenumber: {
-    type: String,
+    type: Number,
   },
   Email: {
     type: String,

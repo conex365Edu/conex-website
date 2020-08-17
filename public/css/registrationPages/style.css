@@ -62,6 +62,9 @@ button:focus {
 .heading {
     margin-bottom: 60px !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#763A7A;
+    font-size:30px
+    
 }
 
 ::placeholder {
@@ -85,7 +88,9 @@ button:focus {
 
 .msg-info {
     padding-left: 15px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    color:#38300A;
+    font-size:23px;
 }
 
 .btn-color {

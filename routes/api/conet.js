@@ -1,16 +1,18 @@
 const router = require("express").Router();
 const conetModel = require("../../models/Conet");
 const { conetregisterValidation } = require("../../validation/validation");
+const nodemailer = require("nodemailer");
+const dotenv = require("dotenv");
+dotenv.config();
 
 router.post("/conet", (req, res) => {
   const { error } = conetregisterValidation(req.body);
   res.setHeader("Content-Type", "application/json");
   if (error) {
-    console.log(error.details[0].message)
+    console.log(error.details[0].message);
     return res.status(400).json({
       error: error.details[0].message,
     });
-    
   }
 
   const email = req.body.Email;
@@ -37,8 +39,29 @@ router.post("/conet", (req, res) => {
             res.status(200).send(user);
             console.log(user);
 
+            const username = process.env.user;
+            const password = process.env.password;
             //Send the Mail to the the client
-            console.log(user.Email)
+            const mailTransporter = nodemailer.createTransport({
+              service: process.env.service,
+              auth: {
+                user: username,
+                pass: password,
+              },
+            });
+
+            const mailDetails = {
+              from: "paulprince24542@gmail.com",
+              to: user.Email,
+              subject: "Welcome to Conet Platform Provided by Conex365 ",
+              body: `Hi ${user.Email}
+              Welcome to Conet Platform...We are delighted to serve you as our top priority client.
+              Our support team will be in touch with you within 12hrs`,
+            };
+            mailTransporter.sendMail(mailDetails, function (err, data) {
+              if (err) throw err;
+              console.log("Email was send successfully" + data.response);
+            });
           }
         });
       } else {

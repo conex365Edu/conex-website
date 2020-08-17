@@ -54,7 +54,18 @@ async function conetReg() {
   } else {
     emailError.style.display = "none";
   }
+  
+  if (res._id) {
+    $("#myModal").modal("show");
+  } else {
+    $("#myModal").modal("hide");
+  }
+  
 }
+
+
+
+function registerValid() {}
 
 function onloadError() {
   const errorAlert = document.getElementById("erroralert");
@@ -62,7 +73,7 @@ function onloadError() {
   const emailAlert = document.getElementById("emailalert");
   emailAlert.style.display = "none";
   const emailError = document.getElementById("emailerror");
-  emailError.style.display = "none"
+  emailError.style.display = "none";
 }
 
 // function onloadError() {

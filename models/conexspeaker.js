@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const conetplusSchema = new Schema(
+const conexspeakerSchema = new Schema(
   {
     Name: {
       type: String,
@@ -14,16 +14,19 @@ const conetplusSchema = new Schema(
     Email: {
       type: String,
     },
-    Address: {
+    Location: {
       type: String,
     },
-    Description: {
+    Expertise: {
       type: String,
+    },
+    Charge: {
+      type: Number,
     },
   },
   {
-    collection: "conexplus",
+    collection: "conexspeaker",
   }
 );
 
-module.exports = Profile = mongoose.model("conexplus", conetplusSchema);
+module.exports = Profile = mongoose.model("conexspeaker", conexspeakerSchema);

@@ -29,7 +29,7 @@
                     <div class="row justify-content-center my-auto">
                         <div class="col-md-8 col-10 my-5">
                             <div class="row justify-content-center px-3 mb-3"></div>
-                            <h3 class="mb-5 text-center heading" style="font-family: Aclonica;">Conet Registeration</h3>
+                            <h3 class="mb-5 text-center heading" style="font-family: Aclonica;">Conet Registration</h3>
                             <h5 class="msg-info">Enter Your Details</h5>
                             <div class="alert alert-danger" id="erroralert" role="alert">
                             </div>
@@ -38,7 +38,7 @@
                             <div class="alert alert-danger" id="emailerror" role="alert">Email is in use
                             </div>
                             <div class="form-group"> <label class="form-control-label text-muted">Name</label>
-                                <input type="text" id="name" name="name"  placeholder="" class="form-control">
+                                <input type="text" id="name" name="name" placeholder="" class="form-control">
                             </div>
                             <div class="form-group"> <label class="form-control-label text-muted">Phone Number</label>
                                 <input type="text" id="phonenumber" name="phonenumber" placeholder=""
@@ -50,21 +50,45 @@
                             </div>
                             <div class="form-group"> <label class="form-control-label text-muted">Area of
                                     expertise</label>
-                                <input type="text" id="expertise" name="expertise" placeholder="" class="form-control">
+                                <input type="text" id="expertise" name="expertise" placeholder="" class="form-control"></input>
                             </div>
                             <div class="form-group"> <label class="form-control-label text-muted">What Describes
                                     You</label>
-                                <input type="text" id="description" name="description" placeholder=""
-                                    class="form-control"> </div>
+                                <textarea type="text" id="description" name="description" placeholder=""
+                                    class="form-control"></textarea> </div>
 
                             <div class="form-group"> <label class="form-control-label text-muted">Suggestion</label>
-                                <input type="text" id="suggestion" name="suggestion" placeholder=""
-                                    class="form-control"> </div>
+                                <textarea type="text" id="suggestion" name="suggestion" placeholder=""
+                                    class="form-control"></textarea> </div>
 
 
                             <div class="row justify-content-center my-3 px-3"> <button onclick="conetReg()"
                                     class="btn-block btn-color">Register
                                 </button> </div>
+                            <div class="modal fade" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">You have been successfully Registered</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            Thank You For Registering Conet.. Please check your mail for more details regarding the Conet service
+                                        </div>
+
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                             <!-- <div class="row justify-content-center my-2"> <a href="#"><small class="text-muted">Forgot
                                         Password?</small></a> </div> -->
                         </div>
