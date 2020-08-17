@@ -16,11 +16,12 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
+    <script src="/public/Main_Page/frontend_Js/conetReg.js"></script>
     <title>Conet Registeration</title>
     <link rel="stylesheet" href="/public/css/registrationPages/style.css">
 </head>
 
-<body>
+<body onload="emailError()">
     <div class="container px-4 py-5 mx-auto">
         <div class="card card0">
             <div class="d-flex flex-lg-row flex-column-reverse">
@@ -31,30 +32,43 @@
                             <h3 class="mb-5 text-center heading" style="font-family: Aclonica;">Conet Registeration</h3>
                             <h5 class="msg-info">Enter Your Details</h5>
                             <div class="form-group"> <label class="form-control-label text-muted">Name</label>
-                                <input type="text" id="email" name="email" placeholder=""
-                                    class="form-control"> </div>
+                                <input type="text" id="name" name="name" placeholder="" class="form-control">
+                            </div>
+                            <div class="alert alert-danger" id="namealert" role="alert">
+                                Email is already in use
+                            </div>
                             <div class="form-group"> <label class="form-control-label text-muted">Phone Number</label>
-                                <input type="text" id="email" name="email" placeholder=""
+                                <input type="text" id="phonenumber" name="phonenumber" placeholder=""
                                     class="form-control"> </div>
+                            <div class="alert alert-danger" id="phonealert" role="alert">
+                                Phone Number is Empty
+                            </div>
                             <div class="form-group"> <label class="form-control-label text-muted">Email</label>
-                                <input type="text" id="email" name="email" placeholder=""
-                                    class="form-control"> </div>
+                                <input type="text" id="email" name="email" placeholder="" class="form-control"> </div>
+                            <div class="alert alert-danger" id="emailalert" role="alert">
+                                Email is already in use
+                            </div>
 
                             <div class="form-group"> <label class="form-control-label text-muted">Native Place</label>
-                                <input type="test" id="psw" name="psw" placeholder="" class="form-control">
+                                <input type="test" id="native" name="native" placeholder="" class="form-control">
                             </div>
-                            <div class="form-group"> <label class="form-control-label text-muted">Area of expertise</label>
-                                <input type="text" id="email" name="email" placeholder=""
+                            <div class="form-group"> <label class="form-control-label text-muted">Area of
+                                    expertise</label>
+                                <input type="text" id="expertise" name="expertise" placeholder="" class="form-control">
+                            </div>
+                            <div class="form-group"> <label class="form-control-label text-muted">What Describes
+                                    You</label>
+                                <input type="text" id="description" name="description" placeholder=""
                                     class="form-control"> </div>
-                            <div class="form-group"> <label class="form-control-label text-muted">What Describes You</label>
-                                <input type="text" id="email" name="email" placeholder=""
-                                    class="form-control"> </div>
-                                    <div class="form-group"> <label class="form-control-label text-muted">Suggestion</label>
-                                        <input type="text" id="email" name="email" placeholder=""
-                                             class="form-control"> </div>
 
-                            <div class="row justify-content-center my-3 px-3"> <button class="btn-block btn-color">Register
-                                    </button> </div>
+                            <div class="form-group"> <label class="form-control-label text-muted">Suggestion</label>
+                                <input type="text" id="suggestion" name="suggestion" placeholder=""
+                                    class="form-control"> </div>
+
+
+                            <div class="row justify-content-center my-3 px-3"> <button onclick="conetReg()"
+                                    class="btn-block btn-color">Register
+                                </button> </div>
                             <!-- <div class="row justify-content-center my-2"> <a href="#"><small class="text-muted">Forgot
                                         Password?</small></a> </div> -->
                         </div>
@@ -66,8 +80,14 @@
                 </div>
                 <div class="card card2">
                     <div class="my-auto mx-md-5 px-md-5 right">
-                        <h3 class="text-white">We are more than just a company</h3> <br><small class="text-white" style="font-size: 18px;">We want talented trainers to step forward and enlighten our target audiences. This knowledge has the capacity to change the world and help our young professionals support their families and aid in this economic crisis. 
-                            Be the member of the highly respected and dynamic panel team. Exchange knowledge, spread astuteness and also reap the various benefits. Meet people from national and international platforms, network, train the ambitious gems that are ignored by the Industry and stretch your own learning curve as well.
+                        <h3 class="text-white">We are more than just a company</h3> <br><small class="text-white"
+                            style="font-size: 18px;">We want talented trainers to step forward and enlighten our target
+                            audiences. This knowledge has the capacity to change the world and help our young
+                            professionals support their families and aid in this economic crisis.
+                            Be the member of the highly respected and dynamic panel team. Exchange knowledge, spread
+                            astuteness and also reap the various benefits. Meet people from national and international
+                            platforms, network, train the ambitious gems that are ignored by the Industry and stretch
+                            your own learning curve as well.
                             CoNet with Conex! We promise to add value to your life!</small>
                     </div>
                 </div>
