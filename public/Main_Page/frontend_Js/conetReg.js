@@ -29,33 +29,45 @@ async function conetReg() {
 
   const res = await rawResponse.json();
   console.log(res.Email);
-  console.log(res.error)
-  const emailalert = document.getElementById("emailalert");
+  console.log(res.error);
 
-  console.log(res.msg);
-  if (res.msg) {
-    emailalert.style.display = "block";
+  //Check For Validation Errors
+  const errorAlert = document.getElementById("erroralert");
+  if (res.error) {
+    errorAlert.style.display = "block";
+    errorAlert.innerHTML = res.error;
   } else {
-    emailalert.style.display = "none";
+    errorAlert.style.display = "none";
+  }
+  const emailAlert = document.getElementById("emailalert");
+  if (res.Email) {
+    emailAlert.style.display = "block";
+    emailAlert.innerHTML = res.Email;
+  } else {
+    emailAlert.style.display = "none";
   }
 
+  const emailError = document.getElementById("emailerror");
+  if (res.msg) {
+    emailError.style.display = "block";
+    emailError.innerHTML = "Email is currently in use";
+  } else {
+    emailError.style.display = "none";
+  }
 }
 
-function emailError() {
-  const emailalert = document.getElementById("emailalert");
-  emailalert.style.display = "none";
+function onloadError() {
+  const errorAlert = document.getElementById("erroralert");
+  errorAlert.style.display = "none";
+  const emailAlert = document.getElementById("emailalert");
+  emailAlert.style.display = "none";
+  const emailError = document.getElementById("emailerror");
+  emailError.style.display = "none"
 }
 
-function contentValidation() {
-  const name = document.getElementById("nameAlert");
-  const phone = document.getElementById("phoneAlert");
-  const email = document.getElementById("email");
-  const native = document.getElementById("native");
-  const expertise = document.getElementById("expertise");
-  const description = document.getElementById("description");
-  const suggestion = document.getElementById("suggestion");
-
-  
-}
-
-contentValidation()
+// function onloadError() {
+//   const emailalert = document.getElementById("emailalert");
+//   const namealert = document.getElementById("erroralert");
+//   emailalert.style.display = "none";
+//   erroralert.style.display = "none";
+// }

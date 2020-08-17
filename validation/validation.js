@@ -10,7 +10,7 @@ const conetregisterValidation = (data) => {
       Expertise: Joi.string().min(6).required(),
       Workrole: Joi.string().min(6).required(),
       Suggestion: Joi.string().min(6).required(),
-    }).unknown();
+    });
   
     return schema.validate(data);
   };

@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="/public/css/registrationPages/style.css">
 </head>
 
-<body onload="emailError()">
+<body onload="onloadError()">
     <div class="container px-4 py-5 mx-auto">
         <div class="card card0">
             <div class="d-flex flex-lg-row flex-column-reverse">
@@ -31,24 +31,20 @@
                             <div class="row justify-content-center px-3 mb-3"></div>
                             <h3 class="mb-5 text-center heading" style="font-family: Aclonica;">Conet Registeration</h3>
                             <h5 class="msg-info">Enter Your Details</h5>
-                            <div class="form-group"> <label class="form-control-label text-muted">Name</label>
-                                <input type="text" id="name" name="name" placeholder="" class="form-control">
+                            <div class="alert alert-danger" id="erroralert" role="alert">
                             </div>
-                            <div class="alert alert-danger" id="namealert" role="alert">
-                                Email is already in use
+                            <div class="alert alert-danger" id="emailalert" role="alert">Email is in use
+                            </div>
+                            <div class="alert alert-danger" id="emailerror" role="alert">Email is in use
+                            </div>
+                            <div class="form-group"> <label class="form-control-label text-muted">Name</label>
+                                <input type="text" id="name" name="name"  placeholder="" class="form-control">
                             </div>
                             <div class="form-group"> <label class="form-control-label text-muted">Phone Number</label>
                                 <input type="text" id="phonenumber" name="phonenumber" placeholder=""
                                     class="form-control"> </div>
-                            <div class="alert alert-danger" id="phonealert" role="alert">
-                                Phone Number is Empty
-                            </div>
                             <div class="form-group"> <label class="form-control-label text-muted">Email</label>
                                 <input type="text" id="email" name="email" placeholder="" class="form-control"> </div>
-                            <div class="alert alert-danger" id="emailalert" role="alert">
-                                Email is already in use
-                            </div>
-
                             <div class="form-group"> <label class="form-control-label text-muted">Native Place</label>
                                 <input type="test" id="native" name="native" placeholder="" class="form-control">
                             </div>
