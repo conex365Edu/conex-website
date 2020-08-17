@@ -36,6 +36,9 @@ router.post("/conet", (req, res) => {
             res.setHeader("Content-Type", "application/json");
             res.status(200).send(user);
             console.log(user);
+
+            //Send the Mail to the the client
+            console.log(user.Email)
           }
         });
       } else {

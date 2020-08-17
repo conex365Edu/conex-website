@@ -39,13 +39,13 @@ async function conetReg() {
   } else {
     errorAlert.style.display = "none";
   }
-  const emailAlert = document.getElementById("emailalert");
-  if (res.Email) {
-    emailAlert.style.display = "block";
-    emailAlert.innerHTML = res.Email;
-  } else {
-    emailAlert.style.display = "none";
-  }
+  // const emailAlert = document.getElementById("emailalert");
+  // if (res.Email) {
+  //   emailAlert.style.display = "block";
+  //   emailAlert.innerHTML = res.Email;
+  // } else {
+  //   emailAlert.style.display = "none";
+  // }
 
   const emailError = document.getElementById("emailerror");
   if (res.msg) {
