@@ -102,17 +102,10 @@ router.delete("/conexplus/:id", (req, res) => {
     .findOneAndRemove({
       _id: req.params.id,
     })
-    .then((err, user) => {
-      if (err) throw err;
-      if (!user) {
-        res.status(200).json({
-          success: "True",
-        });
-      } else {
-        res.json({
-          success: "Delete Failed",
-        });
-      }
+    .then(() => {
+      res.json({
+        success: true,
+      });
     })
     .catch((err) => {
       if (err) throw err;

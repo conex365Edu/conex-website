@@ -148,7 +148,7 @@
                       <tbody>
                         <% data.forEach(function (fetchData) { %>
                         <tr>
-                          <td><%= fetchData.id %></td>
+                          <td id="idfetch"><%= fetchData.id %></td>
                           <td><%= fetchData.Name %> </td>
                           <td><%= fetchData.Phonenumber %></td>
                           <td><%= fetchData.Email %></td>
@@ -156,6 +156,8 @@
                           <td class="text-primary"><%= fetchData.Description %></td>
                           <!-- <input type="hidden" id="userId" value= > -->
                           <script>
+                            const id = document.getElementById("idfetch").innerHTML;
+                            console.log(id)
                             function deleteUser() {
                               var url = "/api/registration/conexplus/<%= fetchData.id %>"
                               fetch(url, {
@@ -171,7 +173,6 @@
                           <td><button type="button" class="btn btn-dark" onclick="deleteUser()">Delete</button></td>
                         </tr>
                         <% }) %>
-
                       </tbody>
                     </table>
                   </div>
