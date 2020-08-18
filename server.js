@@ -53,7 +53,7 @@ app.use("/api/registration", conexspeaker);
 //Connect to MongoDB
 mongoose.connect(
   db.mongoURL,
-  { useNewUrlParser: true, useUnifiedTopology: true },
+  { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false },
   (err) => {
     if (err) throw err;
     console.log("MongoDB connected Successfully");

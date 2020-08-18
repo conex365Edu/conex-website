@@ -69,32 +69,54 @@ router.post("/conexplus", (req, res) => {
   );
 });
 
-router.delete(
-  "/conexplus/:id",
-  // passport.authenticate("jwt", {
-  //   session: false,
-  // }),
-  (req, res) => {
-    conexPlus
-      .findOneAndDelete({
-        id: req.params.id,
-      })
-      .then((err, user) => {
-        if (err) throw err;
-        if (user) {
-          res.status(200).json({
-            activity: "delete successfully",
-          });
-        } else {
-          res.status(404).json({
-            failed: "delete unsuccessfull",
-          });
-        }
-      })
-      .catch((err) => {
-        if (err) throw err;
-      });
-  }
-);
+// router.delete(
+//   "/conexplus/:id",
+//   // passport.authenticate("jwt", {
+//   //   session: false,
+//   // }),
+//   (req, res) => {
+//     conexPlus
+//       .findOneAndRemove({
+//         _id: req.params.id,
+//       })
+//       .then((err, user) => {
+//         if (err) throw err;
+//         if (user) {
+//           res.status(200).json({
+//             activity: "delete successfully",
+//           });
+//         } else {
+//           res.status(404).json({
+//             failed: "delete unsuccessfull",
+//           });
+//         }
+//       })
+//       .catch((err) => {
+//         if (err) throw err;
+//       });
+//   }
+// );
+router.delete("/conexplus/:id", (req, res) => {
+  console.log(req.params.id);
+  conexPlus
+    .findOneAndRemove({
+      _id: req.params.id,
+    })
+    .then((err, user) => {
+      if (err) throw err;
+      if (!user) {
+        res.status(200).json({
+          success: "True",
+        });
+      } else {
+        res.json({
+          success: "Delete Failed",
+        });
+      }
+    })
+    .catch((err) => {
+      if (err) throw err;
+    });
+});
 
 module.exports = router;
