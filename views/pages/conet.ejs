@@ -144,6 +144,7 @@
                         <th>Area Of Expertise</th>
                         <th>What Describes You</th>
                         <th>Suggestions</th>
+                        <th></th>
                       </thead>
                       <tbody>
                         <% data.forEach(function (fetchData) { %>
@@ -156,6 +157,7 @@
                           <td><%= fetchData.Expertise%></td>
                           <td><%= fetchData.Workrole%></td>
                           <td class="text-primary"><%= fetchData.Suggestion%></td>
+                          <td><button type="button" class="btn btn-dark">Delete</button></td>
                         </tr>
                         <% }) %>
                         <!-- <tr>
