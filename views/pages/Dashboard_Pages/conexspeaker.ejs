@@ -17,6 +17,7 @@
   <link href="/public/css/admindashboard/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="/public/css/admindashboard/demo/demo.css" rel="stylesheet" />
+  <script src="/public/Main_Page/frontend_Js/conexspeakerReg.js"></script>
 </head>
 
 <body class="">
@@ -141,27 +142,23 @@
                         <th>Charge</th>
                         </thead>
                       <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td>Dakota Rice</td>
-                          <td>Niger</td>
-                          <td>Oud-Turnhout</td>
-                          <td>Oud-Turnhout</td>
-                          <td>Oud-Turnhout</td>
-                          
-                          <td class="text-primary">$36,738</td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td>Minerva Hooper</td>
-                          <td>Curaçao</td>
-                          <td>Sinaai-Waas</td>
-                          <td>Sinaai-Waas</td>
-                          <td>Sinaai-Waas</td>
-                         
-                          <td class="text-primary">$23,789</td>
-                        </tr>
-                                           
+                        <% data.forEach(function (fetchData) { %>
+                          <tr>
+                            <td id="idfetch"><%= fetchData.id %></td>
+                            <td><%= fetchData.Name %> </td>
+                            <td><%= fetchData.Phonenumber %></td>
+                            <td><%= fetchData.Email %></td>
+                            <td><%= fetchData.Location %></td>
+                            <td class="text-primary"><%= fetchData.Expertise %></td>
+                            <td class="text-primary"><%= fetchData.Charge %></td>
+                            <td>
+                              <button id="<%= fetchData.id %>" type="button" class="btn btn-dark"
+                                onclick="deleteUser(this.id)">Delete</button>
+                            </td>
+  
+                          </tr>
+                          <% }) %>
+                        </tr>         
                       </tbody>
                     </table>
                   </div>

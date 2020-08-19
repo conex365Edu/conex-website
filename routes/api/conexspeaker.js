@@ -69,4 +69,19 @@ router.post("/conexspeaker", (req, res) => {
   );
 });
 
+router.delete("/conexplusspeaker/:id", (req, res) => {
+  console.log(req.params.id);
+  conexspeakermodel
+    .findOneAndRemove({
+      _id: req.params.id,
+    })
+    .then(() => {
+      res.json({
+        success: true,
+      });
+    })
+    .catch((err) => {
+      if (err) throw err;
+    });
+});
 module.exports = router;

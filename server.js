@@ -27,6 +27,7 @@ app.set("view engine", "ejs");
 const conetModel = require("./models/Conet");
 const conexplusModel = require("./models/conexplus");
 const adminModel = require("./models/Admin");
+const speakerModel = require("./models/conexspeaker");
 
 //Middleware for bodyparser
 app.use(bodyParser.json());
@@ -50,6 +51,7 @@ app.use("/api/auth", admin);
 app.use("/api/registration", conet);
 app.use("/api/registration", conexplus);
 app.use("/api/registration", conexspeaker);
+app.use(require('express-status-monitor')());
 
 //Connect to MongoDB
 mongoose.connect(
@@ -172,8 +174,13 @@ app.get(
   passport.authenticate("jwt", {
     session: false,
   }),
-  (req, res) => {
-    res.render("pages/Dashboard_Pages/conexspeaker");
+  async (req, res) => {
+    const filter = {};
+    const all = await speakerModel.find(filter);
+    console.log(all);
+    res.render("pages/Dashboard_Pages/conexspeaker", {
+      data: all,
+    });
   }
 );
 

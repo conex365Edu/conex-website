@@ -71,7 +71,7 @@ function onloadError() {
 
 function deleteUser(id) {
   console.log(id);
-  var url = `/api/registration/conexplus/${id}`;
+  var url = `/api/registration/conexplusspeaker/${id}`;
   fetch(url, {
     method: "DELETE",
   }).then((response) => {
