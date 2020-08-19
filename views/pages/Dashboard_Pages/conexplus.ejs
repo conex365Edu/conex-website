@@ -155,22 +155,11 @@
                           <td><%= fetchData.Address %></td>
                           <td class="text-primary"><%= fetchData.Description %></td>
                           <!-- <input type="hidden" id="userId" value= > -->
-                          <script>
-                            const id = document.getElementById("idfetch").innerHTML;
-                            console.log(id)
-                            function deleteUser() {
-                              var url = "/api/registration/conexplus/<%= fetchData.id %>"
-                              fetch(url, {
-                                method: "DELETE"
-                              }).then(response => {
-                                response.json().then(json => {
-                                  console.log(json);
-                                  location.reload();
-                                })
-                              })
-                            }
-                          </script>
-                          <td><button type="button" class="btn btn-dark" onclick="deleteUser()">Delete</button></td>
+                          <td>
+                            <button id="<%= fetchData.id %>" type="button" class="btn btn-dark"
+                              onclick="deleteUser(this.id)">Delete</button>
+                          </td>
+
                         </tr>
                         <% }) %>
                       </tbody>

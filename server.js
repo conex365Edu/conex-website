@@ -26,6 +26,7 @@ app.set("view engine", "ejs");
 //Mongoose Model
 const conetModel = require("./models/Conet");
 const conexplusModel = require("./models/conexplus");
+const adminModel = require("./models/Admin");
 
 //Middleware for bodyparser
 app.use(bodyParser.json());
@@ -132,7 +133,7 @@ app.get(
     session: false,
   }),
   (req, res) => {
-    res.render("pages/adminDashboard");
+    res.render("pages/Dashboard_Pages/adminDashboard");
   }
 );
 
@@ -145,7 +146,7 @@ app.get(
     const filter = {};
     const all = await conetModel.find(filter);
     console.log(all);
-    res.render("pages/conet", {
+    res.render("pages/Dashboard_Pages/conet", {
       data: all,
     });
   }
@@ -160,7 +161,7 @@ app.get(
     const filter = {};
     const all = await conexplusModel.find(filter);
     console.log(all);
-    res.render("pages/conexplus", {
+    res.render("pages/Dashboard_Pages/conexplus", {
       data: all,
     });
   }
@@ -172,7 +173,7 @@ app.get(
     session: false,
   }),
   (req, res) => {
-    res.render("pages/conexspeaker");
+    res.render("pages/Dashboard_Pages/conexspeaker");
   }
 );
 
@@ -181,8 +182,13 @@ app.get(
   passport.authenticate("jwt", {
     session: false,
   }),
-  (req, res) => {
-    res.render("pages/resetpassword");
+  async (req, res) => {
+    const filter = {};
+    const all = await adminModel.find(filter);
+    console.log(all);
+    res.render("pages/Dashboard_Pages/resetpassword", {
+      data: all,
+    });
   }
 );
 

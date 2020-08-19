@@ -82,3 +82,15 @@ function onloadError() {
 //   emailalert.style.display = "none";
 //   erroralert.style.display = "none";
 // }
+function deleteUser(id) {
+  console.log(id);
+  var url = `/api/registration/conet/${id}`
+  fetch(url, {
+    method: "DELETE"
+  }).then(response => {
+    response.json().then(json => {
+      console.log(json);
+      location.reload();
+    })
+  })
+}

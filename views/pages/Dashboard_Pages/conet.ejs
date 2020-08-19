@@ -18,6 +18,7 @@
   <link href="/public/css/admindashboard/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="/public/css/admindashboard/demo/demo.css" rel="stylesheet" />
+  <script src="/public/Main_Page/frontend_Js/conetReg.js"></script>
 </head>
 
 <body class="">
@@ -149,7 +150,7 @@
                       <tbody>
                         <% data.forEach(function (fetchData) { %>
                         <tr>
-                          <td><%= %> </td>
+                          <td><%=fetchData.id %></td>
                           <td><%= fetchData.Name%></td>
                           <td><%= fetchData.Phonenumber%></td>
                           <td><%= fetchData.Email%></td>
@@ -157,7 +158,11 @@
                           <td><%= fetchData.Expertise%></td>
                           <td><%= fetchData.Workrole%></td>
                           <td class="text-primary"><%= fetchData.Suggestion%></td>
-                          <td><button type="button" class="btn btn-dark">Delete</button></td>
+                          <td>
+                            <button id="<%= fetchData.id %>" type="button" class="btn btn-dark"
+                              onclick="deleteUser(this.id)">Delete</button>
+                          </td>
+
                         </tr>
                         <% }) %>
                         <!-- <tr>

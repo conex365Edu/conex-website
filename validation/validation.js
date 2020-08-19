@@ -27,5 +27,19 @@ const conexplusregister = (data) => {
   return schema.validate(data);
 };
 
+const conexplusspeaker = (data) => {
+  const schema = Joi.object({
+    Name: Joi.string().required(),
+    Phonenumber: Joi.number().min(9).required(),
+    Email: Joi.string().min(6).required().email(),
+    Location: Joi.string().min(6).required(),
+    Expertise: Joi.string().min(6).required(),
+    Charge: Joi.string().min(6).required(),
+  });
+
+  return schema.validate(data);
+};
+
 module.exports.conetregisterValidation = conetregisterValidation;
 module.exports.conexplusregister = conexplusregister;
+module.exports.conexplusspeaker = conexplusspeaker;

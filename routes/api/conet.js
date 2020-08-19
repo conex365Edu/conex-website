@@ -75,4 +75,20 @@ router.post("/conet", (req, res) => {
   );
 });
 
+router.delete("/conet/:id", (req, res) => {
+  console.log(req.params.id);
+  conetModel
+    .findOneAndRemove({
+      _id: req.params.id,
+    })
+    .then(() => {
+      res.json({
+        success: true,
+      });
+    })
+    .catch((err) => {
+      if (err) throw err;
+    });
+});
+
 module.exports = router;
