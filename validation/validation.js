@@ -34,7 +34,7 @@ const conexplusspeaker = (data) => {
     Email: Joi.string().min(6).required().email(),
     Location: Joi.string().min(6).required(),
     Expertise: Joi.string().min(6).required(),
-    Charge: Joi.string().min(6).required(),
+    Charge: Joi.string().min(1).required(),
   });
 
   return schema.validate(data);
