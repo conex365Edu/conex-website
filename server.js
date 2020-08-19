@@ -51,7 +51,7 @@ app.use("/api/auth", admin);
 app.use("/api/registration", conet);
 app.use("/api/registration", conexplus);
 app.use("/api/registration", conexspeaker);
-app.use(require('express-status-monitor')());
+app.use(require("express-status-monitor")());
 
 //Connect to MongoDB
 mongoose.connect(
@@ -134,8 +134,14 @@ app.get(
   passport.authenticate("jwt", {
     session: false,
   }),
-  (req, res) => {
-    res.render("pages/Dashboard_Pages/adminDashboard");
+  async (req, res) => {
+    const filter = {};
+    const conet = await conetModel.find(filter);
+    const conexPlus = await conexplusModel.find(filter);
+    console.log(conet);
+    res.render("pages/Dashboard_Pages/adminDashboard", {
+      data1: conet,
+    });
   }
 );
 

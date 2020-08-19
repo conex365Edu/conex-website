@@ -36,7 +36,7 @@ router.post("/conet", (req, res) => {
             console.log(err);
           } else {
             res.setHeader("Content-Type", "application/json");
-            res.status(200).send(user);
+            res.status(200).json(user);
             console.log(user);
 
             const username = process.env.user;
@@ -73,6 +73,13 @@ router.post("/conet", (req, res) => {
       }
     }
   );
+});
+
+router.get("/conet1", async (req, res) => {
+  const filter = {};
+  const conet = await conetModel.find(filter);
+  console.log(conet)
+  res.json(conet);
 });
 
 router.delete("/conet/:id", (req, res) => {
