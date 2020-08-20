@@ -16,8 +16,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="/public/css/admindashboard/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="/public/css/admindashboard/demo/demo.css" rel="stylesheet" />
 
 </head>
 
@@ -50,24 +48,8 @@
                         <th>Expertise</th>
                         <th>Charge</th>
                       </thead>
-                      <tbody>
-                        <% data.forEach(function (fetchData) { %>
-                        <tr>
-                          <td id="idfetch"><%= fetchData.id %></td>
-                          <td><%= fetchData.Name %> </td>
-                          <td><%= fetchData.Phonenumber %></td>
-                          <td><%= fetchData.Email %></td>
-                          <td><%= fetchData.Location %></td>
-                          <td class="text-primary"><%= fetchData.Expertise %></td>
-                          <td class="text-primary"><%= fetchData.Charge %></td>
-                          <td>
-                            <button id="<%= fetchData.id %>" type="button" class="btn btn-dark"
-                              onclick="deleteUser(this.id)">Delete</button>
-                          </td>
+                      <tbody id="content-render">
 
-                        </tr>
-                        <% }) %>
-                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -208,8 +190,6 @@
   <script src="/public/css/admindashboard/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="/public/css/admindashboard/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
-  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-  <script src="/public/css/admindashboard/demo/demo.js"></script>
   <script>
     $(document).ready(function () {
       $().ready(function () {
@@ -382,6 +362,6 @@
     });
   </script>
 </body>
-<script src="/public/Main_Page/frontend_Js/conexspeakerReg.js"></script>
+<script src="/public/Main_Page/frontend_Js/ConexSpeakerRegistration.ejs.js"></script>
 
 </html>

@@ -50,23 +50,8 @@
                         <th>What describes you</th>
                         <th></th>
                       </thead>
-                      <tbody>
-                        <% data.forEach(function (fetchData) { %>
-                        <tr>
-                          <td id="idfetch"><%= fetchData.id %></td>
-                          <td><%= fetchData.Name %> </td>
-                          <td><%= fetchData.Phonenumber %></td>
-                          <td><%= fetchData.Email %></td>
-                          <td><%= fetchData.Address %></td>
-                          <td class="text-primary"><%= fetchData.Description %></td>
-                          <!-- <input type="hidden" id="userId" value= > -->
-                          <td>
-                            <button id="<%= fetchData.id %>" type="button" class="btn btn-dark"
-                              onclick="deleteUser(this.id)">Delete</button>
-                          </td>
+                      <tbody id="content-render">
 
-                        </tr>
-                        <% }) %>
                       </tbody>
                     </table>
                   </div>
