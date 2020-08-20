@@ -133,11 +133,7 @@ app.get(
   passport.authenticate("jwt", {
     session: false,
   }),
-  async (req, res) => {
-    const filter = {};
-    const conet = await conetModel.find(filter);
-    const conexPlus = await conexplusModel.find(filter);
-    console.log(conet);
+  (req, res) => {
     res.render("pages/DashboardPages/Dashboard", {
       data1: conet,
     });

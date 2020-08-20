@@ -21,50 +21,9 @@
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-  <!-- header-start -->
-  <header>
-    <div class="header-area ">
-        <div id="sticky-header" class="main-header-area">
-            <div class="container-fluid p-0">
-                <div class="row align-items-center no-gutters">
-                    <div class="col-xl-2 col-lg-2">
-                        <div class="logo-img">
-                            <a href="index.html">
-                                <img src="img/logowhite.png" alt="" height="55px" width="170px">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xl-9 col-lg-9">
-                        <div class="main-menu  d-none d-lg-block">
-                            <nav>
-                                <ul id="navigation">
-                                    <li><a href="workshop.html"  style="font-weight: bold; padding-bottom: 10px; width: 170px;border: solid; padding-top: 10px; border-radius: 10%">Live Workshop&nbsp&nbsp&nbsp<i class="fa fa-circle" aria-hidden="true" style="color: red"></i></a></li>
-                                    <li><a class="active" href="index.html">Home</a></li>
-                                    <li><a>Resources</a></i>
-                                        <ul class="submenu">
-                                            <li><a href="speaker.html">Speakers</a></li>
-                                            <li><a href="conexion.html">Newsletter</a></li>
-                                      </ul>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                    <li><a href="https://www.explara.com/c/Conex4students" target="_blank" style="font-weight: bold; padding-bottom: 10px; width: 170px;border: solid; padding-top: 10px; border-radius: 10%">VIP Membership</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="mobile_menu d-block d-lg-none"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<!-- header-end -->
+ <!-- header-start -->
+ <%- include("../partials/mainNavbar") %>
+ <!-- header-end -->
 
         <!-- bradcam_area_start -->
         <div class="bradcam_area breadcam_bg overlay2">
@@ -385,130 +344,9 @@
         </div>
     <!-- about_area_end -->
 
-   <!-- footer -->
-    <footer class="footer footer_bg_1">
-        <div class="footer_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-md-4 col-lg-4">
-                        <div class="footer_widget">
-                            <div class="footer_logo">
-                                <a href="index.html">
-                                    <img src="img/logowhite.png" alt="" height="55px" width="170px">
-                                </a>
-                            </div>
-                            <p>
-                                "Cognitive thinking has made Conex 365 not to simply go through and turn the page but to apply our cognitive skills so as to bring in a change!!"
-                            </p>
-                            <div class="socail_links">
-                                <ul>
-                                    <li>
-                                        <a href="https://www.facebook.com/conex365" target="_blank">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="https://www.instagram.com/conex365/" target="_blank">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/channel/UCtYlw1N-kqsLLdaFOUIYDQA" target="_blank">
-                                            <i class="fa fa-youtube-play"></i>
-                                        </a>
-                                    </li>
-                                    </ul>
-                                    <ul style="padding-top: 10px">
-                                     <li>
-                                        <a href="https://wa.me/919995111184" target="_blank">
-                                            <i class="fa fa-whatsapp"></i>
-                                        </a>
-                                    </li>
-                                    <a href="https://www.f6s.com/conex365?follow=1" target="_blank" title="Follow ConeX365 on F6S"><img src="https://www.f6s.com/images/f6s-follow-white.png" border="0" width="78" height="22 " alt="Follow ConeX365 on F6S" style="width: 78px; height: 22px; padding: 0px; margin: 0px;" /></a>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-xl-2 col-md-2 col-lg-2">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Resources
-                            </h3>
-                            <ul>
-                                <li><a href="webinar.html">Webinar</a></li>
-                                 <li><a href="workshop.html">Workshop</a></li>
-                                <li><a href="about.html"> About</a></li>
-                                <li><a href="contact.html"> Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-2 col-md-2 col-lg-2">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Services
-                            </h3>
-                            <ul>
-                                <li><a href="conet/index.html" target="_blank">Co-Net</a></li>
-                                <li><a href="conexplus/index.html" target="_blank">Organize Conex+</a></li>
-                                <li><a href="speaker/index.html" target="_blank">Conex+ Speaker</a></li>
-                                <li><a href="conexion.html">Conexion</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-4 col-md-4 col-lg-4">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Address
-                            </h3>
-                            <div class="row">
-                            <div class="col-lg-6 col-xl-6">
-                                <h5 style="color: white;font-size: 17px">Headquarters</h5>
-                                <p>
-                                ConeX365 EduCorp Consulting<br>
-                                NRA-37<br>
-                                Ramavarmapuram P.O,<br>
-                                Thrissur, Kerala <br>
-                                680631
-                            </p>
-                            </div>
-                            <div class="col-lg-6 col-xl-6">
-                                <h5 style="color: white;font-size: 17px">Annex</h5>
-                                <p>
-                                ConeX365 EduCorp Consulting<br>
-                                Innerspace Coworking,<br>
-                                SRM Road, Kaloor, Kochi - 682018
-                                </p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copy-right_text">
-            <div class="container">
-                <div class="footer_border"></div>
-                <div class="row">
-                    <div class="col-sm">
-                        <center><a href="privacy.html" style="color: white;" target="_blank">Privacy Policy</a></center>
-                    </div>
-                    <div class="col-sm">
-                        <center><a href="termsofservice.html" style="color: white;" target="_blank">Terms Of Service</a></center>
-                    </div>
-                    <div class="col-sm">
-                        <center><a href="carfp.html" style="color: white;" target="_blank">Cancellation and Refund Policy</a></center>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer -->
-
+   <!-- Footer Section -->
+ <%- include("../partials/mainFooter") %>
+ <!-- Footer Section End -->
 
     <!-- JS here -->
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>

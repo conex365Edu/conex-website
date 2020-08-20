@@ -20,76 +20,35 @@
     <link rel="stylesheet" href="/public/Main_Page/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168254156-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-168254156-1');
+        gtag('config', 'UA-168254156-1');
     </script>
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+    <!-- header-start -->
+    <%- include("../partials/mainNavbar") %>
+    <!-- header-end -->
 
-  <!-- header-start -->
-  <header>
-    <div class="header-area ">
-        <div id="sticky-header" class="main-header-area">
-            <div class="container-fluid p-0">
-                <div class="row align-items-center no-gutters">
-                    <div class="col-xl-2 col-lg-2">
-                        <div class="logo-img">
-                            <a href="index.html">
-                                <img src="/public/Main_Page/img/logowhite.png" alt="" height="55px" width="170px">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xl-9 col-lg-9">
-                        <div class="main-menu  d-none d-lg-block">
-                            <nav>
-                                <ul id="navigation">
-                                    <li><a class="active" href="/workshop"  style="font-weight: bold; padding-bottom: 10px; width: 170px;border: solid; padding-top: 10px; border-radius: 10%">Live Workshop&nbsp&nbsp&nbsp<i class="fa fa-circle" aria-hidden="true" style="color: red"></i></a></li>
-                                    <li><a href="/">Home</a></li>
-                                    <li><a>Resources</a></i>
-                                        <ul class="submenu">
-                                            <li><a href="/speaker">Speakers</a></li>
-                                            <li><a href="/conexion">Newsletter</a></li>
-                                      </ul>
-                                    <li><a href="/about">About Us</a></li>
-                                    <li><a href="/contact">Contact Us</a></li>
-                                    <li><a href="https://www.explara.com/c/Conex4students" target="_blank" style="font-weight: bold; padding-bottom: 10px; width: 170px;border: solid; padding-top: 10px; border-radius: 10%">VIP Membership</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="mobile_menu d-block d-lg-none"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- bradcam_area_start -->
+    <div class="bradcam_area breadcam_bg overlay2">
+        <h3>Live Workshops</h3>
     </div>
-</header>
-<!-- header-end -->
-
-        <!-- bradcam_area_start -->
-        <div class="bradcam_area breadcam_bg overlay2">
-                <h3>Live Workshops</h3>
-            </div>
-            <!-- bradcam_area_end -->
+    <!-- bradcam_area_end -->
 
 
-            
-<section class="section-padding">
+
+    <section class="section-padding">
 
 
-<!--================Comming Soon =================-->
-<!--
+        <!--================Comming Soon =================-->
+        <!--
             <div class="container">
                 <div class="col-xl-12">
                     <div class="section_title text-center mb-100">
@@ -99,182 +58,207 @@
                 </div>
             </div>
 -->
-<!--================Comming Soon End =================-->
+        <!--================Comming Soon End =================-->
 
 
-    <!--================Blog Area =================-->
-    
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6 col-xl-6 col-md-6"  data-aos="zoom-in">
-                                    <img style="max-width: 100%;border-radius: 20px;" src="/public/Main_Page/img/workshop/story.jpg" alt="workshop_img"> 
-                                </div>
-                                <div class="col-lg-6 col-xl-6 col-md-6">     
-                                    <h2>Half Day Workshop on <br>The Art of Brand Storytelling</h2>
-                                    <p>The power of digital technologies and social media have transformed the way brands talk to their customers in the modern-day. Science claims the world is made of atoms, but social science argues it is made of stories.<br>
+        <!--================Blog Area =================-->
 
-                                    This has brought the ancient art of storytelling at the core of brand communication.
-                                    <br>
-                                    Data transferred through stories resonate with the customers more effectively. According to Stanford Professor Jenifer Aaker, stories are up to twenty-two times more memorable than facts.
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xl-6 col-md-6" data-aos="zoom-in">
+                    <img style="max-width: 100%;border-radius: 20px;" src="/public/Main_Page/img/workshop/story.jpg"
+                        alt="workshop_img">
+                </div>
+                <div class="col-lg-6 col-xl-6 col-md-6">
+                    <h2>Half Day Workshop on <br>The Art of Brand Storytelling</h2>
+                    <p>The power of digital technologies and social media have transformed the way brands talk to their
+                        customers in the modern-day. Science claims the world is made of atoms, but social science
+                        argues it is made of stories.<br>
 
+                        This has brought the ancient art of storytelling at the core of brand communication.
+                        <br>
+                        Data transferred through stories resonate with the customers more effectively. According to
+                        Stanford Professor Jenifer Aaker, stories are up to twenty-two times more memorable than facts.
+
+                    </p>
+
+                    <ul class="blog-info-link" style="padding-top: 20px">
+                        <li style="font-weight: bold"><i class="fa fa-user" style="color: #0EAFCC"></i>Dr. S M A MOIN
+                        </li>
+                    </ul>
+                    <ul class="blog-info-link" style="padding-top: 20px">
+                        <li style="font-weight: bold"><i class="fa fa-calendar" style="color: #0EAFCC"></i>23 August
+                            2020</li>
+                    </ul>
+                    <ul class="blog-info-link" style="padding-top: 20px">
+                        <li style="font-weight: bold"><i class="fa fa-certificate" style="color: #0EAFCC"></i>Workshop
+                            Completion Certificate</li>
+                    </ul>
+                    <ul class="blog-info-link" style="padding-top: 20px">
+                        <li style="font-weight: bold"><i class="fa fa-users" style="color: #0EAFCC"></i>Free Student
+                            Connect Membership worth 999/-</li>
+                    </ul>
+                    &nbsp
+                    <ul style="padding-top: 20px;">
+                        <li><a href="/workshopdetails" class="boxed-btn2"><b style="color: white">Workshop
+                                    Details</b></a></center>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--================Blog Area End =================-->
+
+        <!--================Old Workshop =================-->
+        <div class="packages-content">
+            <div class="container">
+                <div class="row">
+
+
+                    <!--col Starting-->
+                    <div class="col-md-4 col-sm-6" data-aos="fade-up">
+                        <div class="single-package-item">
+                            <img src="/public/Main_Page/img/workshop/eh.jpg" alt="workshop_img">
+                            <div class="single-package-item-txt">
+                                <h3><i class="fa fa-user"></i><span class="pull-right">JOEL DELEEP</span></h3>
+                                <div class="packages-para">
+                                    <p>
+                                        <span>
+                                            <i class="fa fa-calendar"></i>4 - 6 August 2020
+                                        </span>
+                                        <i class="fa fa-map-marker"></i>Zoom Meeting
                                     </p>
-                                    
-                                    <ul class="blog-info-link" style="padding-top: 20px">
-                                        <li style="font-weight: bold"><i class="fa fa-user" style="color: #0EAFCC"></i>Dr. S M A MOIN</li>
-                                    </ul>
-                                    <ul  class="blog-info-link" style="padding-top: 20px">
-                                        <li style="font-weight: bold"><i class="fa fa-calendar" style="color: #0EAFCC"></i>23 August 2020</li>
-                                    </ul>
-                                    <ul class="blog-info-link" style="padding-top: 20px">
-                                        <li style="font-weight: bold"><i class="fa fa-certificate" style="color: #0EAFCC"></i>Workshop Completion Certificate</li>
-                                    </ul>
-                                    <ul class="blog-info-link" style="padding-top: 20px">
-                                        <li style="font-weight: bold"><i class="fa fa-users" style="color: #0EAFCC"></i>Free Student Connect Membership worth 999/-</li>
-                                    </ul>
-                                    &nbsp
-                                    <ul style="padding-top: 20px;">
-                                    <li><a href="/workshopdetails" class="boxed-btn2"><b style="color: white">Workshop Details</b></a></center></li>
-                                    </ul>
+                                    <p>
+                                        <i class="fa fa-check"></i>Workshop Completed
+                                    </p>
+                                </div>
+                                <!--/.packages-para-->
+                                <div class="packages-review">
+                                    <p>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <span>50+ Attendees</span>
+                                    </p>
+                                </div>
+                                <!--/.packages-review-->
+                            </div>
+                            <!--/.single-package-item-txt-->
+                        </div>
+                        <!--/.single-package-item-->
+                    </div>
+                    <!--/.col-->
+
+
+
+                    <div class="col-md-4 col-sm-6" data-aos="fade-up">
+                        <div class="single-package-item">
+                            <img src="/public/Main_Page/img/workshop/de.jpg" alt="workshop_img">
+                            <div class="single-package-item-txt">
+                                <h3><i class="fa fa-user"></i><span class="pull-right">DENNIS THOMAS</span></h3>
+                                <div class="packages-para">
+                                    <p>
+                                        <span>
+                                            <i class="fa fa-calendar"></i>25 July 2020
+                                        </span>
+                                        <i class="fa fa-map-marker"></i>Zoom Meeting
+                                    </p>
+                                    <p>
+                                        <i class="fa fa-check"></i>Workshop Completed
+                                    </p>
+                                </div>
+                                <div class="packages-review">
+                                    <p>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <span>50+ Attendees</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                    
+                    </div>
 
+                    <!--col Starting-->
+                    <div class="col-md-4 col-sm-6" data-aos="fade-up">
+                        <div class="single-package-item">
+                            <img src="/public/Main_Page/img/workshop/market.jpg" alt="workshop_img">
+                            <div class="single-package-item-txt">
+                                <h3><i class="fa fa-user"></i><span class="pull-right">ASHOK MOHAN</span></h3>
+                                <div class="packages-para">
+                                    <p>
+                                        <span>
+                                            <i class="fa fa-calendar"></i>13 - 17 July 2020
+                                        </span>
+                                        <i class="fa fa-map-marker"></i>Zoom Meeting
+                                    </p>
+                                    <p>
+                                        <i class="fa fa-check"></i>Workshop Completed
+                                    </p>
+                                </div>
+                                <!--/.packages-para-->
+                                <div class="packages-review">
+                                    <p>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <span>40+ Attendees</span>
+                                    </p>
+                                </div>
+                                <!--/.packages-review-->
+                            </div>
+                            <!--/.single-package-item-txt-->
+                        </div>
+                        <!--/.single-package-item-->
+                    </div>
+                    <!--/.col-->
 
-
-                    <!--================Blog Area End =================-->
-
-                    <!--================Old Workshop =================-->
-                        <div class="packages-content">
-                            <div class="container">
-                                <div class="row">
-
-
-                                     <!--col Starting-->
-                                    <div class="col-md-4 col-sm-6" data-aos="fade-up">
-                                        <div class="single-package-item">
-                                            <img src="/public/Main_Page/img/workshop/eh.jpg" alt="workshop_img">
-                                            <div class="single-package-item-txt">
-                                                <h3><i class="fa fa-user"></i><span class="pull-right">JOEL DELEEP</span></h3>
-                                                <div class="packages-para">
-                                                    <p>
-                                                        <span>
-                                                            <i class="fa fa-calendar"></i>4 - 6 August 2020
-                                                        </span>
-                                                        <i class="fa fa-map-marker"></i>Zoom Meeting
-                                                    </p>
-                                                    <p>
-                                                        <i class="fa fa-check"></i>Workshop Completed
-                                                    </p>
-                                                </div><!--/.packages-para-->
-                                                 <div class="packages-review">
-                                                    <p>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <span>50+ Attendees</span>
-                                                    </p>
-                                                </div><!--/.packages-review-->
-                                            </div><!--/.single-package-item-txt-->
-                                        </div><!--/.single-package-item-->
-                                    </div><!--/.col-->
-
-
-
-                                    <div class="col-md-4 col-sm-6" data-aos="fade-up">
-                                        <div class="single-package-item">
-                                            <img src="/public/Main_Page/img/workshop/de.jpg" alt="workshop_img">
-                                            <div class="single-package-item-txt">
-                                                <h3><i class="fa fa-user"></i><span class="pull-right">DENNIS THOMAS</span></h3>
-                                                <div class="packages-para">
-                                                    <p>
-                                                        <span>
-                                                            <i class="fa fa-calendar"></i>25 July 2020
-                                                        </span>
-                                                        <i class="fa fa-map-marker"></i>Zoom Meeting
-                                                    </p>
-                                                    <p>
-                                                        <i class="fa fa-check"></i>Workshop Completed
-                                                    </p>
-                                                </div>
-                                                 <div class="packages-review">
-                                                    <p>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <span>50+ Attendees</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--col Starting-->
-                                    <div class="col-md-4 col-sm-6" data-aos="fade-up">
-                                        <div class="single-package-item">
-                                            <img src="/public/Main_Page/img/workshop/market.jpg" alt="workshop_img">
-                                            <div class="single-package-item-txt">
-                                                <h3><i class="fa fa-user"></i><span class="pull-right">ASHOK MOHAN</span></h3>
-                                                <div class="packages-para">
-                                                    <p>
-                                                        <span>
-                                                            <i class="fa fa-calendar"></i>13 - 17 July 2020
-                                                        </span>
-                                                        <i class="fa fa-map-marker"></i>Zoom Meeting
-                                                    </p>
-                                                    <p>
-                                                        <i class="fa fa-check"></i>Workshop Completed
-                                                    </p>
-                                                </div><!--/.packages-para-->
-                                                 <div class="packages-review">
-                                                    <p>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <span>40+ Attendees</span>
-                                                    </p>
-                                                </div><!--/.packages-review-->
-                                            </div><!--/.single-package-item-txt-->
-                                        </div><!--/.single-package-item-->
-                                    </div><!--/.col-->
-
-                                    <!--col Starting-->
-                                    <div class="col-md-4 col-sm-6" data-aos="fade-up">
-                                        <div class="single-package-item">
-                                            <img src="/public/Main_Page/img/workshop/employ.jpg" alt="workshop_img">
-                                            <div class="single-package-item-txt">
-                                                <h3><i class="fa fa-user"></i><span class="pull-right">MS.SUMARA KHAN</span></h3>
-                                                <div class="packages-para">
-                                                    <p>
-                                                        <span>
-                                                            <i class="fa fa-calendar"></i>28 June 2020
-                                                        </span>
-                                                        <i class="fa fa-map-marker"></i>Zoom Meeting
-                                                    </p>
-                                                    <p>
-                                                        <i class="fa fa-check"></i>Workshop Completed
-                                                    </p>
-                                                </div><!--/.packages-para-->
-                                                 <div class="packages-review">
-                                                    <p>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <span>70+ Attendees</span>
-                                                    </p>
-                                                </div><!--/.packages-review-->
-                                            </div><!--/.single-package-item-txt-->
-                                        </div><!--/.single-package-item-->
-                                    </div><!--/.col-->
-<!--
+                    <!--col Starting-->
+                    <div class="col-md-4 col-sm-6" data-aos="fade-up">
+                        <div class="single-package-item">
+                            <img src="/public/Main_Page/img/workshop/employ.jpg" alt="workshop_img">
+                            <div class="single-package-item-txt">
+                                <h3><i class="fa fa-user"></i><span class="pull-right">MS.SUMARA KHAN</span></h3>
+                                <div class="packages-para">
+                                    <p>
+                                        <span>
+                                            <i class="fa fa-calendar"></i>28 June 2020
+                                        </span>
+                                        <i class="fa fa-map-marker"></i>Zoom Meeting
+                                    </p>
+                                    <p>
+                                        <i class="fa fa-check"></i>Workshop Completed
+                                    </p>
+                                </div>
+                                <!--/.packages-para-->
+                                <div class="packages-review">
+                                    <p>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <span>70+ Attendees</span>
+                                    </p>
+                                </div>
+                                <!--/.packages-review-->
+                            </div>
+                            <!--/.single-package-item-txt-->
+                        </div>
+                        <!--/.single-package-item-->
+                    </div>
+                    <!--/.col-->
+                    <!--
                                     <div class="col-md-4 col-sm-6">
                                         <div class="single-package-item">
                                             <img src="img/workshop/employ.jpg" alt="workshop_img">
@@ -306,138 +290,17 @@
                                     </div>-->
 
 
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--================Old Workshop End =================-->
-            
-</section>
-
-   <!-- footer -->
-    <footer class="footer footer_bg_1">
-        <div class="footer_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-md-4 col-lg-4">
-                        <div class="footer_widget">
-                            <div class="footer_logo">
-                                <a href="index.html">
-                                    <img src="/public/Main_Page/img/logowhite.png" alt="" height="55px" width="170px">
-                                </a>
-                            </div>
-                            <p>
-                                "Cognitive thinking has made Conex 365 not to simply go through and turn the page but to apply our cognitive skills so as to bring in a change!!"
-                            </p>
-                            <div class="socail_links">
-                                <ul>
-                                    <li>
-                                        <a href="https://www.facebook.com/conex365" target="_blank">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="https://www.instagram.com/conex365/" target="_blank">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/channel/UCtYlw1N-kqsLLdaFOUIYDQA" target="_blank">
-                                            <i class="fa fa-youtube-play"></i>
-                                        </a>
-                                    </li>
-                                    </ul>
-                                    <ul style="padding-top: 10px">
-                                     <li>
-                                        <a href="https://wa.me/919995111184" target="_blank">
-                                            <i class="fa fa-whatsapp"></i>
-                                        </a>
-                                    </li>
-                                    <a href="https://www.f6s.com/conex365?follow=1" target="_blank" title="Follow ConeX365 on F6S"><img src="https://www.f6s.com/images/f6s-follow-white.png" border="0" width="78" height="22 " alt="Follow ConeX365 on F6S" style="width: 78px; height: 22px; padding: 0px; margin: 0px;" /></a>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-xl-2 col-md-2 col-lg-2">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Resources
-                            </h3>
-                            <ul>
-                                <li><a href="/speaker">Speakers</a></li>
-                                <li><a href="/conexion">Conexion</a></li>
-                                <li><a href="/about"> About</a></li>
-                                <li><a href="/contact"> Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-2 col-md-2 col-lg-2">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Services
-                            </h3>
-                            <ul>
-                                <li><a href="/workshop">Workshop</a></li>
-                                <li><a href="conet/index." target="_blank">Co-Net</a></li>
-                                <li><a href="conexplus/index.html" target="_blank">Organize Conex+</a></li>
-                                <li><a href="speaker/index.html" target="_blank">Conex+ Speaker</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-4 col-md-4 col-lg-4">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Address
-                            </h3>
-                            <div class="row">
-                            <div class="col-lg-6 col-xl-6">
-                                <h5 style="color: white;font-size: 17px">Headquarters</h5>
-                                <p>
-                                ConeX365 EduCorp Consulting<br>
-                                NRA-37<br>
-                                Ramavarmapuram P.O,<br>
-                                Thrissur, Kerala <br>
-                                680631
-                            </p>
-                            </div>
-                            <div class="col-lg-6 col-xl-6">
-                                <h5 style="color: white;font-size: 17px">Annex</h5>
-                                <p>
-                                ConeX365 EduCorp Consulting<br>
-                                Innerspace Coworking,<br>
-                                SRM Road, Kaloor, Kochi - 682018
-                                </p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-        <div class="copy-right_text">
-            <div class="container">
-                <div class="footer_border"></div>
-                <div class="row">
-                    <div class="col-sm">
-                        <center><a href="/privacy" style="color: white;" target="_blank">Privacy Policy</a></center>
-                    </div>
-                    <div class="col-sm">
-                        <center><a href="/termsofservice" style="color: white;" target="_blank">Terms Of Service</a></center>
-                    </div>
-                    <div class="col-sm">
-                        <center><a href="/carfp" style="color: white;" target="_blank">Cancellation and Refund Policy</a></center>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer -->
-    
+
+        <!--================Old Workshop End =================-->
+
+    </section>
+
+    <!-- Footer Section -->
+    <%- include("../partials/mainFooter") %>
+    <!-- Footer Section End -->
 
     <!-- JS here -->
     <script src="/public/Main_Page/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -468,8 +331,9 @@
 
     <script src="/public/Main_Page/js/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>

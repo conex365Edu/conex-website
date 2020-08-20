@@ -20,62 +20,63 @@
     <link rel="stylesheet" href="/public/Main_Page/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168254156-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-168254156-1');
+        gtag('config', 'UA-168254156-1');
     </script>
     <style type="text/css">
-/* Clients Section
+        /* Clients Section
 --------------------------------*/
 
-#clients {
-  padding: 60px 0;
-  box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-}
+        #clients {
+            padding: 60px 0;
+            box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+        }
 
-#clients .clients-wrap {
-  border-top: 1px solid #d6eaff;
-  border-left: 1px solid #d6eaff;
-  margin-bottom: 30px;
-}
+        #clients .clients-wrap {
+            border-top: 1px solid #d6eaff;
+            border-left: 1px solid #d6eaff;
+            margin-bottom: 30px;
+        }
 
-#clients .client-logo {
-  padding: 45px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-right: 1px solid #d6eaff;
-  border-bottom: 1px solid #d6eaff;
-  overflow: hidden;
-  background: #fff;
-  height: 160px;
-}
+        #clients .client-logo {
+            padding: 45px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border-right: 1px solid #d6eaff;
+            border-bottom: 1px solid #d6eaff;
+            overflow: hidden;
+            background: #fff;
+            height: 160px;
+        }
 
-#clients .client-logo:hover img {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
+        #clients .client-logo:hover img {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
 
-#clients img {
-  transition: all 0.4s ease-in-out;
-}
-.Client-header{
-    font-size: 28px;
-    }
+        #clients img {
+            transition: all 0.4s ease-in-out;
+        }
+
+        .Client-header {
+            font-size: 28px;
+        }
     </style>
 
 </head>
@@ -85,70 +86,33 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-  <!-- header-start -->
-  <header>
-    <div class="header-area ">
-        <div id="sticky-header" class="main-header-area">
-            <div class="container-fluid p-0">
-                <div class="row align-items-center no-gutters">
-                    <div class="col-xl-2 col-lg-2">
-                        <div class="logo-img">
-                            <a href="/">
-                                <img src="/public/Main_Page/img/logowhite.png" alt="" height="55px" width="170px">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xl-9 col-lg-9">
-                        <div class="main-menu  d-none d-lg-block">
-                            <nav>
-                                <ul id="navigation">
-                                    <li><a href="/workshop"  style="font-weight: bold; padding-bottom: 10px; width: 170px;border: solid; padding-top: 10px; border-radius: 10%">Live Workshop&nbsp&nbsp&nbsp<i class="fa fa-circle" aria-hidden="true" style="color: red"></i></a></li>
-                                    <li><a href="/">Home</a></li>
-                                    <li><a  class="active">Resources</a></i>
-                                        <ul class="submenu">
-                                            <li><a href="/speaker">Speakers</a></li>
-                                            <li><a href="/conexion">Newsletter</a></li>
-                                      </ul>
-                                    <li><a href="/about">About Us</a></li>
-                                    <li><a href="/contact">Contact Us</a></li>
-                                    <li><a href="https://www.explara.com/c/Conex4students" target="_blank" style="font-weight: bold; padding-bottom: 10px; width: 170px;border: solid; padding-top: 10px; border-radius: 10%">VIP Membership</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="mobile_menu d-block d-lg-none"></div>
+    <!-- header-start -->
+    <%- include("../partials/mainNavbar") %>
+    <!-- header-end -->
+
+    <!-- bradcam_area_start -->
+    <div class="bradcam_area breadcam_bg overlay2">
+        <h3>Our Speakers</h3>
+    </div>
+    <!-- bradcam_area_end -->
+
+
+
+    <!-- Speaker Section-->
+    <div class="our_team_member">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-100">
+                        <h3>Speakers Panel</h3>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</header>
-<!-- header-end -->
-
-        <!-- bradcam_area_start -->
-        <div class="bradcam_area breadcam_bg overlay2">
-                <h3>Our Speakers</h3>
-            </div>
-            <!-- bradcam_area_end -->
-
-
-
-            <!-- Speaker Section-->
-    <div class="our_team_member">
-        <div class="container">
-          <div class="row">
-              <div class="col-xl-12">
-                  <div class="section_title text-center mb-100">
-                      <h3>Speakers Panel</h3>
-                  </div>
-              </div>
-          </div>
 
 
             <div class="row">
 
-                 <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
+                <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
                     <div class="single_team">
                         <div class="thumb">
                             <img src="/public/Main_Page/img/speaker/img-18.jpg" alt="">
@@ -159,22 +123,22 @@
                     </div>
                 </div>
 
-              <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
-                  <div class="single_team">
-                      <div class="thumb">
-                          <img src="/public/Main_Page/img/speaker/img-14.jpg" alt="">
-                          <div class="social_link">
+                <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
+                    <div class="single_team">
+                        <div class="thumb">
+                            <img src="/public/Main_Page/img/speaker/img-14.jpg" alt="">
+                            <div class="social_link">
                                 <p>ASSOCIATE HEAD RESEARCH AND CONSULTANCY, COVENTRY UNIVERSITY, LONDON</p>
                             </div>
-                      </div>
-                  </div>
-              </div>
+                        </div>
+                    </div>
+                </div>
 
-              <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
+                <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
                     <div class="single_team">
                         <div class="thumb">
                             <img src="/public/Main_Page/img/speaker/blog-4.jpg" alt="">
-                                <div class="social_link">
+                            <div class="social_link">
                                 <p>DIRECTOR-CENTACARE BATHURST, AUSTRALIA</p>
                             </div>
                         </div>
@@ -185,23 +149,23 @@
                     <div class="single_team">
                         <div class="thumb">
                             <img src="/public/Main_Page/img/speaker/img-17.jpg" alt="">
-                                <div class="social_link">
+                            <div class="social_link">
                                 <p>COURSE DIRECTOR/SENIOR LECTURER, COVENTRY UNIVERSITY, LONDON</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-              </div>
+            </div>
 
 
-              <div class="row">
+            <div class="row">
 
                 <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
                     <div class="single_team">
                         <div class="thumb">
                             <img src="/public/Main_Page/img/speaker/blog-02.jpg" alt="">
-                                <div class="social_link">
+                            <div class="social_link">
                                 <p>CORPORATE ENABLER AND FORMER HR HEAD,VKC GROUP</p>
                             </div>
                         </div>
@@ -213,45 +177,47 @@
                         <div class="thumb">
                             <img src="/public/Main_Page/img/speaker/blog-3.jpg" alt="">
                             <div class="social_link">
-                               <p>ASSISTANT VICE PRESIDENT- LEARNING AND DEVELOPMENT, ESAF SMALL FINANCE BANK</p>
+                                <p>ASSISTANT VICE PRESIDENT- LEARNING AND DEVELOPMENT, ESAF SMALL FINANCE BANK</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
-                  <div class="single_team">
-                      <div class="thumb">
-                          <img src="/public/Main_Page/img/speaker/img-20.jpg" alt="">
-                          <div class="social_link">
-                               <p>DIRECTOR-OUTCOME & PROFESSOR HEAD-AMITY INNOVATION INCUBATOR</p>
+                    <div class="single_team">
+                        <div class="thumb">
+                            <img src="/public/Main_Page/img/speaker/img-20.jpg" alt="">
+                            <div class="social_link">
+                                <p>DIRECTOR-OUTCOME & PROFESSOR HEAD-AMITY INNOVATION INCUBATOR</p>
                             </div>
-                      </div>
-                  </div>
-              </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
                     <div class="single_team">
                         <div class="thumb">
                             <img src="/public/Main_Page/img/speaker/img-7.jpg" alt="">
                             <div class="social_link">
-                               <p>CHIEF INFORMATION OFFICER, ARIES GROUP, UAE AND CHIEF OPERATION OFFICER, INDYWOOD TV</p>
+                                <p>CHIEF INFORMATION OFFICER, ARIES GROUP, UAE AND CHIEF OPERATION OFFICER, INDYWOOD TV
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-              </div>
+            </div>
 
 
-              <div class="row">
+            <div class="row">
 
                 <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
                     <div class="single_team">
                         <div class="thumb">
                             <img src="/public/Main_Page/img/speaker/img-6.jpg" alt="">
                             <div class="social_link">
-                               <p>INTERNATIONAL TRAINER, CAREER COACH, NLP PRACTITIONER, AUTHOR, TOASTMASTER, MARATHON RUNNER</p>
+                                <p>INTERNATIONAL TRAINER, CAREER COACH, NLP PRACTITIONER, AUTHOR, TOASTMASTER, MARATHON
+                                    RUNNER</p>
                             </div>
                         </div>
                     </div>
@@ -262,7 +228,7 @@
                         <div class="thumb">
                             <img src="/public/Main_Page/img/speaker/img-9.jpg" alt="">
                             <div class="social_link">
-                               <p>CORPORATE ENABLER AND FORMER LEARNING AND DEVELOPMENT CHAMPION, LUPIN Ltd</p>
+                                <p>CORPORATE ENABLER AND FORMER LEARNING AND DEVELOPMENT CHAMPION, LUPIN Ltd</p>
                             </div>
                         </div>
                     </div>
@@ -273,7 +239,7 @@
                         <div class="thumb">
                             <img src="/public/Main_Page/img/speaker/img-10.jpg" alt="">
                             <div class="social_link">
-                               <p>CONSULTANT PSYCHOLOGIST, HR EXPERT, FORMER ASST.PROFESSOR SCMS SCHOOL OF BUSINESS</p>
+                                <p>CONSULTANT PSYCHOLOGIST, HR EXPERT, FORMER ASST.PROFESSOR SCMS SCHOOL OF BUSINESS</p>
                             </div>
                         </div>
                     </div>
@@ -284,24 +250,24 @@
                         <div class="thumb">
                             <img src="/public/Main_Page/img/speaker/img-11.jpg" alt="">
                             <div class="social_link">
-                               <p>CORPORATE TRAINER, PEOPLE DEVELOPMENT CONSULTANT & MOTIVATIONAL SPEAKER</p>
+                                <p>CORPORATE TRAINER, PEOPLE DEVELOPMENT CONSULTANT & MOTIVATIONAL SPEAKER</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-              </div>
+            </div>
 
 
 
-                <div class="row">
+            <div class="row">
 
                 <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
                     <div class="single_team">
                         <div class="thumb">
                             <img src="/public/Main_Page/img/speaker/img-12.jpg" alt="">
                             <div class="social_link">
-                               <p>TRAINER AT LAKME, CORPORATE ENABLER, SOFTSKILL TRAINER</p>
+                                <p>TRAINER AT LAKME, CORPORATE ENABLER, SOFTSKILL TRAINER</p>
                             </div>
                         </div>
                     </div>
@@ -312,7 +278,7 @@
                         <div class="thumb">
                             <img src="/public/Main_Page/img/speaker/img-13.jpg" alt="">
                             <div class="social_link">
-                              <p>TRAINER AND CONSULTANT IN QUALITY, RELIABILITY, EHS, INFOSEC. MARATHON RUNNER</p>
+                                <p>TRAINER AND CONSULTANT IN QUALITY, RELIABILITY, EHS, INFOSEC. MARATHON RUNNER</p>
                             </div>
                         </div>
                     </div>
@@ -323,7 +289,7 @@
                         <div class="thumb">
                             <img src="/public/Main_Page/img/speaker/thomas.jpg" alt="">
                             <div class="social_link">
-                              <p>TEAM MANAGER CS & OPERATIONS - AMAZON</p>
+                                <p>TEAM MANAGER CS & OPERATIONS - AMAZON</p>
                             </div>
                         </div>
                     </div>
@@ -334,165 +300,167 @@
                         <div class="thumb">
                             <img src="/public/Main_Page/img/speaker/blog-01.jpg" alt="">
                             <div class="social_link">
-                              <p>DEAN-ACADEMICS TATA INSTITUTE OF SOCIAL SCIENCES, MUMBAI</p>
+                                <p>DEAN-ACADEMICS TATA INSTITUTE OF SOCIAL SCIENCES, MUMBAI</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-              </div>
+            </div>
 
 
-              <div class="row">
-
-                  <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
-                  <div class="single_team">
-                      <div class="thumb">
-                          <img src="/public/Main_Page/img/speaker/img-15.jpg" alt="">
-                          <div class="social_link">
-                              <p>SENIOR MARKETING ANALYST, FREELANCE DIGITAL MARKETER FACEBOOK ADS PRO, FUNNELS EXPERT</p>
-                            </div>
-                      </div>
-                  </div>
-              </div>
+            <div class="row">
 
                 <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
-                  <div class="single_team">
-                      <div class="thumb">
-                          <img src="/public/Main_Page/img/speaker/img-22.jpg" alt="">
-                          <div class="social_link">
-                              <p>AVIATION SPECIALIST, HOSPITALITY SPECIALIST, SOFT SKILL & SEP TRAINER</p>
+                    <div class="single_team">
+                        <div class="thumb">
+                            <img src="/public/Main_Page/img/speaker/img-15.jpg" alt="">
+                            <div class="social_link">
+                                <p>SENIOR MARKETING ANALYST, FREELANCE DIGITAL MARKETER FACEBOOK ADS PRO, FUNNELS EXPERT
+                                </p>
                             </div>
-                      </div>
-                  </div>
-              </div>
+                        </div>
+                    </div>
+                </div>
 
-              <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
-                  <div class="single_team">
-                      <div class="thumb">
-                          <img src="/public/Main_Page/img/speaker/img-21.jpg" alt="">
-                          <div class="social_link">
-                              <p>FORMER SECURITY ANALYST, ERNST AND YOUNG; FORMER VOLUNTEER AT CYBERDOME-KERALA POLICE; INFORMATION SECURITY CONSULTANT</p>
+                <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
+                    <div class="single_team">
+                        <div class="thumb">
+                            <img src="/public/Main_Page/img/speaker/img-22.jpg" alt="">
+                            <div class="social_link">
+                                <p>AVIATION SPECIALIST, HOSPITALITY SPECIALIST, SOFT SKILL & SEP TRAINER</p>
                             </div>
-                      </div>
-                  </div>
-              </div>
+                        </div>
+                    </div>
+                </div>
 
-              </div>
-
-
-
+                <div class="col-xl-3 col-md-6 col-lg-3" data-aos="zoom-in">
+                    <div class="single_team">
+                        <div class="thumb">
+                            <img src="/public/Main_Page/img/speaker/img-21.jpg" alt="">
+                            <div class="social_link">
+                                <p>FORMER SECURITY ANALYST, ERNST AND YOUNG; FORMER VOLUNTEER AT CYBERDOME-KERALA
+                                    POLICE; INFORMATION SECURITY CONSULTANT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
+
+
+
+
         </div>
-   
+    </div>
+
     <!-- speaker_end -->
 
-              <!--==========================
+    <!--==========================
       Clients Section
     ============================-->
     <section id="clients">
 
-      <div class="container">
+        <div class="container">
 
-        <div class="text-center">
-          <h3  class="Client-header">Our trainers are from top organizations like:</h3>
+            <div class="text-center">
+                <h3 class="Client-header">Our trainers are from top organizations like:</h3>
 
-        <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
+                <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
 
-          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
-            <div class="client-logo">
-              <img src="/public/Main_Page/img/clients/client-1.png" class="img-fluid" alt="">
-            </div>
-          </div>
-          
-          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
-            <div class="client-logo">
-              <img src="/public/Main_Page/img/clients/client-2.png" class="img-fluid" alt="">
-            </div>
-          </div>
-        
-          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
-            <div class="client-logo">
-              <img src="/public/Main_Page/img/clients/client-3.png" class="img-fluid" alt="">
-            </div>
-          </div>
-          
-          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
-            <div class="client-logo">
-              <img src="/public/Main_Page/img/clients/client-4.png" class="img-fluid" alt="">
-            </div>
-          </div>
-          
-          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
-            <div class="client-logo">
-              <img src="/public/Main_Page/img/clients/client-5.png" class="img-fluid" alt="">
-            </div>
-          </div>
-        
-          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
-            <div class="client-logo">
-              <img src="/public/Main_Page/img/clients/client-6.png" class="img-fluid" alt="">
-            </div>
-          </div>
-          
-          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
-            <div class="client-logo">
-              <img src="/public/Main_Page/img/clients/client-7.png" class="img-fluid" alt="">
-            </div>
-          </div>
-          
-          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
-            <div class="client-logo">
-              <img src="/public/Main_Page/img/clients/client-8.png" class="img-fluid" alt="">
-            </div>
-          </div>
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                        <div class="client-logo">
+                            <img src="/public/Main_Page/img/clients/client-1.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
 
-          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
-            <div class="client-logo">
-              <img src="/public/Main_Page/img/clients/client-9.png" class="img-fluid" alt="">
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                        <div class="client-logo">
+                            <img src="/public/Main_Page/img/clients/client-2.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                        <div class="client-logo">
+                            <img src="/public/Main_Page/img/clients/client-3.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                        <div class="client-logo">
+                            <img src="/public/Main_Page/img/clients/client-4.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                        <div class="client-logo">
+                            <img src="/public/Main_Page/img/clients/client-5.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                        <div class="client-logo">
+                            <img src="/public/Main_Page/img/clients/client-6.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                        <div class="client-logo">
+                            <img src="/public/Main_Page/img/clients/client-7.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                        <div class="client-logo">
+                            <img src="/public/Main_Page/img/clients/client-8.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                        <div class="client-logo">
+                            <img src="/public/Main_Page/img/clients/client-9.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                        <div class="client-logo">
+                            <img src="/public/Main_Page/img/clients/client-10.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                        <div class="client-logo">
+                            <img src="/public/Main_Page/img/clients/client-11.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                        <div class="client-logo">
+                            <img src="/public/Main_Page/img/clients/client-12.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                        <div class="client-logo">
+                            <img src="/public/Main_Page/img/clients/client-13.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                        <div class="client-logo">
+                            <img src="/public/Main_Page/img/clients/client-14.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                        <div class="client-logo">
+                            <img src="/public/Main_Page/img/clients/client-15.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
-          </div>
-
-          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
-            <div class="client-logo">
-              <img src="/public/Main_Page/img/clients/client-10.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
-            <div class="client-logo">
-              <img src="/public/Main_Page/img/clients/client-11.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
-            <div class="client-logo">
-              <img src="/public/Main_Page/img/clients/client-12.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
-            <div class="client-logo">
-              <img src="/public/Main_Page/img/clients/client-13.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
-            <div class="client-logo">
-              <img src="/public/Main_Page/img/clients/client-14.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-xs-6">
-            <div class="client-logo">
-              <img src="/public/Main_Page/img/clients/client-15.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-        </div>
-
-      </div>
 
     </section>
 
@@ -502,129 +470,9 @@
 
 
 
-     <!-- footer -->
-    <footer class="footer footer_bg_1">
-        <div class="footer_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-md-4 col-lg-4">
-                        <div class="footer_widget">
-                            <div class="footer_logo">
-                                <a href="index.html">
-                                    <img src="/public/Main_Page/img/logowhite.png" alt="" height="55px" width="170px">
-                                </a>
-                            </div>
-                            <p>
-                                "Cognitive thinking has made Conex 365 not to simply go through and turn the page but to apply our cognitive skills so as to bring in a change!!"
-                            </p>
-                            <div class="socail_links">
-                                <ul>
-                                    <li>
-                                        <a href="https://www.facebook.com/conex365" target="_blank">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="https://www.instagram.com/conex365/" target="_blank">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/channel/UCtYlw1N-kqsLLdaFOUIYDQA" target="_blank">
-                                            <i class="fa fa-youtube-play"></i>
-                                        </a>
-                                    </li>
-                                    </ul>
-                                    <ul style="padding-top: 10px">
-                                     <li>
-                                        <a href="https://wa.me/919995111184" target="_blank">
-                                            <i class="fa fa-whatsapp"></i>
-                                        </a>
-                                    </li>
-                                    <a href="https://www.f6s.com/conex365?follow=1" target="_blank" title="Follow ConeX365 on F6S"><img src="https://www.f6s.com/images/f6s-follow-white.png" border="0" width="78" height="22 " alt="Follow ConeX365 on F6S" style="width: 78px; height: 22px; padding: 0px; margin: 0px;" /></a>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-xl-2 col-md-2 col-lg-2">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Resources
-                            </h3>
-                            <ul>
-                                <li><a href="/speaker">Speakers</a></li>
-                                <li><a href="/conexion">Conexion</a></li>
-                                <li><a href="/about"> About</a></li>
-                                <li><a href="/contact"> Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-2 col-md-2 col-lg-2">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Services
-                            </h3>
-                            <ul>
-                                <li><a href="/workshop">Workshop</a></li>
-                                <li><a href="conet/index.html" target="_blank">Co-Net</a></li>
-                                <li><a href="conexplus/index.html" target="_blank">Organize Conex+</a></li>
-                                <li><a href="speaker/index.html" target="_blank">Conex+ Speaker</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-4 col-md-4 col-lg-4">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Address
-                            </h3>
-                            <div class="row">
-                            <div class="col-lg-6 col-xl-6">
-                                <h5 style="color: white;font-size: 17px">Headquarters</h5>
-                                <p>
-                                ConeX365 EduCorp Consulting<br>
-                                NRA-37<br>
-                                Ramavarmapuram P.O,<br>
-                                Thrissur, Kerala <br>
-                                680631
-                            </p>
-                            </div>
-                            <div class="col-lg-6 col-xl-6">
-                                <h5 style="color: white;font-size: 17px">Annex</h5>
-                                <p>
-                                ConeX365 EduCorp Consulting<br>
-                                Innerspace Coworking,<br>
-                                SRM Road, Kaloor, Kochi - 682018
-                                </p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copy-right_text">
-            <div class="container">
-                <div class="footer_border"></div>
-                <div class="row">
-                    <div class="col-sm">
-                        <center><a href="privacy.html" style="color: white;" target="_blank">Privacy Policy</a></center>
-                    </div>
-                    <div class="col-sm">
-                        <center><a href="termsofservice.html" style="color: white;" target="_blank">Terms Of Service</a></center>
-                    </div>
-                    <div class="col-sm">
-                        <center><a href="carfp.html" style="color: white;" target="_blank">Cancellation and Refund Policy</a></center>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer -->
+    <!-- Footer Section -->
+    <%- include("../partials/mainFooter") %>
+    <!-- Footer Section End -->
 
     <!-- JS here -->
     <script src="/public/Main_Page/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -656,8 +504,9 @@
 
     <script src="/public/Main_Page/js/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
