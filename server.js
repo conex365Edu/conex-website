@@ -80,8 +80,32 @@ app.get("/workshop", (req, res) => {
   res.render("pages/workshop");
 });
 
-app.get("/speaker", (req, res) => {
-  res.render("pages/speaker");
+app.get("/trainings", (req, res) => {
+  res.render("pages/Trainings");
+});
+
+app.get("/virtual", (req, res) => {
+  res.render("pages/Virtual");
+});
+
+app.get("/onSite", (req, res) => {
+  res.render("pages/Onsite");
+});
+
+app.get("/conextoc", (req, res) => {
+  res.render("pages/Conextoc");
+});
+
+app.get("/conextoi", (req, res) => {
+  res.render("pages/Conextoi");
+});
+
+app.get("/conetregistration", (req, res) => {
+  res.render("pages/Registration_Pages/conetReg");
+});
+
+app.get("/conexplusregistration", (req, res) => {
+  res.render("pages/Registration_Pages/conexplusReg");
 });
 
 app.get("/conexion", (req, res) => {
@@ -89,16 +113,33 @@ app.get("/conexion", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.render("pages/about");
+  res.render("pages/About");
 });
 
-app.get("/contact", (req, res) => {
-  res.render("pages/contact");
+app.get("/objectives", (req, res) => {
+  res.render("pages/Objectives");
+});
+
+app.get("/csr", (req, res) => {
+  res.render("pages/Csr");
+});
+
+app.get("/speaker", (req, res) => {
+  res.render("pages/Speaker");
+});
+
+app.get("/team", (req, res) => {
+  res.render("pages/Team");
 });
 
 app.get("/privacy", (req, res) => {
-  res.render("pages/privacy");
+  res.render("pages/Privacy");
 });
+
+app.get("/contact", (req, res) => {
+  res.render("pages/Contact");
+});
+
 
 app.get("/termsofservice", (req, res) => {
   res.render("pages/termsofservice");
@@ -110,14 +151,6 @@ app.get("/carfp", (req, res) => {
 
 app.get("/workshopdetails", (req, res) => {
   res.render("pages/workshopDetails");
-});
-
-app.get("/conetregistration", (req, res) => {
-  res.render("pages/Registration_Pages/conetReg");
-});
-
-app.get("/conexplusregistration", (req, res) => {
-  res.render("pages/Registration_Pages/conexplusReg");
 });
 
 app.get("/conexspeakerregistration", (req, res) => {
