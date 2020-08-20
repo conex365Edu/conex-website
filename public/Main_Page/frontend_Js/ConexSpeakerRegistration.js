@@ -53,6 +53,7 @@ async function conexplusspeakerReg() {
 
   const form = document.getElementById("content");
   form.reset();
+
   if (res._id) {
     $("#myModal").modal("show");
   } else {
