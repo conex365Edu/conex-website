@@ -51,7 +51,6 @@ app.use("/api/auth", admin);
 app.use("/api/registration", conet);
 app.use("/api/registration", conexplus);
 app.use("/api/registration", conexspeaker);
-app.use(require("express-status-monitor")());
 
 //Connect to MongoDB
 mongoose.connect(
@@ -139,7 +138,7 @@ app.get(
     const conet = await conetModel.find(filter);
     const conexPlus = await conexplusModel.find(filter);
     console.log(conet);
-    res.render("pages/Dashboard_Pages/adminDashboard", {
+    res.render("pages/DashboardPages/Dashboard", {
       data1: conet,
     });
   }
@@ -154,7 +153,7 @@ app.get(
     const filter = {};
     const all = await conetModel.find(filter);
     console.log(all);
-    res.render("pages/Dashboard_Pages/conet", {
+    res.render("pages/DashboardPages/Conet", {
       data: all,
     });
   }
@@ -165,13 +164,8 @@ app.get(
   passport.authenticate("jwt", {
     session: false,
   }),
-  async (req, res) => {
-    const filter = {};
-    const all = await conexplusModel.find(filter);
-    console.log(all);
-    res.render("pages/Dashboard_Pages/conexplus", {
-      data: all,
-    });
+  (req, res) => {
+    res.render("pages/DashboardPages/ConexPlus");
   }
 );
 
@@ -180,13 +174,8 @@ app.get(
   passport.authenticate("jwt", {
     session: false,
   }),
-  async (req, res) => {
-    const filter = {};
-    const all = await speakerModel.find(filter);
-    console.log(all);
-    res.render("pages/Dashboard_Pages/conexspeaker", {
-      data: all,
-    });
+  (req, res) => {
+    res.render("pages/DashboardPages/ConexSpeaker");
   }
 );
 
@@ -195,13 +184,8 @@ app.get(
   passport.authenticate("jwt", {
     session: false,
   }),
-  async (req, res) => {
-    const filter = {};
-    const all = await adminModel.find(filter);
-    console.log(all);
-    res.render("pages/Dashboard_Pages/resetpassword", {
-      data: all,
-    });
+  (req, res) => {
+    res.render("pages/DashboardPages/ResetPassword");
   }
 );
 
