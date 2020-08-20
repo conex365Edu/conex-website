@@ -1,23 +1,6 @@
-// fetch("/api/registration/conet").then((data) => {
-//   let template = `
-//     <tr>
-//       <td>${data.Name}</td>
-//       <td>${data.Phonenumber}</td>
-//       <td>${data.Email}</td>
-//       <td>${data.Name}</td>
-//       <td>${data.Name}</td>
-//       <td>${data.Name}</td>
-//       <td>${data.Name}</td>
-//       <td class="text-primary"></td>
-//     </tr> `;
-
-//   let element = document.querySelector("#content-render");
-//   element.innerHTML = template;
-// });
-
 async function renderData() {
 
-  const url = "/api/registration/conet1";
+  const url = "/api/registration/conet";
 
   let response = await fetch(url);
 

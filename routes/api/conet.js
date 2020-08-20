@@ -75,7 +75,7 @@ router.post("/conet", (req, res) => {
   );
 });
 
-router.get("/conet1", async (req, res) => {
+router.get("/conet", async (req, res) => {
   const filter = {};
   const conet = await conetModel.find(filter);
   console.log(conet)

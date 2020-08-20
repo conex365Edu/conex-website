@@ -69,6 +69,13 @@ router.post("/conexplus", (req, res) => {
   );
 });
 
+router.get("/conexplus", async (req, res) => {
+  const filter = {};
+  const conexplus = await conexPlus.find(filter);
+  console.log(conexplus);
+  res.json(conexplus);
+});
+
 router.delete("/conexplus/:id", (req, res) => {
   console.log(req.params.id);
   conexPlus

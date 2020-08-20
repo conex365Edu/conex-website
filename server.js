@@ -101,11 +101,11 @@ app.get("/conextoi", (req, res) => {
 });
 
 app.get("/conetregistration", (req, res) => {
-  res.render("pages/Registration_Pages/conetReg");
+  res.render("pages/RegistrationPages/ConetRegistration");
 });
 
 app.get("/conexplusregistration", (req, res) => {
-  res.render("pages/Registration_Pages/conexplusReg");
+  res.render("pages/RegistrationPages/ConexPlusRegistration");
 });
 
 app.get("/conexion", (req, res) => {
@@ -140,7 +140,6 @@ app.get("/contact", (req, res) => {
   res.render("pages/Contact");
 });
 
-
 app.get("/termsofservice", (req, res) => {
   res.render("pages/termsofservice");
 });
@@ -154,7 +153,7 @@ app.get("/workshopdetails", (req, res) => {
 });
 
 app.get("/conexspeakerregistration", (req, res) => {
-  res.render("pages/Registration_Pages/conexspeakerReg");
+  res.render("pages/RegistrationPages/ConexSpeakerRegistration");
 });
 
 app.get("/AdminLogin", csrfProtection, (req, res) => {
