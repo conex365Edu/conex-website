@@ -963,7 +963,7 @@ h3 {
 
 /* line 13,  slick-nav.scss */
 .slicknav_menu .slicknav_nav {
-  background: #172b4d;
+  background: #fff;
   float: right;
   margin-top: 0;
   padding: 0;
@@ -980,7 +980,7 @@ h3 {
 
 .slicknav_menu .slicknav_nav a {
   background: transparent;
-  color: #fff;
+  color: black;
 }
 
 /* line 28,  slick-nav.scss */
@@ -1504,7 +1504,7 @@ h3 {
 
 /* line 5,  slider.scss */
 .slider_area .single_slider {
-  height: 115vh;
+  height: 125vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1566,6 +1566,7 @@ h3 {
   line-height: 70px;
   margin-bottom: 50px;
   margin-top: 10px;
+  margin-left: 80px;
 }
 
 @media (max-width: 767px) {
@@ -1576,6 +1577,7 @@ h3 {
     line-height: 35px;
     margin-top: 0;
     margin-bottom: 0;
+    margin-left: 0;
   }
 }
 
@@ -1636,7 +1638,7 @@ h3 {
 @media (max-width: 767px) {
   /* line 14,      */
   .about_area .single_about_info h3 {
-    font-size: 25px;
+    font-size: 23px;
     line-height: 32px;
   }
 }
@@ -1753,8 +1755,8 @@ h3 {
 @media (max-width: 767px) {
   /* line 81,      */
   .about_area .about_tutorials .courses .inner_courses {
-    width: 290px;
-    height: 290px;
+    width: 240px;
+    height: 240px;
     margin: auto;
   }
 }
@@ -1773,7 +1775,7 @@ h3 {
   content: "";
   width: 100%;
   height: 100%;
-  background: #FD8E5E;
+  background: #0EAFCC;
   border-radius: 50%;
   opacity: .7;
   left: 0;
@@ -1816,8 +1818,8 @@ h3 {
 @media (max-width: 767px) {
   /* line 124,      */
   .about_area .about_tutorials .courses-blue .inner_courses {
-    width: 290px;
-    height: 290px;
+    width: 240px;
+    height: 240px;
     margin: auto;
   }
 }
@@ -1879,8 +1881,8 @@ h3 {
 @media (max-width: 767px) {
   /* line 165,      */
   .about_area .about_tutorials .courses-sky .inner_courses {
-    width: 290px;
-    height: 290px;
+    width: 240px;
+    height: 240px;
     margin: auto;
   }
 }
@@ -1899,7 +1901,7 @@ h3 {
   content: "";
   width: 100%;
   height: 100%;
-  background: #04D2C8;
+  background: #172b4d;
   border-radius: 50%;
   opacity: .7;
   left: 0;
@@ -6877,4 +6879,77 @@ h6 {
   font-size: 12px;
 }
 
+.slider_area .single_slider .animebox {
+  width: 100%;
+  }
+ 
+  .animebox div {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  animation: animate 4s linear infinite;
+  background: rgba(255,255,255,.5);
+  border-radius: 15px;
+  }
+  .animebox div:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+  }
+  .animebox div:nth-child(2) {
+  top: 26%;
+  left: 58%;
+  animation: animate 10s linear infinite;
+  }
+  .animebox div:nth-child(3) {
+  top: 70%;
+  left: 63%;
+  animation: animate 5s linear infinite;
+  }
+  .animebox div:nth-child(4) {
+  top: 65%;
+  left: 15%;
+  animation: animate 7s linear infinite;
+  }
+  .animebox div:nth-child(5) {
+  top: 90%;
+  left: 10%;
+  animation: animate 9s linear infinite;
+  }
+  .animebox div:nth-child(6) {
+  top: 30%;
+  left: 60%;
+  animation: animate 5s linear infinite;
+  }
+  .animebox div:nth-child(7) {
+  top: 70%;
+  left: 33%;
+  animation: animate 8s linear infinite;
+  }
+  .animebox div:nth-child(8) {
+  top: 15%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+  }
+  .animebox div:nth-child(9) {
+  top: 23%;
+  left: 50%;
+  animation: animate 6s linear infinite;
+  }
+  .animebox div:nth-child(10) {
+  top: 35%;
+  left: 7%;
+  animation: animate 10s linear infinite;
+  }
+  @keyframes animate {
+  0% {
+  transform: scale(0) translateY(0) rotate(50deg);
+  }
+  100% {
+  transform: scale(1.6) translateY(-250px) rotate(360deg);
+  }
+  }
+  
 /*# sourceMappingURL=style.css.map */

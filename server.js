@@ -125,7 +125,7 @@ app.get("/csr", (req, res) => {
 });
 
 app.get("/speaker", (req, res) => {
-  res.render("pages/Speaker");
+  res.render("pages/speaker");
 });
 
 app.get("/team", (req, res) => {
@@ -137,7 +137,7 @@ app.get("/privacy", (req, res) => {
 });
 
 app.get("/contact", (req, res) => {
-  res.render("pages/Contact");
+  res.render("pages/contact");
 });
 
 app.get("/termsofservice", (req, res) => {
