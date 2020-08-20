@@ -113,7 +113,7 @@ app.get("/conexion", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.render("pages/About");
+  res.render("pages/about");
 });
 
 app.get("/objectives", (req, res) => {
