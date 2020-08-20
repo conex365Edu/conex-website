@@ -69,6 +69,13 @@ router.post("/conexspeaker", (req, res) => {
   );
 });
 
+router.get("/conexspeaker", async (req, res) => {
+  const filter = {};
+  const conexspeaker = await conexspeakermodel.find(filter);
+  console.log(conexspeaker);
+  res.json(conexspeaker);
+});
+
 router.delete("/conexplusspeaker/:id", (req, res) => {
   console.log(req.params.id);
   conexspeakermodel
