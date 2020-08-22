@@ -106,13 +106,58 @@ router.post("/adminlogin", parseForm, csrfProtection, (req, res) => {
     }
   );
 });
+// // @type    POST
+// // @route   /api/auth/update
+// // @desc    Update Admin
+// // @access  PRIVATE
+router.post("/update", (req, res) => {
+  const name = req.body.name;
+  const password = req.body.password;
+  const username = req.body.username;
 
-// @type    GET
-// @route   /api/auth/lgout
-// @desc    logout User
-// @access  PRIVATE
+  const updateUser = new Admin({
+    name: name,
+    username: username,
+    password: password,
+  });
+
+  updateUser.updateOne(
+    {
+      _id: req.user.id,
+    },
+    (err, savedUser) => {
+      if (err) throw err;
+      if (savedUser) {
+        res.status(201).json({
+          message: "User Updated",
+        });
+      }
+    }
+  );
+});
+
+// // @type    GET
+// // @route   /api/auth/lgout
+// // @desc    logout User
+// // @access  PRIVATE
 router.get("/logout", function (req, res) {
-  req.logout();
+  //   // req.logout()
+  //   res.json({
+  //     status: true,
+  //   });
+  //   res.redirect("/");
+  // });
+  res.clearCookie("jwt").send({
+    redirectTo: "/",
+    resStatus: "Success",
+    msg: "redirect",
+  });
   res.redirect("/");
 });
+
+// router.get("/logout", function (req, res) {
+//   req.logout();
+//   res.redirect("/");
+// });
+
 module.exports = router;
