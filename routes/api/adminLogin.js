@@ -34,6 +34,7 @@ router.post("/adminregister", (req, res) => {
           name: req.body.name,
           username: req.body.username,
           password: req.body.password,
+          workrole: req.body.workrole,
         });
 
         bcrypt.genSalt(10, (err, salt) => {
@@ -119,7 +120,7 @@ router.get("/update", async (req, res) => {
 router.get("/adminData", async (req, res) => {
   const filter = {};
   const admin = await Admin.find(filter);
-  console.log(admin)
+  console.log(admin);
   res.json(admin);
 });
 

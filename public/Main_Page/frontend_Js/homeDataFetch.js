@@ -11,6 +11,7 @@ async function renderData() {
           <td>${item._id}</td>
           <td>${item.name}</td>
           <td>${item.username}</td>
+          <td>${item.workrole}</td>
         </tr>
       `;
 
