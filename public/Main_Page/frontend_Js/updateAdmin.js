@@ -27,7 +27,12 @@ async function fetchData() {
   url = "/api/auth/update";
   const rawresponse = await fetch(url);
   var data = await rawresponse.json();
-  console.log(data[0]._id);
+  data.forEach((item) => {
+    let template = `
+    <button id="${item._id}" type="button" class="btn btn-dark" onclick="updateAdmin(this.id)">Update</button>`;
+    let element = document.querySelector("#button-render");
+    element.innerHTML = template;
+  });
 }
 
 fetchData();
