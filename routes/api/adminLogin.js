@@ -106,11 +106,20 @@ router.post("/adminlogin", parseForm, csrfProtection, (req, res) => {
     }
   );
 });
+
+router.get("/update", async (req, res) => {
+  const filter = {};
+  const admin = await Admin.find(filter);
+  console.log(admin);
+  res.json(admin);
+});
+
+
 // // @type    POST
 // // @route   /api/auth/update
 // // @desc    Update Admin
 // // @access  PRIVATE
-router.post("/update", (req, res) => {
+router.post("/update/:id", (req, res) => {
   const name = req.body.name;
   const password = req.body.password;
   const username = req.body.username;
@@ -123,7 +132,7 @@ router.post("/update", (req, res) => {
 
   updateUser.updateOne(
     {
-      _id: req.user.id,
+      _id: req.params.id,
     },
     (err, savedUser) => {
       if (err) throw err;
