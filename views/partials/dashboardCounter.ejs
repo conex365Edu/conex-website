@@ -8,14 +8,14 @@
                             <i class="material-icons">content_copy</i>
                         </div>
                         <p class="card-category">Conet</p>
-                        <h3 class="card-title">data1
-                            <small< /small>
+                        <h3 class="card-title">
+                            <small><%= data1.length  %> Members</small>
                         </h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons text-danger">warning</i>
-                            <a href="javascript:;">Get More Space...</a>
+                            <i class="material-icons">store</i>Increasing
+                            <a href="javascript:;"></a>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,9 @@
                             <i class="material-icons">store</i>
                         </div>
                         <p class="card-category">Conex Plus</p>
-                        <h3 class="card-title">$34,245</h3>
+                        <h3 class="card-title">
+                            <small><%= data2.length  %> Members</small>
+                        </h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
@@ -43,11 +45,11 @@
                             <i class="material-icons">info_outline</i>
                         </div>
                         <p class="card-category">Conex Register</p>
-                        <h3 class="card-title">75</h3>
+                        <h3 class="card-title"><small><%= data3.length  %> Members</small></h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons">local_offer</i> Tracked from Github
+                            <i class="material-icons">local_offer</i> Tracked
                         </div>
                     </div>
                 </div>
@@ -58,8 +60,8 @@
                         <div class="card-icon">
                             <i class="fa fa-twitter"></i>
                         </div>
-                        <p class="card-category">Followers</p>
-                        <h3 class="card-title">+245</h3>
+                        <p class="card-category">No of Admins</p>
+                        <h3 class="card-title"><small><%= data4.length  %> Admin</small></h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
@@ -68,6 +70,31 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header card-header-primary">
+                    <h4 class="card-title ">Admin Details</h4>
+                    <p class="card-category"> List of Admins</p>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead class=" text-primary">
+                          <th>ID</th>
+                          <th>Name</th>
+                          <th>Username</th>
+                          <th>Workrole</th>
+                          <!-- <th></th> -->
+                        </thead>
+                        <tbody id="content-render">
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
         </div>
     </div>
 </div>
+<script src="/public/Main_Page/frontend_Js/homeDataFetch.js"></script>

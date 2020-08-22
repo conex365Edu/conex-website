@@ -33,6 +33,19 @@ async function updateAdmin(id) {
   } else {
     $("#myModal").modal("hide");
   }
+
+  const errorAlert = document.getElementById("errorbody");
+  console.log(res.error)
+  if (res.error) {
+    errorAlert.style.display = "block";
+    errorAlert.innerHTML = res.error;
+  } else {
+    errorAlert.style.display = "none";
+  }
+}
+function onloadError() {
+  const error = document.getElementById("errorbody");
+  error.style.display = "none";
 }
 
 async function fetchData() {

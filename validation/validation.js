@@ -1,5 +1,16 @@
 const Joi = require("@hapi/joi");
 
+//Reset Password
+const resetPassword = (data) => {
+  const schema = Joi.object({
+    name: Joi.string().required(),
+    username: Joi.string().min(3).required(),
+    password: Joi.string().min(8).required(),
+  });
+
+  return schema.validate(data);
+};
+
 //Conet Register Validation
 const conetregisterValidation = (data) => {
   const schema = Joi.object({
@@ -43,3 +54,4 @@ const conexplusspeaker = (data) => {
 module.exports.conetregisterValidation = conetregisterValidation;
 module.exports.conexplusregister = conexplusregister;
 module.exports.conexplusspeaker = conexplusspeaker;
+module.exports.resetPassword = resetPassword;

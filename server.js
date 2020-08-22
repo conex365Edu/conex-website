@@ -164,9 +164,21 @@ app.get(
   passport.authenticate("jwt", {
     session: false,
   }),
-  (req, res) => {
+  async (req, res) => {
+    const conetFilter = {};
+    const conexFilter = {};
+    const speakerFilter = {};
+    const adminFilter = {};
+    const conet = await conetModel.find(conetFilter);
+    const conex = await conexplusModel.find(conexFilter);
+    console.log(conex);
+    const speaker = await speakerModel.find(speakerFilter);
+    const admin = await adminModel.find(adminFilter);
     res.render("pages/DashboardPages/Dashboard", {
       data1: conet,
+      data2: conex,
+      data3: speaker,
+      data4: admin,
     });
   }
 );
@@ -179,6 +191,7 @@ app.get(
   csrfProtection,
   async (req, res) => {
     res.render("pages/DashboardPages/Conet", {
+      data1: conet,
       csrfToken: req.csrfToken(),
     });
   }

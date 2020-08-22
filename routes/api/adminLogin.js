@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 const passport = require("passport");
 const key = require("../../connection/config");
 const bodyParser = require("body-parser");
+const { resetPassword } = require("../../validation/validation");
 var csrf = require("csurf");
 var csrfProtection = csrf({ cookie: true });
 var parseForm = bodyParser.urlencoded({ extended: false });
@@ -115,6 +116,13 @@ router.get("/update", async (req, res) => {
   res.json(admin);
 });
 
+router.get("/adminData", async (req, res) => {
+  const filter = {};
+  const admin = await Admin.find(filter);
+  console.log(admin)
+  res.json(admin);
+});
+
 // // @type    POST
 // // @route   /api/auth/update
 // // @desc    Update Admin
@@ -127,6 +135,14 @@ router.post(
   parseForm,
   csrfProtection,
   (req, res) => {
+    const { error } = resetPassword(req.body);
+    res.setHeader("Content-Type", "application/json");
+    if (error) {
+      console.log(error.details[0].message);
+      return res.status(400).json({
+        error: error.details[0].message,
+      });
+    }
     const userValues = {};
     userValues.user = req.params.id;
     if (req.body.name) userValues.name = req.body.name;
