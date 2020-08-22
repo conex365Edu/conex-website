@@ -1,4 +1,7 @@
 async function updateAdmin(id) {
+  const token = document
+    .querySelector('meta[name="csrf-token"]')
+    .getAttribute("content");
   const name = document.getElementById("name").value;
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
@@ -16,11 +19,20 @@ async function updateAdmin(id) {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
+      "CSRF-Token": token,
     },
     body: data,
   });
 
   const res = await rawresponse.json();
+  const form = document.getElementById("resetForm");
+  form.reset();
+
+  if (res._id) {
+    $("#myModal").modal("show");
+  } else {
+    $("#myModal").modal("hide");
+  }
 }
 
 async function fetchData() {

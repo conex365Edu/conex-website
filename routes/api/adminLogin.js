@@ -124,6 +124,8 @@ router.post(
   passport.authenticate("jwt", {
     session: false,
   }),
+  parseForm,
+  csrfProtection,
   (req, res) => {
     const userValues = {};
     userValues.user = req.params.id;

@@ -62,15 +62,8 @@ mongoose.connect(
   }
 );
 
-// Empty `filter` means "match all documents"
-
 //Serving Static Files
 app.use("/public", express.static(path.join(__dirname, "public")));
-
-//Page Routes
-// app.get("/", (req, res) => {
-//   res.render("pages/adminLogin");
-// });
 
 app.get("/", (req, res) => {
   res.render("pages/index");
@@ -100,12 +93,16 @@ app.get("/conextoi", (req, res) => {
   res.render("pages/Conextoi");
 });
 
-app.get("/conetregistration", (req, res) => {
-  res.render("pages/RegistrationPages/ConetRegistration");
+app.get("/conetregistration", csrfProtection, (req, res) => {
+  res.render("pages/RegistrationPages/ConetRegistration", {
+    csrfToken: req.csrfToken(),
+  });
 });
 
-app.get("/conexplusregistration", (req, res) => {
-  res.render("pages/RegistrationPages/ConexPlusRegistration");
+app.get("/conexplusregistration", csrfProtection, (req, res) => {
+  res.render("pages/RegistrationPages/ConexPlusRegistration", {
+    csrfToken: req.csrfToken(),
+  });
 });
 
 app.get("/conexion", (req, res) => {
@@ -152,8 +149,10 @@ app.get("/workshopdetails", (req, res) => {
   res.render("pages/workshopDetails");
 });
 
-app.get("/conexspeakerregistration", (req, res) => {
-  res.render("pages/RegistrationPages/ConexSpeakerRegistration");
+app.get("/conexspeakerregistration", csrfProtection, (req, res) => {
+  res.render("pages/RegistrationPages/ConexSpeakerRegistration", {
+    csrfToken: req.csrfToken(),
+  });
 });
 
 app.get("/AdminLogin", csrfProtection, (req, res) => {
@@ -177,33 +176,37 @@ app.get(
   passport.authenticate("jwt", {
     session: false,
   }),
+  csrfProtection,
   async (req, res) => {
-    const filter = {};
-    const all = await conetModel.find(filter);
-    console.log(all);
     res.render("pages/DashboardPages/Conet", {
-      data: all,
+      csrfToken: req.csrfToken(),
     });
   }
 );
 
 app.get(
   "/conexplus",
+  csrfProtection,
   passport.authenticate("jwt", {
     session: false,
   }),
   (req, res) => {
-    res.render("pages/DashboardPages/ConexPlus");
+    res.render("pages/DashboardPages/ConexPlus", {
+      csrfToken: req.csrfToken(),
+    });
   }
 );
 
 app.get(
   "/conexspeaker",
+  csrfProtection,
   passport.authenticate("jwt", {
     session: false,
   }),
   (req, res) => {
-    res.render("pages/DashboardPages/ConexSpeaker");
+    res.render("pages/DashboardPages/ConexSpeaker", {
+      csrfToken: req.csrfToken(),
+    });
   }
 );
 
@@ -212,8 +215,11 @@ app.get(
   passport.authenticate("jwt", {
     session: false,
   }),
+  csrfProtection,
   (req, res) => {
-    res.render("pages/DashboardPages/ResetPassword");
+    res.render("pages/DashboardPages/ResetPassword", {
+      csrfToken: req.csrfToken(),
+    });
   }
 );
 

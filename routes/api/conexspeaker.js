@@ -2,10 +2,14 @@ const router = require("express").Router();
 const conexspeakermodel = require("../../models/conexspeaker");
 const { conexplusspeaker } = require("../../validation/validation");
 const nodemailer = require("nodemailer");
+const bodyParser = require("body-parser");
+var csrf = require("csurf");
+var csrfProtection = csrf({ cookie: true });
+var parseForm = bodyParser.urlencoded({ extended: false });
 const dotenv = require("dotenv");
 dotenv.config();
 
-router.post("/conexspeaker", (req, res) => {
+router.post("/conexspeaker", csrfProtection, parseForm, (req, res) => {
   const { error } = conexplusspeaker(req.body);
   res.setHeader("Content-Type", "application/json");
   if (error) {
@@ -55,19 +59,24 @@ router.get("/conexspeaker", async (req, res) => {
   res.json(conexspeaker);
 });
 
-router.delete("/conexplusspeaker/:id", (req, res) => {
-  console.log(req.params.id);
-  conexspeakermodel
-    .findOneAndRemove({
-      _id: req.params.id,
-    })
-    .then(() => {
-      res.json({
-        success: true,
+router.delete(
+  "/conexplusspeaker/:id",
+  csrfProtection,
+  parseForm,
+  (req, res) => {
+    console.log(req.params.id);
+    conexspeakermodel
+      .findOneAndRemove({
+        _id: req.params.id,
+      })
+      .then(() => {
+        res.json({
+          success: true,
+        });
+      })
+      .catch((err) => {
+        if (err) throw err;
       });
-    })
-    .catch((err) => {
-      if (err) throw err;
-    });
-});
+  }
+);
 module.exports = router;

@@ -1,13 +1,11 @@
 async function renderData() {
+  const url = "/api/registration/conexplus";
 
-    const url = "/api/registration/conexplus";
-  
-    let response = await fetch(url);
-  
-    let data = await response.json();
-  
-    data.forEach((item) => {
-  
+  let response = await fetch(url);
+
+  let data = await response.json();
+
+  data.forEach((item) => {
     let template = `
       <tr>
         <td>${item._id}</td>
@@ -19,24 +17,29 @@ async function renderData() {
         <td><button id="${item._id}" type="button" class="btn btn-dark" onclick="deleteUser(this.id)">Delete</button></td>
       </tr>
     `;
-  
-      let element = document.querySelector("#content-render");
-      element.innerHTML += template;
+
+    let element = document.querySelector("#content-render");
+    element.innerHTML += template;
+  });
+}
+
+function deleteUser(id) {
+  const token = document
+    .querySelector('meta[name="csrf-token"]')
+    .getAttribute("content");
+  console.log(id);
+  var url = `/api/registration/conex/${id}`;
+  fetch(url, {
+    method: "DELETE",
+    headers: {
+      "CSRF-Token": token,
+    },
+  }).then((response) => {
+    response.json().then((json) => {
+      console.log(json);
+      location.reload();
     });
-  }
-  
-  function deleteUser(id) {
-    console.log(id);
-    var url = `/api/registration/conex/${id}`;
-    fetch(url, {
-      method: "DELETE",
-    }).then((response) => {
-      response.json().then((json) => {
-        console.log(json);
-        location.reload();
-      });
-    });
-  }
-  
-  renderData();
-  
+  });
+}
+
+renderData();

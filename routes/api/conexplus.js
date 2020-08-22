@@ -2,11 +2,15 @@ const router = require("express").Router();
 const conexPlus = require("../../models/conexplus");
 const { conexplusregister } = require("../../validation/validation");
 const passport = require("passport");
+const bodyParser = require("body-parser");
+var csrf = require("csurf");
+var csrfProtection = csrf({ cookie: true });
+var parseForm = bodyParser.urlencoded({ extended: false });
 const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
 dotenv.config();
 
-router.post("/conexplus", (req, res) => {
+router.post("/conexplus", csrfProtection, parseForm, (req, res) => {
   const { error } = conexplusregister(req.body);
   res.setHeader("Content-Type", "application/json");
   if (error) {
@@ -53,7 +57,7 @@ router.get("/conexplus", async (req, res) => {
   res.json(conexplus);
 });
 
-router.delete("/conexplus/:id", (req, res) => {
+router.delete("/conexplus/:id", csrfProtection, parseForm, (req, res) => {
   console.log(req.params.id);
   conexPlus
     .findOneAndRemove({
