@@ -16,7 +16,7 @@ const { session } = require("passport");
 // @route   /api/auth/register
 // @desc    Route for registeration of users
 // @access  PUBLIC
-router.post("/adminregister", (req, res) => {
+router.post("/w8498349384gh93hgslsjhg/adminregister", (req, res) => {
   Admin.findOne(
     {
       username: req.body.username,
