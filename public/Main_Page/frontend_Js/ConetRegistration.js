@@ -1,4 +1,7 @@
 async function conetReg() {
+  const token = document
+    .querySelector('meta[name="csrf-token"]')
+    .getAttribute("content");
   const name = document.getElementById("name").value;
   const phonenumber = document.getElementById("phonenumber").value;
   const email = document.getElementById("email").value;
@@ -23,6 +26,7 @@ async function conetReg() {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
+      "CSRF-Token": token,
     },
     body: data,
   });

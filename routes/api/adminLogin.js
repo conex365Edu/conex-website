@@ -9,6 +9,7 @@ var csrfProtection = csrf({ cookie: true });
 var parseForm = bodyParser.urlencoded({ extended: false });
 
 const Admin = require("../../models/Admin");
+const { session } = require("passport");
 
 // @type    POST
 // @route   /api/auth/register
@@ -114,36 +115,69 @@ router.get("/update", async (req, res) => {
   res.json(admin);
 });
 
-
 // // @type    POST
 // // @route   /api/auth/update
 // // @desc    Update Admin
 // // @access  PRIVATE
-router.post("/update/:id", (req, res) => {
-  const name = req.body.name;
-  const password = req.body.password;
-  const username = req.body.username;
+router.post(
+  "/update/:id",
+  passport.authenticate("jwt", {
+    session: false,
+  }),
+  parseForm,
+  csrfProtection,
+  (req, res) => {
+    const userValues = {};
+    userValues.user = req.params.id;
+    if (req.body.name) userValues.name = req.body.name;
+    if (req.body.username) userValues.username = req.body.username;
+    if (req.body.password) userValues.password = req.body.password;
+    console.log(userValues);
 
-  const updateUser = new Admin({
-    name: name,
-    username: username,
-    password: password,
-  });
-
-  updateUser.updateOne(
-    {
-      _id: req.params.id,
-    },
-    (err, savedUser) => {
-      if (err) throw err;
-      if (savedUser) {
-        res.status(201).json({
-          message: "User Updated",
-        });
+    bcrypt.genSalt(10, (err, salt) => {
+      bcrypt.hash(userValues.password, salt, (err, hash) => {
+        if (err) throw err;
+        console.log(hash);
+        userValues.password = hash;
+      });
+    });
+    //Find User Using Id
+    Admin.findOne(
+      {
+        _id: req.params.id,
+      },
+      (err, user) => {
+        console.log(user);
+        if (err) throw err;
+        if (user) {
+          Admin.findOneAndUpdate(
+            {
+              _id: req.params.id,
+            },
+            {
+              $set: userValues,
+            },
+            {
+              new: true,
+            },
+            (err, userUpdated) => {
+              if (err) throw err;
+              console.log(userUpdated);
+              if (userUpdated) {
+                new Admin(userUpdated).save((err, userSaved) => {
+                  if (err) throw err;
+                  if (userSaved) {
+                    res.json(userSaved);
+                  }
+                });
+              }
+            }
+          );
+        }
       }
-    }
-  );
-});
+    );
+  }
+);
 
 // // @type    GET
 // // @route   /api/auth/lgout

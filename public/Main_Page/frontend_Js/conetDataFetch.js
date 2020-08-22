@@ -1,5 +1,4 @@
 async function renderData() {
-
   const url = "/api/registration/conet";
 
   let response = await fetch(url);
@@ -7,8 +6,7 @@ async function renderData() {
   let data = await response.json();
 
   data.forEach((item) => {
-
-  let template = `
+    let template = `
     <tr>
       <td>${item._id}</td>
       <td>${item.Phonenumber}</td>
@@ -28,10 +26,16 @@ async function renderData() {
 }
 
 function deleteUser(id) {
+  const token = document
+    .querySelector('meta[name="csrf-token"]')
+    .getAttribute("content");
   console.log(id);
   var url = `/api/registration/conet/${id}`;
   fetch(url, {
     method: "DELETE",
+    headers: {
+      "CSRF-Token": token,
+    },
   }).then((response) => {
     response.json().then((json) => {
       console.log(json);

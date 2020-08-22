@@ -2,10 +2,14 @@ const router = require("express").Router();
 const conetModel = require("../../models/Conet");
 const { conetregisterValidation } = require("../../validation/validation");
 const nodemailer = require("nodemailer");
+const bodyParser = require("body-parser");
+var csrf = require("csurf");
+var csrfProtection = csrf({ cookie: true });
+var parseForm = bodyParser.urlencoded({ extended: false });
 const dotenv = require("dotenv");
 dotenv.config();
 
-router.post("/conet", (req, res) => {
+router.post("/conet", csrfProtection, parseForm, (req, res) => {
   const { error } = conetregisterValidation(req.body);
   res.setHeader("Content-Type", "application/json");
   if (error) {
@@ -58,7 +62,7 @@ router.get("/conet", async (req, res) => {
   res.json(conet);
 });
 
-router.delete("/conet/:id", (req, res) => {
+router.delete("/conet/:id", csrfProtection, parseForm, (req, res) => {
   console.log(req.params.id);
   conetModel
     .findOneAndRemove({
