@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const conetModel = require("../../models/Conet");
 const { conetregisterValidation } = require("../../validation/validation");
-const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 var csrf = require("csurf");
 var csrfProtection = csrf({ cookie: true });
