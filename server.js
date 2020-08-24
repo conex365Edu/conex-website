@@ -7,6 +7,9 @@ const passport = require("passport");
 const path = require("path");
 const app = express();
 
+//SSl Configuration
+const https = require("https");
+const fs = require("fs");
 //MongoDB Config Path
 const db = require("./connection/config");
 
@@ -41,6 +44,16 @@ app.use(
 app.use(passport.initialize());
 
 require("./strategy/jwtStrategy")(passport);
+
+//SSL Middleware
+https.createServer(
+  {
+    key: fs.readFileSync("./ket.pem"),
+    cert: fs.readFileSync("./cert.pem"),
+    passphrase: "Greets@123",
+  },
+  app
+);
 
 //Middleware for cookieparser
 app.use(cookieParser());
