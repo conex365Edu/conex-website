@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const volleyball = require("volleyball");
 const cookieParser = require("cookie-parser");
 const passport = require("passport");
+const http = require('http');
 const path = require("path");
 const app = express();
 
@@ -45,15 +46,7 @@ app.use(passport.initialize());
 
 require("./strategy/jwtStrategy")(passport);
 
-// //SSL Middleware
-// https.createServer(
-//   {
-//     key: fs.readFileSync("./ket.pem"),
-//     cert: fs.readFileSync("./cert.pem"),
-//     passphrase: "Greets@123",
-//   },
-//   app
-// );
+//SSL Middleware
 
 //Middleware for cookieparser
 app.use(cookieParser());
@@ -249,8 +242,29 @@ app.get(
   }
 );
 
-const PORT = process.env.PORT || 3000;
+// Certificate
+const privateKey = fs.readFileSync("./private.key", "utf8");
+const certificate = fs.readFileSync("./certificate.crt", "utf8");
+const ca = fs.readFileSync("./ca_bundle.crt", "utf8");
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+const credentials = {
+  key: privateKey,
+  cert: certificate,
+  ca: ca,
+};
+
+// Starting both http & https servers
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(credentials, app);
+
+// const PORT = process.env.PORT || 3000;
+httpServer.listen(80, () => {
+  console.log("HTTP Server running on port 80");
 });
+
+httpsServer.listen(443, () => {
+  console.log("HTTPS Server running on port 443");
+});
+// app.listen(PORT, () => {
+//   console.log(`Server is running on http://localhost:${PORT}`);
+// });
