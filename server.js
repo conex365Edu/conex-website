@@ -5,6 +5,7 @@ const volleyball = require("volleyball");
 const cookieParser = require("cookie-parser");
 const passport = require("passport");
 const http = require("http");
+const forceSSL = require('express-force-ssl');
 const path = require("path");
 const app = express();
 
@@ -35,6 +36,7 @@ const speakerModel = require("./models/conexspeaker");
 
 //Middleware for bodyparser
 app.use(bodyParser.json());
+app.use(forceSSL);
 app.use(
   bodyParser.urlencoded({
     extended: true,
