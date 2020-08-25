@@ -153,6 +153,10 @@ app.get("/carfp", (req, res) => {
   res.render("pages/carfp");
 });
 
+app.get("/ThankYou", (req, res) => {
+  res.render("pages/ThankYou");
+});
+
 app.get("/workshopdetails", (req, res) => {
   res.render("pages/workshopDetails");
 });
