@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const volleyball = require("volleyball");
 const cookieParser = require("cookie-parser");
 const passport = require("passport");
-const http = require("http");
+const http = require("http").createServer();
 const path = require("path");
 const app = express();
 
@@ -255,8 +255,8 @@ const credentials = {
 
 // Starting both http & https servers
 // const httpServer = http.createServer(app);
-const http = express.createServer();
-http.get("*", (req, res) => {
+// const http = express.createServer();
+http.get("*",  (req, res) => {
   res.redirect("https://" + req.headers.host + req.url);
 });
 const httpsServer = https.createServer(credentials, app);
