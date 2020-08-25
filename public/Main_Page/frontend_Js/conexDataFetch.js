@@ -28,7 +28,7 @@ function deleteUser(id) {
     .querySelector('meta[name="csrf-token"]')
     .getAttribute("content");
   console.log(id);
-  var url = `/api/registration/conex/${id}`;
+  var url = `/api/registration/conexplus/${id}`;
   fetch(url, {
     method: "DELETE",
     headers: {
