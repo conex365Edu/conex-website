@@ -254,15 +254,8 @@ const credentials = {
 };
 
 // Starting both http & https servers
-const httpServer = http.createServer();
+const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
-
-app.get("*", function (req, res) {
-  res.redirect("https://" + req.headers.host + req.url);
-
-  // Or, if you don't want to automatically detect the domain name from the request header, you can hard code it:
-  // res.redirect('https://example.com' + req.url);
-});
 
 // const PORT = process.env.PORT || 3000;
 httpServer.listen(80, () => {
