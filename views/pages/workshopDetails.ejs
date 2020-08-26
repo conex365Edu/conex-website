@@ -174,58 +174,29 @@
                             </div>
                         </div>
                         <div class="container" style="position: relative;right: 10%">
-                            <!--Payement-->
-                            <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_FOft0mDIiP9SEM/view"
-                                data-text="Register Now!" data-color="#8A20F3" data-size="large">
+                            <!--Razorpay Payement-->
+                            <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_FVOMBmgBBJ4yQ3/view" data-text="Register Now!" data-color="#8A20F3" data-size="large">
                                 <script>
-                                    (function () {
-                                        var d = document; var x = !d.getElementById('razorpay-embed-btn-js')
-                                        if (x) {
-                                            var s = d.createElement('script'); s.defer = !0; s.id = 'razorpay-embed-btn-js';
-                                            s.src = 'https://cdn.razorpay.com/static/embed_btn/bundle.js'; d.body.appendChild(s);
-                                        } else {
-                                            var rzp = window['_rzp_'];
-                                            rzp && rzp.init && rzp.init()
-                                        }
-                                    })();
+                                  (function(){
+                                    var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
+                                    if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
+                                    s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['_rzp_'];
+                                    rzp && rzp.init && rzp.init()}})();
                                 </script>
-                            </div>
+                              </div>
+                            <!--Razorpay Payement Closing-->
                         </div>
+                    <!--
                         <p>&nbsp</p>
                         <div class="col-xl-12 col-lg-12 col-md-12">
                             <h4>For International Students, <br>
                                 Please Register Using PayPal</h4>
                         </div>
                         <p>&nbsp</p>
-                        <div id="paypal-button-container"></div>
-                        <script
-                            src="https://www.paypal.com/sdk/js?client-id=AeFLk-yK6BMVJYcRlQi6C1bfuNTQVNa1gip_WGJ-Px8kyWAyzmTN3ifQ5Yuagu7nWp5CcG8O1AJrAEr4&currency=GBP"
-                            data-sdk-integration-source="button-factory"></script>
-                        <script>
-                            paypal.Buttons({
-                                style: {
-                                    shape: 'rect',
-                                    color: 'blue',
-                                    layout: 'vertical',
-                                    label: 'paypal',
-
-                                },
-                                createOrder: function (data, actions) {
-                                    return actions.order.create({
-                                        purchase_units: [{
-                                            amount: {
-                                                value: '5.49'
-                                            }
-                                        }]
-                                    });
-                                },
-                                onApprove: function (data, actions) {
-                                    return actions.order.capture().then(function (details) {
-                                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                                    });
-                                }
-                            }).render('#paypal-button-container');
-                        </script>
+                    -->
+                        <!--Paypal Integration-->
+                        
+                        <!--Paypal Integration-->
                     </div>
                 </div>
             </div>
