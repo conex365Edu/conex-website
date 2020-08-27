@@ -2,16 +2,22 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const volleyball = require("volleyball");
-const cookieParser = require("cookie-parser");
-const passport = require("passport");
-const http = require("http");
-const forceSSL = require("express-force-ssl");
 const path = require("path");
 const app = express();
 
+//Jwt Configuration
+const cookieParser = require("cookie-parser");
+const passport = require("passport");
+
 //SSl Configuration
+const forceSSL = require("express-force-ssl");
+const http = require("http");
 const https = require("https");
 const fs = require("fs");
+
+//Security Configuration
+const helmet = require("helmet");
+
 //MongoDB Config Path
 const db = require("./connection/config");
 
@@ -48,12 +54,26 @@ app.use(passport.initialize());
 
 require("./strategy/jwtStrategy")(passport);
 
-//SSL Middleware
+//Securit Middleware
+// app.use(helmet())
+app.use(helmet.contentSecurityPolicy());
+app.use(helmet.dnsPrefetchControl());
+app.use(helmet.expectCt());
+app.use(helmet.frameguard());
+app.use(helmet.hidePoweredBy());
+app.use(helmet.hsts());
+app.use(helmet.ieNoOpen());
+app.use(helmet.noSniff());
+app.use(helmet.permittedCrossDomainPolicies());
+app.use(helmet.referrerPolicy());
+app.use(helmet.xssFilter());
 
 //Middleware for cookieparser
 app.use(cookieParser());
+
 //Middleware for volleyball
 app.use(volleyball);
+
 //Actual Routes
 app.use("/api/auth", admin);
 app.use("/api/registration", conet);
