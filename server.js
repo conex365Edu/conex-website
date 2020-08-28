@@ -2,16 +2,22 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const volleyball = require("volleyball");
-const cookieParser = require("cookie-parser");
-const passport = require("passport");
-const http = require("http");
-const forceSSL = require('express-force-ssl');
 const path = require("path");
 const app = express();
 
+//Jwt Configuration
+const cookieParser = require("cookie-parser");
+const passport = require("passport");
+
 //SSl Configuration
+const forceSSL = require("express-force-ssl");
+const http = require("http");
 const https = require("https");
 const fs = require("fs");
+
+//Security Configuration
+const helmet = require("helmet");
+
 //MongoDB Config Path
 const db = require("./connection/config");
 
@@ -48,12 +54,26 @@ app.use(passport.initialize());
 
 require("./strategy/jwtStrategy")(passport);
 
-//SSL Middleware
+//Securit Middleware
+// app.use(helmet())
+app.use(helmet.contentSecurityPolicy());
+app.use(helmet.dnsPrefetchControl());
+app.use(helmet.expectCt());
+app.use(helmet.frameguard());
+app.use(helmet.hidePoweredBy());
+app.use(helmet.hsts());
+app.use(helmet.ieNoOpen());
+app.use(helmet.noSniff());
+app.use(helmet.permittedCrossDomainPolicies());
+app.use(helmet.referrerPolicy());
+app.use(helmet.xssFilter());
 
 //Middleware for cookieparser
 app.use(cookieParser());
+
 //Middleware for volleyball
 app.use(volleyball);
+
 //Actual Routes
 app.use("/api/auth", admin);
 app.use("/api/registration", conet);
@@ -73,104 +93,200 @@ mongoose.connect(
 //Serving Static Files
 app.use("/public", express.static(path.join(__dirname, "public")));
 
+// @type    GET
+// @route   /
+// @desc    Index Page
+// @access  PUBLIC
 app.get("/", (req, res) => {
   res.render("pages/index");
 });
 
+// @type    GET
+// @route   /workshop
+// @desc    Workshop Page
+// @access  PUBLIC
 app.get("/workshop", (req, res) => {
   res.render("pages/workshop");
 });
 
+// @type    GET
+// @route   /trainings
+// @desc    Trainings Page
+// @access  PUBLIC
 app.get("/trainings", (req, res) => {
   res.render("pages/Trainings");
 });
 
+// @type    GET
+// @route   /virtual
+// @desc    Virtual Page
+// @access  PUBLIC
 app.get("/virtual", (req, res) => {
   res.render("pages/Virtual");
 });
 
+// @type    GET
+// @route   /onSite
+// @desc    onSite Page
+// @access  PUBLIC
 app.get("/onSite", (req, res) => {
   res.render("pages/Onsite");
 });
 
+// @type    GET
+// @route   /conextoc
+// @desc    Conextoc Page
+// @access  PUBLIC
 app.get("/conextoc", (req, res) => {
   res.render("pages/Conextoc");
 });
 
+// @type    GET
+// @route   /conextoi
+// @desc    Conextoi Page
+// @access  PUBLIC
 app.get("/conextoi", (req, res) => {
   res.render("pages/Conextoi");
 });
 
+// @type    GET
+// @route   /conetregistration
+// @desc    Conet Registration Page
+// @access  PUBLIC
 app.get("/conetregistration", csrfProtection, (req, res) => {
   res.render("pages/RegistrationPages/ConetRegistration", {
     csrfToken: req.csrfToken(),
   });
 });
 
+// @type    GET
+// @route   /conexplusregistration
+// @desc    Conexplus Registration Page
+// @access  PUBLIC
 app.get("/conexplusregistration", csrfProtection, (req, res) => {
   res.render("pages/RegistrationPages/ConexPlusRegistration", {
     csrfToken: req.csrfToken(),
   });
 });
 
+// @type    GET
+// @route   /conexion
+// @desc    Conexion Page
+// @access  PUBLIC
 app.get("/conexion", (req, res) => {
   res.render("pages/conexion");
 });
 
+// @type    GET
+// @route   /about
+// @desc    About Page
+// @access  PUBLIC
 app.get("/about", (req, res) => {
   res.render("pages/about");
 });
 
+// @type    GET
+// @route   /objectives
+// @desc    Objectives Page
+// @access  PUBLIC
 app.get("/objectives", (req, res) => {
   res.render("pages/Objectives");
 });
 
+// @type    GET
+// @route   /csr
+// @desc    Csr Page
+// @access  PUBLIC
 app.get("/csr", (req, res) => {
   res.render("pages/Csr");
 });
 
+// @type    GET
+// @route   /speaker
+// @desc    Speaker Page
+// @access  PUBLIC
 app.get("/speaker", (req, res) => {
   res.render("pages/speaker");
 });
 
+// @type    GET
+// @route   /team
+// @desc    Team Page
+// @access  PUBLIC
 app.get("/team", (req, res) => {
   res.render("pages/Team");
 });
 
+// @type    GET
+// @route   /privacy
+// @desc    Privacy Page
+// @access  PUBLIC
 app.get("/privacy", (req, res) => {
   res.render("pages/Privacy");
 });
 
+// @type    GET
+// @route   /contact
+// @desc    Contact Page
+// @access  PUBLIC
 app.get("/contact", (req, res) => {
   res.render("pages/contact");
 });
 
+// @type    GET
+// @route   /termsofservice
+// @desc    Terms Of Service Page
+// @access  PUBLIC
 app.get("/termsofservice", (req, res) => {
   res.render("pages/termsofservice");
 });
 
+// @type    GET
+// @route   /carfp
+// @desc    Carfp
+// @access  PUBLIC
 app.get("/carfp", (req, res) => {
   res.render("pages/carfp");
 });
 
+// @type    GET
+// @route   /ThankYou
+// @desc    Thank You Page
+// @access  PUBLIC
 app.get("/ThankYou", (req, res) => {
   res.render("pages/ThankYou");
 });
 
+// @type    GET
+// @route   /workshopdetails
+// @desc    Workshop Details Page
+// @access  PUBLIC
 app.get("/workshopdetails", (req, res) => {
   res.render("pages/workshopDetails");
 });
 
+// @type    GET
+// @route   /conexspeakerregistration
+// @desc    Conex Speaker Registration Page
+// @access  PUBLIC
 app.get("/conexspeakerregistration", csrfProtection, (req, res) => {
   res.render("pages/RegistrationPages/ConexSpeakerRegistration", {
     csrfToken: req.csrfToken(),
   });
 });
 
+// @type    GET
+// @route   /AdminLogin
+// @desc    Admin Login
+// @access  PRIVATE
 app.get("/AdminLogin", csrfProtection, (req, res) => {
   res.render("pages/adminLogin", { csrfToken: req.csrfToken() });
 });
 
+// @type    GET
+// @route   /AdminDashboard
+// @desc    Admin Dashboard Page
+// @access  PUBLIC
 app.get(
   "/AdminDashboard",
   passport.authenticate("jwt", {
@@ -195,6 +311,10 @@ app.get(
   }
 );
 
+// @type    GET
+// @route   /conet
+// @desc    Conet Dashboard Page
+// @access  PRIVATE
 app.get(
   "/conet",
   passport.authenticate("jwt", {
@@ -209,6 +329,10 @@ app.get(
   }
 );
 
+// @type    GET
+// @route   /conexplus
+// @desc    Conexplus Dashboard Page
+// @access  PRIVATE
 app.get(
   "/conexplus",
   csrfProtection,
@@ -222,6 +346,10 @@ app.get(
   }
 );
 
+// @type    GET
+// @route   /conexspeaker
+// @desc    Conexspeaker Dashboard Page
+// @access  PRIVATE
 app.get(
   "/conexspeaker",
   csrfProtection,
@@ -235,6 +363,10 @@ app.get(
   }
 );
 
+// @type    GET
+// @route   /resetmypassword
+// @desc    Resetmypassword Dashboard Page
+// @access  PRIVATE
 app.get(
   "/resetmypassword",
   passport.authenticate("jwt", {
@@ -248,10 +380,10 @@ app.get(
   }
 );
 
-// Certificate
-const privateKey = fs.readFileSync("./private.key", "utf8");
-const certificate = fs.readFileSync("./certificate.crt", "utf8");
-const ca = fs.readFileSync("./ca_bundle.crt", "utf8");
+// Zero SSl Provided Certificate Config
+const privateKey = fs.readFileSync("./certificates/private.key", "utf8");
+const certificate = fs.readFileSync("./certificates/certificate.crt", "utf8");
+const ca = fs.readFileSync("./certificates/ca_bundle.crt", "utf8");
 
 const credentials = {
   key: privateKey,
@@ -263,7 +395,6 @@ const credentials = {
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
-// const PORT = process.env.PORT || 3000;
 httpServer.listen(80, () => {
   console.log("HTTP Server running on port 80");
 });
@@ -271,6 +402,3 @@ httpServer.listen(80, () => {
 httpsServer.listen(443, () => {
   console.log("HTTPS Server running on port 443");
 });
-// app.listen(PORT, () => {
-//   console.log(`Server is running on http://localhost:${PORT}`);
-// });
