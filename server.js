@@ -26,6 +26,7 @@ const admin = require("./routes/api/adminLogin");
 const conet = require("./routes/api/conet");
 const conexplus = require("./routes/api/conexplus");
 const conexspeaker = require("./routes/api/conexspeaker");
+const monthlyPayment = require("./routes/api/monthPay");
 
 //CSRF Token Dependencies
 var csrf = require("csurf");
@@ -79,6 +80,7 @@ app.use("/api/auth", admin);
 app.use("/api/registration", conet);
 app.use("/api/registration", conexplus);
 app.use("/api/registration", conexspeaker);
+app.use("/api/payment365/", monthlyPayment);
 
 //Connect to MongoDB
 mongoose.connect(
