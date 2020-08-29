@@ -226,6 +226,15 @@ app.get("/subscribe", (req, res) => {
 });
 
 // @type    GET
+// @route   /subscribe
+// @desc    Subscripton Page
+// @access  PUBLIC
+app.get("/Thankusu", (req, res) => {
+  res.render("pages/Thankusu");
+});
+
+
+// @type    GET
 // @route   /privacy
 // @desc    Privacy Page
 // @access  PUBLIC
