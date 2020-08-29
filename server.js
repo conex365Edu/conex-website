@@ -220,6 +220,14 @@ app.get("/team", (req, res) => {
 });
 
 // @type    GET
+// @route   /subscribe
+// @desc    Subscripton Page
+// @access  PUBLIC
+app.get("/subscribe", (req, res) => {
+  res.render("pages/subscribe");
+});
+
+// @type    GET
 // @route   /privacy
 // @desc    Privacy Page
 // @access  PUBLIC
