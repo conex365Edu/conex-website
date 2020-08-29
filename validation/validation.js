@@ -51,7 +51,18 @@ const conexplusspeaker = (data) => {
   return schema.validate(data);
 };
 
+const subscribe = (data) => {
+  const schema = Joi.object({
+    buyer_name: Joi.string().required(),
+    phone: Joi.number().min(9).required(),
+    email: Joi.string().min(6).required().email(),
+  });
+
+  return schema.validate(data);
+};
+
 module.exports.conetregisterValidation = conetregisterValidation;
 module.exports.conexplusregister = conexplusregister;
-module.exports.conexplusspeaker = conexplusspeaker;
+module.exports.subscribe = subscribe;
+module.exports.resetPassword = resetPassword;
 module.exports.resetPassword = resetPassword;

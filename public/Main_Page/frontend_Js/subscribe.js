@@ -23,7 +23,20 @@ async function subscribe() {
     },
     body: data,
   });
-
   const res = await rawResponse.json();
-  window.location.href = res;
+
+  const errorAlert = document.getElementById("erroralert");
+  if (res.error) {
+    errorAlert.style.display = "block";
+    errorAlert.innerHTML = res.error;
+  } else {
+    errorAlert.style.display = "none";
+    window.location.href = res;
+  }
+  
 }
+
+function load() {
+  document.getElementById("erroralert").style.display = "none";
+}
+load();

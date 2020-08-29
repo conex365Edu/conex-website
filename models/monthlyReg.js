@@ -3,10 +3,17 @@ const Schema = mongoose.Schema;
 
 const monthly = new Schema(
   {
-    Id: {
+    userId: {
       type: String,
+      required: true,
+      max: 50,
     },
-    Name: {
+    first: {
+      type: String,
+      required: true,
+      max: 50,
+    },
+    last: {
       type: String,
       required: true,
       max: 50,
