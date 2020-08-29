@@ -43,7 +43,7 @@ const speakerModel = require("./models/conexspeaker");
 
 //Middleware for bodyparser
 app.use(bodyParser.json());
-app.use(forceSSL);
+// app.use(forceSSL);
 app.use(
   bodyParser.urlencoded({
     extended: true,
@@ -405,7 +405,7 @@ const credentials = {
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
-httpServer.listen(80, () => {
+httpServer.listen(8080, () => {
   console.log("HTTP Server running on port 80");
 });
 

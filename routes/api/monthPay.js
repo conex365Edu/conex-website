@@ -3,15 +3,17 @@ const config = require("../../connection/config");
 const Insta = require("instamojo-nodejs");
 const shortid = require("shortid");
 const monthly = require("../../models/monthlyReg");
+const url = require("url");
 
 router.post("/pay", (req, res) => {
+  Insta.setKeys(config.API_KEY, config.AUTH_KEY);
   Insta.isSandboxMode(true);
   const data = new Insta.PaymentData();
   //Set the payment values
-  data.purpose = req.body.purpose;
-  data.amount = req.body.amount;
+  data.purpose = "Conex365 Monthly Subscription";
+  data.amount = 10;
   data.buyer_name = req.body.buyer_name;
-  data.redirect_url = `http://localhost:3000/api/payment365/callback?user_id=${shortid.generate()}&name=${
+  data.redirect_url = `http://localhost:8080/api/payment365/callback?user_id=${shortid.generate()}&name=${
     req.body.buyer_name
   }&email=${req.body.email}&phone=${req.body.phone}&amount=${data.amount}`;
   data.email = req.body.email;
@@ -47,7 +49,7 @@ router.get("/callback/", (req, res) => {
     let email = responseData.email;
     let phone = responseData.phone;
     console.log("Done");
-    res.redirect("/paymentc");
+    res.redirect("/ThankYou");
 
     const data = {};
     // data.package = "Education Purpose";
