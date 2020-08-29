@@ -1,7 +1,7 @@
 async function subscribe() {
-  //   const token = document
-  //     .querySelector('meta[name="csrf-token"]')
-  //     .getAttribute("content");
+  const token = document
+    .querySelector('meta[name="csrf-token"]')
+    .getAttribute("content");
   const name = document.getElementById("name").value;
   const phonenumber = document.getElementById("phone").value;
   const email = document.getElementById("email").value;
@@ -19,7 +19,7 @@ async function subscribe() {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-      //   "CSRF-Token": token,
+      "CSRF-Token": token,
     },
     body: data,
   });

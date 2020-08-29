@@ -3,9 +3,13 @@ const config = require("../../connection/config");
 const Insta = require("instamojo-nodejs");
 const shortid = require("shortid");
 const monthly = require("../../models/monthlyReg");
+const bodyParser = require("body-parser");
 const url = require("url");
+var csrf = require("csurf");
+var csrfProtection = csrf({ cookie: true });
+var parseForm = bodyParser.urlencoded({ extended: false });
 
-router.post("/pay", (req, res) => {
+router.post("/pay", csrfProtection, parseForm, (req, res) => {
   Insta.setKeys(config.API_KEY, config.AUTH_KEY);
   Insta.isSandboxMode(true);
   const data = new Insta.PaymentData();

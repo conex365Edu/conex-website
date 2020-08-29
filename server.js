@@ -223,8 +223,10 @@ app.get("/team", (req, res) => {
 // @route   /subscribe
 // @desc    Subscripton Page
 // @access  PUBLIC
-app.get("/subscribe", (req, res) => {
-  res.render("pages/subscribe");
+app.get("/subscribe", csrfProtection, (req, res) => {
+  res.render("pages/subscribe", {
+    csrfToken: req.csrfToken(),
+  });
 });
 
 // @type    GET
