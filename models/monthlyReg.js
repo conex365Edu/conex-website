@@ -27,6 +27,10 @@ const monthly = new Schema(
     Amount: {
       type: String,
     },
+    Date: {
+      type: Date,
+      default: Date.now(),
+    },
   },
   {
     collection: "Monthly Subscription",

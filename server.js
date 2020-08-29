@@ -237,7 +237,6 @@ app.get("/Thankusu", (req, res) => {
   res.render("pages/Thankusu");
 });
 
-
 // @type    GET
 // @route   /privacy
 // @desc    Privacy Page
@@ -389,6 +388,20 @@ app.get(
     res.render("pages/DashboardPages/ConexSpeaker", {
       csrfToken: req.csrfToken(),
     });
+  }
+);
+
+// @type    GET
+// @route   /subscription
+// @desc    Subscription Page
+// @access  PRIVATE
+app.get(
+  "/subscription",
+  passport.authenticate("jwt", {
+    session: false,
+  }),
+  (req, res) => {
+    res.render("pages/DashboardPages/Subscriptions");
   }
 );
 

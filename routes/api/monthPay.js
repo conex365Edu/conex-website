@@ -92,7 +92,16 @@ router.get("/callback/", (req, res) => {
     // const data = {};
     // data.package = "Education Purpose";
     // data.amount = "10";
+  } else {
+    res.redirect("/PayError");
   }
+});
+
+router.get("/subscriptions", async (req, res) => {
+  const filter = {};
+  const subscribe = await monthly.find(filter);
+  console.log(subscribe);
+  res.json(subscribe);
 });
 
 module.exports = router;

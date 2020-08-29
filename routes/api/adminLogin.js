@@ -212,7 +212,8 @@ router.get("/logout", function (req, res) {
     resStatus: "Success",
     msg: "redirect",
   });
-  res.redirect("/");
+  res.redirect("/adminLogin");
+  window.location.href="/adminLogin";
 });
 
 // router.get("/logout", function (req, res) {
