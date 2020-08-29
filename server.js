@@ -26,6 +26,7 @@ const admin = require("./routes/api/adminLogin");
 const conet = require("./routes/api/conet");
 const conexplus = require("./routes/api/conexplus");
 const conexspeaker = require("./routes/api/conexspeaker");
+const monthlyPayment = require("./routes/api/monthPay");
 
 //CSRF Token Dependencies
 var csrf = require("csurf");
@@ -42,7 +43,7 @@ const speakerModel = require("./models/conexspeaker");
 
 //Middleware for bodyparser
 app.use(bodyParser.json());
-app.use(forceSSL);
+// app.use(forceSSL);
 app.use(
   bodyParser.urlencoded({
     extended: true,
@@ -79,6 +80,7 @@ app.use("/api/auth", admin);
 app.use("/api/registration", conet);
 app.use("/api/registration", conexplus);
 app.use("/api/registration", conexspeaker);
+app.use("/api/payment365/", monthlyPayment);
 
 //Connect to MongoDB
 mongoose.connect(
@@ -221,8 +223,10 @@ app.get("/team", (req, res) => {
 // @route   /subscribe
 // @desc    Subscripton Page
 // @access  PUBLIC
-app.get("/subscribe", (req, res) => {
-  res.render("pages/subscribe");
+app.get("/subscribe", csrfProtection, (req, res) => {
+  res.render("pages/subscribe", {
+    csrfToken: req.csrfToken(),
+  });
 });
 
 // @type    GET
@@ -412,7 +416,7 @@ const credentials = {
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
-httpServer.listen(80, () => {
+httpServer.listen(8080, () => {
   console.log("HTTP Server running on port 80");
 });
 
