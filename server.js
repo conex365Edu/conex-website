@@ -279,6 +279,14 @@ app.get("/ThankYou", (req, res) => {
 });
 
 // @type    GET
+// @route   /ThankYou
+// @desc    Thank You Page
+// @access  PUBLIC
+app.get("/PayError", (req, res) => {
+  res.render("pages/PayError");
+});
+
+// @type    GET
 // @route   /workshopdetails
 // @desc    Workshop Details Page
 // @access  PUBLIC
