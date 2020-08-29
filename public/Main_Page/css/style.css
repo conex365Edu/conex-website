@@ -473,7 +473,7 @@ h3 {
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 5px;
-  color: #fff;
+  color: red;
 }
 
 #timer {
@@ -6953,3 +6953,126 @@ h6 {
   }
   
 /*# sourceMappingURL=style.css.map */
+
+.sticky-nav {
+  height:80px;
+  display:-webkit-box;
+  background-color: #0EAFCC;
+  display:flex;
+  -webkit-box-pack:center;
+  justify-content:center;
+  -webkit-box-align:center;
+  align-items:center;
+  position:fixed;
+  width:100%;
+  z-index:10000;
+  bottom:0;
+  font-family:Poppins
+ }
+ @media screen and (max-width:1700px) {
+  .sticky-nav {
+   height:64.8px
+  }
+ }
+ @media screen and (max-width:1459px) {
+  .sticky-nav {
+   height:55.2px
+  }
+ }
+ @media screen and (max-width:1199px) {
+  .sticky-nav {
+   height:45.6px
+  }
+ }
+ @media screen and (max-width:991px) {
+  .sticky-nav {
+   height:67px
+  }
+ }
+ .sticky-nav .sticky-text {
+  color:#fff;
+  font-size:30px;
+  line-height:46px;
+  margin:0 30px 0 0
+ }
+ @media screen and (max-width:1700px) {
+  .sticky-nav .sticky-text {
+   font-size:24.3px;
+   line-height:37.26px;
+   margin-right:24.3px
+  }
+ }
+ @media screen and (max-width:1459px) {
+  .sticky-nav .sticky-text {
+   font-size:20.7px;
+   line-height:31.74px;
+   margin-right:20.7px
+  }
+ }
+ @media screen and (max-width:1199px) {
+  .sticky-nav .sticky-text {
+   font-size:17.1px;
+   line-height:26.22px;
+   margin-right:17.1px
+  }
+ }
+ @media screen and (max-width:991px) {
+  .sticky-nav .sticky-text {
+   font-size:13px;
+   line-height:18px;
+   margin-right:10px;
+   width:188px
+  }
+ }
+ .sticky-nav .sticky-text del {
+  color:red
+ }
+ .sticky-nav .sticky-text del span {
+  color:#fff
+ }
+ .sticky-nav .sticky-btn {
+  background:#172b4d;
+  color:#fff;
+  height:46px;
+  border:3px solid #fff;
+  font-size:18px;
+  line-height:23px;
+  border-radius:50px;
+  width:203px;
+  font-family:Lato,sans-serif;
+  font-weight:500
+ }
+ @media screen and (max-width:1700px) {
+  .sticky-nav .sticky-btn {
+   height:37.26px;
+   font-size:14.58px;
+   line-height:18.63px;
+   width:164.43px
+  }
+ }
+ @media screen and (max-width:1459px) {
+  .sticky-nav .sticky-btn {
+   height:31.74px;
+   font-size:12.42px;
+   line-height:15.87px;
+   width:140.07px
+  }
+ }
+ @media screen and (max-width:1199px) {
+  .sticky-nav .sticky-btn {
+   height:26.22px;
+   font-size:10.26px;
+   line-height:13.11px;
+   width:115.71px;
+   border-width:2px
+  }
+ }
+ @media screen and (max-width:991px) {
+  .sticky-nav .sticky-btn {
+   height:28px;
+   width:119px;
+   font-size:13px;
+   line-height:15px;
+   border-width:1px
+  }
+ }
