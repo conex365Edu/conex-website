@@ -22,14 +22,14 @@ router.post("/pay", (req, res) => {
   } else {
     Insta.setKeys(config.API_KEY, config.AUTH_KEY);
 
-    Insta.isSandboxMode(true);
+    Insta.isSandboxMode(false);
     const data = new Insta.PaymentData();
     //Set the payment values
     const name = req.body.buyer_name;
     const nameres = name.split(" ");
     console.log(nameres);
     data.purpose = "Conex365 Monthly Subscription";
-    data.amount = 10;
+    data.amount = 499;
     data.buyer_name = `${req.body.buyer_name}`;
     data.redirect_url = `http://localhost:8080/api/payment365/callback?user_id=${shortid.generate()}&first=${
       nameres[0]
