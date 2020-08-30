@@ -31,7 +31,7 @@ router.post("/pay", (req, res) => {
     data.purpose = "Conex365 Monthly Subscription";
     data.amount = 499;
     data.buyer_name = `${req.body.buyer_name}`;
-    data.redirect_url = `http://localhost:8080/api/payment365/callback?user_id=${shortid.generate()}&first=${
+    data.redirect_url = `http://localhost:80/api/payment365/callback?user_id=${shortid.generate()}&first=${
       nameres[0]
     }&last=${nameres[1]}&email=${req.body.email}&phone=${
       req.body.phone
