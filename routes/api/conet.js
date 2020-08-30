@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const passport = require("passport");
 const conetModel = require("../../models/Conet");
 const { conetregisterValidation } = require("../../validation/validation");
 const bodyParser = require("body-parser");
@@ -54,27 +55,41 @@ router.post("/conet", csrfProtection, parseForm, (req, res) => {
   );
 });
 
-router.get("/conet", async (req, res) => {
-  const filter = {};
-  const conet = await conetModel.find(filter);
-  console.log(conet);
-  res.json(conet);
-});
+router.get(
+  "/conet",
+  passport.authenticate("jwt", {
+    session: false,
+  }),
+  async (req, res) => {
+    const filter = {};
+    const conet = await conetModel.find(filter);
+    console.log(conet);
+    res.json(conet);
+  }
+);
 
-router.delete("/conet/:id", csrfProtection, parseForm, (req, res) => {
-  console.log(req.params.id);
-  conetModel
-    .findOneAndRemove({
-      _id: req.params.id,
-    })
-    .then(() => {
-      res.json({
-        success: true,
+router.delete(
+  "/conet/:id",
+  csrfProtection,
+  parseForm,
+  passport.authenticate("jwt", {
+    session: false,
+  }),
+  (req, res) => {
+    console.log(req.params.id);
+    conetModel
+      .findOneAndRemove({
+        _id: req.params.id,
+      })
+      .then(() => {
+        res.json({
+          success: true,
+        });
+      })
+      .catch((err) => {
+        if (err) throw err;
       });
-    })
-    .catch((err) => {
-      if (err) throw err;
-    });
-});
+  }
+);
 
 module.exports = router;

@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const conexspeakermodel = require("../../models/conexspeaker");
+const passport = require("passport");
 const { conexplusspeaker } = require("../../validation/validation");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
@@ -52,17 +53,26 @@ router.post("/conexspeaker", csrfProtection, parseForm, (req, res) => {
   );
 });
 
-router.get("/conexspeaker", async (req, res) => {
-  const filter = {};
-  const conexspeaker = await conexspeakermodel.find(filter);
-  console.log(conexspeaker);
-  res.json(conexspeaker);
-});
+router.get(
+  "/conexspeaker",
+  passport.authenticate("jwt", {
+    session: false,
+  }),
+  async (req, res) => {
+    const filter = {};
+    const conexspeaker = await conexspeakermodel.find(filter);
+    console.log(conexspeaker);
+    res.json(conexspeaker);
+  }
+);
 
 router.delete(
   "/conexplusspeaker/:id",
   csrfProtection,
   parseForm,
+  passport.authenticate("jwt", {
+    session: false,
+  }),
   (req, res) => {
     console.log(req.params.id);
     conexspeakermodel

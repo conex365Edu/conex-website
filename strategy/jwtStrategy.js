@@ -6,7 +6,7 @@ const passport = require("passport");
 
 var cookieExtractor = function (req) {
   var token = null;
-  if (req && req.cookies) token = req.cookies["jwt"];
+  if (req && req.cookies) token = req.cookies["_q3e8bkdl3"];
   return token;
 };
 

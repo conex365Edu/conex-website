@@ -93,7 +93,7 @@ router.post("/adminlogin", parseForm, csrfProtection, (req, res) => {
                 //   success: "true",
                 //   token: "Bearer " + token
                 // })
-                res.cookie("jwt", token).json({
+                res.cookie("_q3e8bkdl3", token).json({
                   msg: "Authorization",
                 });
               }

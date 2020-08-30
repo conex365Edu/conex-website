@@ -50,27 +50,41 @@ router.post("/conexplus", csrfProtection, parseForm, (req, res) => {
   );
 });
 
-router.get("/conexplus", async (req, res) => {
-  const filter = {};
-  const conexplus = await conexPlus.find(filter);
-  console.log(conexplus);
-  res.json(conexplus);
-});
+router.get(
+  "/conexplus",
+  passport.authenticate("jwt", {
+    session: false,
+  }),
+  async (req, res) => {
+    const filter = {};
+    const conexplus = await conexPlus.find(filter);
+    console.log(conexplus);
+    res.json(conexplus);
+  }
+);
 
-router.delete("/conexplus/:id", csrfProtection, parseForm, (req, res) => {
-  console.log(req.params.id);
-  conexPlus
-    .findOneAndRemove({
-      _id: req.params.id,
-    })
-    .then(() => {
-      res.json({
-        success: true,
+router.delete(
+  "/conexplus/:id",
+  passport.authenticate("jwt", {
+    session: false,
+  }),
+  csrfProtection,
+  parseForm,
+  (req, res) => {
+    console.log(req.params.id);
+    conexPlus
+      .findOneAndRemove({
+        _id: req.params.id,
+      })
+      .then(() => {
+        res.json({
+          success: true,
+        });
+      })
+      .catch((err) => {
+        if (err) throw err;
       });
-    })
-    .catch((err) => {
-      if (err) throw err;
-    });
-});
+  }
+);
 
 module.exports = router;

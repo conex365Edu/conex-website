@@ -4,6 +4,7 @@ const Insta = require("instamojo-nodejs");
 const shortid = require("shortid");
 const monthly = require("../../models/monthlyReg");
 const bodyParser = require("body-parser");
+const passport = require("passport");
 const url = require("url");
 var csrf = require("csurf");
 var csrfProtection = csrf({ cookie: true });
@@ -59,7 +60,6 @@ router.post("/pay", (req, res) => {
 });
 
 router.get("/callback/", (req, res) => {
-  const url = require("url");
   let url_parts = url.parse(req.url, true);
   console.log(url_parts);
   const responseData = url_parts.query;
@@ -97,11 +97,17 @@ router.get("/callback/", (req, res) => {
   }
 });
 
-router.get("/subscriptions", async (req, res) => {
-  const filter = {};
-  const subscribe = await monthly.find(filter);
-  console.log(subscribe);
-  res.json(subscribe);
-});
+router.get(
+  "/subscriptions",
+  passport.authenticate("jwt", {
+    session: false,
+  }),
+  async (req, res) => {
+    const filter = {};
+    const subscribe = await monthly.find(filter);
+    console.log(subscribe);
+    res.json(subscribe);
+  }
+);
 
 module.exports = router;
