@@ -281,6 +281,14 @@ app.get("/ThankYou", (req, res) => {
 // @route   /ThankYou
 // @desc    Thank You Page
 // @access  PUBLIC
+app.get("/Certification/MachineLearning", (req, res) => {
+  res.render("pages/Certifications/MachineLearning");
+});
+
+// @type    GET
+// @route   /ThankYou
+// @desc    Thank You Page
+// @access  PUBLIC
 app.get("/PayError", (req, res) => {
   res.render("pages/PayError");
 });
