@@ -278,11 +278,19 @@ app.get("/ThankYou", (req, res) => {
 });
 
 // @type    GET
-// @route   /ThankYou
-// @desc    Thank You Page
+// @route   /Certification/MachineLearning
+// @desc    Machine Learning Page
 // @access  PUBLIC
 app.get("/Certification/MachineLearning", (req, res) => {
   res.render("pages/Certifications/MachineLearning");
+});
+
+// @type    GET
+// @route   /Certification/Python
+// @desc    Python Page
+// @access  PUBLIC
+app.get("/Certification/Python", (req, res) => {
+  res.render("pages/Certifications/Python");
 });
 
 // @type    GET
