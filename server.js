@@ -294,6 +294,38 @@ app.get("/Certification/Python", (req, res) => {
 });
 
 // @type    GET
+// @route   /Certification/DataScience
+// @desc    Data Science Page
+// @access  PUBLIC
+app.get("/Certification/DataScience", (req, res) => {
+  res.render("pages/Certifications/DataScience");
+});
+
+// @type    GET
+// @route   /Certification/BigData
+// @desc    Big Data Page
+// @access  PUBLIC
+app.get("/Certification/BigData", (req, res) => {
+  res.render("pages/Certifications/BigData");
+});
+
+// @type    GET
+// @route   /Certification/Android
+// @desc    Android Page
+// @access  PUBLIC
+app.get("/Certification/Android", (req, res) => {
+  res.render("pages/Certifications/Android");
+});
+
+// @type    GET
+// @route   /Certification/FullStack
+// @desc    Full Stack Page
+// @access  PUBLIC
+app.get("/Certification/FullStack", (req, res) => {
+  res.render("pages/Certifications/FullStack");
+});
+
+// @type    GET
 // @route   /ThankYou
 // @desc    Thank You Page
 // @access  PUBLIC

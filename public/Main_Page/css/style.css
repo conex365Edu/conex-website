@@ -357,7 +357,7 @@ h3 {
   
     }
 }
-    .fancy-line { 
+    .blue-line { 
     border: 0; 
     height: 2px; 
     background-color: #00eeaa;
@@ -725,19 +725,15 @@ h3 {
 /* Line Button */
 
 .line-button {
-  color: #919191;
-  font-size: 16px;
-  font-weight: 400;
+  color: #0EAFCC;
+  font-size: 15px;
   display: inline-block;
   position: relative;
-  padding-right: 5px;
-  padding-bottom: 2px;
 }
 
 .line-button::before {
   position: absolute;
-  content: "";
-  background: #919191;
+  color: #0EAFCC;
   width: 100%;
   height: 1px;
   bottom: 0;
@@ -745,12 +741,9 @@ h3 {
 }
 
 .line-button:hover {
-  color: #009DFF;
+  color: #0EAFCC;
 }
 
-.line-button:hover::before {
-  background: #009DFF;
-}
 
 
 /* line 2,  section_title.scss */
@@ -6427,7 +6420,7 @@ h6 {
   text-align: center;
 }
 
-/* Vision Box */
+/* Purpose Box */
 
 .purpose_box{
   margin-bottom: 30px;
@@ -6524,7 +6517,9 @@ h6 {
   color: #0EAFCC;
 }
 
-/* Certification */
+/* ============================
+      Certificate Section
+   ============================ */
 
 .certificate_details_info {
   padding-top: 80px;
@@ -6537,95 +6532,125 @@ h6 {
   }
 }
 
-.certificate_details_info .accordion_heading h3 {
-  font-size: 42px;
-  font-weight: 400;
-  margin-bottom: 0;
+.certificate_details_info h3 img {
+  max-width: 20%;
 }
 
-@media (max-width: 767px) {
-  .certificate_details_info .accordion_heading h3 {
-    font-size: 28px;
-  }
-}
-
-.certificate_details_info #accordion .card h5 button {
-  font-size: 22px;
-  font-weight: 400;
-  color: #1F1F1F;
-}
-
-@media (max-width: 767px) {
-  .certificate_details_info #accordion .card h5 button {
-    font-size: 13px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .certificate_details_info #accordion .card h5 button {
-    font-size: 18px;
-  }
-}
-
-.certificate_details_info #accordion .card h5 button i {
-  color: #00D363;
-  padding-right: 15px;
-}
-
-.certificate_details_info #accordion .card .card-body {
-  padding: 0 76px 40px 76px;
-}
-
-.certificate_details_info #accordion .card .card-body ul li i {
-  margin-right: 10px;
+.certificate_details_info h4 {
   color: #0EAFCC;
 }
 
-@media (max-width: 767px) {
-  .certificate_details_info #accordion .card .card-body {
-    padding: 0 20px 10px 20px;
-  }
+#about_certification {
+  padding: 60px 0 40px 0;
+  box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
-.certificate_details_info #accordion .card {
+#about_certification .box {
+  padding: 30px;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: .25rem;
-  background: #fff !important;
-  border: 1px solid #E9E5EC;
-  border: 5px;
-  border: 1px solid #E9E5EC;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 10px 40px 10px;
+  background: #fff;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
-.certificate_details_info #accordion .card .card-header {
+#about_certification .box:hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+#about_certification .icon {
+  position: absolute;
+  left: -10px;
+  top: calc(50% - 32px);
+}
+
+#about_certification .icon i {
+  font-size: 64px;
+  line-height: 1;
+  transition: 0.5s;
+}
+
+#about_certification .title {
+  margin-left: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #0EAFCC;
+}
+
+
+#about_certification .description {
+  font-size: 14px;
+  margin-left: 40px;
+  line-height: 24px;
   margin-bottom: 0;
-  background-color: #fff;
-  border-bottom: none;
-  padding: 14px 14px 16px 14px;
 }
 
-.certificate_details_info .btn-link.focus, .certificate_details_info .btn-link:focus {
-  text-decoration: none;
-  border-color: transparent;
-  box-shadow: none;
+#course_syllubus {
+  padding: 60px 0;
+  overflow: hidden;
 }
 
-.certificate_details_info .btn-link:hover {
-  color: #0056b3;
-  text-decoration: none;
-  background-color: transparent;
-  border-color: transparent;
+#course_syllubus #course_syllubus_list {
+  padding: 0;
+  list-style: none;
+}
+
+#course_syllubus #course_syllubus_list li {
+  border-bottom: 1px solid #ebebeb;
+}
+
+#course_syllubus #course_syllubus_list a {
+  padding: 22px 0;
+  display: block;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  padding-right: 20px;
+}
+
+#course_syllubus #course_syllubus_list i {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+#course_syllubus #course_syllubus_list p .ul_collapse {
+  margin-bottom: 20px;
+}
+
+#course_syllubus #course_syllubus_list a.collapse {
+  color: #1bb1dc;
+}
+
+#course_syllubus #course_syllubus_list a.collapsed {
+  color: #000;
+}
+
+#course_syllubus #course_syllubus_list a.collapsed i::before {
+  content: "\f067" !important;
+}
+
+.industry-project {
+  margin-bottom: 20px;
+}
+
+.industry-project ul li {
+  font-size: 17px;
+}
+
+.expand-para {
+  font-size: 15px;
+}
+
+.expand-para a {
+  color: #0EAFCC; 
 }
 
 .certificate_box{
@@ -6656,49 +6681,6 @@ h6 {
   }
 }
 
-.industry-project ul li {
-  font-size: 17px;
-}
-
-.expand-para{
-  font-size: 15px;
-}
-
-.certificate_industry_box{
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  box-shadow: 15px 15px 15px rgba(14, 175, 204, 0.5);
-  -webkit-transition: .5s; 
-  -moz-transition:.5s; 
-  -ms-transition:.5s; 
-  -o-transition:.5s;
-  transition: .5s;
-  padding-top: 15px;
-}
-.certificate_industry_box i {
-  color: #0EAFCC;
-  margin-left: 45%;
-}
-
-@media (max-width: 767px) {
-  .certificate_industry_box i{
-    margin-left: 32%;
-  }
-}
-
-.certificate_industry_box h3 {
-  padding-right: 13px;
-  padding-left: 13px;
-  text-align: center;
-}
-
-.certificate_industry_box p {
-  padding-right: 13px;
-  padding-left: 13px;
-  text-align: center;
-}
-
-
 .coaches_details_info {
   padding-top: 60px;
 }
@@ -6720,9 +6702,29 @@ h6 {
   height: 157px; 
 }
 
-@media (max-width: 767px) {
+@media (max-width: 574px) {
   .coaches_details_info .author_info {
     height:180px;
+  }
+}
+
+@media (min-width: 575px) and (max-width: 767px) {
+  .coaches_details_info .author_info {
+    padding: 5px;
+    height:155px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .coaches_details_info .author_info {
+    padding: 5px;
+    height: 205px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1198px) {
+  .coaches_details_info .author_info {
+    height: 205px;
   }
 }
 
@@ -6749,8 +6751,14 @@ h6 {
   color: #919191;
 }
 
+/* ============================
+      Certificate Section
+   ============================ */
+   
 /* Modal */
 
 #myModal{
   z-index: 10000;
 }
+
+
