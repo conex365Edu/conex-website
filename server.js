@@ -326,6 +326,46 @@ app.get("/Certification/FullStack", (req, res) => {
 });
 
 // @type    GET
+// @route   /Certification/AWS
+// @desc    AWS Page
+// @access  PUBLIC
+app.get("/Certification/AWS", (req, res) => {
+  res.render("pages/Certifications/AWS");
+});
+
+// @type    GET
+// @route   /Certification/CandCPP
+// @desc    CandCPP Page
+// @access  PUBLIC
+app.get("/Certification/CandCPP", (req, res) => {
+  res.render("pages/Certifications/CandCPP");
+});
+
+// @type    GET
+// @route   /Certification/Java
+// @desc    Java Page
+// @access  PUBLIC
+app.get("/Certification/Java", (req, res) => {
+  res.render("pages/Certifications/Java");
+});
+
+// @type    GET
+// @route   /Certification/DSandAlgorithm
+// @desc    DS and Algorithm Page
+// @access  PUBLIC
+app.get("/Certification/DSandAlgorithm", (req, res) => {
+  res.render("pages/Certifications/DSandAlgorithm");
+});
+
+// @type    GET
+// @route   /Certification/CyberSecurity
+// @desc    Cyber Security Page
+// @access  PUBLIC
+app.get("/Certification/CyberSecurity", (req, res) => {
+  res.render("pages/Certifications/CyberSecurity");
+});
+
+// @type    GET
 // @route   /ThankYou
 // @desc    Thank You Page
 // @access  PUBLIC

@@ -6695,7 +6695,8 @@ h6 {
 }
 
 .coaches_details_info .author_info {
-  border: 5px solid #0EAFCC;
+  border: 3px solid #0EAFCC;
+  box-shadow: -10px -10px 3px rgba(14, 175, 204, 0.5);
   padding: 30px;
   margin-top: 20px;
   margin-bottom: 20px;
