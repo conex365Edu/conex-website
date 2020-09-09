@@ -43,7 +43,7 @@ const speakerModel = require("./models/conexspeaker");
 
 //Middleware for bodyparser
 app.use(bodyParser.json());
-// app.use(forceSSL);
+app.use(forceSSL);
 app.use(
   bodyParser.urlencoded({
     extended: true,
