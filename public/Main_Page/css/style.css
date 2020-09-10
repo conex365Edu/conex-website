@@ -491,73 +491,85 @@ h3 {
   background: #ecf5ff;
 }
 
-    #services {
-  padding: 60px 0 40px 0;
-  box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-}
+/* ============================
+      CtoI Section
+   ============================ */
 
-#services .box {
-  padding: 30px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  margin: 0 10px 40px 10px;
-  background: #fff;
-  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
-  transition: all 0.3s ease-in-out;
-}
-
-#services .box:hover {
-  -webkit-transform: translateY(-5px);
-  transform: translateY(-5px);
-}
-
-#services .pp{
-  line-height: 24px;
-  margin-bottom: 0;
-  color: #1f1f1f;
-  padding-bottom: 35px;
-  padding-left: 10px;
-  padding-right: 7px;
-}
-
-#services .hh{
-  line-height: 24px;
-  font-weight: bold;
-  margin-bottom: 0;
-  color: #1f1f1f;
-  padding-bottom: 35px;
-  padding-left: 20px;
-  padding-right: 7px;
-}
-
-#services .icon {
-  position: absolute;
-  left: -10px;
-  top: calc(50% - 32px);
-}
-
-#services .icon i {
-  font-size: 64px;
-  line-height: 1;
-  transition: 0.5s;
-}
-
-#services .title {
-  margin-left: 40px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
-  color: #0EAFCC;
-}
-
-
-#services .description {
-  font-size: 14px;
-  margin-left: 40px;
-  line-height: 24px;
-  margin-bottom: 0;
-}
+   #Conexto {
+    padding: 60px 0 40px 0;
+    box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  #Conexto .box {
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 10px 40px 10px;
+    background: #fff;
+    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #Conexto .box:hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  
+  #Conexto .pp{
+    line-height: 24px;
+    margin-bottom: 0;
+    color: #1f1f1f;
+    padding-bottom: 35px;
+    padding-left: 10px;
+    padding-right: 7px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
+  #Conexto .hh{
+    line-height: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #1f1f1f;
+    padding-bottom: 35px;
+    padding-left: 20px;
+    padding-right: 7px;
+  }
+  
+  #Conexto .icon {
+    position: absolute;
+    left: 10px;
+    top: calc(50% - 32px);
+  }
+  
+  #Conexto .icon i {
+    font-size: 64px;
+    line-height: 1;
+    transition: 0.5s;
+  }
+  
+  #Conexto .title {
+    margin-left: 65px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #0EAFCC;
+  }
+  
+  
+  #Conexto .description {
+    font-size: 14px;
+    margin-left: 65px;
+    line-height: 24px;
+    margin-bottom: 0;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
+  /* ============================
+        CtoI Section
+     ============================ */
 
 /* CSR */
 
