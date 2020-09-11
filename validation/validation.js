@@ -29,7 +29,7 @@ const conetregisterValidation = (data) => {
 const conexplusregister = (data) => {
   const schema = Joi.object({
     Name: Joi.string().required(),
-    Phonenumber: Joi.number().min(6).required(),
+    Phonenumber: Joi.number().min(10).max(10).required(),
     Email: Joi.string().min(6).required().email(),
     Address: Joi.string().min(6).required(),
     Description: Joi.string().min(6).required(),
@@ -41,7 +41,7 @@ const conexplusregister = (data) => {
 const conexplusspeaker = (data) => {
   const schema = Joi.object({
     Name: Joi.string().required(),
-    Phonenumber: Joi.number().min(9).required(),
+    Phonenumber: Joi.number().min(10).max(10).required(),
     Email: Joi.string().min(6).required().email(),
     Location: Joi.string().min(6).required(),
     Expertise: Joi.string().min(6).required(),
@@ -64,5 +64,5 @@ const subscribe = (data) => {
 module.exports.conetregisterValidation = conetregisterValidation;
 module.exports.conexplusregister = conexplusregister;
 module.exports.subscribe = subscribe;
-module.exports.resetPassword = resetPassword;
+module.exports.conexplusspeaker = conexplusspeaker;
 module.exports.resetPassword = resetPassword;
