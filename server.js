@@ -43,7 +43,7 @@ const speakerModel = require("./models/conexspeaker");
 
 //Middleware for bodyparser
 app.use(bodyParser.json());
-// app.use(forceSSL);
+app.use(forceSSL);
 app.use(
   bodyParser.urlencoded({
     extended: true,
@@ -275,6 +275,94 @@ app.get("/carfp", (req, res) => {
 // @access  PUBLIC
 app.get("/ThankYou", (req, res) => {
   res.render("pages/ThankYou");
+});
+
+// @type    GET
+// @route   /Certification/MachineLearning
+// @desc    Machine Learning Page
+// @access  PUBLIC
+app.get("/Certification/MachineLearning", (req, res) => {
+  res.render("pages/Certifications/MachineLearning");
+});
+
+// @type    GET
+// @route   /Certification/Python
+// @desc    Python Page
+// @access  PUBLIC
+app.get("/Certification/Python", (req, res) => {
+  res.render("pages/Certifications/Python");
+});
+
+// @type    GET
+// @route   /Certification/DataScience
+// @desc    Data Science Page
+// @access  PUBLIC
+app.get("/Certification/DataScience", (req, res) => {
+  res.render("pages/Certifications/DataScience");
+});
+
+// @type    GET
+// @route   /Certification/BigData
+// @desc    Big Data Page
+// @access  PUBLIC
+app.get("/Certification/BigData", (req, res) => {
+  res.render("pages/Certifications/BigData");
+});
+
+// @type    GET
+// @route   /Certification/Android
+// @desc    Android Page
+// @access  PUBLIC
+app.get("/Certification/Android", (req, res) => {
+  res.render("pages/Certifications/Android");
+});
+
+// @type    GET
+// @route   /Certification/FullStack
+// @desc    Full Stack Page
+// @access  PUBLIC
+app.get("/Certification/FullStack", (req, res) => {
+  res.render("pages/Certifications/FullStack");
+});
+
+// @type    GET
+// @route   /Certification/AWS
+// @desc    AWS Page
+// @access  PUBLIC
+app.get("/Certification/AWS", (req, res) => {
+  res.render("pages/Certifications/AWS");
+});
+
+// @type    GET
+// @route   /Certification/CandCPP
+// @desc    CandCPP Page
+// @access  PUBLIC
+app.get("/Certification/CandCPP", (req, res) => {
+  res.render("pages/Certifications/CandCPP");
+});
+
+// @type    GET
+// @route   /Certification/Java
+// @desc    Java Page
+// @access  PUBLIC
+app.get("/Certification/Java", (req, res) => {
+  res.render("pages/Certifications/Java");
+});
+
+// @type    GET
+// @route   /Certification/DSandAlgorithm
+// @desc    DS and Algorithm Page
+// @access  PUBLIC
+app.get("/Certification/DSandAlgorithm", (req, res) => {
+  res.render("pages/Certifications/DSandAlgorithm");
+});
+
+// @type    GET
+// @route   /Certification/CyberSecurity
+// @desc    Cyber Security Page
+// @access  PUBLIC
+app.get("/Certification/CyberSecurity", (req, res) => {
+  res.render("pages/Certifications/CyberSecurity");
 });
 
 // @type    GET
