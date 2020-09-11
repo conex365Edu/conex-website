@@ -9,11 +9,11 @@ async function renderData() {
     let template = `
     <tr>
       <td>${item._id}</td>
-      <td>${item.Phonenumber}</td>
-      <td>${item.Email}</td>
+      <td>${item.Name}</td>
       <td>${item.Phonenumber}</td>
       <td>${item.Email}</td>
       <td>${item.NativePlace}</td>
+      <td>${item.Expertise}</td>      
       <td>${item.Workrole}</td>
       <td class="text-primary">${item.Suggestion}</td>
       <td><button id="${item._id}" type="button" class="btn btn-dark" onclick="deleteUser(this.id)">Delete</button></td>
