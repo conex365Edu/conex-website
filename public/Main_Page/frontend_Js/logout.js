@@ -10,10 +10,5 @@ async function logout() {
   //   }
   // }
 }
-// function logout() {
-//   var url = "/api/auth/logout";
-//   var xmlHttp = new XMLHttpRequest();
-//   xmlHttp.open("GET", url, false); // false for synchronous request
-//   document.cookie = "jwt=; expires=Data.now()";
-//   window.location.assign("/adminLogin");
+
 // }
