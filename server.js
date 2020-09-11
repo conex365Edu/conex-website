@@ -101,6 +101,7 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 // @access  PUBLIC
 app.get("/", (req, res) => {
   res.render("pages/index");
+  console.log(req.ip);
 });
 
 // @type    GET
