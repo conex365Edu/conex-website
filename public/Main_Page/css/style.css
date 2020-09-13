@@ -6575,7 +6575,7 @@ h6 {
 
 #about_certification .icon {
   position: absolute;
-  left: -10px;
+  left: 10px;
   top: calc(50% - 32px);
 }
 
@@ -6586,7 +6586,7 @@ h6 {
 }
 
 #about_certification .title {
-  margin-left: 40px;
+  margin-left: 50px;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
@@ -6596,7 +6596,7 @@ h6 {
 
 #about_certification .description {
   font-size: 14px;
-  margin-left: 40px;
+  margin-left: 50px;
   line-height: 24px;
   margin-bottom: 0;
 }
