@@ -6784,14 +6784,22 @@ h6 {
   margin-bottom: 50px;
   background-color: #172b4d;
 }
+
 .caroo h1 {
   color: white;
 }
+
 .carousal_star{
   color: gold;
 }
+
 #client-testimonial-carousel {
   min-height: 260px;
+}
+
+.carousal_para{
+  font-size: 22px;
+  color: white;
 }
 
 @media (max-width:767px) {
