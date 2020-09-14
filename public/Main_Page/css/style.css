@@ -170,6 +170,11 @@ h3 {
   margin-top: 75px;
 }
 
+.mb-35 {
+  margin-bottom: 15px;
+  margin-top: 35;
+}
+
 /* line 117,     */
 .black-bg {
   background: #020c26 !important;
@@ -6772,6 +6777,34 @@ h6 {
 
 #myModal{
   z-index: 10000;
+}
+
+.caroo{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #172b4d;
+}
+.caroo h1 {
+  color: white;
+}
+.carousal_star{
+  color: gold;
+}
+#client-testimonial-carousel {
+  min-height: 260px;
+}
+
+@media (max-width:767px) {
+  #client-testimonial-carousel {
+    min-height: 400px;
+  }
+  .carousal_para {
+    font-size: 16px;
+    margin:0;
+    padding: 0;
+    text-align: justify;
+    text-justify: inter-word;
+  }
 }
 
 
