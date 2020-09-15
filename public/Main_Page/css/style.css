@@ -6779,18 +6779,18 @@ h6 {
   z-index: 10000;
 }
 
-.caroo{
+/* ============================
+      Testimonial Section
+   ============================ */
+
+.testimonials{
   margin-top: 50px;
   margin-bottom: 50px;
   background-color: #172b4d;
 }
 
-.caroo h1 {
+.testimonials h1 {
   color: white;
-}
-
-.carousal_star{
-  color: gold;
 }
 
 #client-testimonial-carousel {
@@ -6799,6 +6799,10 @@ h6 {
 
 .carousal_para{
   font-size: 22px;
+  color: white;
+}
+
+.blockquote-footer{
   color: white;
 }
 
@@ -6815,4 +6819,6 @@ h6 {
   }
 }
 
-
+/* ============================
+      Testimonial Section
+   ============================ */
