@@ -43,7 +43,9 @@ const speakerModel = require("./models/conexspeaker");
 
 //Middleware for bodyparser
 app.use(bodyParser.json());
+//Force SSL is configured for https...Don't Remove
 app.use(forceSSL);
+//BodyParser Middleware
 app.use(
   bodyParser.urlencoded({
     extended: true,
@@ -366,6 +368,7 @@ app.get("/Certification/CyberSecurity", (req, res) => {
   res.render("pages/Certifications/CyberSecurity");
 });
 
+
 // @type    GET
 // @route   /Certification/BI
 // @desc    Cyber Security Page
@@ -522,7 +525,7 @@ app.get(
 // Zero SSl Provided Certificate Config
 const privateKey = fs.readFileSync("./certificates/private.key", "utf8");
 const certificate = fs.readFileSync("./certificates/certificate.crt", "utf8");
-const ca = fs.readFileSync("./certificates/ca_bundle.crt", "utf8");
+const ca = fs.readFileSync("./certificates/ca_bundle1.crt", "utf8");
 
 const credentials = {
   key: privateKey,
