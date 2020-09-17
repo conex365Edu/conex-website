@@ -525,7 +525,7 @@ app.get(
 // Zero SSl Provided Certificate Config
 const privateKey = fs.readFileSync("./certificates/private.key", "utf8");
 const certificate = fs.readFileSync("./certificates/certificate.crt", "utf8");
-const ca = fs.readFileSync("./certificates/ca_bundle1.crt", "utf8");
+const ca = fs.readFileSync("./certificates/ca_bundle.crt", "utf8");
 
 const credentials = {
   key: privateKey,

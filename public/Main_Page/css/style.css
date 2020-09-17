@@ -6773,11 +6773,18 @@ h6 {
       Certificate Section
    ============================ */
    
-/* Modal */
+/* ============================
+      Modal Section
+   ============================ */
 
 #myModal{
   z-index: 10000;
 }
+
+/* ============================
+      Modal Section
+   ============================ */
+
 
 /* ============================
       Testimonial Section
@@ -6821,4 +6828,77 @@ h6 {
 
 /* ============================
       Testimonial Section
+   ============================ */
+
+   /* ============================
+      Subscribe Section
+   ============================ */
+
+.monthly_subscribe{
+    margin-top:65px;
+}
+
+.subscription_workshop{
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,.1);
+    -webkit-transition: .5s; 
+    -moz-transition:.5s; 
+    -ms-transition:.5s; 
+    -o-transition:.5s;
+    transition: .5s;
+}
+
+.subscription_workshop-txt{
+    padding: 0 25px;
+}
+
+.subscription_workshop h3{
+    position: relative;
+    font-size: 20px;
+    color: #0EAFCC;
+    font-weight:500;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 0;
+    margin-left: 18px;
+}
+
+.subscription_workshop-txt h3{
+  position: relative;
+  font-size: 17px;
+  color: #565a5c;
+  font-weight:500;
+  font-family: 'Poppins', sans-serif;
+  padding: 5px 0;
+}
+
+.subscribe_decription{
+    padding:17px 0 0;
+}
+
+.subscribe_decription p{
+    font-size: 19px;
+    font-weight: 500;
+    color: #0EAFCC;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom:15px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.subscribe_decription p span{
+    display: inline-block;
+    width: 150px;
+}
+
+.subscribe_decription p span i{
+  margin-right: 10px;
+}
+
+.subscription_workshop:hover{
+    box-shadow: 0 0 20px #0EAFCC;
+}
+
+   /* ============================
+      Subscribe Section
    ============================ */
