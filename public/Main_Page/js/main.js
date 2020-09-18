@@ -185,8 +185,6 @@ $('.popup-video').magnificPopup({
   });
 
 
-  // blog-page
-
   //brand-active
 $('.brand-active').owlCarousel({
   loop:true,
@@ -285,6 +283,8 @@ dots:false,
 
 });
 
+
+
 // resitration_Form
 $(document).ready(function() {
 	$('.popup-with-form').magnificPopup({
@@ -327,6 +327,26 @@ $(document).ready(function() {
 	});
 });
 
+
+const counters = document.querySelectorAll('.counterP');
+        const speed = 500;
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+            const target = +counter.getAttribute('data-count');
+            const count = +counter.innerText;
+            const inc = target / speed;
+
+            if(count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 1);
+            }
+            else {
+                count.innerText = target;
+            }
+            }
+            updateCount();
+        });
 
 //------- Lets --------// 
 

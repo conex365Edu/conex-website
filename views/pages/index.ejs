@@ -48,7 +48,9 @@
 <body>
 
 
-    <!--Popup Start-->
+    <!--==========================
+      Pop Up Start
+    ============================-->
 <!--
     <div id="myModal" class="modal fade">
         <div class="modal-dialog">
@@ -117,12 +119,18 @@
         </div>
     </div>-->
 
+    <!--==========================
+      Pop Up End
+    ============================-->
+    
     <!-- header-start -->
     <%- include("../partials/mainNavbar") %>
     <!-- header-end -->
 
 
-  <!-- slider_area_start -->
+    <!--==========================
+        Slider Area Start
+    ============================-->
 
   <div class="slider_area">
     <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
@@ -164,51 +172,51 @@
             </div>
         </div>
     </div>
-</div>
-<!-- slider_area_end -->
-
-
-<!--About Area--->
-
-<div class="about_area" style="padding-bottom: 30px;padding-top: 30px;">
-<div class="container">
-    <div class="row">
-        <div class="col-lg-6 col-xl-6 col-md-6">
-            <div class="single_about_info">
-                <p style="text-align: center;">Conex 365 is the fastest growing skill development platform.<br><br>We aim to blur the Rural-Urban divide and bridge the skill gap to provide equal opportunities to everyone.<br><br>
-                <a style="font-size: medium;color: #0EAFCC;" href="/about">Get to know us more!</a></p>
-                <h3 style="text-align: center;">Let's "GET GEARED UP"</h3>
-        </div>
-    </div>
-
-    <div class="col-lg-6 col-xl-6 col-md-6">
-
-        <div class="row lets">
-        <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-xs-12">
-        <img src="/public/Main_Page/img/home/about.svg" class="img-fluid" alt="">
-        </div>
-        <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-xs-12">
-        <h1>LET'S CREATE
-          <span
-             class="txt-rotate"
-             data-period="2000"
-             data-rotate='[ "MANAGERS", "ENTREPRENEURS", "PROFESSIONALS", "SCHOLARS" ]'></span>
-        </h1>
-        </div>
-        </div>
-    </div>
-
-</div>
-</div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260"><path fill="#172b4d" fill-opacity="1" d="M0,32L48,53.3C96,75,192,117,288,138.7C384,160,480,160,576,154.7C672,149,768,139,864,128C960,117,1056,107,1152,
+        128C1248,149,1344,203,1392,229.3L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
 </div>
 
-<!----About Area End-->
+    <!--==========================
+        Slider Area End
+    ============================-->
 
-<hr class="fancy-line"></hr>
 
-<!--About US-->
+    <!--==========================
+        About Area Start
+    ============================-->
 
 <div class="about_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-xl-6 col-md-6">
+                <div class="single_about_info">
+                    <p style="text-align: center;">Conex 365 is the fastest growing skill development platform.<br><br>We aim to blur the Rural-Urban divide and bridge the skill gap to provide equal opportunities to everyone.<br><br>
+                    <a style="font-size: medium;color: #0EAFCC;" href="/about">Get to know us more!</a></p>
+                    <h1 class="letsanimation">LET'S 
+                        <span
+                        class="txt-rotate"
+                        data-period="2000"
+                        data-rotate='[ "GET GEARED UP" ]'></span>
+                    </h1>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-6 col-md-6">   
+                <img src="/public/Main_Page/img/home/about.svg" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!--==========================
+        About Area End
+    ============================-->
+
+
+    <!--==========================
+        Acheivement Area Start
+    ============================-->
+
+<div class="achievement_area">
 <div class="container">
     <div class="row">
         <div class="col-xl-5 col-lg-6">
@@ -224,16 +232,20 @@
                 <div class="courses">
                     <div class="inner_courses">
                         <div class="text_info">
-                            <span>1660+</span>
-                            <p> Registrations</p>
+                            <p class="counterpara_top">More Than</p> 
+                            <h1 class="counterP" data-count="1660">0</h1>
+                            
+                            <p class="counterpara_bottom">Registrations</p>   
                         </div>
                     </div>
                 </div>
                 <div class="courses-blue">
                     <div class="inner_courses">
                         <div class="text_info">
-                            <span>16+</span>
-                            <p> Workshops</p>
+                            <p class="counterpara_top">More Than</p> 
+                            <h1 class="counterP" data-count="20">0</h1>   
+                            
+                            <p class="counterpara_bottom">Workshops</p> 
                         </div>
 
                     </div>
@@ -241,8 +253,9 @@
                 <div class="courses-sky">
                     <div class="inner_courses">
                         <div class="text_info">
-                            <span>89%</span>
-                            <p>Customer Satisfication</p>
+                            <h1 class="counterP" data-count="89">0</h1>
+                            <span class="counterspan">%</span>
+                            <p class="counterpara_bottom">Customer Satisfication</p> 
                         </div>
 
                     </div>
@@ -252,63 +265,78 @@
     </div>
 </div>
 </div>
-<!-- about_area_end -->
+
+    <!--==========================
+        Acheivement Area End
+    ============================-->
 
 
+    <!--==========================
+        Testimonial Area Start
+    ============================-->
 
 <div class="pt-5 pb-5 text-light testimonials">
-    <div class="section_title text-center mb-35">
-        <h1>Testimonials</h1> 
-    </div>
-    <div id="client-testimonial-carousel" class="carousel slide" data-ride="carousel" style="height:200px;">
-      <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active text-center p-4">
-          <blockquote class="blockquote text-center">
-            <p class="carousal_para"><i class="fa fa-quote-left"></i> It was great learnt a lot of things in the world of hacking will 
-                keep practicing about all which I have learned and thank you for the recording so we can watch It again and again 
-                and become a good hacker thanks for arranging this workshop it was really amazing.
-            </p>
-            <footer class="blockquote-footer">RAVIRAJ <cite title="Source Title">Universal Business School</cite></footer>
-          </blockquote>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 225" style="display: block;"><path fill="#172b4d" fill-opacity="1" d="M0,96L48,85.3C96,75,192,53,288,58.7C384,64,
+        480,96,576,133.3C672,171,768,213,864,208C960,203,1056,149,1152,122.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,
+        320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    <div class="sub_testimonials">
+        <div class="text-center">
+            <h1>Testimonials</h1> 
         </div>
-        <div class="carousel-item text-center p-4">
-          <blockquote class="blockquote text-center">
-            <p class="carousal_para"><i class="fa fa-quote-left"></i> This have been an absolutely amazing & enlightening workshop. 
-                Totally enjoyed and learned a lot in a comfortable environment. The style and the knowledge of the presenter 
-                Mr. Joel Deleep was totally amazing. Thank you so much Mr. Joel Deleep and ConeX365 Edu corp for such a great opportunity.
-            </p>
-            <footer class="blockquote-footer">MANSI V.S <cite title="Source Title">Rajagiri Centre For Business Studies And Management</cite></footer>
-          </blockquote>
-        </div>
-        <div class="carousel-item text-center p-4">
-          <blockquote class="blockquote text-center">
-            <p class="carousal_para"><i class="fa fa-quote-left"></i> I attended the workshop on legal hacking and earning by Mr. Joel. I'm actually pleased 
-                to have participated in this workshop as not just theory but he also encouraged the participants to work on it. In short everything organized was nothing 
-                but professional. Thank you for this opportunity team Conex365.
-            </p>
-            <footer class="blockquote-footer">DEVIKA AJITH <cite title="Source Title">Federal Institute of Science and Technology</cite></footer>
-          </blockquote>
-        </div>
-        <div class="carousel-item text-center p-4">
+        <div id="client-testimonial-carousel" class="carousel slide" data-ride="carousel" style="height:200px;">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active text-center p-4">
             <blockquote class="blockquote text-center">
-              <p class="carousal_para"><i class="fa fa-quote-left"></i> Quality content is the key marker of their workshops. 
-                Good assistance from the service providers. After attending their first webinar, I seriously recommend 
-                to my colleagues and try to attend their other workshops too. Conex365 is Worth your time and money.
-              </p>
-              <footer class="blockquote-footer">SHIV SHANKARI<!--<cite title="Source Title">Rajagiri Centre For Business Studies And Management</cite>--></footer>
+                <p class="carousal_para"><i class="fa fa-quote-left"></i> It was great learnt a lot of things in the world of hacking will 
+                    keep practicing about all which I have learned and thank you for the recording so we can watch It again and again 
+                    and become a good hacker thanks for arranging this workshop it was really amazing.
+                </p>
+                <footer class="blockquote-footer">RAVIRAJ <cite title="Source Title">Universal Business School</cite></footer>
             </blockquote>
-          </div>
-      </div>
-      <ol class="carousel-indicators">
-        <li data-target="#client-testimonial-carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#client-testimonial-carousel" data-slide-to="1"></li>
-        <li data-target="#client-testimonial-carousel" data-slide-to="2"></li>
-        <li data-target="#client-testimonial-carousel" data-slide-to="3"></li>
-      </ol>
+            </div>
+            <div class="carousel-item text-center p-4">
+            <blockquote class="blockquote text-center">
+                <p class="carousal_para"><i class="fa fa-quote-left"></i> This have been an absolutely amazing & enlightening workshop. 
+                    Totally enjoyed and learned a lot in a comfortable environment. The style and the knowledge of the presenter 
+                    Mr. Joel Deleep was totally amazing. Thank you so much Mr. Joel Deleep and ConeX365 Edu corp for such a great opportunity.
+                </p>
+                <footer class="blockquote-footer">MANSI V.S <cite title="Source Title">Rajagiri Centre For Business Studies And Management</cite></footer>
+            </blockquote>
+            </div>
+            <div class="carousel-item text-center p-4">
+            <blockquote class="blockquote text-center">
+                <p class="carousal_para"><i class="fa fa-quote-left"></i> I attended the workshop on legal hacking and earning by Mr. Joel. I'm actually pleased 
+                    to have participated in this workshop as not just theory but he also encouraged the participants to work on it. In short everything organized was nothing 
+                    but professional. Thank you for this opportunity team Conex365.
+                </p>
+                <footer class="blockquote-footer">DEVIKA AJITH <cite title="Source Title">Federal Institute of Science and Technology</cite></footer>
+            </blockquote>
+            </div>
+            <div class="carousel-item text-center p-4">
+                <blockquote class="blockquote text-center">
+                <p class="carousal_para"><i class="fa fa-quote-left"></i> Quality content is the key marker of their workshops. 
+                    Good assistance from the service providers. After attending their first webinar, I seriously recommend 
+                    to my colleagues and try to attend their other workshops too. Conex365 is Worth your time and money.
+                </p>
+                <footer class="blockquote-footer">SHIV SHANKARI<!--<cite title="Source Title">Rajagiri Centre For Business Studies And Management</cite>--></footer>
+                </blockquote>
+            </div>
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#client-testimonial-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#client-testimonial-carousel" data-slide-to="1"></li>
+            <li data-target="#client-testimonial-carousel" data-slide-to="2"></li>
+            <li data-target="#client-testimonial-carousel" data-slide-to="3"></li>
+        </ol>
+        </div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 210"><path fill="#172b4d" fill-opacity="1" d="M0,96L48,85.3C96,75,192,53,288,58.7C384,64,480,96,576,133.3C672,171,768,213,864,208C960,203,1056,
+        149,1152,122.7C1248,96,1344,96,1392,96L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
   </div>
 
-
+    <!--==========================
+        Testimonial Area End
+    ============================-->
 
 
     <!-- Feature Section -->
@@ -351,6 +379,7 @@
 
     <!-- JavaScript Section -->
     <%- include("../partials/mainScripts") %>
+
 
 </body>
 
