@@ -6787,22 +6787,25 @@ h6 {
 /* ============================
       Testimonial Section
    ============================ */
+   
 
-.sub_testimonials{
+.testimonials{
   background-color: #172b4d;
-  margin-top: 0;
-  height: 200px;
+  margin-top: 160px;
+  height: 400px;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .sub_testimonials {
-    height: 245px;
+  .testimonials {
+    height: 370px;
+    margin-top: 120px;
   }
 }
 
 @media (max-width: 767px) {
-  .sub_testimonials {
-    height: 440px;
+  .testimonials {
+    height: 520px;
+    margin-top: 80px;
   }
 }
 
