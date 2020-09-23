@@ -1660,13 +1660,13 @@ h3 {
 }
 
 .footer .footer_top {
-  padding-top: 145px;
+  padding-top: 0px;
   padding-bottom: 129px;
 }
 
 @media (max-width: 767px) {
   .footer .footer_top {
-    padding-top: 60px;
+    padding-top: 0px;
     padding-bottom: 30px;
   }
 }
@@ -6783,65 +6783,116 @@ h6 {
       Modal Section
    ============================ */
 
-
 /* ============================
       Testimonial Section
    ============================ */
    
 
-.testimonials{
-  background-color: #172b4d;
-  margin-top: 160px;
-  height: 400px;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .testimonials {
-    height: 370px;
-    margin-top: 120px;
+   .testimonials{
+    background-color: #172b4d;
+    margin-top: 160px;
+    height: 580px;
   }
-}
-
-@media (max-width: 767px) {
-  .testimonials {
-    height: 520px;
-    margin-top: 80px;
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    .testimonials {
+      height: 520px;
+      margin-top: 120px;
+    }
   }
-}
-
-.testimonials h1 {
-  color: white;
-}
-
-#client-testimonial-carousel {
-  min-height: 260px;
-}
-
-.carousal_para{
-  font-size: 22px;
-  color: white;
-}
-
-.blockquote-footer{
-  color: white;
-}
-
-@media (max-width:767px) {
+  
+  @media (max-width: 767px) {
+    .testimonials {
+      height: 625px;
+      margin-top: 80px;
+    }
+  }
+  
+  .testimonials h1 {
+    color: white;
+    padding-top: 40px;
+  }
+  
   #client-testimonial-carousel {
-    min-height: 400px;
+    min-height: 260px;
   }
-  .carousal_para {
-    font-size: 16px;
-    margin:0;
-    padding: 0;
+  
+  .carousal_para{
+    font-size: 22px;
+    color: white;
+  }
+  
+  .blockquote-footer{
+    color: white;
+  }
+  
+  .testimonial_svg_top{
+      position: relative;
+      top: -80px;
+  }
+  
+  @media (max-width: 767px) {
+  .testimonial_svg_top{
+    top:-76px;
+    }
+  }
+  
+  @media (max-width:767px) {
+    #client-testimonial-carousel {
+      min-height: 400px;
+    }
+    .carousal_para {
+      font-size: 16px;
+      margin:0;
+      padding: 0;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  }
+  
+  /* ============================
+        Testimonial Section
+     ============================ */
+  
+  
+  /* ============================
+        StartupIndia Section
+     ============================ */ 
+  
+  .startupindia{
+    margin-top: 150px;
+    margin-bottom: 50px;
+  }
+  
+  .startupindia img{
+    max-width: 100%;
+  }
+  
+  .startupindia .startup_description .emblem{
+    max-width: 45%;
+  }
+  
+  @media (max-width:767px) {
+    .startupindia .startup_description .emblem{
+      max-width: 65%;
+    }
+  }
+
+  .startupindia .startup_description h2{
     text-align: justify;
     text-justify: inter-word;
   }
-}
-
-/* ============================
-      Testimonial Section
-   ============================ */
+  
+  .startupindia .startup_description img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* ============================
+        StartupIndia Section
+     ============================ */
+  
 
    /* ============================
       Subscribe Section
