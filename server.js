@@ -378,6 +378,14 @@ app.get("/Certification/BI", (req, res) => {
 });
 
 // @type    GET
+// @route   /Certification/BI
+// @desc    Cyber Security Page
+// @access  PUBLIC
+app.get("/Certification/PowerBI", (req, res) => {
+  res.render("pages/Certifications/PowerBI");
+});
+
+// @type    GET
 // @route   /ThankYou
 // @desc    Thank You Page
 // @access  PUBLIC
