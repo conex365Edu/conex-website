@@ -15,8 +15,6 @@
     <!-- CSS here -->
     <link rel="stylesheet" href="/public/Main_Page/css/bootstrap.min.css">
     <link rel="stylesheet" href="/public/Main_Page/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/public/Main_Page/css/flaticon.css">
-    <link rel="stylesheet" href="/public/Main_Page/css/slicknav.css">
     <link rel="stylesheet" href="/public/Main_Page/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
@@ -34,18 +32,49 @@
 
 <body>
 
-    <!-- header-start -->
+    <!--==========================
+        Header Area Start
+    ============================-->
+
     <%- include("../partials/mainNavbar") %>
-    <!-- header-end -->
-    <!-- bradcam_area_start -->
-    <div class="bradcam_area breadcam_bg overlay2">
-        <h3>Conexion</h3>
+
+    <!--==========================
+        Header Area End
+    ============================-->
+
+    <!--==========================
+        Bradcam Area Start
+    ============================-->
+
+    <div class="bradcam_area breadcam_bg overlay">
+      <h3>Conexion</h3>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 315"
+        style="display: block"
+      >
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,192L80,170.7C160,149,320,107,480,122.7C640,139,800,213,960,224C1120,
+        235,1280,181,1360,154.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+        ></path>
+      </svg>
     </div>
-    <!-- bradcam_area_end -->
+
+    <!--==========================
+        Bradcam Area End
+    ============================-->
+
+    <!--==========================
+        Conexion Area Start
+    ============================-->
 
 <div class="container">
+
+    
     <!--================Blog Area =================-->
-    <section class="blog_area section-padding">
+    <section class="section-padding">
         <div class="container">
 
 
@@ -63,17 +92,17 @@
 AhalIa School of Engineering & Technology, Palakkad
                                 </p>
                                 
-                                    <a class="boxed-btn2" href="https://drive.google.com/file/d/1mJaYTl8Fk4lnDr1-BDe0By-NQBPIbnhq/view?usp=sharing" target="_blank"><b style="color: white">View</b></a>
+                                    <a class="boxed-btn2" href="/public/Main_Page/pdf/blockchain.pdf" target="_blank"><b style="color: white">View</b></a>
                             </div>
                             </div>
                             </div>
                             </div>
         </div>
     </section>
-                           
+    <!--================Blog Area =================-->                           
 
     <!--================Blog Area =================-->
-    <section class="blog_area">
+    
         <div class="container">
 
 
@@ -88,7 +117,7 @@ AhalIa School of Engineering & Technology, Palakkad
                                 <h3>A COMPARISON BETWEEN UNITED STATES OF AMERICA AND STATE GOVT. OF KERALA IN PUBLIC HEALTH CARE.</h3>
                                 <p>Prof. Prashanth P John
                                 <br>Asst. Professor, FISAT Business School, Kochi, Kerala</p>
-                                    <a class="boxed-btn2" href="https://drive.google.com/file/d/1qJA1CLCcZEo_5jCnPxv2X3B9CNU4z7RP/view?usp=sharing" target="_blank"><b style="color: white">View</b></a>
+                                    <a class="boxed-btn2" href="/public/Main_Page/pdf/health.pdf" target="_blank"><b style="color: white">View</b></a>
                             </div>
                             </div>
                             </div>
@@ -101,41 +130,58 @@ AhalIa School of Engineering & Technology, Palakkad
     <div class="row">
         <p><br></p>
     </div>
-
-    <section class="blog_area section-padding">
+    <!--==========================
+        Subscribe Conexion Area Start
+    ============================-->
+    <section class="section-padding">
         <div class="container">
-            <!-- subscribe_newsletter_Start -->
-            <div class="subscribe_newsletter bg-gra-03">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6">
-                            <div class="newsletter_text">
-                                <h3>Send Your Article</h3>
-                                <p>Send your articles to our mail so that we can post it.</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-5 offset-xl-1 col-lg-6">
-                            <div class="newsletter_text">
-                                <h5 style="color: white;font-size: 90%">support@conex365.info</h3>
-                                    <h5 style="color: white;font-size: 90%">conex365corp@gmail.com</h3>
-                            </div>
-                        </div>
-                    </div>
+          <div class="subscribe_newsletter subscribe_bg">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-6 col-lg-6">
+                  <div class="newsletter_text">
+                    <h3>Send Your Article</h3>
+                    <p>
+                      Send your articles to our mail so that we can post it.
+                    </p>
+                  </div>
                 </div>
+                <div class="col-xl-5 offset-xl-1 col-lg-6">
+                  <div class="newsletter_text">
+                    <h5>support@conex365.com</h5>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- subscribe_newsletter_end -->
+          </div>
+        </div>
+      </section>
+    <!--==========================
+        Subscribe Conexion Area End
+    ============================-->
         </div>
     </section>
 
 </div>
 
+    <!--==========================
+        Conexion Area End
+    ============================-->
 
+   <!--==========================
+        Footer Area Start
+    ============================-->
 
-    <!-- Footer Section -->
     <%- include("../partials/mainFooter") %>
-    <!-- Footer Section End -->
 
-    <!-- JavaScript Section -->
+    <!--==========================
+        Footer Area End
+    ============================-->
+
+    <!--==========================
+        JS Area 
+    ============================-->
+
     <%- include("../partials/mainScripts") %>
 </body>
 

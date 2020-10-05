@@ -12,97 +12,220 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/slicknav.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/public/Main_Page/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/public/Main_Page/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/public/Main_Page/css/style.css" />
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
 <body>
 
-    <!-- header-start -->
+    <!--==========================
+        Header Area Start
+    ============================-->
+
     <%- include("../partials/mainNavbar") %>
-    <!-- header-end -->
 
-    <!-- bradcam_area_start -->
-    <div class="bradcam_area breadcam_bg overlay2">
-        <h3>Cancellation and Refund Policy</h3>
+    <!--==========================
+        Header Area End
+    ============================-->
+
+    <!--==========================
+        Bradcam Area Start
+    ============================-->
+
+    <div class="bradcam_area breadcam_bg overlay">
+      <h3>Cancellation and Refund Policy</h3>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 315"
+        style="display: block"
+      >
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,192L80,170.7C160,149,320,107,480,122.7C640,139,800,213,960,224C1120,
+        235,1280,181,1360,154.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+        ></path>
+      </svg>
     </div>
-    <!-- bradcam_area_end -->
 
-    <!-- about_area_start -->
-    <div class="about_area">
+    <!--==========================
+        Bradcam Area End
+    ============================-->
+
+    <!--==========================
+        Carfp Area Start
+    ============================-->
+
+    <section id="course_syllubus">
         <div class="container">
-            <div class="row">
+          <ul id="course_syllubus_list">
+            <li>
+              <a data-toggle="collapse" class="collapsed" href="#faq1">
+                Refund Policy and Returns <i class="fa fa-minus"></i>
+              </a>
+              <div
+                id="faq1"
+                class="collapse"
+                data-parent="#course_syllubus_list"
+              >
+                <ul class="ul_collapse">
+                  Transactions made in this site are NON-Refundable,
+                  unfortunately we can’t offer you a refund or exchange.
+                  <br />
+                  To be eligible for a return, It should be communicated via
+                  official mail of the company.
+                  <br />
+                  Several types of goods are exempt from being returned.
+                  Perishable goods such as food, flowers, newspapers or
+                  magazines cannot be returned. We also do not accept products
+                  that are intimate or sanitary goods, hazardous materials, or
+                  flammable liquids or gases.
+                  <br />
+                  Additional non-returnable items:
+                  <br />• Gift cards
+                  <br />• Downloadable software products
+                  <br />• Some health and personal care items
+                  <br />• Payment of Workshops,Webinars or any other online
+                  services through ConeX365 Edu-Corp Consulting
+                  <br />
+                  To complete your return, we require a receipt or proof of
+                  purchase.Please do not send your purchase back to the
+                  manufacturer.There are certain situations where only partial
+                  refunds are granted: (if applicable)Book with obvious signs of
+                  use CD, DVD, VHS tape, software, video game, cassette tape, or
+                  vinyl record that has been opened.Any item not in its original
+                  condition, is damaged or missing parts for reasons not due to
+                  our error.Any item that is returned more than 30 days after
+                  deliveryRefunds (if applicable)Once your return is received
+                  and inspected, we will send you an email to notify you that we
+                  have received your returned item. We will also notify you of
+                  the approval or rejection of your refund.If you are approved,
+                  then your refund will be processed, and a credit will
+                  automatically be applied to your credit card or original
+                  method of payment, within a certain amount of days.Late or
+                  missing refunds (if applicable)If you haven’t received a
+                  refund yet, first check your bank account again.Then contact
+                  your credit card company, it may take some time before your
+                  refund is officially posted.Next contact your bank. There is
+                  often some processing time before a refund is posted.If you’ve
+                  done all of this and you still have not received your refund
+                  yet, please contact us at support@conex365.com.
+                </ul>
+              </div>
+            </li>
 
-                <div class="single_about_info">
+            <li>
+              <a data-toggle="collapse" class="collapsed" href="#faq2">
+                Sale Items (if applicable) <i class="fa fa-minus"></i>
+              </a>
+              <div
+                id="faq2"
+                class="collapse"
+                data-parent="#course_syllubus_list"
+              >
+                <ul class="ul_collapse">
+                  Only regular priced items may be refunded, unfortunately sale
+                  items cannot be refunded.
+                </ul>
+              </div>
+            </li>
 
-                    <p style="padding-right: 13px;padding-left: 13px;">Refund Policy<br>Returns<br>Transactions made in
-                        this site are NON-Refundable, unfortunately we can’t offer you a refund or exchange.<br>To be
-                        eligible for a return, It should be communicated via official mail of the company.<br>Several
-                        types of goods are exempt from being returned. Perishable goods such as food, flowers,
-                        newspapers or magazines cannot be returned. We also do not accept products that are intimate or
-                        sanitary goods, hazardous materials, or flammable liquids or gases.<br>Additional non-returnable
-                        items:<br>• Gift cards<br>• Downloadable software products<br>• Some health and personal care
-                        items<br>• Payment of Workshops,Webinars or any other online services through ConeX365 Edu-Corp
-                        Consulting<br>To complete your return, we require a receipt or proof of purchase.Please do not
-                        send your purchase back to the manufacturer.There are certain situations where only partial
-                        refunds are granted: (if applicable)Book with obvious signs of useCD, DVD, VHS tape, software,
-                        video game, cassette tape, or vinyl record that has been opened.Any item not in its original
-                        condition, is damaged or missing parts for reasons not due to our error.Any item that is
-                        returned more than 30 days after deliveryRefunds (if applicable)Once your return is received and
-                        inspected, we will send you an email to notify you that we have received your returned item. We
-                        will also notify you of the approval or rejection of your refund.If you are approved, then your
-                        refund will be processed, and a credit will automatically be applied to your credit card or
-                        original method of payment, within a certain amount of days.Late or missing refunds (if
-                        applicable)If you haven’t received a refund yet, first check your bank account again.Then
-                        contact your credit card company, it may take some time before your refund is officially
-                        posted.Next contact your bank. There is often some processing time before a refund is posted.If
-                        you’ve done all of this and you still have not received your refund yet, please contact us at
-                        support@conex365.info.
-                        <br>
-                        <br>
-                        <br>Sale items (if applicable)
-                        <br>
-                        Only regular priced items may be refunded, unfortunately sale items cannot be refunded.
-                        Exchanges (if applicable)
-                        We only replace items if they are defective or damaged.  If you need to exchange it for the same
-                        item, send us an email at support@conex365.info and send your item to: ‘THAARA’, NRA-37,
-                        KUTTUMUCK, RAMAVARMAPURAM P.O, THRISSUR, 680631
-                        <br>
-                        <br>
+            <li>
+              <a data-toggle="collapse" class="collapsed" href="#faq3">
+                Exchanges (if applicable) <i class="fa fa-minus"></i>
+              </a>
+              <div
+                id="faq3"
+                class="collapse"
+                data-parent="#course_syllubus_list"
+              >
+                <ul class="ul_collapse">
+                  We only replace items if they are defective or damaged.  If
+                  you need to exchange it for the same item, send us an email at
+                  support@conex365.com and send your item to:
+                  <br /> ‘THAARA’, NRA-37
+                  <br />
+                  KUTTUMUCK, RAMAVARMAPURAM P.O
+                  <br /> THRISSUR
+                  <br /> 680631
+                </ul>
+              </div>
+            </li>
 
-                        <br>Gifts<br>
-                        If the item was marked as a gift when purchased and shipped directly to you, you’ll receive a
-                        gift credit for the value of your return. Once the returned item is received, a gift certificate
-                        will be mailed to you.If the item wasn’t marked as a gift when purchased, or the gift giver had
-                        the order shipped to themselves to give to you later, we will send a refund to the gift giver
-                        and he will find out about your return.
-                        <br>
-                        <br>
-                        <br>
-                        Shipping<br>
-                        To return your product, you should mail your product to: ‘THAARA’, NRA-37, KUTTUMUCK,
-                        RAMAVARMAPURAM P.O, THRISSUR, 680631You will be responsible for paying for your own shipping
-                        costs for returning your item. Shipping costs are non-refundable. If you receive a refund, the
-                        cost of return shipping will be deducted from your refund.Depending on where you live, the time
-                        it may take for your exchanged product to reach you, may vary.If you are shipping an item over
-                        $75, you should consider using a trackable shipping service or purchasing shipping insurance. We
-                        don’t guarantee that we will receive your returned item.</p>
+            <li>
+              <a data-toggle="collapse" class="collapsed" href="#faq4">
+                Gifts <i class="fa fa-minus"></i>
+              </a>
+              <div
+                id="faq4"
+                class="collapse"
+                data-parent="#course_syllubus_list"
+              >
+                <ul class="ul_collapse">
+                  If the item was marked as a gift when purchased and shipped
+                  directly to you, you’ll receive a gift credit for the value of
+                  your return. Once the returned item is received, a gift
+                  certificate will be mailed to you.If the item wasn’t marked as
+                  a gift when purchased, or the gift giver had the order shipped
+                  to themselves to give to you later, we will send a refund to
+                  the gift giver and he will find out about your return.
+                </ul>
+              </div>
+            </li>
 
-                </div>
-            </div>
+            <li>
+              <a data-toggle="collapse" class="collapsed" href="#faq5">
+                Shipping <i class="fa fa-minus"></i>
+              </a>
+              <div
+                id="faq5"
+                class="collapse"
+                data-parent="#course_syllubus_list"
+              >
+                <ul class="ul_collapse">
+                  To return your product, you should mail your product to:
+                  <br /> ‘THAARA’, NRA-37
+                  <br />
+                  KUTTUMUCK, RAMAVARMAPURAM P.O
+                  <br /> THRISSUR
+                  <br /> 680631
+                  <br />
+                  You will be responsible for paying for your own shipping costs
+                  for returning your item. Shipping costs are non-refundable. If
+                  you receive a refund, the cost of return shipping will be
+                  deducted from your refund.Depending on where you live, the
+                  time it may take for your exchanged product to reach you, may
+                  vary.If you are shipping an item over $75, you should consider
+                  using a trackable shipping service or purchasing shipping
+                  insurance. We don’t guarantee that we will receive your
+                  returned item.
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
-    </div>
+      </section>
 
-    <!-- Footer Section -->
+    <!--==========================
+        Carfp Area End
+    ============================-->
+
+    <!--==========================
+        Footer Area Start
+    ============================-->
+
     <%- include("../partials/mainFooter") %>
-    <!-- Footer Section End -->
 
+    <!--==========================
+        Footer Area End
+    ============================-->
 
-    <!-- JavaScript Section -->
+    <!--==========================
+        JS Area 
+    ============================-->
+
     <%- include("../partials/mainScripts") %>
 
 </body>

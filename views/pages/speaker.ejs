@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Our Speakers</title>
-    <meta name="description" content="Our trainers are from top organizations like Amazon, Coventry University London etc.">
+    <meta name="description"
+        content="Our trainers are from top organizations like Amazon, Coventry University London etc.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
@@ -15,7 +16,6 @@
     <!-- CSS here -->
     <link rel="stylesheet" href="/public/Main_Page/css/bootstrap.min.css">
     <link rel="stylesheet" href="/public/Main_Page/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/public/Main_Page/css/slicknav.css">
     <link rel="stylesheet" href="/public/Main_Page/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
@@ -32,23 +32,38 @@
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+    <!--==========================
+        Header Area Start
+    ============================-->
 
-    <!-- header-start -->
     <%- include("../partials/mainNavbar") %>
-    <!-- header-end -->
 
-    <!-- bradcam_area_start -->
-    <div class="bradcam_area breadcam_bg overlay2">
+    <!--==========================
+        Header Area End
+    ============================-->
+
+    <!--==========================
+        Bradcam Area Start
+    ============================-->
+
+    <div class="bradcam_area breadcam_bg overlay">
         <h3>Our Speakers</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 315" style="display: block">
+            <path fill="#ffffff" fill-opacity="1"
+                d="M0,192L80,170.7C160,149,320,107,480,122.7C640,139,800,213,960,224C1120,
+        235,1280,181,1360,154.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+        </svg>
     </div>
-    <!-- bradcam_area_end -->
+
+    <!--==========================
+        Bradcam Area End
+    ============================-->
+
+    <!--==========================
+        Speaker Area Start
+    ============================-->
 
 
-
-    <!-- Speaker Section-->
     <div class="our_team_member">
         <div class="container">
             <div class="row">
@@ -326,7 +341,7 @@
                         <div class="thumb">
                             <img src="/public/Main_Page/img/speaker/chetan_dubey.jpeg" alt="">
                             <div class="social_link">
-                                <p>Marketing and Brand Management Expert, Consultant and Lecturer</p>
+                                <p>MARKETING AND BRAND MANAGEMENT EXPERT, CONSULTANT AND LECTURER</p>
                             </div>
                         </div>
                     </div>
@@ -351,11 +366,13 @@
         </div>
     </div>
 
-    <!-- speaker_end -->
+    <!--==========================
+        Speaker Area End
+    ============================-->
 
-
-
-    <!--Speaker Area--->
+    <!--==========================
+        Speaker Reg Area Start
+    ============================-->
 
     <div class="about_area" style="padding-bottom: 30px;padding-top: 30px;">
         <div class="container">
@@ -371,7 +388,8 @@
                     <div class="single_about_info">
                         <p>Conex365 is the high quality E-learning platform that’s determined to decrease employability
                             equip people with skills and help them become career ready.<br><br>
-                            WE cannot do this alone!<br><br>We need talented influencers and entrepreneurs to join our Conex
+                            WE cannot do this alone!<br><br>We need talented influencers and entrepreneurs to join our
+                            Conex
                             family!
                             It’s time to cascade your wisdom to those who need them the most! Become a Conex Speaker for
                             both Conex Plus and Conex Edu Plus and help us transform the traditional learning with a
@@ -380,7 +398,7 @@
                             progression, market yourself and change lives.<br><br>
                             <b>Fill in the form and we promise to be in touch within 12hrs!</b>
                         </p>
-                        
+
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-6 col-md-6" data-aos="fade-up">
@@ -395,9 +413,9 @@
             </div>
         </div>
     </div>
-    <!----Speaker Area End-->
-
-
+    <!--==========================
+        Speaker Reg Area Start
+    ============================-->
 
     <!--==========================
       Clients Section
@@ -508,13 +526,19 @@
       Contact Section
     ============================-->
 
+    <!--==========================
+        Footer Area Start
+    ============================-->
 
-
-    <!-- Footer Section -->
     <%- include("../partials/mainFooter") %>
-    <!-- Footer Section End -->
 
-    <!-- JavaScript Section -->
+    <!--==========================
+        Footer Area End
+    ============================-->
+
+    <!--==========================
+        JS Area 
+    ============================-->
     <%- include("../partials/mainScripts") %>
 </body>
 

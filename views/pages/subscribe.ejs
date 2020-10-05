@@ -1,62 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="zxx">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Monthly Subscription</title>
-    <meta name="description" content="Attend the workshops by national and international experts with very cheap cost.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Attend the workshops by national and international experts with very cheap cost."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content="<%= csrfToken %> " />
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="/public/Main_Page/img/logo2.jpg">
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/public/Main_Page/img/logo2.jpg"
+    />
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="/public/Main_Page/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/public/Main_Page/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/public/Main_Page/css/flaticon.css">
-    <link rel="stylesheet" href="/public/Main_Page/css/slicknav.css">
-    <link rel="stylesheet" href="/public/Main_Page/css/style.css">
+    <link rel="stylesheet" href="/public/Main_Page/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/public/Main_Page/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/public/Main_Page/css/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168254156-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-168254156-1"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'UA-168254156-1');
+      gtag("config", "UA-168254156-1");
     </script>
-</head>
+  </head>
 
-<body>
-    <!-- header-start -->
+  <body>
+    <!--==========================
+        Header Area Start
+    ============================-->
+
     <%- include("../partials/mainNavbar") %>
-    <!-- header-end -->
 
-    <!-- bradcam_area_start -->
-    <div class="bradcam_area breadcam_bg overlay2">
-        <h3>Monthly Subscription</h3>
+    <!--==========================
+        Header Area End
+    ============================-->
+
+    <!--==========================
+        Bradcam Area Start
+    ============================-->
+
+    <div class="bradcam_area breadcam_bg overlay">
+      <h3>Monthly Subscription</h3>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 315"
+        style="display: block"
+      >
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,192L80,170.7C160,149,320,107,480,122.7C640,139,800,213,960,224C1120,
+        235,1280,181,1360,154.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+        ></path>
+      </svg>
     </div>
-    <!-- bradcam_area_end -->
 
+    <!--==========================
+        Bradcam Area End
+    ============================-->
 
+    <!--==========================
+        Subscription Area Start
+    ============================-->
 
-    <section class="section-padding">
-
-        <div class="monthly_subscribe">
-            <div class="container">
-                <div class="row">
-
-
-
-
-
-
-                    <!--<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6" data-aos="fade-up">
+    <div class="monthly_subscribe">
+      <div class="container">
+        <div class="row">
+          <!--<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6" data-aos="fade-up">
                         <div class="subscription_workshop">
                             <h3>PET Workshop 2nd Edition<br></h3>
                             <hr class="blue-line">
@@ -85,158 +112,178 @@
                         </div>
                     </div>-->
 
-
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6" data-aos="fade-up">
-                        <div class="subscription_workshop">
-                            <h3>Fin- Tech and Its Demand Post Covid</h3>
-                            <hr class="blue-line">
-                            <div class="subscription_workshop-txt">
-                                <h3><img src="/public/Main_Page/img/speaker/dennis_varghese.jpeg"
-                                        style="max-width: 20%;border-radius: 50%;"><span class="pull-right">Mr.
-                                            Dennis</span>
-                                <br>
-                                </h3>
-                                <h3><br></h3>
-                                <h3></h3>
-                                <hr class="blue-line">
-                                <p>Lead - GTM Financing<br>Ola Electric Mobility Pvt. Ltd. </p>
-                                <hr class="blue-line">
-                                <div class="subscribe_decription">
-                                    <p>
-                                        <span>
-                                            <i class="fa fa-calendar"></i>Week 1
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6" data-aos="fade-up">
-                        <div class="subscription_workshop">
-                            <h3>Social Entrepreneurship<br><br></h3>
-                            <hr class="blue-line">
-                            <div class="subscription_workshop-txt">
-                                <h3>
-                                    <img src="/public/Main_Page/img/speaker/img-24.jpeg"
-                                        style="max-width: 20%;border-radius: 50%;">
-                                        <span class="pull-right">Lalit Gautam</span>
-                                </h3>
-                                <h3><br></h3>
-                                <h3></h3>
-                                <hr class="blue-line">
-                                <p>Entrepreneur, Startup Mentor | Forbes 30 Under 30 Asia</p>
-                                <hr class="blue-line">
-                                <div class="subscribe_decription">
-                                    <p>
-                                        <span>
-                                            <i class="fa fa-calendar"></i>Week 2
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6" data-aos="fade-up">
-                        <div class="subscription_workshop">
-                            <h3>Brand Management<br><br></h3>
-                            <hr class="blue-line">
-                            <div class="subscription_workshop-txt">
-                                <h3>
-                                    <img src="/public/Main_Page/img/speaker/chetan_dubey.jpeg"
-                                        style="max-width: 20%;border-radius: 50%;">
-                                        <span class="pull-right">Chetan Dubey</span>
-                                </h3>
-                                <h3><br></h3>
-                                <h3></h3>
-                                <hr class="blue-line">
-                                <p>Marketing and Brand Management Expert, Consultant and Lecturer</p>
-                                <hr class="blue-line">
-                                <div class="subscribe_decription">
-                                    <p>
-                                        <span>
-                                            <i class="fa fa-calendar"></i>Week 3
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6" data-aos="fade-up">
+            <div class="subscription_workshop">
+              <h3>Fin- Tech and Its Demand Post Covid</h3>
+              <hr class="blue-line" />
+              <div class="subscription_workshop-txt">
+                <h3>
+                  <img
+                    src="/public/Main_Page/img/speaker/dennis_varghese.jpeg"
+                    style="max-width: 20%; border-radius: 50%"
+                  /><span class="pull-right">Mr. Dennis</span>
+                  <br />
+                </h3>
+                <h3><br /></h3>
+                <h3></h3>
+                <hr class="blue-line" />
+                <p>Lead - GTM Financing<br />Ola Electric Mobility Pvt. Ltd.</p>
+                <hr class="blue-line" />
+                <div class="subscribe_decription">
+                  <p>
+                    <span> <i class="fa fa-calendar"></i>Week 1 </span>
+                  </p>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
 
-
-        <div class="container mb-65">
-            <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-3">
-                    <h2 class="contact-title">Subscribe Now</h2>
-                    <br>
-                    <center>
-                        <!--Razorpay Payement-->
-                        <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_FjYbBqSC7s6cTF/view" data-text="Subscribe" data-color="#0EAFCC" data-size="large">
-                            <script>
-                              (function(){
-                                var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
-                                if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
-                                s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
-                                rzp && rzp.init && rzp.init()}})();
-                            </script>
-                          </div>
-                              
-                              
-                        <!--Razorpay Payement-->
-                    </center>
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6" data-aos="fade-up">
+            <div class="subscription_workshop">
+              <h3>Social Entrepreneurship<br /><br /></h3>
+              <hr class="blue-line" />
+              <div class="subscription_workshop-txt">
+                <h3>
+                  <img
+                    src="/public/Main_Page/img/speaker/img-24.jpeg"
+                    style="max-width: 20%; border-radius: 50%"
+                  />
+                  <span class="pull-right">Lalit Gautam</span>
+                </h3>
+                <h3><br /></h3>
+                <h3></h3>
+                <hr class="blue-line" />
+                <p>Entrepreneur, Startup Mentor | Forbes 30 Under 30 Asia</p>
+                <hr class="blue-line" />
+                <div class="subscribe_decription">
+                  <p>
+                    <span> <i class="fa fa-calendar"></i>Week 2 </span>
+                  </p>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-3">
-                    <div class="media contact-info">
-                        <span class="contact-info__icon"><i class="ti-home"></i></span>
-                        <div class="media-body">
-
-                            <h3>ConeX365 EduCorp Consulting</h3>
-                            <p>Innerspace Coworking,<br>
-                                SRM Road, Kaloor, Kochi - 682018
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-3">
-                    <div class="media contact-info">
-                        <span class="contact-info__icon"><i class="ti-tablet"></i></span>
-                        <div class="media-body">
-                            <h3>+91 9995111184</h3>
-                            <h3>+91 9995111132</h3>
-                            <p>Mon to Fri 10am to 4pm</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-3">
-                    <div class="media contact-info">
-                        <span class="contact-info__icon"><i class="ti-email"></i></span>
-                        <div class="media-body">
-                            <h3>support@conex365.com</h3>
-                            <p>Send us your query anytime!</p>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6" data-aos="fade-up">
+            <div class="subscription_workshop">
+              <h3>Brand Management<br /><br /></h3>
+              <hr class="blue-line" />
+              <div class="subscription_workshop-txt">
+                <h3>
+                  <img
+                    src="/public/Main_Page/img/speaker/chetan_dubey.jpeg"
+                    style="max-width: 20%; border-radius: 50%"
+                  />
+                  <span class="pull-right">Chetan Dubey</span>
+                </h3>
+                <h3><br /></h3>
+                <h3></h3>
+                <hr class="blue-line" />
+                <p>
+                  Marketing and Brand Management Expert, Consultant and Lecturer
+                </p>
+                <hr class="blue-line" />
+                <div class="subscribe_decription">
+                  <p>
+                    <span> <i class="fa fa-calendar"></i>Week 3 </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
 
+    <div class="container mb-65">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-3">
+          <h2 class="contact-title">Subscribe Now</h2>
+          <br />
+          <center>
+            <!--Razorpay Payement-->
+            <div
+              class="razorpay-embed-btn"
+              data-url="https://pages.razorpay.com/pl_FjYbBqSC7s6cTF/view"
+              data-text="Subscribe"
+              data-color="#0EAFCC"
+              data-size="large"
+            >
+              <script>
+                (function () {
+                  var d = document;
+                  var x = !d.getElementById("razorpay-embed-btn-js");
+                  if (x) {
+                    var s = d.createElement("script");
+                    s.defer = !0;
+                    s.id = "razorpay-embed-btn-js";
+                    s.src =
+                      "https://cdn.razorpay.com/static/embed_btn/bundle.js";
+                    d.body.appendChild(s);
+                  } else {
+                    var rzp = window["__rzp__"];
+                    rzp && rzp.init && rzp.init();
+                  }
+                })();
+              </script>
+            </div>
 
-    </section>
+            <!--Razorpay Payement-->
+          </center>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3">
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-home"></i></span>
+            <div class="media-body">
+              <h3>ConeX365 EduCorp Consulting</h3>
+              <p>
+                Innerspace Coworking,<br />
+                SRM Road, Kaloor, Kochi - 682018
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3">
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+            <div class="media-body">
+              <h3>+91 9995111184</h3>
+              <h3>+91 9995111132</h3>
+              <p>Mon to Fri 10am to 4pm</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3">
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-email"></i></span>
+            <div class="media-body">
+              <h3>support@conex365.com</h3>
+              <p>Send us your query anytime!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="/public/Main_Page/frontend_Js/subscribe.js"></script>
-    <!-- Footer Section -->
+
+    <!--==========================
+        Subscribe Area End
+    ============================-->
+
+    <!--==========================
+        Footer Area Start
+    ============================-->
+
     <%- include("../partials/mainFooter") %>
-    <!-- Footer Section End -->
 
-    <!-- JavaScript Section -->
+    <!--==========================
+        Footer Area End
+    ============================-->
+
+    <!--==========================
+        JS Area 
+    ============================-->
     <%- include("../partials/mainScripts") %>
-</body>
-
+  </body>
 </html>

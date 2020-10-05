@@ -245,7 +245,7 @@ app.get("/Thankusu", (req, res) => {
 // @desc    Privacy Page
 // @access  PUBLIC
 app.get("/privacy", (req, res) => {
-  res.render("pages/Privacy");
+  res.render("pages/privacy");
 });
 
 // @type    GET
@@ -260,8 +260,8 @@ app.get("/contact", (req, res) => {
 // @route   /termsofservice
 // @desc    Terms Of Service Page
 // @access  PUBLIC
-app.get("/termsofservice", (req, res) => {
-  res.render("pages/termsofservice");
+app.get("/TofS", (req, res) => {
+  res.render("pages/TofS");
 });
 
 // @type    GET
