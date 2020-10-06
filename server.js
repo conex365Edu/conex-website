@@ -191,14 +191,6 @@ app.get("/about", (req, res) => {
 });
 
 // @type    GET
-// @route   /objectives
-// @desc    Objectives Page
-// @access  PUBLIC
-app.get("/objectives", (req, res) => {
-  res.render("pages/Objectives");
-});
-
-// @type    GET
 // @route   /csr
 // @desc    Csr Page
 // @access  PUBLIC
