@@ -404,6 +404,14 @@ app.get("/conexspeakerregistration", csrfProtection, (req, res) => {
 });
 
 // @type    GET
+// @route   /about
+// @desc    About Page
+// @access  PUBLIC
+app.get("/incur", (req, res) => {
+  res.render("incur/index");
+});
+
+// @type    GET
 // @route   /AdminLogin
 // @desc    Admin Login
 // @access  PRIVATE
