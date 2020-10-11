@@ -20,88 +20,112 @@
 </head>
 
 <body>
-    <!-- header-start -->
-    <%- include("../../partials/mainNavbar") %>
-    <!-- header-end -->
+    <!--==========================
+        Header Area Start
+    ============================-->
 
-    
-    <!-- bradcam_area_start -->
+    <%- include("../../partials/mainNavbar") %>
+
+    <!--==========================
+        Header Area End
+    ============================-->
+
+    <!--==========================
+        Bradcam Area Start
+    ============================-->
+
     <div class="bradcam_area breadcam_bg overlay">
         <h3>Big Data Certification Course</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 315" style="display: block">
+            <path fill="#ffffff" fill-opacity="1"
+                d="M0,192L80,170.7C160,149,320,107,480,122.7C640,139,800,213,960,224C1120,
+        235,1280,181,1360,154.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+        </svg>
     </div>
-    <!-- bradcam_area_end -->
 
+    <!--==========================
+        Bradcam Area End
+    ============================-->
 
     <!--==========================
       Introduction Section
     ============================-->
 
-        <div class="certificate_details_info">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-7 col-lg-7">
-                        <h3>Micro Learning Certification Powered by
-                            <img src="/public/Main_Page/img/certification/board-infinity.png">
-                        </h3>
-                        <p>This course will help you become a Certified Big Data Engineer. Discover market 
-                            trends, unknown correlations, customer preferences, hidden patterns that can help
-                             businesses make data-driven decisions. Learn how to systematically extract information & 
-                             analyze data sets that are too large & complex by working on multiple types of real-world projects.
-                        </p>
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-md-6">
-                                <h4>
-                                    <i class="fa fa-inr" aria-hidden="true"></i>
-                                    <del>25,000</del>
-                                    <br><hr class="blue-line">
-                                    <i class="fa fa-inr" aria-hidden="true"></i>5,799 (77% OFF)
-                                </h4>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6">
-                                <center>
-                                    <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_Fa1R5qsCdB5S3O/view" data-text="Buy" data-color="#0EAFCC" data-size="large">
-                                        <script>
-                                          (function(){
-                                            var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
-                                            if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
-                                            s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['_rzp_'];
-                                            rzp && rzp.init && rzp.init()}})();
-                                        </script>
-                                      </div>
-                                </center>
-                            </div>
+    <div class="certificate_details_info">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7 col-lg-7">
+                    <h3>Micro Learning Certification Powered by
+                        <img src="/public/Main_Page/img/certification/board-infinity.png">
+                    </h3>
+                    <p>This course will help you become a Certified Big Data Engineer. Discover market
+                        trends, unknown correlations, customer preferences, hidden patterns that can help
+                        businesses make data-driven decisions. Learn how to systematically extract information &
+                        analyze data sets that are too large & complex by working on multiple types of real-world
+                        projects.
+                    </p>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <h4>
+                                <i class="fa fa-inr" aria-hidden="true"></i>
+                                <del>25,000</del>
+                                <br>
+                                <hr class="blue-line">
+                                <i class="fa fa-inr" aria-hidden="true"></i>5,799 (77% OFF)
+                            </h4>
                         </div>
-                    </div>
-                    <div class="col-xl-5 col-lg-5">
-                        <img src="/public/Main_Page/img/certification/BigData/bigData.svg" style="max-width:100%">
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <center>
+                                <div class="razorpay-embed-btn"
+                                    data-url="https://pages.razorpay.com/pl_Fa1R5qsCdB5S3O/view" data-text="Buy"
+                                    data-color="#0EAFCC" data-size="large">
+                                    <script>
+                                        (function () {
+                                            var d = document; var x = !d.getElementById('razorpay-embed-btn-js')
+                                            if (x) {
+                                                var s = d.createElement('script'); s.defer = !0; s.id = 'razorpay-embed-btn-js';
+                                                s.src = 'https://cdn.razorpay.com/static/embed_btn/bundle.js'; d.body.appendChild(s);
+                                            } else {
+                                                var rzp = window['_rzp_'];
+                                                rzp && rzp.init && rzp.init()
+                                            }
+                                        })();
+                                    </script>
+                                </div>
+                            </center>
+                        </div>
                     </div>
                 </div>
-
-                <div class="certificate_box mb-65">
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-md-4 certificate_box_content">
-                            <p>Duration</p>
-                            <h3>40 Hrs</h3>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 certificate_box_content">
-                            <p>Level</p>
-                            <h3>Beginners & Intermediate</h3>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 certificate_box_content">
-                            <p>Delivery Mode</p>
-                            <h3>Live Online</h3>
-                        </div>
-                    </div>
+                <div class="col-xl-5 col-lg-5">
+                    <img src="/public/Main_Page/img/certification/BigData/bigData.svg" style="max-width:100%">
                 </div>
             </div>
 
-            <div class="container mb-65 certificate_experts">
+            <div class="certificate_box mb-65">
                 <div class="row">
-                    <p>With Experts From:-</p>
-                    <img src="/public/Main_Page/img/certification/BigData/big-data.png">
-                </div>  
+                    <div class="col-xl-4 col-lg-4 col-md-4 certificate_box_content">
+                        <p>Duration</p>
+                        <h3>40 Hrs</h3>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 certificate_box_content">
+                        <p>Level</p>
+                        <h3>Beginners & Intermediate</h3>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 certificate_box_content">
+                        <p>Delivery Mode</p>
+                        <h3>Live Online</h3>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="container mb-65 certificate_experts">
+            <div class="row">
+                <p>With Experts From:-</p>
+                <img src="/public/Main_Page/img/certification/BigData/big-data.png">
+            </div>
+        </div>
+    </div>
 
     <!--==========================
       Introduction Section End
@@ -111,45 +135,48 @@
       About Program Section
     ============================-->
 
-        <section id="about_certification" class="section-bg">
-            <div class="container">
-                <div class="row">
-                    <h3 class="hh">About the Program</h3>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-6 col-xl-6">
-                        <div class="box">
-                            <div class="icon"><i class="fa fa-book"></i></div>
-                            <h4 class="title">60 Hours of Online Learning</h4>
-                            <p class="description" style="padding-left:5px ">Acquire premium content through live classes and bootcamps</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-6">
-                        <div class="box">
-                            <div class="icon"><i class="fa fa-graduation-cap"></i></div>
-                            <h4 class="title" style="padding-left: 10px;">Learn Latest Tools and Skills</h4>
-                            <p class="description" style="padding-left: 5px;">Learn new skills & tools and Become a Master at Big Data Analysis</p>
-                        </div>
+    <section id="about_certification" class="section-bg">
+        <div class="container">
+            <div class="row">
+                <h3 class="hh">About the Program</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-book"></i></div>
+                        <h4 class="title">60 Hours of Online Learning</h4>
+                        <p class="description" style="padding-left:5px ">Acquire premium content through live classes
+                            and bootcamps</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-6 col-xl-6">
-                        <div class="box">
-                            <div class="icon"><i class="fa fa-certificate"></i></div>
-                            <h4 class="title">Get Certification</h4>
-                            <p class="description" style="padding-left:5px ">Get certified and Build a strong portfolio of big data projects</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-6">
-                        <div class="box">
-                            <div class="icon"><i class="fa fa-upload"></i></div>
-                            <h4 class="title">Upgrade your skills</h4>
-                            <p class="description">Get better clarity about the field of Big Data</p>
-                        </div>
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-graduation-cap"></i></div>
+                        <h4 class="title" style="padding-left: 10px;">Learn Latest Tools and Skills</h4>
+                        <p class="description" style="padding-left: 5px;">Learn new skills & tools and Become a Master
+                            at Big Data Analysis</p>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-certificate"></i></div>
+                        <h4 class="title">Get Certification</h4>
+                        <p class="description" style="padding-left:5px ">Get certified and Build a strong portfolio of
+                            big data projects</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-upload"></i></div>
+                        <h4 class="title">Upgrade your skills</h4>
+                        <p class="description">Get better clarity about the field of Big Data</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!--==========================
       About Program Section End
@@ -158,17 +185,19 @@
     <!--==========================
       Tools Section
     ============================-->
-    
+
     <section id="clients">
         <div class="container">
             <div class="text-center">
                 <h3 class="Client-header">Tools & Skills Covered</h3>
-                <p>Master the right set of skills & tools which will allow you to perfectly execute your future projects.</p>
+                <p>Master the right set of skills & tools which will allow you to perfectly execute your future
+                    projects.</p>
                 <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
 
                     <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
                         <div class="client-logo">
-                            <img src="/public/Main_Page/img/certification/BigData/apache-spark.png" class="img-fluid" alt="">
+                            <img src="/public/Main_Page/img/certification/BigData/apache-spark.png" class="img-fluid"
+                                alt="">
                         </div>
                     </div>
 
@@ -195,7 +224,7 @@
                             <img src="/public/Main_Page/img/certification/BigData/sqoop.png" class="img-fluid" alt="">
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
     </section>
@@ -211,224 +240,232 @@
 
     <section id="course_syllubus">
         <div class="container">
-          <header class="section-header">
-            <h3>Syllabus</h3>
-            <p>Best-in-class content delivered by leading faculty and industry experts in the form of Live Classes, 
-                On Demand Videos, Case Studies, Assignments and Projects.</p>
-          </header>
-  
-          <ul id="course_syllubus_list">
+            <header class="section-header">
+                <h3>Syllabus</h3>
+                <p>Best-in-class content delivered by leading faculty and industry experts in the form of Live Classes,
+                    On Demand Videos, Case Studies, Assignments and Projects.</p>
+            </header>
 
-            <li>
-              <a data-toggle="collapse" class="collapsed" href="#faq1">Introduction To Big Data <i class="fa fa-minus"></i></a>
-              <div id="faq1" class="collapse" data-parent="#course_syllubus_list">
-                <ul class="ul_collapse">
-                    <li>Different types of data (Structured, unstructed and semi structured)</li>
-                    <li>Characteristics of Big Data (5 V’s of Big data)</li>
-                    <li>Evolution and Chanllenges of Big Data</li>
-                    <li>Why is parallel computing important?</li>
-                    <li>Discuss various products developed by vendors</li>
-                    <li>Different types of analytics</li>
-                    <li>Importance of Big Data analytics</li>
-                    <li>Introduction to Google File System</li>
-                    <li>Architecture of GFS</li>
-                </ul>
-              </div>
-            </li>
-  
-            <li>
-              <a data-toggle="collapse" class="collapsed" href="#faq2">Introducing Hadoop <i class="fa fa-minus"></i></a>
-              <div id="faq2" class="collapse" data-parent="#course_syllubus_list">
-                <ul class="ul_collapse">
-                    <li>Distributed systems and its Importance</li>
-                    <li>Difference between parallel and distributed system</li>
-                    <li>Components of Hadoop</li>
-                    <li>Starting Hadoop</li>
-                    <li>Identify various processes</li>
-                    <li>Hands on</li>
-                </ul>
-              </div>
-            </li>
-  
-            <li>
-                <a data-toggle="collapse" class="collapsed" href="#faq3">Working with HDFS <i class="fa fa-minus"></i></a>
-                <div id="faq3" class="collapse" data-parent="#course_syllubus_list">
-                  <ul class="ul_collapse">
-                    <li>Basic file commands</li>
-                    <li>Web Based User Interface</li>
-                    <li>Reading & Writing to files</li>
-                    <li>Run a word count program</li>
-                    <li>View jobs in the Web UI</li>
-                    <li>Practice</li>
-                  </ul>
-                </div>
-              </li>
-  
-              <li>
-                <a data-toggle="collapse" class="collapsed" href="#faq4">Installation and Configuration of Hadoop <i class="fa fa-minus"></i></a>
-                <div id="faq4" class="collapse" data-parent="#course_syllubus_list">
-                  <ul class="ul_collapse">
-                    <li>Types of installation (RPM’s & Tar files)</li>
-                    <li>Set up ‘ssh’ for the Hadoop cluster</li>
-                    <li>Tree structure</li>
-                    <li>XML, masters and slaves files</li>
-                    <li>Checking system health</li>
-                    <li>Discuss block size and replication factor</li>
-                    <li>Benchmarking the cluster</li>
-                    <li>Hands on</li>
-                  </ul>
-                </div>
-              </li>
-  
-              <li>
-                <a data-toggle="collapse" class="collapsed" href="#faq5">Other Components of the Hadoop ecosystem <i class="fa fa-minus"></i></a>
-                <div id="faq5" class="collapse" data-parent="#course_syllubus_list">
-                  <ul class="ul_collapse">
-                    <li>Discuss Hive, Sqoop, Pig, HBase, Flume</li>
-                    <li>Use cases of each</li>
-                    <li>Use Hadoop streaming to write code in Perl / Python</li>
-                    <li>Hands on</li>
-                  </ul>
-                </div>
-              </li>
+            <ul id="course_syllubus_list">
 
-              <li>
-                <a data-toggle="collapse" class="collapsed" href="#faq6">Hadoop <i class="fa fa-minus"></i></a>
-                <div id="faq6" class="collapse" data-parent="#course_syllubus_list">
-                  <ul class="ul_collapse">
-                    <li>Why Hadoop?</li>
-                    <li>Scaling</li>
-                    <li>Distributed Framework</li>
-                    <li>Hadoop v/s RDBMS</li>
-                    <li>Brief history of hadoop</li>
-                  </ul>
-                </div>
-              </li>
-
-              <li>
-                <a data-toggle="collapse" class="collapsed" href="#faq7">Hadoop: Basic Concepts <i class="fa fa-minus"></i></a>
-                <div id="faq7" class="collapse" data-parent="#course_syllubus_list">
-                  <ul class="ul_collapse">
-                    <li>An Overview of Hadoop</li>
-                    <li>The Hadoop Distributed File System</li>
-                    <li>Hands-On Exercise</li>
-                    <li>How MapReduce Works</li>
-                    <li>Hands-On Exercise</li>
-                    <li>Anatomy of a Hadoop Cluster</li>
-                    <li>Other Hadoop Ecosystem Components</li>
-                  </ul>
-                </div>
-              </li>
-
-              <li>
-                <a data-toggle="collapse" class="collapsed" href="#faq8">Hadoop Programming Languages <i class="fa fa-minus"></i></a>
-                <div id="faq8" class="collapse" data-parent="#course_syllubus_list">
-                  <ul class="ul_collapse">
-                    <li>ETL tool: Pig</li>
-                    <li>Pig architecture</li>
-                        <ul style="margin-left: 15px;">
-                            <li>Installing and Running Pig</li>
-                            <li>Execution Types</li>
-                            <li>Running Pig Programs</li>
-                            <li>Grunt</li>
-                            <li>Pig Latin Editors</li>
-                            <li>An Example</li>
-                            <li>Generating Examples</li>
-                            <li>Comparison with Databases</li>
-                            <li>Pig Latin</li>
-                            <li>Structure</li>
-                            <li>Statements</li>
-                            <li>Expressions</li>
-                            <li>Types</li>
-                            <li>Schemas</li>
-                            <li>Functions</li>
-                            <li>Macros</li>
-                            <li>User-Defined Functions</li>
-                            <li>A Filter UDF</li>
-                            <li>An Eval UDF</li>
-                            <li>A Load UDF</li>
-                            <li>Data Processing Operators</li>
-                            <li>Loading and Storing Data</li>
-                            <li>Filtering Data</li>
-                            <li>Grouping and Joining Data</li>
-                            <li>Sorting Data</li>
-                            <li>Combining and Splitting Data</li>
-                            <li>Pig in Practice</li>
-                            <li>Parallelism</li>
-                            <li>Parameter Substitution</li>
+                <li>
+                    <a data-toggle="collapse" class="collapsed" href="#faq1">Introduction To Big Data <i
+                            class="fa fa-minus"></i></a>
+                    <div id="faq1" class="collapse" data-parent="#course_syllubus_list">
+                        <ul class="ul_collapse">
+                            <li>Different types of data (Structured, unstructed and semi structured)</li>
+                            <li>Characteristics of Big Data (5 V’s of Big data)</li>
+                            <li>Evolution and Chanllenges of Big Data</li>
+                            <li>Why is parallel computing important?</li>
+                            <li>Discuss various products developed by vendors</li>
+                            <li>Different types of analytics</li>
+                            <li>Importance of Big Data analytics</li>
+                            <li>Introduction to Google File System</li>
+                            <li>Architecture of GFS</li>
                         </ul>
-                    <li>Hive Database</li>
-                        <ul style="margin-left: 15px;">
-                            <li>Hive Background</li>
-                            <li>Hive Architecture</li>
-                            <li>Downloading, Installing and Configuring Hive</li>
-                            <li>Simple Hive Example</li>
-                            <li>Loading Data into Hive</li>
-                            <li>Hive Query Statements</li>
-                            <li>Working with Sqoop: Data Ingestion tool</li>
-                            <li>Getting Sqoop</li>
-                            <li>A Sample Import</li>
-                            <li>Generated Code</li>
-                            <li>Additional Serialization Systems</li>
-                            <li>Database Imports: A Deeper Look</li>
-                            <li>Controlling the Import</li>
-                            <li>Imports and Consistency</li>
-                            <li>Direct-mode Imports</li>
-                            <li>Working with Imported Data</li>
-                            <li>Imported Data and Hive</li>
-                            <li>Importing Large Objects</li>
-                            <li>Performing an Expo</li>
-                            <li>Working with Flume: Data Ingestion tool</li>
-                            <li>Introduction</li>
-                            <li>Overview</li>
-                            <li>Architecture</li>
-                            <li>Data flow model</li>
-                            <li>Reliability</li>
-                            <li>Building Flume</li>
-                            <li>Getting the source</li>
-                            <li>Compile/test Flume</li>
-                            <li>Developing custom components</li>
-                            <li>Client</li>
-                            <li>Client SDK</li>
-                            <li>RPC client interface</li>
-                            <li>RPC clients - Avro and Thrift</li>
-                            <li>Failover Client</li>
-                            <li>Load Balancing RPC client</li>
-                            <li>Embedded agent</li>
-                            <li>Transaction interface</li>
-                            <li>Sink</li>
-                            <li>Source</li>
-                            <li>Channel</li>
-                        </ul>
-                  </ul>
-                </div>
-              </li>
+                    </div>
+                </li>
 
-              <li>
-                <a data-toggle="collapse" class="collapsed" href="#faq9">Introduction to NOSQL Database <i class="fa fa-minus"></i></a>
-                <div id="faq9" class="collapse" data-parent="#course_syllubus_list">
-                  <ul class="ul_collapse">
-                    <li>What is NOSQL database?</li>
-                    <li>Difference between SQL and NOSQL database</li>
-                    <li>Examples for NOSQL databases</li>
-                    <li>Different types of NOSQL database</li>
-                    <li>Introduction to mongodb ( Document database)</li>
-                    <li>Introduction to HBase (columnar database)</li>
-                    <li>Apache Spark</li>
-                    <li>Architecture of spark</li>
-                    <li>When to go for hadoop and spark?</li>
-                    <li>Components of spark</li>
-                    <li>Lambda architecture</li>
-                    <li>Deep dive into spark MLlib and pyspark</li>
-                  </ul>
-                </div>
-              </li>
-              
-          </ul>
-  
+                <li>
+                    <a data-toggle="collapse" class="collapsed" href="#faq2">Introducing Hadoop <i
+                            class="fa fa-minus"></i></a>
+                    <div id="faq2" class="collapse" data-parent="#course_syllubus_list">
+                        <ul class="ul_collapse">
+                            <li>Distributed systems and its Importance</li>
+                            <li>Difference between parallel and distributed system</li>
+                            <li>Components of Hadoop</li>
+                            <li>Starting Hadoop</li>
+                            <li>Identify various processes</li>
+                            <li>Hands on</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" class="collapsed" href="#faq3">Working with HDFS <i
+                            class="fa fa-minus"></i></a>
+                    <div id="faq3" class="collapse" data-parent="#course_syllubus_list">
+                        <ul class="ul_collapse">
+                            <li>Basic file commands</li>
+                            <li>Web Based User Interface</li>
+                            <li>Reading & Writing to files</li>
+                            <li>Run a word count program</li>
+                            <li>View jobs in the Web UI</li>
+                            <li>Practice</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" class="collapsed" href="#faq4">Installation and Configuration of Hadoop <i
+                            class="fa fa-minus"></i></a>
+                    <div id="faq4" class="collapse" data-parent="#course_syllubus_list">
+                        <ul class="ul_collapse">
+                            <li>Types of installation (RPM’s & Tar files)</li>
+                            <li>Set up ‘ssh’ for the Hadoop cluster</li>
+                            <li>Tree structure</li>
+                            <li>XML, masters and slaves files</li>
+                            <li>Checking system health</li>
+                            <li>Discuss block size and replication factor</li>
+                            <li>Benchmarking the cluster</li>
+                            <li>Hands on</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" class="collapsed" href="#faq5">Other Components of the Hadoop ecosystem <i
+                            class="fa fa-minus"></i></a>
+                    <div id="faq5" class="collapse" data-parent="#course_syllubus_list">
+                        <ul class="ul_collapse">
+                            <li>Discuss Hive, Sqoop, Pig, HBase, Flume</li>
+                            <li>Use cases of each</li>
+                            <li>Use Hadoop streaming to write code in Perl / Python</li>
+                            <li>Hands on</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" class="collapsed" href="#faq6">Hadoop <i class="fa fa-minus"></i></a>
+                    <div id="faq6" class="collapse" data-parent="#course_syllubus_list">
+                        <ul class="ul_collapse">
+                            <li>Why Hadoop?</li>
+                            <li>Scaling</li>
+                            <li>Distributed Framework</li>
+                            <li>Hadoop v/s RDBMS</li>
+                            <li>Brief history of hadoop</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" class="collapsed" href="#faq7">Hadoop: Basic Concepts <i
+                            class="fa fa-minus"></i></a>
+                    <div id="faq7" class="collapse" data-parent="#course_syllubus_list">
+                        <ul class="ul_collapse">
+                            <li>An Overview of Hadoop</li>
+                            <li>The Hadoop Distributed File System</li>
+                            <li>Hands-On Exercise</li>
+                            <li>How MapReduce Works</li>
+                            <li>Hands-On Exercise</li>
+                            <li>Anatomy of a Hadoop Cluster</li>
+                            <li>Other Hadoop Ecosystem Components</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" class="collapsed" href="#faq8">Hadoop Programming Languages <i
+                            class="fa fa-minus"></i></a>
+                    <div id="faq8" class="collapse" data-parent="#course_syllubus_list">
+                        <ul class="ul_collapse">
+                            <li>ETL tool: Pig</li>
+                            <li>Pig architecture</li>
+                            <ul style="margin-left: 15px;">
+                                <li>Installing and Running Pig</li>
+                                <li>Execution Types</li>
+                                <li>Running Pig Programs</li>
+                                <li>Grunt</li>
+                                <li>Pig Latin Editors</li>
+                                <li>An Example</li>
+                                <li>Generating Examples</li>
+                                <li>Comparison with Databases</li>
+                                <li>Pig Latin</li>
+                                <li>Structure</li>
+                                <li>Statements</li>
+                                <li>Expressions</li>
+                                <li>Types</li>
+                                <li>Schemas</li>
+                                <li>Functions</li>
+                                <li>Macros</li>
+                                <li>User-Defined Functions</li>
+                                <li>A Filter UDF</li>
+                                <li>An Eval UDF</li>
+                                <li>A Load UDF</li>
+                                <li>Data Processing Operators</li>
+                                <li>Loading and Storing Data</li>
+                                <li>Filtering Data</li>
+                                <li>Grouping and Joining Data</li>
+                                <li>Sorting Data</li>
+                                <li>Combining and Splitting Data</li>
+                                <li>Pig in Practice</li>
+                                <li>Parallelism</li>
+                                <li>Parameter Substitution</li>
+                            </ul>
+                            <li>Hive Database</li>
+                            <ul style="margin-left: 15px;">
+                                <li>Hive Background</li>
+                                <li>Hive Architecture</li>
+                                <li>Downloading, Installing and Configuring Hive</li>
+                                <li>Simple Hive Example</li>
+                                <li>Loading Data into Hive</li>
+                                <li>Hive Query Statements</li>
+                                <li>Working with Sqoop: Data Ingestion tool</li>
+                                <li>Getting Sqoop</li>
+                                <li>A Sample Import</li>
+                                <li>Generated Code</li>
+                                <li>Additional Serialization Systems</li>
+                                <li>Database Imports: A Deeper Look</li>
+                                <li>Controlling the Import</li>
+                                <li>Imports and Consistency</li>
+                                <li>Direct-mode Imports</li>
+                                <li>Working with Imported Data</li>
+                                <li>Imported Data and Hive</li>
+                                <li>Importing Large Objects</li>
+                                <li>Performing an Expo</li>
+                                <li>Working with Flume: Data Ingestion tool</li>
+                                <li>Introduction</li>
+                                <li>Overview</li>
+                                <li>Architecture</li>
+                                <li>Data flow model</li>
+                                <li>Reliability</li>
+                                <li>Building Flume</li>
+                                <li>Getting the source</li>
+                                <li>Compile/test Flume</li>
+                                <li>Developing custom components</li>
+                                <li>Client</li>
+                                <li>Client SDK</li>
+                                <li>RPC client interface</li>
+                                <li>RPC clients - Avro and Thrift</li>
+                                <li>Failover Client</li>
+                                <li>Load Balancing RPC client</li>
+                                <li>Embedded agent</li>
+                                <li>Transaction interface</li>
+                                <li>Sink</li>
+                                <li>Source</li>
+                                <li>Channel</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" class="collapsed" href="#faq9">Introduction to NOSQL Database <i
+                            class="fa fa-minus"></i></a>
+                    <div id="faq9" class="collapse" data-parent="#course_syllubus_list">
+                        <ul class="ul_collapse">
+                            <li>What is NOSQL database?</li>
+                            <li>Difference between SQL and NOSQL database</li>
+                            <li>Examples for NOSQL databases</li>
+                            <li>Different types of NOSQL database</li>
+                            <li>Introduction to mongodb ( Document database)</li>
+                            <li>Introduction to HBase (columnar database)</li>
+                            <li>Apache Spark</li>
+                            <li>Architecture of spark</li>
+                            <li>When to go for hadoop and spark?</li>
+                            <li>Components of spark</li>
+                            <li>Lambda architecture</li>
+                            <li>Deep dive into spark MLlib and pyspark</li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+
         </div>
-      </section>
-      
+    </section>
+
     <!--==========================
       Syllubus Section End
     ============================-->
@@ -437,55 +474,57 @@
       Industry Project Section
     ============================-->
 
-        <section class="mb-65">
-            <div class="container industry-project">
-                <h3>Industry Projects</h3>
-                <ul>
-                    <h4>
-                        Learn through real-life industry projects sponsored by top companies across various verticals
-                    </h4>
-                    <li>✓ Engage in collaborative projects with student-mentor interaction</li>
-                    <li>✓ Learn faster in-person through guidance from expert mentors</li>
-                    <li>✓ Personalized subjective feedback on your submissions to facilitate quick improvement</li>
-                </ul>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4">
-                        <div class="purpose_box">
-                            <img src="/public/Main_Page/img/certification/BigData/flipkart.png">
-                            <h3>Analyzing Flipkart Product performance
-                            </h3>
-                            <p class="expand-para">
-                                <br>
-                                Perform product and customer segmentation to increase the sales of Flipkart.
-                            </p>
-                        </div>
+    <section class="mb-65">
+        <div class="container industry-project">
+            <h3>Industry Projects</h3>
+            <ul>
+                <h4>
+                    Learn through real-life industry projects sponsored by top companies across various verticals
+                </h4>
+                <li>✓ Engage in collaborative projects with student-mentor interaction</li>
+                <li>✓ Learn faster in-person through guidance from expert mentors</li>
+                <li>✓ Personalized subjective feedback on your submissions to facilitate quick improvement</li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4">
+                    <div class="purpose_box">
+                        <img src="/public/Main_Page/img/certification/BigData/flipkart.png">
+                        <h3>Analyzing Flipkart Product performance
+                        </h3>
+                        <p class="expand-para">
+                            <br>
+                            Perform product and customer segmentation to increase the sales of Flipkart.
+                        </p>
                     </div>
-                    <div class="col-xl-4">
-                        <div class="purpose_box">
-                            <img src="/public/Main_Page/img/certification/BigData/fraud-detection.png">
-                            <h3>Fraud Detection
-                            </h3>
-                            <p class="expand-para">
-                                <br>
-                                Design and implement Big Data solutions to ingest, process and store data to detect credit card frauds and create a solution
-                            </p>
-                        </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="purpose_box">
+                        <img src="/public/Main_Page/img/certification/BigData/fraud-detection.png">
+                        <h3>Fraud Detection
+                        </h3>
+                        <p class="expand-para">
+                            <br>
+                            Design and implement Big Data solutions to ingest, process and store data to detect credit
+                            card frauds and create a solution
+                        </p>
                     </div>
-                    <div class="col-xl-4">
-                        <div class="purpose_box">
-                            <img src="/public/Main_Page/img/certification/BigData/insurance-claim.png">
-                            <h3>Analyzing Historical Insurance claims
-                            </h3>
-                            <p class="expand-para">
-                                Use Hadoop features to predict patterns and share actionable insights for a car insurance company.
-                            </p>
-                        </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="purpose_box">
+                        <img src="/public/Main_Page/img/certification/BigData/insurance-claim.png">
+                        <h3>Analyzing Historical Insurance claims
+                        </h3>
+                        <p class="expand-para">
+                            Use Hadoop features to predict patterns and share actionable insights for a car insurance
+                            company.
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>    
+        </div>
+    </section>
 
     <!--=============================
       Industry Project Section End
@@ -494,105 +533,105 @@
     <!--=============================
             Coaches Section
     =================================-->
-        
 
-        <div class="coaches_details_info">
-            <div class="container">
-                <div class="row">
-                    <h3 class="coach_heading">Meet Your Coaches</h3> 
+
+    <div class="coaches_details_info">
+        <div class="container">
+            <div class="row">
+                <h3 class="coach_heading">Meet Your Coaches</h3>
+            </div>
+            <div class="row">
+                <p class="coach_heading">Learn from the Best Leaders and Coaches.</p>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                    <div class="author_info">
+                        <div class="auhor_header">
+                            <div class="thumb">
+                                <img src="/public/Main_Page/img/certification/ML/ruble-joseph.jpeg" alt="" height="60px"
+                                    ,width="60px" style="border-radius: 50px">
+                            </div>
+                            <div class="name">
+                                <h3>Ruble Joseph</h3>
+                                <p>Vice President at eClerx</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                    <p class="coach_heading">Learn from the Best Leaders and Coaches.</p>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                    <div class="author_info">
+                        <div class="auhor_header">
+                            <div class="thumb">
+                                <img src="/public/Main_Page/img/certification/ML/rajanikant-ghate.jpeg" alt=""
+                                    height="60px" ,width="60px" style="border-radius: 50px">
+                            </div>
+                            <div class="name">
+                                <h3>Rajanikant Ghate</h3>
+                                <p>Data Scientist at Sleepiz AG</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                        <div class="author_info">
-                            <div class="auhor_header">
-                                <div class="thumb">
-                                    <img src="/public/Main_Page/img/certification/ML/ruble-joseph.jpeg" alt="" height="60px"
-                                        ,width="60px" style="border-radius: 50px">
-                                </div>
-                                <div class="name">
-                                    <h3>Ruble Joseph</h3>
-                                    <p>Vice President at eClerx</p>
-                                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                    <div class="author_info">
+                        <div class="auhor_header">
+                            <div class="thumb">
+                                <img src="/public/Main_Page/img/certification/BigData/gowtham-jayachandiran.jpeg" alt=""
+                                    height="60px" ,width="60px" style="border-radius: 50px">
+                            </div>
+                            <div class="name">
+                                <h3>Gowtham Jayachandiran</h3>
+                                <p>Senior Associate at State Street</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                        <div class="author_info">
-                            <div class="auhor_header">
-                                <div class="thumb">
-                                    <img src="/public/Main_Page/img/certification/ML/rajanikant-ghate.jpeg" alt="" height="60px"
-                                        ,width="60px" style="border-radius: 50px">
-                                </div>
-                                <div class="name">
-                                    <h3>Rajanikant Ghate</h3>
-                                    <p>Data Scientist at Sleepiz AG</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                        <div class="author_info">
-                            <div class="auhor_header">
-                                <div class="thumb">
-                                    <img src="/public/Main_Page/img/certification/BigData/gowtham-jayachandiran.jpeg" alt="" height="60px"
-                                        ,width="60px" style="border-radius: 50px">
-                                </div>
-                                <div class="name">
-                                    <h3>Gowtham Jayachandiran</h3>
-                                    <p>Senior Associate at State Street</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                        <div class="author_info">
-                            <div class="auhor_header">
-                                <div class="thumb">
-                                    <img src="/public/Main_Page/img/certification/BigData/sumit-ganguly.jpeg" alt="" height="60px"
-                                        ,width="60px" style="border-radius: 50px">
-                                </div>
-                                <div class="name">
-                                    <h3>Sumit Ganguly</h3>
-                                    <p>Technical Lead at Cognizant at Cognizant</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                        <div class="author_info">
-                            <div class="auhor_header">
-                                <div class="thumb">
-                                    <img src="/public/Main_Page/img/certification/BigData/raghu-raman.jpeg" alt="" height="60px"
-                                        ,width="60px" style="border-radius: 50px">
-                                </div>
-                                <div class="name">
-                                    <h3>Raghu Raman A V</h3>
-                                    <p>Adjunct Faculty at Great Lakes Institute of Management</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                        <div class="author_info">
-                            <div class="auhor_header">
-                                <div class="thumb">
-                                    <img src="/public/Main_Page/img/certification/BigData/prasuna.jpeg" alt="" height="60px"
-                                        ,width="60px" style="border-radius: 50px">
-                                </div>
-                                <div class="name">
-                                    <h3>Prasuna</h3>
-                                    <p>Freelance Hadoop trainer at Board Infinity </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                    <div class="author_info">
+                        <div class="auhor_header">
+                            <div class="thumb">
+                                <img src="/public/Main_Page/img/certification/BigData/sumit-ganguly.jpeg" alt=""
+                                    height="60px" ,width="60px" style="border-radius: 50px">
+                            </div>
+                            <div class="name">
+                                <h3>Sumit Ganguly</h3>
+                                <p>Technical Lead at Cognizant at Cognizant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                    <div class="author_info">
+                        <div class="auhor_header">
+                            <div class="thumb">
+                                <img src="/public/Main_Page/img/certification/BigData/raghu-raman.jpeg" alt=""
+                                    height="60px" ,width="60px" style="border-radius: 50px">
+                            </div>
+                            <div class="name">
+                                <h3>Raghu Raman A V</h3>
+                                <p>Adjunct Faculty at Great Lakes Institute of Management</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                    <div class="author_info">
+                        <div class="auhor_header">
+                            <div class="thumb">
+                                <img src="/public/Main_Page/img/certification/BigData/prasuna.jpeg" alt="" height="60px"
+                                    ,width="60px" style="border-radius: 50px">
+                            </div>
+                            <div class="name">
+                                <h3>Prasuna</h3>
+                                <p>Freelance Hadoop trainer at Board Infinity </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </div>
 
 
     <!--=============================
@@ -604,23 +643,29 @@
     =================================-->
 
 
-        <div class="container">
+    <div class="container">
         <div class="row">
-                            <!--Razorpay Payement-->
-                            <center>
-                                <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_Fa1R5qsCdB5S3O/view" data-text="Buy" data-color="#0EAFCC" data-size="large">
-                                    <script>
-                                      (function(){
-                                        var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
-                                        if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
-                                        s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['_rzp_'];
-                                        rzp && rzp.init && rzp.init()}})();
-                                    </script>
-                                  </div>
-                            </center>
-                            <!--Razorpay Payement Closing-->
-                        </div>
-                    <!--
+            <!--Razorpay Payement-->
+            <center>
+                <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_Fa1R5qsCdB5S3O/view"
+                    data-text="Buy" data-color="#0EAFCC" data-size="large">
+                    <script>
+                        (function () {
+                            var d = document; var x = !d.getElementById('razorpay-embed-btn-js')
+                            if (x) {
+                                var s = d.createElement('script'); s.defer = !0; s.id = 'razorpay-embed-btn-js';
+                                s.src = 'https://cdn.razorpay.com/static/embed_btn/bundle.js'; d.body.appendChild(s);
+                            } else {
+                                var rzp = window['_rzp_'];
+                                rzp && rzp.init && rzp.init()
+                            }
+                        })();
+                    </script>
+                </div>
+            </center>
+            <!--Razorpay Payement Closing-->
+        </div>
+        <!--
                         <p>&nbsp</p>
                         <div class="col-xl-12 col-lg-12 col-md-12">
                             <h4>For International Students, <br>
@@ -628,14 +673,14 @@
                         </div>
                         <p>&nbsp</p>
                     -->
-                        <!--Paypal Integration-->
-                        
-                        <!--Paypal Integration-->
-                    </div>    
+        <!--Paypal Integration-->
+
+        <!--Paypal Integration-->
+    </div>
 
     <!--=============================
             Payment Section End
-    =================================-->                    
+    =================================-->
 
     <!-- Footer Section -->
     <%- include("../../partials/mainFooter") %>
@@ -646,14 +691,14 @@
     =================================-->
 
     <script>
-        function toggleMe(a){
-            var e=document.getElementById(a);
-            if(!e)return true;
-            if(e.style.display=="none"){
-                e.style.display="block"
+        function toggleMe(a) {
+            var e = document.getElementById(a);
+            if (!e) return true;
+            if (e.style.display == "none") {
+                e.style.display = "block"
             }
-            else{
-                e.style.display="none"
+            else {
+                e.style.display = "none"
             }
             return true;
         }

@@ -197,14 +197,6 @@ app.get("/about", (req, res) => {
 });
 
 // @type    GET
-// @route   /objectives
-// @desc    Objectives Page
-// @access  PUBLIC
-app.get("/objectives", (req, res) => {
-  res.render("pages/Objectives");
-});
-
-// @type    GET
 // @route   /csr
 // @desc    Csr Page
 // @access  PUBLIC
@@ -414,6 +406,14 @@ app.get("/conexspeakerregistration", csrfProtection, (req, res) => {
   res.render("pages/RegistrationPages/ConexSpeakerRegistration", {
     csrfToken: req.csrfToken(),
   });
+});
+
+// @type    GET
+// @route   /about
+// @desc    About Page
+// @access  PUBLIC
+app.get("/incur", (req, res) => {
+  res.render("incur/index");
 });
 
 // @type    GET
