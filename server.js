@@ -388,6 +388,14 @@ app.get("/Certification/PowerBI", (req, res) => {
 });
 
 // @type    GET
+// @route   /Certification/BI
+// @desc    Cyber Security Page
+// @access  PUBLIC
+app.get("/Certification/MSpowerBI", (req, res) => {
+  res.render("pages/Certifications/MSpowerBI");
+});
+
+// @type    GET
 // @route   /ThankYou
 // @desc    Thank You Page
 // @access  PUBLIC
@@ -414,19 +422,35 @@ app.get("/conexspeakerregistration", csrfProtection, (req, res) => {
 });
 
 // @type    GET
-// @route   /about
-// @desc    About Page
+// @route   /incur
+// @desc    Incur Home
 // @access  PUBLIC
 app.get("/incur", (req, res) => {
   res.render("incur/index");
 });
 
 // @type    GET
-// @route   /about
-// @desc    About Page
+// @route   /incur/apply
+// @desc    IncurAT
 // @access  PUBLIC
 app.get("/incur/apply", (req, res) => {
   res.render("incur/incurForm");
+});
+
+// @type    GET
+// @route   /incur/marketing
+// @desc    Incur Marketing
+// @access  PUBLIC
+app.get("/incur/marketing", (req, res) => {
+  res.render("incur/marketing");
+});
+
+// @type    GET
+// @route   /incur/contact
+// @desc    Incur Contact
+// @access  PUBLIC
+app.get("/incur/contact", (req, res) => {
+  res.render("incur/incurContact");
 });
 
 // @type    GET
