@@ -10,8 +10,9 @@ const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
 dotenv.config();
 
-router.post("/conexplus", csrfProtection, parseForm, (req, res) => {
+router.post("/conexplus", (req, res) => {
   const { error } = conexplusregister(req.body);
+
   res.setHeader("Content-Type", "application/json");
   if (error) {
     console.log(error.details[0].message);

@@ -39,6 +39,7 @@
     "passport-jwt": "^4.0.0",
     "razorpay": "^2.0.6",
     "shortid": "^2.2.15",
+    "validator": "^13.1.17",
     "volleyball": "^1.5.1"
   }
 }

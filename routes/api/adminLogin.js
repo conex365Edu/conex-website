@@ -100,7 +100,7 @@ router.post("/adminlogin", parseForm, csrfProtection, (req, res) => {
             );
           } else {
             res.status(400).json({
-              msg: "Password is not corrected",
+              msg: "Password is not correct",
             });
             console.log(err);
           }
@@ -110,19 +110,31 @@ router.post("/adminlogin", parseForm, csrfProtection, (req, res) => {
   );
 });
 
-router.get("/update", async (req, res) => {
-  const filter = {};
-  const admin = await Admin.find(filter);
-  console.log(admin);
-  res.json(admin);
-});
+router.get(
+  "/update",
+  passport.authenticate("jwt", {
+    session: false,
+  }),
+  async (req, res) => {
+    const filter = {};
+    const admin = await Admin.find(filter);
+    console.log(admin);
+    res.json(admin);
+  }
+);
 
-router.get("/adminData", async (req, res) => {
-  const filter = {};
-  const admin = await Admin.find(filter);
-  console.log(admin);
-  res.json(admin);
-});
+router.get(
+  "/adminData",
+  passport.authenticate("jwt", {
+    session: false,
+  }),
+  async (req, res) => {
+    const filter = {};
+    const admin = await Admin.find(filter);
+    console.log(admin);
+    res.json(admin);
+  }
+);
 
 // // @type    POST
 // // @route   /api/auth/update
@@ -213,7 +225,7 @@ router.get("/logout", function (req, res) {
     msg: "redirect",
   });
   res.redirect("/adminLogin");
-  window.location.href="/adminLogin";
+  window.location.href = "/adminLogin";
 });
 
 // router.get("/logout", function (req, res) {
