@@ -31,6 +31,9 @@ const monthlyPayment = require("./routes/api/monthPay");
 //Forum Routes
 const forumLogin = require("./routes/api/Forum/Login.Services");
 
+//Incurex Routes
+const IncurexLogin = require("./routes/api/Incurex/incurex.registeration");
+
 //CSRF Token Dependencies
 var csrf = require("csurf");
 var csrfProtection = csrf({ cookie: true });
@@ -89,6 +92,8 @@ app.use("/api/payment365/", monthlyPayment);
 
 //Form Main Routes
 app.use("/api/forum/services", forumLogin);
+
+app.use("/content/incurex/services", IncurexLogin);
 
 //Connect to MongoDB
 mongoose.connect(
