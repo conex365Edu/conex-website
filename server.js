@@ -28,6 +28,9 @@ const conexplus = require("./routes/api/conexplus");
 const conexspeaker = require("./routes/api/conexspeaker");
 const monthlyPayment = require("./routes/api/monthPay");
 
+//Forum Routes
+const forumLogin = require("./routes/api/Forum/Login.Services");
+
 //CSRF Token Dependencies
 var csrf = require("csurf");
 var csrfProtection = csrf({ cookie: true });
@@ -44,7 +47,7 @@ const speakerModel = require("./models/conexspeaker");
 //Middleware for bodyparser
 app.use(bodyParser.json());
 //Force SSL is configured for https...Don't Remove
-app.use(forceSSL);
+// app.use(forceSSL);
 //BodyParser Middleware
 app.use(
   bodyParser.urlencoded({
@@ -83,6 +86,9 @@ app.use("/api/registration", conet);
 app.use("/api/registration", conexplus);
 app.use("/api/registration", conexspeaker);
 app.use("/api/payment365/", monthlyPayment);
+
+//Form Main Routes
+app.use("/api/forum/services", forumLogin);
 
 //Connect to MongoDB
 mongoose.connect(
@@ -368,7 +374,6 @@ app.get("/Certification/CyberSecurity", (req, res) => {
   res.render("pages/Certifications/CyberSecurity");
 });
 
-
 // @type    GET
 // @route   /Certification/BI
 // @desc    Cyber Security Page
@@ -531,24 +536,30 @@ app.get(
 );
 
 // Zero SSl Provided Certificate Config
-const privateKey = fs.readFileSync("./certificates/private.key", "utf8");
-const certificate = fs.readFileSync("./certificates/certificate.crt", "utf8");
-const ca = fs.readFileSync("./certificates/ca_bundle.crt", "utf8");
+if (process.env.NODE_ENV == "production") {
+  const privateKey = fs.readFileSync("./certificates/private.key", "utf8");
+  const certificate = fs.readFileSync("./certificates/certificate.crt", "utf8");
+  const ca = fs.readFileSync("./certificates/ca_bundle.crt", "utf8");
 
-const credentials = {
-  key: privateKey,
-  cert: certificate,
-  ca: ca,
-};
+  const credentials = {
+    key: privateKey,
+    cert: certificate,
+    ca: ca,
+  };
 
-// Starting both http & https servers
-const httpServer = http.createServer(app);
-const httpsServer = https.createServer(credentials, app);
+  // Starting both http & https servers
+  const httpServer = http.createServer(app);
+  const httpsServer = https.createServer(credentials, app);
 
-httpServer.listen(80, () => {
-  console.log("HTTP Server running on port 80");
-});
+  httpServer.listen(80, () => {
+    console.log("HTTP Server running on port 80");
+  });
 
-httpsServer.listen(443, () => {
-  console.log("HTTPS Server running on port 443");
-});
+  httpsServer.listen(443, () => {
+    console.log("HTTPS Server running on port 443");
+  });
+} else {
+  app.listen(5000, () => {
+    console.log("Server is running");
+  });
+}

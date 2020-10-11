@@ -29,7 +29,7 @@ const conetregisterValidation = (data) => {
 const conexplusregister = (data) => {
   const schema = Joi.object({
     Name: Joi.string().required(),
-    Phonenumber: Joi.number().min(10).max(10).required(),
+    Phonenumber: Joi.number().min(10).required(),
     Email: Joi.string().min(6).required().email(),
     Address: Joi.string().min(6).required(),
     Description: Joi.string().min(6).required(),
@@ -41,7 +41,7 @@ const conexplusregister = (data) => {
 const conexplusspeaker = (data) => {
   const schema = Joi.object({
     Name: Joi.string().required(),
-    Phonenumber: Joi.number().min(10).max(10).required(),
+    Phonenumber: Joi.number().min(10).required(),
     Email: Joi.string().min(6).required().email(),
     Location: Joi.string().min(6).required(),
     Expertise: Joi.string().min(6).required(),
@@ -54,7 +54,7 @@ const conexplusspeaker = (data) => {
 const subscribe = (data) => {
   const schema = Joi.object({
     buyer_name: Joi.string().required(),
-    phone: Joi.number().min(9).required(),
+    phone: Joi.number().min(10).required(),
     email: Joi.string().min(6).required().email(),
   });
 

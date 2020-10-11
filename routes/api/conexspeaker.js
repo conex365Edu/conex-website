@@ -2,6 +2,7 @@ const router = require("express").Router();
 const conexspeakermodel = require("../../models/conexspeaker");
 const passport = require("passport");
 const { conexplusspeaker } = require("../../validation/validation");
+
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 var csrf = require("csurf");
