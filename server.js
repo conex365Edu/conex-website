@@ -422,6 +422,14 @@ app.get("/incur", (req, res) => {
 });
 
 // @type    GET
+// @route   /about
+// @desc    About Page
+// @access  PUBLIC
+app.get("/incur/apply", (req, res) => {
+  res.render("incur/incurForm");
+});
+
+// @type    GET
 // @route   /AdminLogin
 // @desc    Admin Login
 // @access  PRIVATE
