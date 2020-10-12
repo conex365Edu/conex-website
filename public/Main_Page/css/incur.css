@@ -369,3 +369,43 @@ li {
 .text-center {
   text-align: center;
 }
+
+
+/* ============================
+      Contact Section
+   ============================ */
+
+   .contact-section {
+    padding: 25px 0 25px;
+  }
+  
+  @media (max-width: 991px) {
+    .contact-section {
+      padding: 20px 0 20px;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .contact-section {
+      padding: 25px 0 25px;
+    }
+  }
+  
+  .contact-section i {
+    margin-bottom: 40px;
+    color: #e6b63a;
+    margin-top: 30px;
+  }
+  
+  .contact-section h1 {
+    margin-bottom: 30px;
+  }
+  
+  .contact-section h3 {
+    margin-bottom: 20px;
+  }
+  
+  /* ============================
+        Contact Section
+     ============================ */
+  
