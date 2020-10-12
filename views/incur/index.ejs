@@ -60,41 +60,10 @@
   </head>
 
   <body>
-    <header id="header">
-      <div class="row">
-        <div class="col-xl-2 col-lg-2 col-md-2"></div>
-        <div class="col-xl-4 col-lg-4 col-md-4">
-          <div class="logo">
-            <a href="/incur">
-              <img src="/public/Main_Page/img/incur/logo.png" alt="logo"
-            /></a>
-          </div>
-        </div>
 
-        <div class="col-xl-2 col-lg-2 col-md-2"></div>
-        <div class="col-xl-2 col-lg-2 col-md-2">
-          <div class="explore">
-            <a href="/incur/marketing" class="btn-nav"
-              >Explore Courses<i
-                class="fa fa-long-arrow-right"
-                aria-hidden="true"
-              ></i
-            ></a>
-          </div>
-        </div>
-        <div class="col-xl-2 col-lg-2 col-md-2">
-          <div class="contact">
-            <a href="/incur/contact" class="line-button"
-              >Contact Us<i
-                class="fa fa-long-arrow-right"
-                aria-hidden="true"
-              ></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- #header -->
+        <!-- header-start -->
+        <%- include("./partials/incurHeader") %>
+        <!-- header-end -->
 
     <!--==========================
         About incur Start
@@ -104,7 +73,7 @@
         <div class="row">
           <div class="col-xl-6 col-lg-6 col-md-6">
             <h1 class="block__title" style="text-align: left;">
-              WORLD'S 1<sup>st</sup><br /><span>VIRTUAL SKILL UNIVERSITY</span>
+              WORLD'S FIRST<br /><span>VIRTUAL SKILL UNIVERSITY</span>
             </h1>
             <p class="block__paragraph">
               Incur is the World’s first Industry Readiness Skill Certificate
@@ -133,14 +102,15 @@
         <div class="container">
           <!-- HEADER -->
           <div class="col-lg-8 col-xl-7 mx-auto text-center mb-5">
-            <p class="block__pre-title mb-2">WHY CHOOSING US</p>
-            <h1 class="block__title mb-3">
-              Easy Process With <span class="highlight">Best Features</span>
-            </h1>
+            <p class="block__pre-title mb-2">WHY INCUR ?</p>
             <p class="block__paragraph mb-0">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry’s standard
+              InCur is a one-of-a-kind programme which is a groundbreaking concept 
+              intended to sky-rocket the students emerging out of Academia into the 
+              stratosphere of the Industry.
             </p>
+            <h1 class="block__title mb-3">
+              Why you need it is <span class="highlight">inherent in the concept.</span>
+            </h1>
           </div>
           <div
             class="row align-items-center flex-column-reverse flex-lg-row px-2"
@@ -150,45 +120,46 @@
               <div class="card-2 d-flex flex-row flex-lg-row-reverse" data-aos="fade-up">
                 <div>
                   <span class="card-2__symbol mx-auto">
-                    <i class="fa fa-heartbeat"></i>
+                    <i class="fa fa-handshake-o"></i>
                   </span>
                 </div>
                 <div class="px-2"></div>
                 <div>
-                  <h3 class="card-2__title mb-2">Heart Rate Monitor</h3>
+                  <h3 class="card-2__title mb-2">Learn the Skills that Matter</h3>
                   <p class="card-2__paragraph">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    You need it to learn the "Skills that Matter" - not the paragraphs 
+                    that you've been mugging up, or the papers you have been reading. 
                   </p>
                 </div>
               </div>
               <div class="card-2 d-flex flex-row flex-lg-row-reverse" data-aos="fade-up">
                 <div>
                   <span class="card-2__symbol mx-auto">
-                    <i class="fas fa-briefcase-medical"></i>
+                    <i class="fa fa-graduation-cap"></i>
                   </span>
                 </div>
                 <div class="px-2"></div>
                 <div>
-                  <h3 class="card-2__title mb-2">Blood Pressure Manager</h3>
+                  
+                  <h3 class="card-2__title mb-2">Receive a Letter Of Recommendation</h3>
                   <p class="card-2__paragraph">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    Receive a letter of recommendation from our industry experts upon showing 
+                    a consistent quality performance. 
                   </p>
                 </div>
               </div>
               <div class="card-2 d-flex flex-row flex-lg-row-reverse" data-aos="fade-up">
                 <div>
                   <span class="card-2__symbol mx-auto">
-                    <i class="fas fa-bell"></i>
+                    <i class="fa fa-bell"></i>
                   </span>
                 </div>
                 <div class="px-2"></div>
                 <div>
-                  <h3 class="card-2__title mb-2">Alarm Alert</h3>
+                  <h3 class="card-2__title mb-2">Customized Education</h3>
                   <p class="card-2__paragraph">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    Customized education experience for the first 
+                    time ever from companies like Parle, ESAF, L&T, Cadbury and more
                   </p>
                 </div>
               </div>
@@ -202,45 +173,44 @@
               <div class="card-2 d-flex" data-aos="fade-up">
                 <div>
                   <span class="card-2__symbol mx-auto">
-                    <i class="fas fa-map-marker-alt"></i>
+                    <i class="fa fa-smile-o"></i>
                   </span>
                 </div>
                 <div class="px-2"></div>
                 <div>
-                  <h3 class="card-2__title mb-2">Location Finder</h3>
+                  <h3 class="card-2__title mb-2">Personality and Soft Skills</h3>
                   <p class="card-2__paragraph">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    Your personality and soft skills are also thoroughly sharpened 
+                    by our soft-skill Industry trainer in addition to the course 
+                    training you're receiving from a Panel of the best 5 Elite Industry tycoons.
                   </p>
                 </div>
               </div>
               <div class="card-2 d-flex" data-aos="fade-up">
                 <div>
                   <span class="card-2__symbol mx-auto">
-                    <i class="fas fa-fingerprint"></i>
+                    <i class="fa fa-industry"></i>
                   </span>
                 </div>
                 <div class="px-2"></div>
                 <div>
-                  <h3 class="card-2__title mb-2">Fingerprint Lock</h3>
+                  <h3 class="card-2__title mb-2">Industry Ready</h3>
                   <p class="card-2__paragraph">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    The idea is to give you practical skills plus a practical environment to practise it in, so that you are "INDUSTRY-READY".
                   </p>
                 </div>
               </div>
               <div class="card-2 d-flex" data-aos="fade-up">
                 <div>
                   <span class="card-2__symbol mx-auto">
-                    <i class="fas fa-mobile"></i>
+                    <i class="fa fa-eye"></i>
                   </span>
                 </div>
                 <div class="px-2"></div>
                 <div>
-                  <h3 class="card-2__title mb-2">Camera and Bluetooth</h3>
+                  <h3 class="card-2__title mb-2">Continuous Evaluation</h3>
                   <p class="card-2__paragraph">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    Continuous evaluation process is to be carried out to ensure candidate isn't left too far behind.
                   </p>
                 </div>
               </div>
@@ -524,7 +494,9 @@
     </div>
   </section>
     <!-- incur_structure_end-->
-
+    <!-- footer-start -->
+    <%- include("./partials/incurFooter") %>
+    <!-- footer-end -->
 
     <!-- JS here -->
     <script src="/public/Main_Page/js/vendor/modernizr-3.5.0.min.js"></script>
