@@ -49,8 +49,6 @@ const speakerModel = require("./models/conexspeaker");
 
 //Middleware for bodyparser
 app.use(bodyParser.json());
-//Force SSL is configured for https...Don't Remove
-app.use(forceSSL);
 //BodyParser Middleware
 app.use(
   bodyParser.urlencoded({
@@ -93,7 +91,7 @@ app.use("/api/payment365/", monthlyPayment);
 //Form Main Routes
 app.use("/api/forum/services", forumLogin);
 
-app.use("/content/info/services", IncurexLogin);
+app.use("/content/incurex/services", IncurexLogin);
 
 //Connect to MongoDB
 mongoose.connect(
@@ -434,7 +432,7 @@ app.get("/incur", (req, res) => {
 // @desc    IncurAT
 // @access  PUBLIC
 app.get("/incur/apply", (req, res) => {
-  
+  res.render("incur/incurForm");
 });
 
 // @type    GET
@@ -574,6 +572,8 @@ app.get(
 
 // Zero SSl Provided Certificate Config
 if (process.env.NODE_ENV == "production") {
+  //Force SSL is configured for https...Don't Remove
+  app.use(forceSSL);
   const privateKey = fs.readFileSync("./certificates/private.key", "utf8");
   const certificate = fs.readFileSync("./certificates/certificate.crt", "utf8");
   const ca = fs.readFileSync("./certificates/ca_bundle.crt", "utf8");
@@ -597,6 +597,6 @@ if (process.env.NODE_ENV == "production") {
   });
 } else {
   app.listen(5000, () => {
-    console.log("Server is running");
+    console.log(`Server is running at http://localhost:5000`);
   });
 }
