@@ -659,7 +659,7 @@ h3 {
      ============================ */
 
 .btn-nav {
-  background: #0eafcc;
+  background: #e6b63a;
   color: #ffffff;
   display: inline-block;
   font-family: "Poppins", sans-serif;
@@ -668,13 +668,12 @@ h3 {
   border: 0;
   text-align: center;
   color: #ffffff !important;
-  border-radius: 40px;
   letter-spacing: 1px;
   cursor: pointer;
 }
 
 .btn-nav:hover {
-  background: #0b8ca3;
+  background: #cfa334;
   color: #fff !important;
 }
 
