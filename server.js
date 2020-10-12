@@ -32,7 +32,7 @@ const monthlyPayment = require("./routes/api/monthPay");
 const forumLogin = require("./routes/api/Forum/Login.Services");
 
 //Incurex Routes
-const IncurexLogin = require("./routes/api/Incurex/incurex.registeration");
+const IncurexLogin = require("./routes/api/Incur/incur.registeration");
 
 //CSRF Token Dependencies
 var csrf = require("csurf");
@@ -49,8 +49,11 @@ const speakerModel = require("./models/conexspeaker");
 
 //Middleware for bodyparser
 app.use(bodyParser.json());
+<<<<<<< HEAD
 //Force SSL is configured for https...Don't Remove
 //app.use(forceSSL);
+=======
+>>>>>>> d75d8361e78ab8ad3855666215d7c48e46e4344c
 //BodyParser Middleware
 app.use(
   bodyParser.urlencoded({
@@ -574,6 +577,8 @@ app.get(
 
 // Zero SSl Provided Certificate Config
 if (process.env.NODE_ENV == "production") {
+  //Force SSL is configured for https...Don't Remove
+  app.use(forceSSL);
   const privateKey = fs.readFileSync("./certificates/private.key", "utf8");
   const certificate = fs.readFileSync("./certificates/certificate.crt", "utf8");
   const ca = fs.readFileSync("./certificates/ca_bundle.crt", "utf8");
@@ -597,6 +602,6 @@ if (process.env.NODE_ENV == "production") {
   });
 } else {
   app.listen(5000, () => {
-    console.log("Server is running");
+    console.log(`Server is running at http://localhost:5000`);
   });
 }
