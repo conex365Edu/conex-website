@@ -32,7 +32,7 @@ const monthlyPayment = require("./routes/api/monthPay");
 const forumLogin = require("./routes/api/Forum/Login.Services");
 
 //Incurex Routes
-const IncurexLogin = require("./routes/api/Incurex/incurex.registeration");
+const IncurexLogin = require("./routes/api/Incur/incur.registeration");
 
 //CSRF Token Dependencies
 var csrf = require("csurf");
@@ -93,7 +93,7 @@ app.use("/api/payment365/", monthlyPayment);
 //Form Main Routes
 app.use("/api/forum/services", forumLogin);
 
-app.use("/content/incurex/services", IncurexLogin);
+app.use("/content/info/services", IncurexLogin);
 
 //Connect to MongoDB
 mongoose.connect(
@@ -426,7 +426,7 @@ app.get("/incur", (req, res) => {
 // @desc    About Page
 // @access  PUBLIC
 app.get("/incur/apply", (req, res) => {
-  res.render("incur/incurForm");
+  
 });
 
 // @type    GET

@@ -6,7 +6,6 @@ const bodyParser = require("body-parser");
 var csrf = require("csurf");
 var csrfProtection = csrf({ cookie: true });
 var parseForm = bodyParser.urlencoded({ extended: false });
-const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
 dotenv.config();
 
