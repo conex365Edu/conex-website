@@ -16,7 +16,7 @@ const transport = nodemailer.createTransport({
 const IncurApply = require("../../../models/Incur/incur.registration.model");
 
 // @type    GET
-// @route   /content/incurex/services/incur/apply
+// @route   /content/incur/services/incur/apply
 // @desc    About Page
 // @access  PUBLIC
 Router.get("/incur/apply", (req, res) => {
@@ -24,7 +24,7 @@ Router.get("/incur/apply", (req, res) => {
 });
 
 // @type    GET
-// @route   /content/incure/services/incur/apply
+// @route   /content/incur/services/incur/apply
 // @desc    About Page
 // @access  PUBLIC
 Router.post("/api/incur/apply", (req, res) => {
@@ -99,6 +99,24 @@ Router.post("/api/incur/apply", (req, res) => {
       }
     }
   );
+});
+
+
+// @type    GET
+// @route   /content/incur/services/incur/marketing
+// @desc    Incur Marketing
+// @access  PUBLIC
+Router.get("/incur/marketing", (req, res) => {
+  res.render("incur/marketing");
+});
+
+
+// @type    GET
+// @route   /content/incur/services/incur/contact
+// @desc    Incur Contact
+// @access  PUBLIC
+Router.get("/incur/contact", (req, res) => {
+  res.render("incur/incurContact");
 });
 
 module.exports = Router;

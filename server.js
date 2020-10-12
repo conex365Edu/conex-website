@@ -92,7 +92,7 @@ app.use("/api/payment365/", monthlyPayment);
 //Form Main Routes
 app.use("/api/forum/services", forumLogin);
 
-app.use("/content/incurex/services", IncurexLogin);
+app.use("/content/incur/services", IncurexLogin);
 
 //Connect to MongoDB
 mongoose.connect(
@@ -428,29 +428,6 @@ app.get("/incur", (req, res) => {
   res.render("incur/index");
 });
 
-// @type    GET
-// @route   /incur/apply
-// @desc    IncurAT
-// @access  PUBLIC
-app.get("/incur/apply", (req, res) => {
-  res.render("incur/incurForm");
-});
-
-// @type    GET
-// @route   /incur/marketing
-// @desc    Incur Marketing
-// @access  PUBLIC
-app.get("/incur/marketing", (req, res) => {
-  res.render("incur/marketing");
-});
-
-// @type    GET
-// @route   /incur/contact
-// @desc    Incur Contact
-// @access  PUBLIC
-app.get("/incur/contact", (req, res) => {
-  res.render("incur/incurContact");
-});
 
 // @type    GET
 // @route   /AdminLogin
