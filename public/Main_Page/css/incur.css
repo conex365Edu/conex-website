@@ -447,7 +447,6 @@ li {
        margin-top: 50px;
      }
      .details_main_box{
-      background-color: ;
       color: #000;
       border-radius: 15px;
       padding: 20px;
@@ -567,4 +566,40 @@ li {
         height: 100px;
       }
     }
-    
+    #ab-serv2 p {
+      padding-bottom: 60px;
+      text-align: center;
+    }
+
+    #ab-serv2 .card {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #ab-serv2 .card:hover {
+      transform: scale(1.05);
+      transition: 0.2s ease-in-out;
+      overflow: hidden;
+    }
+
+    #ab-serv2 .card a {
+      color: #1e272e;
+      margin: 5px;
+    }
+
+    #ab-serv2 .card a:hover {
+      color: black;
+    }
+
+    .spk-img {
+      width: 200px;
+      margin-left: 20px;
+    }
+
+    .detail_img{
+      max-width: 100%;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
