@@ -32,7 +32,7 @@ const monthlyPayment = require("./routes/api/monthPay");
 const forumLogin = require("./routes/api/Forum/Login.Services");
 
 //Incurex Routes
-const IncurexLogin = require("./routes/api/Incur/incur.registeration");
+const IncurexLogin = require("./routes/api/Incur/Incur.registration");
 
 //CSRF Token Dependencies
 var csrf = require("csurf");
@@ -62,7 +62,7 @@ app.use(passport.initialize());
 
 require("./strategy/jwtStrategy")(passport);
 
-//Securit Middleware
+//Security Middleware
 // app.use(helmet())
 // app.use(helmet.contentSecurityPolicy());
 app.use(helmet.dnsPrefetchControl());
@@ -113,7 +113,6 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 // @access  PUBLIC
 app.get("/", (req, res) => {
   res.render("pages/index");
-  console.log(req.ip);
 });
 
 // @type    GET
