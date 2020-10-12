@@ -49,11 +49,7 @@ const speakerModel = require("./models/conexspeaker");
 
 //Middleware for bodyparser
 app.use(bodyParser.json());
-<<<<<<< HEAD
-//Force SSL is configured for https...Don't Remove
-//app.use(forceSSL);
-=======
->>>>>>> d75d8361e78ab8ad3855666215d7c48e46e4344c
+
 //BodyParser Middleware
 app.use(
   bodyParser.urlencoded({
