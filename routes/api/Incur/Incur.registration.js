@@ -1,5 +1,7 @@
 const Router = require("express").Router();
-const sendMail = require("@sendgrid/mail");
+const {
+  incurRegisteration,
+} = require("../Incur/Validation/incur.registration.validate");
 const dotenv = require("dotenv");
 const nodemailer = require("nodemailer");
 dotenv.config();
@@ -24,7 +26,7 @@ Router.get("/incur/apply", (req, res) => {
 });
 
 // @type    GET
-// @route   /content/incur/services/incur/apply
+// @route   /content/incur/services/api/incur/apply
 // @desc    About Page
 // @access  PUBLIC
 Router.post("/api/incur/apply", (req, res) => {
@@ -52,6 +54,14 @@ Router.post("/api/incur/apply", (req, res) => {
     },
     (err, data) => {
       if (!data) {
+        const { error } = incurRegisteration(req.body);
+        res.setHeader("Content-Type", "application/json");
+        if (error) {
+          console.log(error.details[0].message);
+          return res.status(400).json({
+            error: error.details[0].message,
+          });
+        }
         const newReg = IncurApply({
           Name: Name,
           Address1: Address1,
@@ -75,6 +85,7 @@ Router.post("/api/incur/apply", (req, res) => {
           if (err) {
             console.log(err);
           } else {
+            res.setHeader("Content-Type", "application/json");
             res.status(200).json(saved);
             console.log(saved);
             var mailOptions = {
@@ -101,7 +112,6 @@ Router.post("/api/incur/apply", (req, res) => {
   );
 });
 
-
 // @type    GET
 // @route   /content/incur/services/incur/marketing
 // @desc    Incur Marketing
@@ -109,7 +119,6 @@ Router.post("/api/incur/apply", (req, res) => {
 Router.get("/incur/marketing", (req, res) => {
   res.render("incur/marketing");
 });
-
 
 // @type    GET
 // @route   /content/incur/services/incur/contact

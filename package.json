@@ -30,6 +30,7 @@
     "express": "^4.17.1",
     "express-force-ssl": "^0.3.2",
     "express-session": "^1.17.1",
+    "express-validator": "^6.6.1",
     "helmet": "^4.1.0",
     "instamojo-nodejs": "0.0.5",
     "jsonwebtoken": "^8.5.1",
