@@ -50,7 +50,6 @@ async function Register() {
     body: data,
   });
   const res = await rawResponse.json();
-  console.log(res);
 
   const emailError = document.getElementById("emailAlert");
   if (res.msg) {
