@@ -1,7 +1,7 @@
 async function Register() {
-  // var token = document
-  //   .querySelector('meta[name="csrf-token"]')
-  //   .getAttribute("content");
+  var token = document
+    .querySelector('meta[name="csrf-token"]')
+    .getAttribute("content");
   const Name = document.getElementById("Name").value;
   const Address1 = document.getElementById("Address1").value;
   const Address2 = document.getElementById("Address2").value;
@@ -45,14 +45,12 @@ async function Register() {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
+      "CSRF-Token": token,
     },
     body: data,
   });
   const res = await rawResponse.json();
   console.log(res);
-
-  const form = document.getElementById("contentForm");
-  form.reset();
 
   const emailError = document.getElementById("emailAlert");
   if (res.msg) {
@@ -61,7 +59,6 @@ async function Register() {
   } else {
     emailError.style.display = "none";
   }
-
   if (res.error) {
     emailError.style.display = "block";
     emailError.innerHTML = res.error;

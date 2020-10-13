@@ -4,6 +4,10 @@ const {
 } = require("../Incur/Validation/incur.registration.validate");
 const dotenv = require("dotenv");
 const nodemailer = require("nodemailer");
+const bodyParser = require("body-parser");
+var csrf = require("csurf");
+var csrfProtection = csrf({ cookie: true });
+var parseForm = bodyParser.urlencoded({ extended: false });
 dotenv.config();
 
 const transport = nodemailer.createTransport({
@@ -21,15 +25,17 @@ const IncurApply = require("../../../models/Incur/incur.registration.model");
 // @route   /content/incur/services/incur/apply
 // @desc    About Page
 // @access  PUBLIC
-Router.get("/incur/apply", (req, res) => {
-  res.render("incur/incurForm");
+Router.get("/incur/apply", csrfProtection, (req, res) => {
+  res.render("incur/incurForm", {
+    csrfToken: req.csrfToken(),
+  });
 });
 
 // @type    GET
 // @route   /content/incur/services/api/incur/apply
 // @desc    About Page
 // @access  PUBLIC
-Router.post("/api/incur/apply", (req, res) => {
+Router.post("/api/incur/apply", csrfProtection, parseForm, (req, res) => {
   const Name = req.body.Name;
   const Address1 = req.body.Address1;
   const Address2 = req.body.Address2;

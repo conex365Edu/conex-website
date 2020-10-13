@@ -9,7 +9,7 @@ var parseForm = bodyParser.urlencoded({ extended: false });
 const dotenv = require("dotenv");
 dotenv.config();
 
-router.post("/conexplus", (req, res) => {
+router.post("/conexplus",csrfProtection, parseForm, (req, res) => {
   const { error } = conexplusregister(req.body);
 
   res.setHeader("Content-Type", "application/json");
