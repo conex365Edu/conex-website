@@ -98,8 +98,13 @@ Router.post("/api/incur/apply", csrfProtection, parseForm, (req, res) => {
               from: "techsupport@conex365.com",
               to: `${Email}`,
               subject: "Incur Registration",
-              text:
-                "Thank You for registring in Incur.. Our Conex Team will be in touch with you within 12hrs",
+              html: `Your Registration is complete. <br>
+
+              <b>You're all geared up. InCur Coaches are waiting for you.</b><br>
+              
+              Strap up, sit back and relax, while our team  prepares for the best ride you'll ever have. <br>
+              
+              Our team shall be in touch with you within 10-12 working hours.<br>`
             };
             transport.sendMail(mailOptions, (error, info) => {
               if (error) {

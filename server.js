@@ -517,6 +517,23 @@ app.get(
 );
 
 // @type    GET
+// @route   /conexspeaker
+// @desc    Conexspeaker Dashboard Page
+// @access  PRIVATE
+app.get(
+  "/incurDash",
+  csrfProtection,
+  passport.authenticate("jwt", {
+    session: false,
+  }),
+  (req, res) => {
+    res.render("pages/DashboardPages/IncurMarketing", {
+      csrfToken: req.csrfToken(),
+    });
+  }
+);
+
+// @type    GET
 // @route   /subscription
 // @desc    Subscription Page
 // @access  PRIVATE
