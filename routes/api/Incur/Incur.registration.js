@@ -1,4 +1,6 @@
 const Router = require("express").Router();
+const passport = require("passport");
+const shortid = require("shortid");
 const {
   incurRegisteration,
 } = require("../Incur/Validation/incur.registration.validate");
@@ -20,6 +22,7 @@ const transport = nodemailer.createTransport({
 });
 //Incur Data Model
 const IncurApply = require("../../../models/Incur/incur.registration.model");
+const incurRegistrationModel = require("../../../models/Incur/incur.registration.model");
 
 // @type    GET
 // @route   /content/incur/services/incur/apply
@@ -36,6 +39,7 @@ Router.get("/incur/apply", csrfProtection, (req, res) => {
 // @desc    About Page
 // @access  PUBLIC
 Router.post("/api/incur/apply", csrfProtection, parseForm, (req, res) => {
+  const RegisterId = shortid.generate();
   const Name = req.body.Name;
   const Address1 = req.body.Address1;
   const Address2 = req.body.Address2;
@@ -49,7 +53,6 @@ Router.post("/api/incur/apply", csrfProtection, parseForm, (req, res) => {
   const University = req.body.University;
   const College = req.body.College;
   const Stream = req.body.Stream;
-  const RegisterNumber = req.body.RegisterNumber;
   const Percentage = req.body.Percentage;
   const YearOfCompletion = req.body.YearOfCompletion;
   const Remarks = req.body.Remarks;
@@ -69,6 +72,7 @@ Router.post("/api/incur/apply", csrfProtection, parseForm, (req, res) => {
           });
         }
         const newReg = IncurApply({
+          RegisterId: RegisterId,
           Name: Name,
           Address1: Address1,
           Address2: Address2,
@@ -82,7 +86,6 @@ Router.post("/api/incur/apply", csrfProtection, parseForm, (req, res) => {
           University: University,
           College: College,
           Stream: Stream,
-          RegisterNumber: RegisterNumber,
           Percentage: Percentage,
           YearOfCompletion: YearOfCompletion,
           Remarks: Remarks,
@@ -101,10 +104,12 @@ Router.post("/api/incur/apply", csrfProtection, parseForm, (req, res) => {
               html: `Your Registration is complete. <br>
 
               <b>You're all geared up. InCur Coaches are waiting for you.</b><br>
+
+              Your Registration ID is <b>${RegisterId}</b> <br>
               
               Strap up, sit back and relax, while our team  prepares for the best ride you'll ever have. <br>
               
-              Our team shall be in touch with you within 10-12 working hours.<br>`
+              Our team shall be in touch with you within 10-12 working hours.<br>`,
             };
             transport.sendMail(mailOptions, (error, info) => {
               if (error) {
@@ -138,5 +143,18 @@ Router.get("/incur/marketing", (req, res) => {
 Router.get("/incur/contact", (req, res) => {
   res.render("incur/incurContact");
 });
+
+Router.get(
+  "/incur/dataFetch",
+  passport.authenticate("jwt", {
+    session: false,
+  }),
+  async (req, res) => {
+    const filter = {};
+    const incurData = await incurRegistrationModel.find(filter);
+    console.log(incurData);
+    res.json(incurData);
+  }
+);
 
 module.exports = Router;

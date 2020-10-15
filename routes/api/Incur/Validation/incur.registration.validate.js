@@ -9,8 +9,8 @@ const incurRegisteration = (data) => {
     State: Joi.string().required(),
     Zip: Joi.number().required(),
     Number: Joi.string().required().messages({
-        'string.base': "Invalid type, Phone number must be a number",
-        "string.empty": 'Please enter your phone number'
+      "string.base": "Invalid type, Phone number must be a number",
+      "string.empty": "Please enter your phone number",
     }),
     Email: Joi.string().min(6).required().email(),
     Gender: Joi.string().max(7).required(),
@@ -18,7 +18,6 @@ const incurRegisteration = (data) => {
     University: Joi.string().required(),
     College: Joi.string().required(),
     Stream: Joi.string().required(),
-    RegisterNumber: Joi.string().required(),
     Percentage: Joi.number().required(),
     YearOfCompletion: Joi.string().required(),
     Remarks: Joi.string().required(),

@@ -1,46 +1,31 @@
-async function renderData() {
-    const url = "/api/registration/conexplus";
-  
-    let response = await fetch(url);
-  
-    let data = await response.json();
-  
-    data.forEach((item) => {
-      let template = `
+async function renderIncurData() {
+  const url = "/content/incur/services/incur/dataFetch";
+  const response = await fetch(url);
+  const data = await response.json();
+  data.forEach((fetchItem) => {
+    const templateData = `
         <tr>
-          <td>${item._id}</td>
-          <td>${item.Name}</td>
-          <td>${item.Phonenumber}</td>
-          <td>${item.Email}</td>
-          <td>${item.Address}</td>
-          <td>${item.Description}</td>
-          <td><button id="${item._id}" type="button" class="btn btn-dark" onclick="deleteUser(this.id)">Delete</button></td>
+            <td>${fetchItem.RegisterId}</td>
+            <td>${fetchItem.Name}</td>
+            <td>${fetchItem.Address1}</td>
+            <td>${fetchItem.Address2}</td>
+            <td>${fetchItem.City}</td>
+            <td>${fetchItem.State}</td>
+            <td>${fetchItem.Zip}</td>
+            <td>${fetchItem.Number}</td>
+            <td>${fetchItem.Email}</td>
+            <td>${fetchItem.Gender}</td>
+            <td>${fetchItem.DOB}</td>
+            <td>${fetchItem.University}</td>
+            <td>${fetchItem.College}</td>
+            <td>${fetchItem.Stream}</td>
+            <td>${fetchItem.Percentage}</td>
+            <td>${fetchItem.YearOfCompletion}</td>
+            <td>${fetchItem.Remarks}</td>
         </tr>
-      `;
-  
-      let element = document.querySelector("#content-render");
-      element.innerHTML += template;
-    });
-  }
-  
-  function deleteUser(id) {
-    const token = document
-      .querySelector('meta[name="csrf-token"]')
-      .getAttribute("content");
-    console.log(id);
-    var url = `/api/registration/conexplus/${id}`;
-    fetch(url, {
-      method: "DELETE",
-      headers: {
-        "CSRF-Token": token,
-      },
-    }).then((response) => {
-      response.json().then((json) => {
-        console.log(json);
-        location.reload();
-      });
-    });
-  }
-  
-  renderData();
-  
+        `;
+
+    const element = document.querySelector("#data-render");
+    element.innerHTML += templateData;
+  });
+}

@@ -3,6 +3,11 @@ const Schema = mongoose.Schema;
 
 const incurModel = new Schema(
   {
+    RegisterId: {
+      type: String,
+      required: true,
+      max: 10,
+    },
     Name: {
       type: String,
       required: true,
@@ -58,11 +63,6 @@ const incurModel = new Schema(
     Stream: {
       type: String,
       required: true,
-    },
-    RegisterNumber: {
-      type: String,
-      required: true,
-      max: 30,
     },
     Percentage: {
       type: Number,

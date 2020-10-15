@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="">
+<body class="" onload="renderIncurData()">
   <div class="wrapper ">
     <!-- Navbar Partials -->
     <%- include("../../partials/adminNavbar") %>
@@ -41,9 +41,10 @@
                   <div class="table-responsive">
                     <table class="table">
                       <thead class=" text-primary">
-                        <th>ID</th>
+                        <th>Register ID</th>
                         <th>Name</th>
-                        <th>Address</th>
+                        <th>Address 1</th>
+                        <th>Address 2</th>
                         <th>City</th>
                         <th>State</th>
                         <th>Zip</th>
@@ -54,13 +55,12 @@
                         <th>University</th>
                         <th>College</th>
                         <th>Stream</th>
-                        <th>Register Number</th>
                         <th>Percentage of Marks</th>
                         <th>Year of Completion</th>
                         <th>Remarks</th>
-                        
+
                       </thead>
-                      <tbody id="content-render">
+                      <tbody id="data-render">
 
                       </tbody>
                     </table>
@@ -104,6 +104,6 @@
   <%- include("../../partials/dashboardScripts.ejs")  %>
 
 </body>
-<script src="/public/Main_Page/frontend_Js/speakerDataFetch.js"></script>
+<script src="public/Main_Page/frontend_Js/incurDataFetch.js"></script>
 
 </html>

@@ -15,7 +15,6 @@ async function Register() {
   const University = document.getElementById("University").value;
   const College = document.getElementById("College").value;
   const Stream = document.getElementById("Stream").value;
-  const RegisterNumber = document.getElementById("RegisterNumber").value;
   const Percentage = document.getElementById("Percentage").value;
   const YearOfCompletion = document.getElementById("YearOfCompletion").value;
   const Remarks = document.getElementById("Remarks").value;
@@ -33,7 +32,6 @@ async function Register() {
     University: University,
     College: College,
     Stream: Stream,
-    RegisterNumber: RegisterNumber,
     Percentage: Percentage,
     YearOfCompletion: YearOfCompletion,
     Remarks: Remarks,
