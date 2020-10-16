@@ -942,3 +942,54 @@ box-shadow: 0px 0px 11px 4px rgba(36,51,91,1);
       margin-bottom: 20px;
       margin-top: 20px;
     }
+
+    .whatsapp ul {
+      position: fixed;
+      left: 7%;
+      bottom: 5%;
+      padding:0;
+      margin:0;
+      transform:translate(-50%, -50%);
+      display:flex;
+    }
+
+    @media (max-width: 767px) {
+      .whatsapp ul {
+        position: fixed;
+        left: 23%;
+        bottom: 5%;
+      }
+    }
+
+    .whatsapp ul li{
+      list-style: none;
+      margin: 0 15px;
+    }
+    .whatsapp ul li .fa {
+      font-size: 23px;
+      line-height: 60px;
+      transition: .6s;
+      color: #fff;
+      padding-left: 5px;
+      margin-right: 5px;
+    }
+    .whatsapp ul li a {
+      position: relative;
+      display: block;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      padding-right: 10px;
+      background-color: #e6b63a;
+      text-align: center;
+      transition: .6s;
+      box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+    }
+    .whatsapp ul li a:hover{
+      transform: translate(0, -10px);
+    }
+    
+    #myModal {
+      z-index: 10000;
+    }

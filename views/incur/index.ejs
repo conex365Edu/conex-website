@@ -43,6 +43,11 @@
     <link rel="stylesheet" href="/public/Main_Page/css/incur.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <script>
+      $(document).ready(function () {
+        $("#myModal").modal("show");
+      });
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -60,6 +65,106 @@
   </head>
 
   <body>
+    <!--==========================
+      Pop Up Start
+    ============================-->
+
+    <div id="myModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4
+              class="modal-title justify-content-center"
+              style="font-weight: bold; letter-spacing: 0px"
+            >
+            INDUSTRY CURATED SKILL PROGRAM (ICSP) IN MARKETING AND BUSINESS DEVELOPMENT
+            </h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-hidden="true"
+              style="color: red"
+            >
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <picture>
+              <center>
+                <img
+                  src="/public/Main_Page/img/incur/popup.jpg"
+                  alt="popup_image"
+                  style="max-width: 100%"
+                />
+              </center>
+            </picture>
+          
+            <!--<p class="blink">20% cashback to previous Digital Marketing Workshop Attendees</p>-->
+<!--
+            <script type="text/javascript">
+              const finaldate = new Date("October 09, 2020 23:59:59").getTime();
+              console.log(finaldate);
+
+              // countdown
+              let timer = setInterval(function () {
+                // get today's date
+                const today = new Date().getTime();
+
+                // get the difference
+                const diff = finaldate - today;
+
+                // math
+                let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                let hours = Math.floor(
+                  (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                );
+                let minutes = Math.floor(
+                  (diff % (1000 * 60 * 60)) / (1000 * 60)
+                );
+                let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                // display
+                document.getElementById("timer").innerHTML =
+                  '<div class="days"> \
+                      <div class="numbers">' +
+                  days +
+                  '</div>days</div> \
+                    <div class="hours"> \
+                      <div class="numbers">' +
+                  hours +
+                  '</div>hours</div> \
+                    <div class="minutes"> \
+                      <div class="numbers">' +
+                  minutes +
+                  '</div>minutes</div> \
+                    <div class="seconds"> \
+                      <div class="numbers">' +
+                  seconds +
+                  "</div>seconds</div> \
+                    </div>";
+              }, 1000);
+            </script>
+
+            <div class="timer_container">
+              <h1>Registration Ends in</h1>
+              <div id="timer"></div>
+            </div>-->
+          </div>
+        
+          <div class="modal-footer">
+            <h4 style="font-weight: bold; padding-top: 8px">
+              To know more 
+            </h4>
+            <a href="/content/incur/services/incur/marketing" class="btn_prime">Click Here!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!--==========================
+      Pop Up End
+    ============================-->
 
         <!-- header-start -->
         <%- include("./partials/incurHeader") %>
@@ -514,6 +619,11 @@ be customized for students, not by academicians, but by industry experts, to giv
       </div>
     </div>
   </section>
+  <div class="whatsapp">
+      <ul data-toggle="tooltip" data-placement="top" title="Chat With Us">
+        <li><a href="https://wa.me/919995111184" target="_blank"><i class="fa fa-commenting-o"></i>Chat With Us</a></li>
+      </ul>
+    </div>
     <!-- incur_structure_end-->
     <!-- footer-start -->
     <%- include("./partials/incurFooter") %>
