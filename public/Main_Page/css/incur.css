@@ -1007,3 +1007,19 @@ tbody tr i {
     
   }
 }
+
+
+
+.popup_footer {
+  font-size: 50px;
+  padding-top: 8px;
+  font-weight: bold;
+ }
+
+@media (max-width: 767px) {
+  .popup_footer {
+    font-size: 18px;
+    padding-top: 8px;
+    font-weight: bold;
+   }
+}
