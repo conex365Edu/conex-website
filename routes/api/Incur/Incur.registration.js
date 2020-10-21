@@ -101,15 +101,35 @@ Router.post("/api/incur/apply", csrfProtection, parseForm, (req, res) => {
               from: "techsupport@conex365.com",
               to: `${Email}`,
               subject: "Incur Registration",
-              html: `Your Registration is complete. <br>
+              text: "Incur Support",
+              html: `
+              Dear Candidate, <br><br>
 
-              <b>You're all geared up. InCur Coaches are waiting for you.</b><br>
+              This mail is to confirm your Registration. <br><br>
+              <b>Your registration is Completed and Locked.</b> <br><br>
 
-              Your Registration ID is <b>${RegisterId}</b> <br>
-              
-              Strap up, sit back and relax, while our team  prepares for the best ride you'll ever have. <br>
-              
-              Our team shall be in touch with you within 10-12 working hours.<br>`,
+              Get ready to begin your course under our Industry experts and put your skills to test. <br><br>
+
+              <b>InCur Coaches are waiting for you.</b> <br><br>
+
+              Strap up, sit back and relax, while our team  prepares for the best ride you'll ever have. <br><br>
+
+              Our team shall be in touch with you within 10-12 working hours to assist you with the further proceedings and to provide further updates. <br><br>
+
+              <b>You're all geared up and good to go</b> <br><br>
+
+              <p>Your registration ID is <b>${RegisterId}</b></p>
+
+              Regards, <br>
+              Team Conex365 <br>
+              `,
+              attachments: [
+                {
+                  filename: "brochure.pdf",
+                  content: "Incur Brochure",
+                  path: "./public/content/brochure.pdf",
+                },
+              ],
             };
             transport.sendMail(mailOptions, (error, info) => {
               if (error) {
