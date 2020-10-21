@@ -16,8 +16,8 @@ const transport = nodemailer.createTransport({
   host: "smtp-pulse.com",
   port: 465,
   auth: {
-    user: "conex365tech@gmail.com",
-    pass: "mp58JBXbb3GoFqi",
+    user: process.env.sendPulse,
+    pass: process.env.sendPass,
   },
 });
 //Incur Data Model
