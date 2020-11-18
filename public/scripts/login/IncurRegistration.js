@@ -65,6 +65,7 @@ async function Register() {
 
   if (res._id) {
     $("#myModal").modal("show");
+    window.location.assign("https://rzp.io/l/InCurD20");
   } else {
     $("#myModal").modal("hide");
   }
