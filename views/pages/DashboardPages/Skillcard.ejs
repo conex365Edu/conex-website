@@ -54,60 +54,59 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="container" style="margin-top: 100px;margin-bottom: 100px;">
-        <div class="row">
-          <center>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-              Add Student to SkillCard
-            </button>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Fill the form</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
+              <div class="container" style="margin-top: 100px;margin-bottom: 100px;">
+                <div class="row">
+                  <center>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                      Add Student to SkillCard
                     </button>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputID">Skill ID</label>
-                        <input type="text" class="form-control" id="inputID">
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Fill the form</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label for="inputID">Skill ID</label>
+                                  <input type="text" class="form-control" id="inputID">
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="inputName">Name</label>
+                                  <input type="text" class="form-control" id="inputName">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputOrganization">Organization</label>
+                                <input type="text" class="form-control" id="inputOrganization">
+                              </div>
+                              <div class="form-group">
+                                <label for="inputPhone">Phone Number</label>
+                                <input type="text" class="form-control" id="inputPhone">
+                              </div>
+                              <button type="submit" class="btn btn-primary">Sign in</button>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="addSkillCard()">Add Student</button>
+                          </div>
                         </div>
-                        <div class="form-group col-md-6">
-                          <label for="inputName">Name</label>
-                        <input type="text" class="form-control" id="inputName">
-                        </div>
                       </div>
-                      <div class="form-group">
-                        <label for="inputOrganization">Organization</label>
-                        <input type="text" class="form-control" id="inputOrganization">
-                      </div>
-                      <div class="form-group">
-                        <label for="inputPhone">Phone Number</label>
-                        <input type="text" class="form-control" id="inputPhone">
-                      </div>
-                      <button type="submit" class="btn btn-primary">Sign in</button>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Add Student</button>
-                  </div>
+                    </div>
+                  </center>
                 </div>
               </div>
             </div>
-          </center>
+          </div>
         </div>
       </div>
       <footer class="footer">
@@ -150,6 +149,6 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 </body>
-<script src="/public/Main_Page/frontend_Js/subscriptionData.js"></script>
+<script src="/public/Main_Page/frontend_Js/skillCard.js"></script>
 
 </html>
