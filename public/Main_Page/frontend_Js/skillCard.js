@@ -38,6 +38,28 @@ function deleteUser(id) {
   );
 }
 
+function validateInput(){
+
+  //Error Text
+  const idError = document.getElementById("idError");
+  const nameError = document.getElementById("nameError");
+  const orgError = document.getElementById("orgError");
+  const phoneError = document.getElementById("phoneError");
+
+  //Values
+  const id = document.getElementById("inputID").value;
+  const name = document.getElementById("inputName").value;
+  const organization = document.getElementById("inputOrganization").value;
+  const phone = document.getElementById("inputPhone").value;
+
+  // if(id == "" || id == null ){
+  //   idError.style.display = "block";
+  //   idError.innerHTML = "ID cannot be empty"
+  // }
+}
+
+validateInput()
+
 async function addSkillCard() {
   const id = document.getElementById("inputID").value;
   const name = document.getElementById("inputName").value;
@@ -61,6 +83,7 @@ async function addSkillCard() {
     body: data,
   });
   const res = await rawResponse.json();
+  console.log(res)
 }
 
 skillCardData();
