@@ -6,7 +6,7 @@ const skrill = new Schema(
     id: {
       type: String,
       required: true,
-      max: 10,
+      max: 16,
     },
     name: {
       type: String,
