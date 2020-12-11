@@ -8,7 +8,7 @@ var csrfProtection = csrf({ cookie: true });
 var parseForm = bodyParser.urlencoded({ extended: false });
 
 const SkillModel = require("../../models/SkillCard");
-const { skillcard } = require("../../validation/validation");
+const { skillcard, skillpoints } = require("../../validation/validation");
 
 // @type    GET
 // @route   /api/analytics/skillCard
@@ -23,7 +23,6 @@ Router.get(
   async (req, res) => {
     const filter = {};
     const data = await SkillModel.find(filter);
-    console.log(data);
     res.render("pages/DashboardPages/Skillcard", {
       csrfToken: req.csrfToken(),
     });
@@ -40,7 +39,6 @@ Router.get(
     const filter = {};
     const data = await SkillModel.find(filter);
     res.json(data);
-    console.log(data);
   }
 );
 
@@ -50,7 +48,7 @@ Router.get(
 // @access  PRIVATE
 Router.post(
   "/skillCard",
-  passport.authenticate("jwt",{
+  passport.authenticate("jwt", {
     session: false,
   }),
   csrfProtection,
@@ -67,6 +65,7 @@ Router.post(
     const Id = req.body.Id;
     const Name = req.body.Name;
     const Organization = req.body.Organization;
+    const Points = req.body.Points;
     const Phone = req.body.Phone;
 
     SkillModel.findOne(
@@ -79,6 +78,7 @@ Router.post(
             id: Id,
             name: Name,
             organization: Organization,
+            points: Points,
             phone: Phone,
           });
           newCard.save((err, cardUser) => {
@@ -87,7 +87,6 @@ Router.post(
             } else {
               res.setHeader("Content-Type", "application/json");
               res.status(200).json(cardUser);
-              console.log(cardUser);
             }
           });
         } else {
@@ -115,11 +114,67 @@ Router.delete(
       },
       (err, sucess) => {
         if (err) {
-          console.log(err);
         } else {
           res.json({
             status: "success",
           });
+        }
+      }
+    );
+  }
+);
+
+// @type    GET
+// @route   /api/analytics/update/:id
+// @desc    SkillCard UPDATE POST ROUTE
+// @access  PRIVATE
+Router.post(
+  "/update/:id",
+  passport.authenticate("jwt", {
+    session: false,
+  }),
+  (req, res) => {
+    const { error } = skillpoints(req.body);
+    res.setHeader("Content-Type", "application/json");
+    if (error) {
+      console.log(error.details[0].message);
+      return res.status(400).json({
+        error: error.details[0].message,
+      });
+    }
+    const values = {};
+    values.user = req.params.id;
+    if (req.body.Points) values.points = req.body.Points;
+    console.log(values);
+    SkillModel.findOne(
+      {
+        _id: req.params.id,
+      },
+      (err, user) => {
+        if (err) throw err;
+        if (user) {
+          SkillModel.findOneAndUpdate(
+            {
+              _id: req.params.id,
+            },
+            {
+              $set: values,
+            },
+            {
+              new: true,
+            },
+            (err, userUpdates) => {
+              if (err) throw err;
+              if (userUpdates) {
+                new SkillModel(userUpdates).save((err, saved) => {
+                  if (err) throw err;
+                  if (saved) {
+                    res.json(saved);
+                  }
+                });
+              }
+            }
+          );
         }
       }
     );

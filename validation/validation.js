@@ -66,9 +66,17 @@ const skillCard = (data) => {
     Id: Joi.string().required(),
     Name: Joi.string().required(),
     Organization: Joi.string().required(),
+    Points: Joi.number().required(),
     Phone: Joi.number().min(10).required(),
   });
 
+  return schema.validate(data);
+};
+
+const skillPoints = (data) => {
+  const schema = Joi.object({
+    Points: Joi.number().required(),
+  });
   return schema.validate(data);
 };
 
@@ -78,3 +86,4 @@ module.exports.subscribe = subscribe;
 module.exports.conexplusspeaker = conexplusspeaker;
 module.exports.resetPassword = resetPassword;
 module.exports.skillcard = skillCard;
+module.exports.skillpoints = skillPoints;

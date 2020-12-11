@@ -22,6 +22,10 @@ const skrill = new Schema(
       type: Number,
       required: true,
     },
+    points: {
+      type: Number,
+      required: true,
+    },
   },
   {
     collection: "Skrill Card",

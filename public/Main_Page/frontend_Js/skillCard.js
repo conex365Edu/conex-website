@@ -9,8 +9,10 @@ async function skillCardData() {
         <td>${item.id}</td>
         <td>${item.name}</td>
         <td>${item.organization}</td>
+        <td>${item.points}</td>
         <td>${item.phone}</td>
         <td><button id="${item._id}" type="button" class="btn btn-dark" onclick="deleteUser(this.id)">Delete</button></td>
+        <td><button id="${item._id}" type="button" class="btn btn-dark" onclick="editPoints(this.id)">Edit</button></td>
       </tr>
     `;
 
@@ -34,6 +36,37 @@ async function deleteUser(id) {
   const res = await raw.json();
   if (res) {
     location.reload();
+  }
+}
+
+async function editPoints(id) {
+  const points = prompt("Please enter the points");
+  if (points == null || points == "") {
+    alert("Enter the points for update");
+  } else if (isNaN(points) === true) {
+    alert("Points must be numeric");
+  } else if (isNaN(points) === false) {
+    const token = document
+      .querySelector('meta[name="csrf-token"]')
+      .getAttribute("content");
+
+    const data = JSON.stringify({
+      Points: points,
+    });
+    const raw = await fetch(`/api/analytics/update/${id}`, {
+      method: "POST",
+      credentials: "same-origin",
+      headers: {
+        "CSRF-Token": token,
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: data,
+    });
+    const res = await raw.json();
+    if (res) {
+      location.reload();
+    }
   }
 }
 
@@ -79,6 +112,20 @@ function validateOrg(org) {
   }
 }
 
+function validatePoints(points) {
+  const pointsError = document.getElementById("pointError");
+  if (points === "") {
+    pointsError.innerHTML = "Points cannot be empty";
+    return false;
+  } else if (isNaN(points) === true) {
+    pointsError.innerHTML = "Value must be numeric";
+    return false;
+  } else if (points) {
+    pointsError.innerHTML = "";
+    return true;
+  }
+}
+
 function validatePhone(phone) {
   const phoneError = document.getElementById("phoneError");
   if (phone === "") {
@@ -100,11 +147,13 @@ async function addSkillCard() {
   const id = document.getElementById("inputID").value;
   const name = document.getElementById("inputName").value;
   const organization = document.getElementById("inputOrganization").value;
+  const points = document.getElementById("inputPoint").value;
   const phone = document.getElementById("inputPhone").value;
 
   const idValid = validateID(id);
   const nameValid = validateName(name);
   const orgValid = validateOrg(organization);
+  const pointsValid = validatePoints(points);
   const phoneValid = validatePhone(phone);
   console.log(idValid);
   console.log(nameValid);
@@ -114,12 +163,14 @@ async function addSkillCard() {
     idValid === true &&
     nameValid === true &&
     orgValid === true &&
+    pointsValid === true &&
     phoneValid === true
   ) {
     const data = JSON.stringify({
       Id: id,
       Name: name,
       Organization: organization,
+      Points: points,
       Phone: phone,
     });
     const rawResponse = await fetch("/api/analytics/skillCard", {
