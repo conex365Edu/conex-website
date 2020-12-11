@@ -133,6 +133,8 @@ Router.post(
   passport.authenticate("jwt", {
     session: false,
   }),
+  csrfProtection,
+  parseForm,
   (req, res) => {
     const { error } = skillpoints(req.body);
     res.setHeader("Content-Type", "application/json");
