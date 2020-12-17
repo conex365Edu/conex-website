@@ -427,7 +427,6 @@ app.get("/incur", (req, res) => {
   res.render("incur/index");
 });
 
-
 // @type    GET
 // @route   /AdminLogin
 // @desc    Admin Login
@@ -570,11 +569,12 @@ if (process.env.NODE_ENV == "production") {
   app.use(forceSSL);
   const privateKey = fs.readFileSync("./certificates/private.key", "utf8");
   const certificate = fs.readFileSync("./certificates/certificate.crt", "utf8");
+  const ca = fs.readFileSync("./certificates/ca_bundle.crt", "utf8");
 
   const credentials = {
     key: privateKey,
     cert: certificate,
-    pas: "conex3652020"
+    ca: ca,
   };
 
   // Starting both http & https servers
