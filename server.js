@@ -568,9 +568,9 @@ app.get(
 if (process.env.NODE_ENV == "production") {
   //Force SSL is configured for https...Don't Remove
   app.use(forceSSL);
-  const privateKey = fs.readFileSync("./certificates/private.key", "utf8");
-  const certificate = fs.readFileSync("./certificates/certificate.crt", "utf8");
-  const ca = fs.readFileSync("./certificates/ca_bundle.crt", "utf8");
+  const privateKey = fs.readFileSync("./certificates/conex365.key", "utf8");
+  const certificate = fs.readFileSync("./certificates/conex365.crt", "utf8");
+  const ca = fs.readFileSync("./certificates/conex365.csr", "utf8");
 
   const credentials = {
     key: privateKey,
