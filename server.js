@@ -568,13 +568,13 @@ app.get(
 if (process.env.NODE_ENV == "production") {
   //Force SSL is configured for https...Don't Remove
   app.use(forceSSL);
-  const privateKey = fs.readFileSync("./certificates/key.pem", "utf8");
-  const certificate = fs.readFileSync("./certificates/cert.pem", "utf8");
+  const privateKey = fs.readFileSync("./certificates/private.key", "utf8");
+  const certificate = fs.readFileSync("./certificates/certificate.crt", "utf8");
 
   const credentials = {
     key: privateKey,
     cert: certificate,
-    passhrase: "conex3652020"
+    pas: "conex3652020"
   };
 
   // Starting both http & https servers
