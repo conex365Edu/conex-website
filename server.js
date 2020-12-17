@@ -34,6 +34,9 @@ const forumLogin = require("./routes/api/Forum/Login.Services");
 //Incurex Routes
 const IncurexLogin = require("./routes/api/Incur/Incur.registration");
 
+//Skill Card Routes
+const skillCard = require("./routes/api/SkillCard");
+
 //CSRF Token Dependencies
 var csrf = require("csurf");
 var csrfProtection = csrf({ cookie: true });
@@ -87,6 +90,7 @@ app.use("/api/auth", admin);
 app.use("/api/registration", conet);
 app.use("/api/registration", conexplus);
 app.use("/api/registration", conexspeaker);
+app.use("/api/analytics", skillCard);
 app.use("/api/payment365/", monthlyPayment);
 
 //Form Main Routes
@@ -426,7 +430,6 @@ app.get("/conexspeakerregistration", csrfProtection, (req, res) => {
 app.get("/incur", (req, res) => {
   res.render("incur/index");
 });
-
 
 // @type    GET
 // @route   /AdminLogin
