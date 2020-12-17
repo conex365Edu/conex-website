@@ -34,9 +34,6 @@ const forumLogin = require("./routes/api/Forum/Login.Services");
 //Incurex Routes
 const IncurexLogin = require("./routes/api/Incur/Incur.registration");
 
-//Skill Card Routes
-const skillCard = require("./routes/api/SkillCard");
-
 //CSRF Token Dependencies
 var csrf = require("csurf");
 var csrfProtection = csrf({ cookie: true });
@@ -90,7 +87,6 @@ app.use("/api/auth", admin);
 app.use("/api/registration", conet);
 app.use("/api/registration", conexplus);
 app.use("/api/registration", conexspeaker);
-app.use("/api/analytics", skillCard);
 app.use("/api/payment365/", monthlyPayment);
 
 //Form Main Routes
@@ -431,6 +427,7 @@ app.get("/incur", (req, res) => {
   res.render("incur/index");
 });
 
+
 // @type    GET
 // @route   /AdminLogin
 // @desc    Admin Login
@@ -571,14 +568,13 @@ app.get(
 if (process.env.NODE_ENV == "production") {
   //Force SSL is configured for https...Don't Remove
   app.use(forceSSL);
-  const privateKey = fs.readFileSync("./certificates/conex365.key", "utf8");
-  const certificate = fs.readFileSync("./certificates/conex365.crt", "utf8");
-  const ca = fs.readFileSync("./certificates/conex365.csr", "utf8");
+  const privateKey = fs.readFileSync("./certificates/key.pem", "utf8");
+  const certificate = fs.readFileSync("./certificates/cert.pem", "utf8");
 
   const credentials = {
     key: privateKey,
     cert: certificate,
-    ca: ca,
+    passhrase: "conex3652020"
   };
 
   // Starting both http & https servers
