@@ -405,8 +405,24 @@ app.get("/PayError", (req, res) => {
 // @route   /workshopdetails
 // @desc    Workshop Details Page
 // @access  PUBLIC
-app.get("/workshopdetails", (req, res) => {
-  res.render("pages/workshopDetails");
+app.get("/marketresearch", (req, res) => {
+  res.render("pages/workshops/marketResearch");
+});
+
+// @type    GET
+// @route   /workshopdetails
+// @desc    Workshop Details Page
+// @access  PUBLIC
+app.get("/groomingUpLinkedIn", (req, res) => {
+  res.render("pages/workshops/linkedIn");
+});
+
+// @type    GET
+// @route   /workshopdetails
+// @desc    Workshop Details Page
+// @access  PUBLIC
+app.get("/socialentreprenuership", (req, res) => {
+  res.render("pages/workshops/socialEntreprenuership");
 });
 
 // @type    GET
