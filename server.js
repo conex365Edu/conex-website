@@ -426,6 +426,30 @@ app.get("/socialentreprenuership", (req, res) => {
 });
 
 // @type    GET
+// @route   /workshopdetails
+// @desc    Workshop Details Page
+// @access  PUBLIC
+app.get("/branding", (req, res) => {
+  res.render("pages/workshops/branding");
+});
+
+// @type    GET
+// @route   /workshopdetails
+// @desc    Workshop Details Page
+// @access  PUBLIC
+app.get("/yentreprenuer", (req, res) => {
+  res.render("pages/workshops/Yentreprenuer");
+});
+
+// @type    GET
+// @route   /workshopdetails
+// @desc    Workshop Details Page
+// @access  PUBLIC
+app.get("/PowerBIVisual", (req, res) => {
+  res.render("pages/workshops/PowerBIVisual");
+});
+
+// @type    GET
 // @route   /conexspeakerregistration
 // @desc    Conex Speaker Registration Page
 // @access  PUBLIC

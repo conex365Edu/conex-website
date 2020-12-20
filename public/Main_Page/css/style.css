@@ -2039,6 +2039,11 @@ h3 {
   color: #919191;
 }
 
+.courses_details_info .courses_sidebar .author_info .auhor_header img{
+  max-width: 60%;
+  text-align: center;
+}
+
 .courses_details_info {
   padding-top: 190px;
 }
