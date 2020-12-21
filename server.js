@@ -450,6 +450,14 @@ app.get("/PowerBIVisual", (req, res) => {
 });
 
 // @type    GET
+// @route   /workshopdetails
+// @desc    Workshop Details Page
+// @access  PUBLIC
+app.get("/bioTech", (req, res) => {
+  res.render("pages/workshops/bioTech");
+});
+
+// @type    GET
 // @route   /conexspeakerregistration
 // @desc    Conex Speaker Registration Page
 // @access  PUBLIC
