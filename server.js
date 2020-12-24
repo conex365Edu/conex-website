@@ -27,6 +27,7 @@ const conet = require("./routes/api/conet");
 const conexplus = require("./routes/api/conexplus");
 const conexspeaker = require("./routes/api/conexspeaker");
 const monthlyPayment = require("./routes/api/monthPay");
+const skillcard = require("./routes/api/SkillCard");
 
 //Forum Routes
 const forumLogin = require("./routes/api/Forum/Login.Services");
@@ -93,6 +94,7 @@ app.use("/api/payment365/", monthlyPayment);
 app.use("/api/forum/services", forumLogin);
 
 app.use("/content/incur/services", IncurexLogin);
+app.use("/api/analytics", skillcard)
 
 //Connect to MongoDB
 mongoose.connect(
