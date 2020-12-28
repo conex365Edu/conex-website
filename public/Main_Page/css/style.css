@@ -2548,6 +2548,8 @@ h6 {
   color: #fff;
 }
 .sticky-nav .sticky-btn {
+  padding: 5px;
+  text-align: center;
   background: #172b4d;
   color: #fff;
   height: 46px;

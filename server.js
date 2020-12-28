@@ -586,15 +586,15 @@ app.get(
 // @route   /subscription
 // @desc    Subscription Page
 // @access  PRIVATE
-app.get(
-  "/subscription",
-  passport.authenticate("jwt", {
-    session: false,
-  }),
-  (req, res) => {
-    res.render("pages/DashboardPages/Subscriptions");
-  }
-);
+// app.get(
+//   "/subscription",
+//   passport.authenticate("jwt", {
+//     session: false,
+//   }),
+//   (req, res) => {
+//     res.render("pages/DashboardPages/Subscriptions");
+//   }
+// );
 
 // @type    GET
 // @route   /resetmypassword
