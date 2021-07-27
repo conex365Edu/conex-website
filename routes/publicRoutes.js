@@ -7,52 +7,24 @@ router.get('/', (req, res) => {
   res.render('pages/index')
 })
 
-// @type    GET
-// @route   /workshop
-// @desc    Workshop Page
-// @access  PUBLIC
-router.get('/workshop', (req, res) => {
-  res.render('pages/workshop')
-})
-
-// @type    GET
-// @route   /trainings
-// @desc    Trainings Page
-// @access  PUBLIC
-router.get('/trainings', (req, res) => {
-  res.render('pages/Trainings')
-})
-
-// @type    GET
-// @route   /virtual
-// @desc    Virtual Page
-// @access  PUBLIC
+// Virtual Training Sections
 router.get('/virtual', (req, res) => {
-  res.render('pages/Virtual')
+  res.render('pages/virtual')
 })
 
-// @type    GET
-// @route   /onSite
-// @desc    onSite Page
-// @access  PUBLIC
+// On-Site Training Sessions
 router.get('/onSite', (req, res) => {
-  res.render('pages/Onsite')
+  res.render('pages/onSite')
 })
 
-// @type    GET
-// @route   /conextoc
-// @desc    Conextoc Page
-// @access  PUBLIC
+// Conex to College
 router.get('/conextoc', (req, res) => {
-  res.render('pages/Conextoc')
+  res.render('pages/conexToC')
 })
 
-// @type    GET
-// @route   /conextoi
-// @desc    Conextoi Page
-// @access  PUBLIC
+// ConeX to Industry
 router.get('/conextoi', (req, res) => {
-  res.render('pages/Conextoi')
+  res.render('pages/conexToI')
 })
 
 // @type    GET
