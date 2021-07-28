@@ -9,100 +9,47 @@ router.get('/', (req, res) => {
 
 // Virtual Training Sections
 router.get('/virtual', (req, res) => {
-  res.render('pages/virtual')
+  res.render('pages/virtual', { title: 'VTS' })
 })
 
 // On-Site Training Sessions
 router.get('/onSite', (req, res) => {
-  res.render('pages/onSite')
+  res.render('pages/onSite', { title: 'OTS' })
 })
 
 // Conex to College
 router.get('/conextoc', (req, res) => {
-  res.render('pages/conexToC')
+  res.render('pages/conexToC', { title: 'C2C' })
 })
 
 // ConeX to Industry
 router.get('/conextoi', (req, res) => {
-  res.render('pages/conexToI')
+  res.render('pages/conexToI', { title: 'C2I' })
 })
 
-// @type    GET
-// @route   /conetregistration
-// @desc    Conet Registration Page
-// @access  PUBLIC
-router.get('/conetregistration', (req, res) => {
-  res.render('pages/RegistrationPages/ConetRegistration', {
-    csrfToken: req.csrfToken()
-  })
-})
-
-// @type    GET
-// @route   /conexplusregistration
-// @desc    Conexplus Registration Page
-// @access  PUBLIC
-router.get('/conexplusregistration', (req, res) => {
-  res.render('pages/RegistrationPages/ConexPlusRegistration', {
-    csrfToken: req.csrfToken()
-  })
-})
-
-// @type    GET
-// @route   /conexion
-// @desc    Conexion Page
-// @access  PUBLIC
+// NewsLetter
 router.get('/conexion', (req, res) => {
-  res.render('pages/conexion')
+  res.render('pages/conexion', { title: 'Conexion' })
 })
 
-// @type    GET
-// @route   /about
-// @desc    About Page
-// @access  PUBLIC
+// about
 router.get('/about', (req, res) => {
-  res.render('pages/about')
+  res.render('pages/about', { title: 'About Us' })
 })
 
-// @type    GET
-// @route   /csr
-// @desc    Csr Page
-// @access  PUBLIC
+// csr
 router.get('/csr', (req, res) => {
-  res.render('pages/Csr')
+  res.render('pages/Csr', { title: 'CSR' })
 })
 
-// @type    GET
-// @route   /speaker
-// @desc    Speaker Page
-// @access  PUBLIC
+// speakers
 router.get('/speaker', (req, res) => {
-  res.render('pages/speaker')
+  res.render('pages/speaker', { title: 'Our Speakers' })
 })
 
-// @type    GET
-// @route   /team
-// @desc    Team Page
-// @access  PUBLIC
+// team
 router.get('/team', (req, res) => {
-  res.render('pages/Team')
-})
-
-// @type    GET
-// @route   /subscribe
-// @desc    Subscripton Page
-// @access  PUBLIC
-router.get('/subscribe', (req, res) => {
-  res.render('pages/subscribe', {
-    csrfToken: req.csrfToken()
-  })
-})
-
-// @type    GET
-// @route   /subscribe
-// @desc    Subscripton Page
-// @access  PUBLIC
-router.get('/Thankusu', (req, res) => {
-  res.render('pages/Thankusu')
+  res.render('pages/Team', { title: 'Our Team' })
 })
 
 // @type    GET
@@ -345,6 +292,26 @@ router.get('/incur', (req, res) => {
 // @access  PRIVATE
 router.get('/AdminLogin', (req, res) => {
   res.render('pages/adminLogin', { csrfToken: req.csrfToken() })
+})
+
+// @type    GET
+// @route   /conetregistration
+// @desc    Conet Registration Page
+// @access  PUBLIC
+router.get('/conetregistration', (req, res) => {
+  res.render('pages/RegistrationPages/ConetRegistration', {
+    csrfToken: req.csrfToken()
+  })
+})
+
+// @type    GET
+// @route   /conexplusregistration
+// @desc    Conexplus Registration Page
+// @access  PUBLIC
+router.get('/conexplusregistration', (req, res) => {
+  res.render('pages/RegistrationPages/ConexPlusRegistration', {
+    csrfToken: req.csrfToken()
+  })
 })
 
 module.exports = router
