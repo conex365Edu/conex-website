@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700|Poppins:200,300,400,500,500i,600,700,800&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700|Poppins:200,300,400,500,500i,600,700,800&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900");
-@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700|Poppins:200,300,400,500,500i,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700|Poppins:200,300,400,500,500i,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 .flex-center-start {
   display: -webkit-box;
@@ -23,7 +23,7 @@
 /* 1. Theme default css */
 
 body {
-  font-family: "Crimson Text", serif;
+  font-family: 'Crimson Text', serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -73,7 +73,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #1f1f1f;
 }
 
@@ -101,7 +101,7 @@ p {
   line-height: 28px;
   color: #919191;
   margin-bottom: 13px;
-  font-family: "Lato", serif;
+  font-family: 'Lato', serif;
 }
 
 label {
@@ -190,7 +190,7 @@ h3 {
 
 .overlay::before {
   position: absolute;
-  content: "";
+  content: '';
   background-color: #000;
   top: 0;
   left: 0;
@@ -252,7 +252,7 @@ h3 {
      ============================ */
 
 .letsanimation {
-  font-family: "Luckiest Guy", cursive;
+  font-family: 'Luckiest Guy', cursive;
   color: #0eafcc;
   text-align: center;
   padding-bottom: 20px;
@@ -311,12 +311,12 @@ h3 {
   font-size: 20px;
   color: #565a5c;
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding: 20px 0;
 }
 .single-package-item h3:after {
   position: absolute;
-  content: " ";
+  content: ' ';
   bottom: 0;
   left: 0;
   width: 100%;
@@ -330,7 +330,7 @@ h3 {
 .packages-para p {
   font-size: 14px;
   color: #aaa;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 15px;
 }
 .packages-para p span {
@@ -345,7 +345,7 @@ h3 {
   margin-left: 20px;
   font-size: 14px;
   color: #aaa;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-transform: capitalize;
 }
 .single-package-item:hover {
@@ -380,7 +380,7 @@ h3 {
   color: #f6f4f3;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 0.6em;
   letter-spacing: 4px;
   margin-top: 15px;
@@ -413,7 +413,7 @@ h3 {
 }
 
 .numbers {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 4em;
 }
 
@@ -589,7 +589,7 @@ h3 {
   color: #ffffff;
   display: inline-block;
   padding: 18px 44px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
   border: 0;
@@ -628,7 +628,7 @@ h3 {
   color: #ffffff;
   display: inline-block;
   padding: 8px 15px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: bold;
   border: 0;
@@ -662,7 +662,7 @@ h3 {
   background: #172b4d;
   color: #ffffff;
   display: inline-block;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 15px;
   font-weight: 500;
   border: 0;
@@ -752,7 +752,7 @@ h3 {
 
 .section_title p {
   font-size: 17px;
-  font-family: "Crimson Text", serif;
+  font-family: 'Crimson Text', serif;
   font-weight: 400;
   line-height: 28px;
   color: #727272;
@@ -858,7 +858,7 @@ h3 {
   padding: 10px 15px;
   transition: 0.3s;
   font-size: 14px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
 }
 
@@ -907,7 +907,7 @@ h3 {
 }
 
 .main-nav .drop-down > a:after {
-  content: "\f107";
+  content: '\f107';
   font-family: FontAwesome;
   padding-left: 10px;
 }
@@ -928,7 +928,7 @@ h3 {
 }
 
 .main-nav .drop-down .drop-down > a:after {
-  content: "\f105";
+  content: '\f105';
   position: absolute;
   right: 15px;
 }
@@ -966,7 +966,7 @@ h3 {
   color: #fff;
   padding: 10px 20px;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .mobile-nav a:hover,
@@ -977,7 +977,7 @@ h3 {
 }
 
 .mobile-nav .drop-down > a:after {
-  content: "\f078";
+  content: '\f078';
   font-family: FontAwesome;
   padding-left: 10px;
   position: absolute;
@@ -985,7 +985,7 @@ h3 {
 }
 
 .mobile-nav .active.drop-down > a:after {
-  content: "\f077";
+  content: '\f077';
 }
 
 .mobile-nav .drop-down > a {
@@ -1506,7 +1506,7 @@ h3 {
 
 .achievement_area .achievement .courses .inner_courses::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   background: #0c4b2d;
@@ -1562,7 +1562,7 @@ h3 {
 
 .achievement_area .achievement .courses-blue .inner_courses::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   background: #298cd3;
@@ -1618,7 +1618,7 @@ h3 {
 
 .achievement_area .achievement .courses-sky .inner_courses::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   background: #cf933e;
@@ -1877,7 +1877,7 @@ h3 {
   color: #fff;
   line-height: 56px;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 @media (max-width: 767px) {
@@ -1890,7 +1890,7 @@ h3 {
 .courses_details_banner .course_text .prise span {
   font-size: 30px;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 @media (max-width: 767px) {
@@ -1925,7 +1925,7 @@ h3 {
   font-size: 18px;
   padding-left: 14px;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .courses_details_info {
@@ -2038,7 +2038,7 @@ h3 {
   color: #919191;
 }
 
-.courses_details_info .courses_sidebar .author_info .auhor_header img{
+.courses_details_info .courses_sidebar .author_info .auhor_header img {
   max-width: 60%;
   text-align: center;
 }
@@ -2178,7 +2178,7 @@ h3 {
   bottom: 0;
   width: 100%;
   height: 100%;
-  content: "";
+  content: '';
   background-color: rgba(0, 0, 0, 0.5);
   background-size: cover;
   background-position: bottom;
@@ -2233,7 +2233,7 @@ h3 {
 
 .our_team_member .single_team .master_name h3 {
   font-size: 24px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #1f1f1f;
   font-weight: 400;
   margin-top: 25px;
@@ -2343,7 +2343,7 @@ h6 {
 }
 
 .unordered-list li:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 14px;
   height: 14px;
@@ -2885,7 +2885,7 @@ h6 {
   padding: 22px 0;
   display: block;
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   line-height: 1;
   font-weight: 400;
@@ -2912,7 +2912,7 @@ h6 {
 }
 
 #course_syllubus #course_syllubus_list a.collapsed i::before {
-  content: "\f067" !important;
+  content: '\f067' !important;
 }
 
 .industry-project {
@@ -3260,7 +3260,7 @@ h6 {
   font-size: 20px;
   color: #0eafcc;
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding: 20px 0;
   margin-left: 18px;
 }
@@ -3270,7 +3270,7 @@ h6 {
   font-size: 17px;
   color: #565a5c;
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding: 5px 0;
 }
 
@@ -3282,7 +3282,7 @@ h6 {
   font-size: 19px;
   font-weight: 500;
   color: #0eafcc;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 15px;
   text-transform: capitalize;
   text-align: center;
@@ -3422,7 +3422,7 @@ COURSE MODULES
 .course-footer .pull-left ul li {
   font-size: 15px;
   font-weight: 700;
-  font-family: "Lato", serif;
+  font-family: 'Lato', serif;
   color: var(--course-color);
 }
 
@@ -3445,4 +3445,12 @@ COURSE MODULES
 
 .course-footer .pull-right ul li a i {
   margin-right: 5px;
+}
+
+#workshop-icon {
+  background-color: #298cd3;
+  padding: 7px;
+  border-radius: 5px;
+  color: white;
+  margin: 5px;
 }

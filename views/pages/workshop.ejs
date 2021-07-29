@@ -1,35 +1,9 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
+    <%- include("../partials/head") %>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Workshop Details</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="/public/Main_Page/img/logo2.jpg">
-    <!-- Place favicon.ico in the root directory -->
-
-    <!-- CSS here -->
-    <link rel="stylesheet" href="/public/Main_Page/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/public/Main_Page/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/public/Main_Page/css/style.css">
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179940933-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-179940933-1');
-    </script>
-</head>
 
 <body>
     <!-- header-start -->
-    <%- include("../../partials/mainNavbar") %>
+    <%- include("../partials/mainNavbar") %>
         <!-- header-end -->
 
         <!-- bradcam_area_start -->
@@ -44,19 +18,16 @@
                                 </hr>
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-6">
-                                        <a href="https://rzp.io/l/mktri" target="_blank">
                                             <h4 class="course_cash">ENROLL NOW
-                                                <!-- <span class="active"><i class="fa fa-inr" aria-hidden="true"
-                                                style="margin-right: 5px"></i>499</span> -->
-                                                <!-- <i class="fa fa-inr" aria-hidden="true" style="margin-right: 5px"></i>999 -->
                                             </h4>
                                         </a>
-                                    </div>
+                                        </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6">
-                                        <a href="https://chat.whatsapp.com/GB212l64AI7FuMqMcc3zkd">
+                                        <a href="#">
                                             <h4 class="course_cash">JOIN OUR COMMUNITY
                                             </h4>
                                         </a>
+                                    </div>
                                     </div>
                                 </div>
 
@@ -70,7 +41,7 @@
 
                                         <div class="col-xl-4 col-lg-4 col-md-4">
                                             <div class="single_video">
-                                                <i class="fa fa-cc" style="background-color: #298cd3;"></i> <span>Life
+                                                <i class="fa fa-cc" id="workshop-icon"></i> <span style="color: white;">Life
                                                     Long
                                                     Access</span>
                                             </div>
@@ -78,21 +49,21 @@
 
                                         <div class="col-xl-4 col-lg-4 col-md-4">
                                             <div class="single_video">
-                                                <i class="fa fa-sort-alpha-asc" style="background-color: #298cd3;"></i>
-                                                <span>Language: English</span>
+                                                <i class="fa fa-sort-alpha-asc" id="workshop-icon"></i>
+                                                <span style="color: white;">Language: English</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-xl-4 col-lg-4 col-md-4">
                                             <div class="single_video">
-                                                <i class="fa fa-google" style="background-color: #cf933e;"></i>
-                                                <span>Google Meet</span>
+                                                <i class="fa fa-google" id="workshop-icon"></i>
+                                                <span style="color: white;">Google Meet</span>
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-4">
                                             <div class="single_video">
-                                                <i class="fa fa-clock-o" style="background-color: #0c4b2d;"></i> <span>2
+                                                <i class="fa fa-clock-o" id="workshop-icon"></i> <span style="color: white;">2
                                                     Hours</span>
                                             </div>
                                         </div>
@@ -165,31 +136,31 @@
                     <div class="col-xl-5 col-lg-5">
                         <div class="courses_sidebar">
                             <div class="video_thumb">
-                                <img src="/public/Main_Page/img/speaker/AJEESH.png" alt="">
+                                <img src="/public/img/sample.svg" alt="">
                             </div>
                             <div class="author_info">
                                 <div class="auhor_header">
                                     <div class="name">
-                                        <h3>Dr. AJEESH G MANNADIAR</h3>
+                                        <h3>Dr. Sample Sample</h3>
                                         <p>Project Manager - Composites<br>
                                             L&T Defence (Heading BrahMos Project)</p>
                                     </div>
                                     <div class="row">
                                         <div class="col-xl-3 col-lg-3 col-md-3"></div>
-                                        <img src="/public/Main_Page/img/workshop/ltgrouplogo.jpg" alt="">
+                                        <img src="/public/img/sample.png" alt="">
                                     </div>
                                 </div>
                             </div>
 
                     <div class="row">
                         <div class="col-xl-5 col-lg-5 col-md-5">
-                            <a href="https://rzp.io/l/mktri" target="_blank">
+                            <a href="#">
                                 <h4 class="course_cash">ENROLL NOW
                                 </h4>
                             </a>
                         </div>
                         <div class="col-xl-7 col-lg-7 col-md-7">
-                            <a href="https://chat.whatsapp.com/GB212l64AI7FuMqMcc3zkd">
+                            <a href="#">
                                 <h4 class="course_cash">JOIN OUR COMMUNITY
                                 </h4>
                             </a>
@@ -249,14 +220,14 @@
         </div>
 
         <!-- Footer Section -->
-        <%- include("../../partials/mainFooter") %>
+        <%- include("../partials/mainFooter") %>
             <!-- Footer Section End -->
 
 
 
 
             <!-- JavaScript Section -->
-            <%- include("../../partials/mainScripts") %>
+            <%- include("../partials/mainScripts") %>
 </body>
 
 </html>

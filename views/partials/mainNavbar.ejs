@@ -22,12 +22,12 @@
                                     <li><a>Certification Courses</a></i>
                                         <ul class="submenu">
                                             <!--<li><a href="/trainings">Trainings</a></li>-->
-                                           <!-- <li><a href="/Certification/MachineLearning">Machine Learning</a></li>
+<!-- <li><a href="/Certification/MachineLearning">Machine Learning</a></li>
                                         </ul>
                                     <li><a>Services</a></i>
                                         <ul class="submenu">
                                             <!--<li><a href="/trainings">Trainings</a></li>-->
-                                           <!-- <li><a href="/virtual">Virtual</a></li>
+<!-- <li><a href="/virtual">Virtual</a></li>
                                             <li><a href="/onSite">On-Site</a></li>
                                             <li><a href="/conexion">Newsletter</a></li>
                                             <li><a href="/conextoc">Conex to College</a></li>
@@ -62,63 +62,96 @@
     </div>
 </header>-->
 <header id="header" class="fixed-top">
-    <div class="container">
+  <div class="container">
+    <div class="logo float-left">
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+      <a href="/" class="scrollto"
+        ><img
+          src="/public/Main_Page/img/logowhite.png"
+          alt=""
+          class="img-fluid"
+      /></a>
+    </div>
 
-      <div class="logo float-left">
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
-        <a href="/" class="scrollto"><img src="/public/Main_Page/img/logowhite.png" alt="" class="img-fluid"></a>
-      </div>
-
-      <nav class="main-nav float-right d-none d-lg-block">
-        <ul>
-            <!-- <li>
+    <nav class="main-nav float-right d-none d-lg-block">
+      <ul>
+        <!-- <li>
                 <a href="/workshopdetails" class="btn-nav">Workshop <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                 </a>
             </li> -->
 
-            <li>
-                <a href="/">Home</a>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/workshop">Workshop</a>
+        </li>
+        <li class="drop-down">
+          <a href="#">Certification Courses</a>
+          <ul>
+            <li class="drop-down">
+              <a href="#">Development</a>
+              <!--Drop Down 3-->
+              <ul>
+                <li>
+                  <a href="/Certification/Android">Android Development</a>
+                </li>
+                <li>
+                  <a href="/Certification/FullStack">Full Stack Development</a>
+                </li>
+              </ul>
             </li>
-
-            <li class="drop-down"><a href="#">Certification Courses</a>
-                <ul>
-                    <li class="drop-down"><a href="#">Development</a>    <!--Drop Down 3-->
-                        <ul>
-                        <li><a href="/Certification/Android">Android Development</a></li>
-                        <li><a href="/Certification/FullStack">Full Stack Development</a></li>
-                        </ul>
-                    </li>
-                    <li class="drop-down"><a href="#">Technology</a>    <!--Drop Down 3-->
-                        <ul>
-                        <li><a href="/Certification/AWS">AWS Solution Architect</a></li>
-                        <li><a href="/Certification/CyberSecurity">Cyber Security</a></li>
-                        </ul>
-                    </li>
-                    <li class="drop-down"><a href="#">Data Science</a> <!--Drop Down 1-->
-                        <ul>
-                        <li><a href="/Certification/BigData">Big Data</a></li>
-                        <li><a href="/Certification/DataScience">Data Science</a></li>
-                        <li><a href="/Certification/MachineLearning">Machine Learning</a></li>
-                        </ul>
-                    </li>
-                    <li class="drop-down"><a href="#">Programming Languages</a>  <!--Drop Down 2-->
-                        <ul>
-                        <li><a href="/Certification/CandCPP">C & C++ Programming</a></li>
-                        <li><a href="/Certification/Java">Core and Advanced Java</a></li>
-                        <li><a href="/Certification/DSandAlgorithm">Data Structures and Algorithms</a></li>
-                        <li><a href="/Certification/Python">Python Programming</a></li>
-                        </ul>
-                    </li>
-                    <li class="drop-down"><a href="#">Business Analytics</a> <!--Drop Down 1-->
-                        <ul>
-                        <li><a href="/Certification/BI">Microsoft Power BI</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <li class="drop-down">
+              <a href="#">Technology</a>
+              <!--Drop Down 3-->
+              <ul>
+                <li><a href="/Certification/AWS">AWS Solution Architect</a></li>
+                <li>
+                  <a href="/Certification/CyberSecurity">Cyber Security</a>
+                </li>
+              </ul>
             </li>
+            <li class="drop-down">
+              <a href="#">Data Science</a>
+              <!--Drop Down 1-->
+              <ul>
+                <li><a href="/Certification/BigData">Big Data</a></li>
+                <li><a href="/Certification/DataScience">Data Science</a></li>
+                <li>
+                  <a href="/Certification/MachineLearning">Machine Learning</a>
+                </li>
+              </ul>
+            </li>
+            <li class="drop-down">
+              <a href="#">Programming Languages</a>
+              <!--Drop Down 2-->
+              <ul>
+                <li>
+                  <a href="/Certification/CandCPP">C & C++ Programming</a>
+                </li>
+                <li>
+                  <a href="/Certification/Java">Core and Advanced Java</a>
+                </li>
+                <li>
+                  <a href="/Certification/DSandAlgorithm"
+                    >Data Structures and Algorithms</a
+                  >
+                </li>
+                <li><a href="/Certification/Python">Python Programming</a></li>
+              </ul>
+            </li>
+            <li class="drop-down">
+              <a href="#">Business Analytics</a>
+              <!--Drop Down 1-->
+              <ul>
+                <li><a href="/Certification/BI">Microsoft Power BI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
 
-            <!-- <li class="drop-down"><a href="">Services</a>
+        <!-- <li class="drop-down"><a href="">Services</a>
                 <ul>
                     
                     <li><a href="/virtual">Virtual</a></li>
@@ -131,7 +164,7 @@
                 </ul>
             </li> -->
 
-            <!-- <li class="drop-down"><a href="">About Us</a>
+        <!-- <li class="drop-down"><a href="">About Us</a>
                 <ul>
                     <li><a href="/about">What are we?</a></li>
                     <li><a href="/csr">CSR</a></li>
@@ -140,9 +173,10 @@
                 </ul>
             </li> -->
 
-            <li><a href="/contact">Contact Us</a></li>
-            </ul>
-      </nav><!-- .main-nav -->
-      
-    </div>
-  </header><!-- #header -->
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <!-- .main-nav -->
+  </div>
+</header>
+<!-- #header -->

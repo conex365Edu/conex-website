@@ -116,5 +116,4 @@ mongoose
   })
 
 app.use(publicRoutes)
-// app.use(authRoutes)
 // app.use(adminRoutes)
