@@ -4,6 +4,7 @@ const path = require('path')
 const morgan = require('morgan')
 const db = require('./connection/config')
 const publicRoutes = require('./routes/publicRoutes')
+const incurRoutes = require('./routes/incurRoute')
 
 // const volleyball = require('volleyball')
 
@@ -116,4 +117,6 @@ mongoose
   })
 
 app.use(publicRoutes)
+app.use('/incur', incurRoutes)
+
 // app.use(adminRoutes)

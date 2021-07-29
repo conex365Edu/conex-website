@@ -82,22 +82,9 @@ router.get('/workshop', (req, res) => {
   res.render('pages/workshop', { title: 'Sample Workshop' })
 })
 
-// @type    GET
-// @route   /conexspeakerregistration
-// @desc    Conex Speaker Registration Page
-// @access  PUBLIC
+// Conex Speaker Registration
 router.get('/conexspeakerregistration', (req, res) => {
-  res.render('pages/RegistrationPages/ConexSpeakerRegistration', {
-    csrfToken: req.csrfToken()
-  })
-})
-
-// @type    GET
-// @route   /incur
-// @desc    Incur Home
-// @access  PUBLIC
-router.get('/incur', (req, res) => {
-  res.render('incur/index')
+  res.render('pages/conexSpeakerRegistration')
 })
 
 // @type    GET
@@ -123,7 +110,7 @@ router.get('/conetregistration', (req, res) => {
 // @desc    Conexplus Registration Page
 // @access  PUBLIC
 router.get('/conexplusregistration', (req, res) => {
-  res.render('pages/RegistrationPages/ConexPlusRegistration', {
+  res.render('pages/conexPlusRegistration', {
     csrfToken: req.csrfToken()
   })
 })

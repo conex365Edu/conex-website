@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="<%= csrfToken %> " />
+    <title>Conet Registration</title>
+    <link rel="icon" type="image/png" href="/public/Main_Page/img/logo2.jpg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/registrationPages/style.css">
+
+</head>
+
+<body onload="onloadError()">
+    <div class="container px-4 py-5 mx-auto">
+        <div class="card card0">
+            <div class="d-flex flex-lg-row flex-column-reverse">
+                <div class="card card1">
+                    <div class="row justify-content-center my-auto">
+                        <div class="col-md-8 col-10 my-5">
+                            <div class="row justify-content-center px-3 mb-3"></div>
+                            <h3 class="mb-5 text-center heading" style="font-family: Aclonica;">JOIN THE CO-NET
+                                COMMUNITY</h3>
+                            <h5 class="msg-info">Kindly Fill Out The Form</h5>
+                            <form id="content" method="POST" action="javascript:void(0)">
+                            <div class="form-group"> <label class="form-control-label text-muted">Name</label>
+                                <input type="text" id="name" name="name" placeholder="" class="form-control">
+                            </div>
+                            <div class="form-group"> <label class="form-control-label text-muted">Phone Number</label>
+                                <input type="text" id="phonenumber" name="phonenumber" placeholder=""
+                                    class="form-control"> </div>
+                            <div class="form-group"> <label class="form-control-label text-muted">Email</label>
+                                <input type="text" id="email" name="email" placeholder="" class="form-control"> </div>
+                            <div class="form-group"> <label class="form-control-label text-muted">Native Place</label>
+                                <input type="test" id="native" name="native" placeholder="" class="form-control">
+                            </div>
+                            <div class="form-group"> <label class="form-control-label text-muted">Area of
+                                    expertise</label>
+                                <input type="text" id="expertise" name="expertise" placeholder=""
+                                    class="form-control"></input>
+                            </div>
+                            <div class="form-group"> <label class="form-control-label text-muted">What Describes
+                                    You</label>
+                                <select class="form-control" id="description">
+                                    <option>Choose Option</option>
+                                    <option value="Freelance Trainer">Freelance Trainer</option>
+                                    <option value="Part of a Training Organization">Part of a Training Organization
+                                    </option>
+                                    <option value="College Faculty">College Faculty</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group"> <label class="form-control-label text-muted">Any Suggestions to Add
+                                    Up?</label>
+                                <textarea type="text" id="suggestion" name="suggestion" placeholder=""
+                                    class="form-control"></textarea> </div>
+                            <div class="alert alert-danger" id="erroralert" role="alert">
+                            </div>
+                            <div class="alert alert-danger" id="emailalert" role="alert">Email is in use
+                            </div>
+                            <div class="alert alert-danger" id="emailerror" role="alert">Email is in use
+                            </div>
+
+                            <div class="row justify-content-center my-3 px-3"> <button onclick="conetReg()"
+                                    class="btn-block btn-color">Register
+                                </button> </div>
+                            </form>
+                            <div class="modal fade" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">You have been successfully Registered</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            Thank You For Registering Conet.. Please check your mail for more details
+                                            regarding the Conet service
+                                        </div>
+
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card card2">
+                    <div class="my-auto mx-md-5 px-md-5 right">
+                        <h3 class="text-white">CoNet with Conex!</h3> <br><small class="text-white"
+                            style="font-size: 18px;">We want talented trainers to step forward and enlighten our target
+                            audiences. This knowledge has the capacity to change the world and help our young
+                            professionals support their families and aid in this economic crisis.
+                            Be the member of the highly respected and dynamic panel team. Exchange knowledge, spread
+                            astuteness and also reap the various benefits. Meet people from national and international
+                            platforms, network, train the ambitious gems that are ignored by the Industry and stretch
+                            your own learning curve as well.
+                            CoNet with Conex! We promise to add value to your life!<br><b>
+                                Fill in the form and we promise to be in touch within 12hrs!</b></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="/public/Main_Page/frontend_Js/ConetRegistration.js"></script>
+
+</html>

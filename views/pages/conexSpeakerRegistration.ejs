@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/public/Main_Page/img/logo2.jpg">
+    <meta name="csrf-token" content="<%= csrfToken %> " />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <title>Conex Speaker Registeration</title>
+
+    <link rel="stylesheet" href="/public/css/registrationPages/style.css">
+</head>
+
+<body onload="onloadError()">
+    <div class="container px-4 py-5 mx-auto">
+        <div class="card card0">
+            <div class="d-flex flex-lg-row flex-column-reverse">
+                <div class="card card1">
+                    <div class="row justify-content-center my-auto">
+                        <div class="col-md-8 col-10 my-5">
+                            <div class="row justify-content-center px-3 mb-3"> </div>
+                            <h3 class="mb-5 text-center heading" style="font-family: Aclonica;">BE A CONEX SPEAKER</h3>
+                            <h6 class="msg-info">Kindly Fill Out the Form</h6>
+                            <form id="content" action="javascript:void(0)" method="POST">
+                                <div class="form-group"> <label class="form-control-label text-muted">Name</label>
+                                    <input type="text" id="name" name="email" placeholder="" class="form-control">
+                                </div>
+                                <div class="form-group"> <label class="form-control-label text-muted">Phone
+                                        Number</label>
+                                    <input type="text" id="phonenumber" name="psw" placeholder="" class="form-control">
+                                </div>
+                                <div class="form-group"> <label class="form-control-label text-muted">Email</label>
+                                    <input type="email" id="email" name="psw" placeholder="" class="form-control">
+                                </div>
+                                <div class="form-group"> <label class="form-control-label text-muted">Location</label>
+                                    <input type="text" id="location" name="psw" placeholder="" class="form-control">
+                                </div>
+                                <div class="form-group"> <label class="form-control-label text-muted">Area of
+                                        Expertise</label>
+                                    <input type="text" id="expertise" name="psw" placeholder="" class="form-control">
+                                </div>
+                                <div class="form-group"> <label class="form-control-label text-muted">How Do You
+                                        Charge?</label>
+                                    <input type="text" id="charge" name="" placeholder="Eg: 2000 Rs/Hour"
+                                        class="form-control">
+                                </div>
+                                <div class="alert alert-danger" id="erroralert" role="alert">
+                                </div>
+                                <div class="alert alert-danger" id="emailalert" role="alert">Email is in use
+                                </div>
+                                <div class="alert alert-danger" id="emailerror" role="alert">Email is in use
+                                </div>
+                                <div class="row justify-content-center my-3 px-3"> <button class="btn-block btn-color"
+                                        onclick="conexplusspeakerReg()">Register
+                                    </button> </div>
+                            </form>
+                            <div class="modal fade" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">You have been successfully Registered</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            Thank You For Registering Conex Plus Speaker .. Please check your mail for
+                                            more
+                                            details
+                                            regarding the Conex Plus service
+                                        </div>
+
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card card2">
+                    <div class="my-auto mx-md-5 px-md-5 right">
+                        <h3 class="text-white">We are more than just a company</h3> <small style="font-size: 15px;"
+                            class="text-white">Conex365 is the high quality E-learning platform that’s determined to
+                            decrease employability equip people with skills and help them become career ready. WE cannot
+                            do this alone! We need talented influencers and entrepreneurs to join our Conex family! It’s
+                            time to cascade your wisdom to those who need them the most! Become a Conex Speaker for both
+                            Conex Plus and Conex Edu Plus and help us transform the traditional learning with a more
+                            dynamic, smart and understandable learning that can be suitable for any age group. What’s in
+                            it for you? A lot of opportunities to fulfill your goals, speed up your career progression,
+                            market yourself and change lives.<br><b>
+                                Fill in the form and we promise to be in touch within 12hrs!</b></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="/public/Main_Page/frontend_Js/ConexSpeakerRegistration.js"></script>
+
+</html>
