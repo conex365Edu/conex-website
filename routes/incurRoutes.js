@@ -1,4 +1,5 @@
 const express = require('express')
+const incurApplyControl = require('../controls/incurApplyControl')
 
 const router = express.Router()
 
@@ -18,8 +19,6 @@ router.get('/contact', (req, res) => {
 })
 
 // Marketing Apply Form
-router.get('/marketing/apply', (req, res) => {
-  res.render('incur/marketingForm')
-})
+router.get('/marketing/apply', incurApplyControl.getIncureMarketing)
 
 module.exports = router

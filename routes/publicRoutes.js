@@ -82,37 +82,4 @@ router.get('/workshop', (req, res) => {
   res.render('pages/workshop', { title: 'Sample Workshop' })
 })
 
-// Conex Speaker Registration
-router.get('/conexspeakerregistration', (req, res) => {
-  res.render('pages/conexSpeakerRegistration')
-})
-
-// @type    GET
-// @route   /AdminLogin
-// @desc    Admin Login
-// @access  PRIVATE
-router.get('/AdminLogin', (req, res) => {
-  res.render('pages/adminLogin', { csrfToken: req.csrfToken() })
-})
-
-// @type    GET
-// @route   /conetregistration
-// @desc    Conet Registration Page
-// @access  PUBLIC
-router.get('/conetregistration', (req, res) => {
-  res.render('pages/RegistrationPages/ConetRegistration', {
-    csrfToken: req.csrfToken()
-  })
-})
-
-// @type    GET
-// @route   /conexplusregistration
-// @desc    Conexplus Registration Page
-// @access  PUBLIC
-router.get('/conexplusregistration', (req, res) => {
-  res.render('pages/conexPlusRegistration', {
-    csrfToken: req.csrfToken()
-  })
-})
-
 module.exports = router

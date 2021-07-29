@@ -125,3 +125,5 @@ app.get(
     })
   }
 )
+
+// skill card

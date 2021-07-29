@@ -2,10 +2,10 @@ const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
 const morgan = require('morgan')
-const db = require('./connection/config')
+const db = require('./config/config')
 const publicRoutes = require('./routes/publicRoutes')
-const incurRoutes = require('./routes/incurRoute')
-
+const incurRoutes = require('./routes/incurRoutes')
+const registrationRoutes = require('./routes/registrationRoutes')
 // const volleyball = require('volleyball')
 
 const app = express()
@@ -117,6 +117,5 @@ mongoose
   })
 
 app.use(publicRoutes)
+app.use('/register', registrationRoutes)
 app.use('/incur', incurRoutes)
-
-// app.use(adminRoutes)
