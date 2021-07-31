@@ -2,22 +2,26 @@ const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
 const morgan = require('morgan')
+const cookieParser = require('cookie-parser')
 const db = require('./config/config')
 const publicRoutes = require('./routes/publicRoutes')
 const incurRoutes = require('./routes/incurRoutes')
 const registrationRoutes = require('./routes/registrationRoutes')
+const authRoutes = require('./routes/authRoutes')
+const adminRoutes = require('./routes/adminRoutes')
+
 // const volleyball = require('volleyball')
 
 const app = express()
 
 //middlewares
+// app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+app.use(cookieParser())
 app.use('/public', express.static(path.join(__dirname, 'public')))
 app.set('view engine', 'ejs')
-app.use(express.urlencoded({ extended: true }))
 app.use(morgan('dev'))
 
-//Jwt Configuration
-// const cookieParser = require('cookie-parser')
 // const passport = require('passport')
 
 //SSl Configuration
@@ -119,3 +123,5 @@ mongoose
 app.use(publicRoutes)
 app.use('/register', registrationRoutes)
 app.use('/incur', incurRoutes)
+app.use(authRoutes)
+app.use('/admin', adminRoutes)

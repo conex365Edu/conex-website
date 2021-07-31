@@ -17,22 +17,19 @@
     <!-- CSS Files -->
 
     <link rel="apple-touch-icon" sizes="76x76" href="/public/css/admindashboard/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="/public/Main_Page/img/logo2.jpg">
+    <link rel="icon" type="image/png" href="/public/img/logo2.jpg">
 </head>
 
 <body>
     <div class="wrapper ">
-        <%- include("../../partials/adminNavbar") %>
-        <div class="main-panel">
-            <!-- Navbar Header Partials -->
-            <%- include("../../partials/dashboardHeader")  %>
-            <!-- End Navbar -->
-            <!-- Dashboard Counter -->
-            <%- include("../../partials/dashboardCounter")  %>
 
+        <div class="main-panel">
+
+<p><%= userName%></p>
+<p><%= name%></p>
             
             <!-- dashboard Scripts -->
-            <%- include("../../partials/dashboardScripts.ejs")  %>
+
 </body>
 
 </html>

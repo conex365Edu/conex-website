@@ -11,36 +11,45 @@
             <div class="row">
               <div class="col-md-9 col-lg-8 mx-auto">
                 <h3 class="login-heading mb-4">Welcome Admin!</h3>
-                <form action="javascript:void(0)" method="POST">
-                  <div class="form-label-group">
+                <% if (error.status) { %>
+                <label style="color:red"><%= error.userName %></p>
+                  <% } %>
+                <form method="POST">
+                  <div class="form-label-group mb-3">
                     <input
                       type="text"
-                      id="inputEmail"
+                      id="userName"
+                      name="userName"
                       class="form-control"
-                      placeholder="Email address"
+                      placeholder="Username"
                       required
                       autofocus
                     />
-                    <label for="inputEmail">Username</label>
+                    <% if (error.userName) { %>
+                    <label style="color:red"><%= error.userName %></p>
+                    <% } %>
                   </div>
 
                   <div class="form-label-group">
                     <input
                       type="password"
-                      id="inputPassword"
+                      id="password"
+                      name="password"
                       class="form-control"
                       placeholder="Password"
                       required
                     />
                     <label for="inputPassword">Password</label>
+                                      <% if (error.password) { %>
+                    <label style="color:red;display: block;"><%= error.password %></label>
+                      <% } %>
                   </div>
                   <button
                     class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
                     type="submit"
-                    onclick="login()"
                   >
-                    Sign in
-                  </button>
+                  Sign In
+                </button>
                 </form>
               </div>
             </div>
