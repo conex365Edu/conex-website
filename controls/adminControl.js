@@ -33,7 +33,7 @@ const getConexPlusDetails = async (req, res) => {
   const result = await conexPlusModel.find({}).lean()
   res.render('dashboardPages/conexPlus', {
     result: result,
-    title: 'Conet List'
+    title: 'ConexPlus List'
   })
 }
 
