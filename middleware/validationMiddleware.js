@@ -30,6 +30,17 @@ const conetSchema = Joi.object().keys({
   suggestion: Joi.string().required()
 })
 
+const conexPlusSchema = Joi.object().keys({
+  name: Joi.string().required(),
+  phoneNumber: Joi.string()
+    .length(10)
+    .pattern(/^[0-9]+$/)
+    .required(),
+  email: Joi.string().required(),
+  address: Joi.string().required(),
+  description: Joi.string().required()
+})
+
 //Login
 const login = (req, res, next) => {
   const { error } = loginSchema.validate(req.body)
@@ -86,8 +97,27 @@ const conet = (req, res, next) => {
   }
 }
 
+// Conex Plus
+const conexPlus = (req, res, next) => {
+  const { error } = conexPlusSchema.validate(req.body)
+  const valid = error == null
+
+  if (valid) {
+    next()
+  } else {
+    const { details } = error
+    const message = details.map(i => i.message).join(',')
+    console.log('error', message)
+    res.render('pages/conexPlusRegistration', {
+      error: message,
+      message: ''
+    })
+  }
+}
+
 module.exports = {
   login,
   speaker,
-  conet
+  conet,
+  conexPlus
 }
