@@ -1,5 +1,6 @@
 const speakerModel = require('../models/speakerModel')
 const conetModel = require('../models/conetModel')
+const conexPlusModel = require('../models/conexPlusModel')
 
 // Speaker Registration
 const getConexSpeaker = (req, res) => {
@@ -57,8 +58,32 @@ const postConet = async (req, res) => {
   }
 }
 
+// Conex Plus Registration
 const getConexPlus = (req, res) => {
-  res.render('pages/conexPlusRegistration')
+  res.render('pages/conexPlusRegistration', { error: '', message: '' })
+}
+
+const postConexPlus = async (req, res) => {
+  let error
+  const data = req.body
+  try {
+    await conexPlusModel.create(data)
+    res.render('pages/conexPlusRegistration', {
+      message: 'Successfully Registered. Please wait for confirmation',
+      error: ''
+    })
+  } catch (err) {
+    console.log(err)
+    // email id is already registered
+    if (err.code === 11000) {
+      error = 'email already exist'
+    }
+    error = 'Registration Failed. Please try again'
+    res.render('pages/conexPlusRegistration', {
+      error: error,
+      message: ''
+    })
+  }
 }
 
 module.exports = {
@@ -66,5 +91,6 @@ module.exports = {
   getConet,
   getConexPlus,
   postConexSpeaker,
-  postConet
+  postConet,
+  postConexPlus
 }

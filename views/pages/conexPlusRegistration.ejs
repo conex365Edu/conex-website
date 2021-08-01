@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/public/css/registerStyle.css">
 </head>
 
-<body onload="onloadError()">
+<body>
     <div class="container px-4 py-5 mx-auto">
         <div class="card card0">
             <div class="d-flex flex-lg-row flex-column-reverse">
@@ -23,62 +23,41 @@
                                 CAMPUS
                             </h3>
                             <h5 class="msg-info">Kindly Fill Out The Form</h5>
-                            <form id="content" action="javascript:void(0)" method="POST">
+                            <% if (error) { %>
+                            <h6 style="color: white; background-color: red; padding: 10px">
+                              <%= error %>
+                            </h6>
+                            <% } %> <% if (message) { %>
+                            <h6
+                              style="color: white; background-color: green; padding: 10px"
+                            >
+                              <%= message %>
+                            </h6>
+                            <% } %>
+                            <form method="POST">
                                 <div class="form-group"> <label class="form-control-label text-muted">Name</label>
-                                    <input type="text" id="name" placeholder="" class="form-control"> </div>
+                                    <input type="text" id="name" name="name" placeholder="" class="form-control" required> </div>
                                 <div class="form-group"> <label class="form-control-label text-muted">Phone
                                         Number</label>
-                                    <input type="text" id="phonenumber" placeholder="" class="form-control">
+                                    <input type="text" id="phoneNumber"  name="phoneNumber"placeholder="" class="form-control" required>
                                 </div>
                                 <div class="form-group"> <label class="form-control-label text-muted">Email</label>
-                                    <input type="text" id="email" placeholder="" class="form-control"> </div>
+                                    <input type="email" id="email" name="email" placeholder="" class="form-control" required> </div>
                                 <div class="form-group"> <label class="form-control-label text-muted">College Name And
                                         Address</label>
-                                    <input type="text" id="address" placeholder="" class="form-control"> </div>
+                                    <input type="text" id="address" name="address" placeholder="" class="form-control" required> </div>
                                 <div class="form-group"> <label class="form-control-label text-muted">What Describes
                                         You</label>
-                                    <select class="form-control" id="description">
+                                    <select class="form-control" id="description" name="description" required>
                                         <option value="Freelance Trainer">Student</option>
                                         <option value="Part of a Training Organization">College Official
                                         </option>
                                     </select>
                                 </div>
-                                <div class="alert alert-danger" id="erroralert" role="alert">
-                                </div>
-                                <div class="alert alert-danger" id="emailalert" role="alert">Email is in use
-                                </div>
-                                <div class="alert alert-danger" id="emailerror" role="alert">Email is in use
-                                </div>
-                                <div class="row justify-content-center my-3 px-3"> <button onclick="conexplusReg()"
+                                <div class="row justify-content-center my-3 px-3"> <button type="submit"
                                         class="btn-block btn-color">Register
                                     </button> </div>
                             </form>
-                            <div class="modal fade" id="myModal">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-
-                                        <!-- Modal Header -->
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">You have been successfully Registered</h4>
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        </div>
-
-                                        <!-- Modal body -->
-                                        <div class="modal-body">
-                                            Thank You For Registering Conex Plus.. Please check your mail for more
-                                            details
-                                            regarding the Conex Plus service
-                                        </div>
-
-                                        <!-- Modal footer -->
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger"
-                                                data-dismiss="modal">Close</button>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="bottom text-center mb-5">
@@ -108,6 +87,5 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-<script src="/public/Main_Page/frontend_Js/ConexPlusRegistration.js"></script>
 
 </html>

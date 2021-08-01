@@ -1,6 +1,7 @@
 const adminModel = require('../models/adminModel')
 const speakerModel = require('../models/speakerModel')
 const conetModel = require('../models/conetModel')
+const conexPlusModel = require('../models/conexPlusModel')
 
 const getDashboard = async (req, res) => {
   adminId = res.locals.adminId
@@ -28,8 +29,17 @@ const getConetDetails = async (req, res) => {
   })
 }
 
+const getConexPlusDetails = async (req, res) => {
+  const result = await conexPlusModel.find({}).lean()
+  res.render('dashboardPages/conexPlus', {
+    result: result,
+    title: 'Conet List'
+  })
+}
+
 module.exports = {
   getDashboard,
   getSpeakerDetails,
-  getConetDetails
+  getConetDetails,
+  getConexPlusDetails
 }

@@ -12,5 +12,6 @@ router.post('/conet', registrationControl.postConet)
 
 // conex plus Registration
 router.get('/conexplus', registrationControl.getConexPlus)
+router.post('/conexplus', registrationControl.postConexPlus)
 
 module.exports = router

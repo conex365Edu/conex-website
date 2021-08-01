@@ -1,0 +1,46 @@
+    <%- include("../partials/head") %>
+
+
+
+<body>
+    <%- include("./partials/adminNavbar") %>
+        <div class="section-margin container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+                    <h4 class="card-title">Conet Details</h4>
+                    <p class="card-category">
+                      List of registered people in conet.
+                    </p>
+                  </div>
+                  <div style="overflow: scroll;width: 100%;">
+                      <table class="table">
+                        <tr>
+                        <thead class="text-primary">
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>What describes you</th>
+                        </thead>
+                        </tr>
+                        <tbody>
+                          <% result.forEach(item => { %>
+                            <tr>
+                              <th scope="row"><%= item._id %></th>
+                              <td><%= item.name %></td>
+                              <td><%= item.phoneNumber %></td>
+                              <td><%= item.email %></td>
+                              <td><%= item.address %></td>
+                              <td><%= item.description %></td>
+                            </tr>
+                          <%})%>
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+              </div>
+  </body>
+    <%- include("../partials/mainScripts") %>
+
+</html>

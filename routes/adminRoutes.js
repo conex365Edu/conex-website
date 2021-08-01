@@ -10,9 +10,7 @@ router.get('/speakers', requireAuth, adminControl.getSpeakerDetails)
 
 router.get('/conet', requireAuth, adminControl.getConetDetails)
 
-router.get('/conexplus', (req, res) => {
-  res.render('pages/DashboardPages/ConexPlus')
-})
+router.get('/conexplus', requireAuth, adminControl.getConexPlusDetails)
 
 // @type    GET
 // @route   /conexspeaker
