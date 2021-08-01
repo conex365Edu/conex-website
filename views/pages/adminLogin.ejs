@@ -11,9 +11,6 @@
             <div class="row">
               <div class="col-md-9 col-lg-8 mx-auto">
                 <h3 class="login-heading mb-4">Welcome Admin!</h3>
-                <% if (error.status) { %>
-                <label style="color:red"><%= error.userName %></p>
-                  <% } %>
                 <form method="POST">
                   <div class="form-label-group mb-3">
                     <input
@@ -51,6 +48,12 @@
                   Sign In
                 </button>
                 </form>
+                <code>
+          {
+            userName: adminConex,
+            password: admin@Conex365
+          }
+        </code>
               </div>
             </div>
           </div>

@@ -1,0 +1,40 @@
+    <%- include("../partials/head") %>
+
+
+
+<body>
+    <%- include("./partials/adminNavbar") %>
+      <!-- End Navbar -->
+        <div class="section-margin container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <%= result %>
+                  <h4>Conet Details</h4>
+                  <p> List of registered persons in conet.</p>
+                </div>
+                <div style="overflow: scroll;">
+                    <table class="table">
+                      <thead class=" text-primary">
+                        <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Native Place</th>
+                        <th>Area Of Expertise</th>
+                        <th>What Describes You</th>
+                        <th>Suggestions</th>
+                        </tr>
+                      </thead>
+                      <tbody >
+
+                      </tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+
+</body>
+    <%- include("../partials/mainScripts") %>
+
+</html>

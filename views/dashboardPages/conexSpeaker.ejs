@@ -1,0 +1,48 @@
+    <%- include("../partials/head") %>
+
+
+
+<body>
+    <%- include("./partials/adminNavbar") %>
+        <div class="section-margin container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+                    <h4 class="card-title">Speakers Details</h4>
+                    <p class="card-category">
+                      List of registered speakers in conex.
+                    </p>
+                  </div>
+                  <div style="overflow: scroll;width: 100%;">
+                      <table class="table">
+                        <tr>
+                        <thead class="text-primary">
+                          <th>ID</th>
+                          <th>Name</th>
+                          <th>Phone Number</th>
+                          <th>Email</th>
+                          <th>Location</th>
+                          <th>Expertise</th>
+                          <th>Charge</th>
+                        </thead>
+                        </tr>
+                        <tbody>
+                          <% speakers.forEach(speaker => { %>
+                            <tr>
+                              <th scope="row"><%= speaker._id %></th>
+                              <td><%= speaker.name %></td>
+                              <td><%= speaker.phoneNumber %></td>
+                              <td><%= speaker.email %></td>
+                              <td><%= speaker.location %></td>
+                              <td><%= speaker.areaOfExpertise %></td>
+                              <td><%= speaker.charge %></td>
+                            </tr>
+                          <%})%>
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+              </div>
+  </body>
+    <%- include("../partials/mainScripts") %>
+
+</html>

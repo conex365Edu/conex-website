@@ -6,13 +6,7 @@ const router = express.Router()
 
 router.get('/dashboard', requireAuth, adminControl.getDashboard)
 
-// @type    GET
-// @route   /conet
-// @desc    Conet Dashboard Page
-// @access  PRIVATE
-router.get('/conet', async (req, res) => {
-  res.render('pages/DashboardPages/Conet')
-})
+router.get('/speakers', requireAuth, adminControl.getSpeakerDetails)
 
 // @type    GET
 // @route   /conexplus

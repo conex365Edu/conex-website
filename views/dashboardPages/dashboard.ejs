@@ -1,35 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+    <%- include("../partials/head") %>
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>
-        Conex Dashboard
-    </title>
-    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-    <link rel="icon" type="image/png" href="/public/Main_Page/img/logo2.jpg">
-    <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    <link href="/public/css/admindashboard/css/material-dashboard.css" rel="stylesheet" />
-    <!-- CSS Files -->
 
-    <link rel="apple-touch-icon" sizes="76x76" href="/public/css/admindashboard/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="/public/img/logo2.jpg">
-</head>
 
 <body>
-    <div class="wrapper ">
+    <%- include("./partials/adminNavbar") %>
 
-        <div class="main-panel">
-
-<p><%= userName%></p>
-<p><%= name%></p>
-            
-            <!-- dashboard Scripts -->
-
+    <div class="section-margin container">
+        <div class="row mb-4">
+          <div class="col-4">
+          </div>
+          <div class="col-4">
+          <h2>Welcome <%= name%></h2>
+          </div>
+          <div class="col-4">
+            </div>
+            </div>
+        <div class="row">
+          <div class="col-2">
+          </div>
+          <div class="col-4">
+            <a class="boxed-btn" href="">Reset Password</a>
+          </div>
+          <div class="col-2">
+            </div>
+          <div class="col-2">
+            <a class="boxed-btn" href="">Logout</a>
+          </div>
+          <div class="col-2">
+          </div>
+        </div>
+</div>
 </body>
+    <%- include("../partials/mainScripts") %>
 
 </html>

@@ -4,6 +4,7 @@ const router = express.Router()
 
 // Conex Speaker Registration
 router.get('/conexspeaker', registrationControl.getConexSpeaker)
+router.post('/conexspeaker', registrationControl.postConexSpeaker)
 
 // Conet Registration
 router.get('/conet', registrationControl.getConet)
