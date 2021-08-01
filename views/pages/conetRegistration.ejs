@@ -12,7 +12,7 @@
 
 </head>
 
-<body onload="onloadError()">
+<body>
     <div class="container px-4 py-5 mx-auto">
         <div class="card card0">
             <div class="d-flex flex-lg-row flex-column-reverse">
@@ -23,26 +23,37 @@
                             <h3 class="mb-5 text-center heading" style="font-family: Aclonica;">JOIN THE CO-NET
                                 COMMUNITY</h3>
                             <h5 class="msg-info">Kindly Fill Out The Form</h5>
-                            <form id="content" method="POST" action="javascript:void(0)">
+                            <% if (error) { %>
+                            <h6 style="color: white; background-color: red; padding: 10px">
+                              <%= error %>
+                            </h6>
+                            <% } %> <% if (message) { %>
+                            <h6
+                              style="color: white; background-color: green; padding: 10px"
+                            >
+                              <%= message %>
+                            </h6>
+                            <% } %>
+                            <form method="POST">
                             <div class="form-group"> <label class="form-control-label text-muted">Name</label>
-                                <input type="text" id="name" name="name" placeholder="" class="form-control">
+                                <input type="text" id="name" name="name" placeholder="" class="form-control" required>
                             </div>
                             <div class="form-group"> <label class="form-control-label text-muted">Phone Number</label>
-                                <input type="text" id="phonenumber" name="phonenumber" placeholder=""
-                                    class="form-control"> </div>
+                                <input type="text" id="phonenumber" name="phoneNumber" placeholder=""
+                                    class="form-control" required> </div>
                             <div class="form-group"> <label class="form-control-label text-muted">Email</label>
-                                <input type="text" id="email" name="email" placeholder="" class="form-control"> </div>
+                                <input type="text" id="email" name="email" placeholder="" class="form-control" required> </div>
                             <div class="form-group"> <label class="form-control-label text-muted">Native Place</label>
-                                <input type="test" id="native" name="native" placeholder="" class="form-control">
+                                <input type="test" id="nativePlace" name="nativePlace" placeholder="" class="form-control" required>
                             </div>
                             <div class="form-group"> <label class="form-control-label text-muted">Area of
                                     expertise</label>
-                                <input type="text" id="expertise" name="expertise" placeholder=""
-                                    class="form-control"></input>
+                                <input type="text" id="areaOfExpertise" name="areaOfExpertise" placeholder=""
+                                    class="form-control" required></input>
                             </div>
                             <div class="form-group"> <label class="form-control-label text-muted">What Describes
                                     You</label>
-                                <select class="form-control" id="description">
+                                <select class="form-control" id="description" name="description">
                                     <option>Choose Option</option>
                                     <option value="Freelance Trainer">Freelance Trainer</option>
                                     <option value="Part of a Training Organization">Part of a Training Organization
@@ -55,42 +66,11 @@
                                     Up?</label>
                                 <textarea type="text" id="suggestion" name="suggestion" placeholder=""
                                     class="form-control"></textarea> </div>
-                            <div class="alert alert-danger" id="erroralert" role="alert">
-                            </div>
-                            <div class="alert alert-danger" id="emailalert" role="alert">Email is in use
-                            </div>
-                            <div class="alert alert-danger" id="emailerror" role="alert">Email is in use
-                            </div>
 
-                            <div class="row justify-content-center my-3 px-3"> <button onclick="conetReg()"
+                            <div class="row justify-content-center my-3 px-3"> <button type="submit"
                                     class="btn-block btn-color">Register
                                 </button> </div>
-                            </form>
-                            <div class="modal fade" id="myModal">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-
-                                        <!-- Modal Header -->
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">You have been successfully Registered</h4>
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        </div>
-
-                                        <!-- Modal body -->
-                                        <div class="modal-body">
-                                            Thank You For Registering Conet.. Please check your mail for more details
-                                            regarding the Conet service
-                                        </div>
-
-                                        <!-- Modal footer -->
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger"
-                                                data-dismiss="modal">Close</button>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
+                              </form>
 
                         </div>
                     </div>
@@ -122,6 +102,5 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-<script src="/public/Main_Page/frontend_Js/ConetRegistration.js"></script>
 
 </html>

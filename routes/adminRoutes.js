@@ -8,20 +8,10 @@ router.get('/dashboard', requireAuth, adminControl.getDashboard)
 
 router.get('/speakers', requireAuth, adminControl.getSpeakerDetails)
 
-// @type    GET
-// @route   /conexplus
-// @desc    Conexplus Dashboard Page
-// @access  PRIVATE
+router.get('/conet', requireAuth, adminControl.getConetDetails)
+
 router.get('/conexplus', (req, res) => {
   res.render('pages/DashboardPages/ConexPlus')
-})
-
-// @type    GET
-// @route   /conexspeaker
-// @desc    Conexspeaker Dashboard Page
-// @access  PRIVATE
-router.get('/conexspeaker', (req, res) => {
-  res.render('pages/DashboardPages/ConexSpeaker')
 })
 
 // @type    GET

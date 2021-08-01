@@ -4,18 +4,18 @@
 
 <body>
     <%- include("./partials/adminNavbar") %>
-      <!-- End Navbar -->
         <div class="section-margin container-fluid">
           <div class="row">
             <div class="col-md-12">
-              <%= result %>
-                  <h4>Conet Details</h4>
-                  <p> List of registered persons in conet.</p>
-                </div>
-                <div style="overflow: scroll;">
-                    <table class="table">
-                      <thead class=" text-primary">
+                    <h4 class="card-title">Conet Details</h4>
+                    <p class="card-category">
+                      List of registered people in conet.
+                    </p>
+                  </div>
+                  <div style="overflow: scroll;width: 100%;">
+                      <table class="table">
                         <tr>
+                        <thead class="text-primary">
                         <th>ID</th>
                         <th>Name</th>
                         <th>Phone Number</th>
@@ -24,17 +24,27 @@
                         <th>Area Of Expertise</th>
                         <th>What Describes You</th>
                         <th>Suggestions</th>
+                        </thead>
                         </tr>
-                      </thead>
-                      <tbody >
-
-                      </tbody>
-                    </table>
+                        <tbody>
+                          <% result.forEach(item => { %>
+                            <tr>
+                              <th scope="row"><%= item._id %></th>
+                              <td><%= item.name %></td>
+                              <td><%= item.phoneNumber %></td>
+                              <td><%= item.email %></td>
+                              <td><%= item.nativePlace %></td>
+                              <td><%= item.areaOfExpertise %></td>
+                              <td><%= item.description %></td>
+                              <td><%= item.suggestion %></td>
+                            </tr>
+                          <%})%>
+                        </tbody>
+                      </table>
+                    </div>
                 </div>
               </div>
-            </div>
-
-</body>
+  </body>
     <%- include("../partials/mainScripts") %>
 
 </html>

@@ -8,6 +8,7 @@ router.post('/conexspeaker', registrationControl.postConexSpeaker)
 
 // Conet Registration
 router.get('/conet', registrationControl.getConet)
+router.post('/conet', registrationControl.postConet)
 
 // conex plus Registration
 router.get('/conexplus', registrationControl.getConexPlus)
