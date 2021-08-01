@@ -17,6 +17,19 @@ const speakerSchema = Joi.object().keys({
   charge: Joi.number().positive().required()
 })
 
+const conetSchema = Joi.object().keys({
+  name: Joi.string().required(),
+  phoneNumber: Joi.string()
+    .length(10)
+    .pattern(/^[0-9]+$/)
+    .required(),
+  email: Joi.string().required(),
+  nativePlace: Joi.string().required(),
+  areaOfExpertise: Joi.string().required(),
+  description: Joi.string().required(),
+  suggestion: Joi.string().required()
+})
+
 //Login
 const login = (req, res, next) => {
   const { error } = loginSchema.validate(req.body)
@@ -55,7 +68,26 @@ const speaker = (req, res, next) => {
   }
 }
 
+// Conet
+const conet = (req, res, next) => {
+  const { error } = conetSchema.validate(req.body)
+  const valid = error == null
+
+  if (valid) {
+    next()
+  } else {
+    const { details } = error
+    const message = details.map(i => i.message).join(',')
+    console.log('error', message)
+    res.render('pages/conetRegistration', {
+      error: message,
+      message: ''
+    })
+  }
+}
+
 module.exports = {
   login,
-  speaker
+  speaker,
+  conet
 }

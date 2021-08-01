@@ -28,8 +28,7 @@ const conetSchema = new Schema({
     required: true
   },
   suggestion: {
-    type: String,
-    required: true
+    type: String
   }
 })
 

@@ -14,7 +14,7 @@ router.post(
 
 // Conet Registration
 router.get('/conet', registrationControl.getConet)
-router.post('/conet', registrationControl.postConet)
+router.post('/conet', validation.conet, registrationControl.postConet)
 
 // conex plus Registration
 router.get('/conexplus', registrationControl.getConexPlus)
