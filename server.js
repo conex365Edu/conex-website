@@ -30,7 +30,7 @@ mongoose
   })
   .then(result => {
     console.log('MongoDB Connected')
-    app.listen(3000, () => {
+    app.listen(process.env.PORT || 3000, () => {
       console.log('Server Running in Port 3000')
     })
   })
