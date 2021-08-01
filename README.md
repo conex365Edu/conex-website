@@ -2,9 +2,9 @@
 
 Conex365 was a high quality skill development platform to have gained an IPR which is focused on skilling up people from different nations, communities and race.
 
-> **The company is closed and not working now**
+> **The company was shut down and is not running now.**
 
-[conex365 Website](https://conex365.herokuapp.com/)
+[Website](https://conex365.herokuapp.com/)
 
 Accessing [admin](https://conex365.herokuapp.com/admin) pages
 
