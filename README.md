@@ -4,7 +4,6 @@ Conex365 was a high quality skill development platform to have gained an IPR whi
 
 > **The company was shut down and is not running now.**
 
-[Website](https://conex365.herokuapp.com/)
 
 Accessing [admin](https://conex365.herokuapp.com/admin) pages
 
